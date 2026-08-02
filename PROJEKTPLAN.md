@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
 **Datum:** 02.08.2026  
-**Status:** Planungsphase  
+**Status:** Planungsphase abgeschlossen; Umsetzung in Phase 2 "Core Content" (siehe unten und [`README.md`](./README.md#status))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---
@@ -315,21 +315,21 @@ AIActEU KI News Hub
 ## 📅 Projektphasen
 
 ### **Phase 1: Foundations** (Woche 1-2)
-- [ ] Wireframes & Design System
-- [ ] Technical Architecture finalisieren
-- [ ] API-Integrations planen (OpenAI, Anthropic, RSS-Feeds)
-- [ ] EU-Compliance-Checklist erstellen
-- [ ] Newsletter Setup (Mailchimp/Substack)
+- [x] Wireframes & Design System → [`DESIGN.md`](./DESIGN.md)
+- [x] Technical Architecture finalisieren → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+- [x] API-Integrations planen (OpenAI, Anthropic, RSS-Feeds) → [`data/sources.json`](./data/sources.json) (50 Quellen, real per HTTP geprüft); Claude-API-Anbindung in `scripts/ingest.mjs` implementiert, aber ohne `ANTHROPIC_API_KEY` noch nicht live gegen die Anthropic-API getestet
+- [x] EU-Compliance-Checklist erstellen → [`COMPLIANCE.md`](./COMPLIANCE.md)
+- [ ] Newsletter Setup (Mailchimp/Substack) — bewusst zurückgestellt: aktuell kein Newsletter-Feature auf der Seite (siehe Entscheidung in [`COMPLIANCE.md`](./COMPLIANCE.md))
 
 ### **Phase 2: Core Content** (Woche 3-6)
-- [ ] Backend-Grundgerüst (CMS, API)
-- [ ] Frontend-Shells (Header, Navigation, Card Components)
-- [ ] RSS-Feed Ingestion für 7 Kategorien
-- [ ] Datenbank für News-Artikel
-- [ ] Basic Search & Filter
+- [x] Backend-Grundgerüst (CMS, API) → Strapi 5 (`backend/`), lokal mit SQLite lauffähig, öffentliche REST-API für Artikel/Kategorien
+- [x] Frontend-Shells (Header, Navigation, Card Components) → `frontend/src/components/`, inkl. Mobile-Menü, Suche, Theme-Toggle
+- [x] RSS-Feed Ingestion für 7 Kategorien → `scripts/verify-sources.mjs` + `scripts/ingest.mjs`, gegen echte Feeds getestet (23/50 Quellen aktuell erreichbar, siehe `data/sources.json`)
+- [x] Datenbank für News-Artikel → SQLite lokal (Strapi), PostgreSQL für Produktivbetrieb weiterhin geplant (siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md))
+- [x] Basic Search & Filter → `/suche` (Volltextsuche) und Tag-Filter auf Kategorie-Seiten
 
 ### **Phase 3: AI Integration** (Woche 7-10)
-- [ ] Automated Summarization (Claude API)
+- [ ] Automated Summarization (Claude API) — Code-Pfad in `scripts/ingest.mjs` vorhanden, benötigt `ANTHROPIC_API_KEY` zum produktiven Einsatz
 - [ ] Auto-Tagging & Kategorisierung
 - [ ] Related Articles Recommendation Engine
 - [ ] Smart Search (Vector Search für semantische Suche)
@@ -429,14 +429,14 @@ AIActEU KI News Hub
 
 ## ✅ Nächste Schritte (Action Items)
 
-1. [ ] **Design-Review**: Wireframes & Color Scheme abstimmen
-2. [ ] **Tech-Stack**: Finale Entscheidung Backend/Frontend
-3. [ ] **Editorial Policy**: Guidelines für Curation & Fact-Checking schreiben
-4. [ ] **Datenquellen**: RSS-Feeds testen & dokumentieren
-5. [ ] **Team Assembly**: Wer macht was?
-6. [ ] **Compliance Audit**: Rechtliche Prüfung (DSGVO, Impressum, etc.)
-7. [ ] **Timeline**: Konkrete Termine für Phasen 1-5
-8. [ ] **Budget**: Infrastructure & Tools kosten kalkulieren
+1. [x] **Design-Review**: Wireframes & Color Scheme abstimmen → [`DESIGN.md`](./DESIGN.md)
+2. [x] **Tech-Stack**: Finale Entscheidung Backend/Frontend → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+3. [x] **Editorial Policy**: Guidelines für Curation & Fact-Checking schreiben → [`EDITORIAL_POLICY.md`](./EDITORIAL_POLICY.md)
+4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (50 Quellen real per HTTP geprüft, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (100 Anbieter, 10 je Domäne) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
+5. [ ] **Team Assembly**: Wer macht was? — offen, erfordert Entscheidung außerhalb des Codebase
+6. [ ] **Compliance Audit**: Rechtliche Prüfung (DSGVO, Impressum, etc.) — Entwürfe stehen ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`), rechtliche Prüfung durch Fachanwalt/-anwältin noch ausstehend
+7. [ ] **Timeline**: Konkrete Termine für Phasen 1-5 — offen, erfordert Entscheidung außerhalb des Codebase
+8. [ ] **Budget**: Infrastructure & Tools kosten kalkulieren — offen, erfordert Entscheidung außerhalb des Codebase
 
 ---
 

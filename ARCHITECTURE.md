@@ -8,8 +8,8 @@ Entscheidung getroffen: 02.08.2026 (Action Item #2 aus PROJEKTPLAN.md).
 |---|---|---|
 | Frontend | **Next.js 14 (App Router) + TypeScript + Tailwind CSS** | Größtes Ökosystem für News-/Content-Seiten, ISR für schnelle News-Updates ohne Full-Rebuild, einfaches Vercel-Deployment, SSR für SEO |
 | Backend/CMS | **Strapi (Headless CMS) + PostgreSQL** | Fertiges Admin-Panel für Artikel/Kategorien/Editor's-Picks, REST- und GraphQL-API out-of-the-box, spart eigenen CRUD-Code für den MVP |
-| Datenbank | **PostgreSQL** | Von Strapi nativ unterstützt, robust für relationale Artikel/Kategorie/Tag-Struktur |
-| Ingestion-Pipeline | **Node.js Cron-Jobs (Phase 2) → ggf. Python/Airflow (Phase 3+)** | Start einfach mit `node-cron` + RSS-Parser innerhalb eines Strapi-Plugins/Custom-Service; erst bei Skalierungsbedarf auf Airflow/Prefect wechseln |
+| Datenbank | **PostgreSQL** (Produktion) / **SQLite** (lokale Entwicklung) | Postgres von Strapi nativ unterstützt, robust für relationale Artikel/Kategorie/Tag-Struktur; SQLite lokal, damit kein separater DB-Server für die Entwicklung nötig ist (`backend/.env` steuert `DATABASE_CLIENT`) |
+| Ingestion-Pipeline | **Standalone Node-Skripte** (`scripts/`), aufrufbar per Cron (Phase 2) → ggf. Python/Airflow (Phase 3+) | Umgesetzt als eigenständiges npm-Package statt Strapi-Plugin (siehe "Offene Punkte" unten für die Begründung); `scripts/verify-sources.mjs` prüft Feeds, `scripts/ingest.mjs` zieht Artikel und summarisiert optional per Claude API, beide mit begrenzter Nebenläufigkeit (`scripts/lib/http.mjs`) |
 | KI-Integration | **Anthropic Claude API** (Summarization, Tagging) | Lt. Plan primäre Wahl; via Strapi Lifecycle-Hooks beim Artikel-Import angebunden |
 | Suche | **Postgres Full-Text-Search (MVP) → Vector Search (Phase 3)** | Kein Elasticsearch/Qdrant-Overhead für den MVP; erst bei Bedarf für semantische Suche nachziehen |
 | Hosting | **Vercel (Frontend) + Hetzner/EU-Cloud (Strapi + Postgres)** | EU-Datenresidenz für Compliance, Vercel für Frontend-Performance/CDN |
@@ -20,19 +20,47 @@ Entscheidung getroffen: 02.08.2026 (Action Item #2 aus PROJEKTPLAN.md).
 ```
 /frontend    Next.js App (Consumer-facing Website)
 /backend     Strapi Instanz (Content-API, Admin-Panel)
-/data        Statische Konfigurationsdaten (RSS-Quellen etc.)
+/scripts     Standalone Ingestion-/Wartungs-Skripte (eigenes npm-Package)
+/data        Statische Konfigurationsdaten (RSS-Quellen, Anbieter-Verzeichnis, Benchmarks)
 ```
 
-Kein gemeinsames Package-Management (kein Turborepo/Nx) im MVP – beide Teile haben unabhängige `package.json`, um die Komplexität niedrig zu halten. Re-Evaluierung in Phase 3, falls geteilter Code (z. B. TypeScript-Typen für Artikel-Schema) nötig wird.
+Kein gemeinsames Package-Management (kein Turborepo/Nx) im MVP – alle drei Teile haben
+unabhängige `package.json`, um die Komplexität niedrig zu halten. `data/*.json` dient als
+gemeinsame, frameworkunabhängige Quelle: `frontend/src/data/` enthält Kopien für den
+Build (`resolveJsonModule`), `backend/data/seed-*.json` wird aus den Frontend-Mock-Daten via
+`scripts/dump-content.ts` exportiert. Re-Evaluierung in Phase 3, falls geteilter TypeScript-Code
+(z. B. ein gemeinsames Article-Interface) den Aufwand einer echten Monorepo-Tool-Kette
+rechtfertigt.
 
 ## Content-Modell (Strapi Collection Types, Phase 2)
 
-- `Article` (title, slug, summary, body, sourceUrl, sourceName, category, tags[], publishedAt, aiGenerated: boolean, humanReviewed: boolean)
-- `Category` (7 Hauptkategorien lt. Plan, mit Subkategorien als Tags statt eigenem Content-Type für MVP-Einfachheit)
-- `Source` (name, feedUrl, type: lab-blog|newsletter|paper|dev-blog|de-quelle|startup|policy, refreshIntervalMinutes)
+- `Article` (title, slug, summary, body, sourceUrl, sourceName, category-Relation, tags: json,
+  publishedDate, aiGenerated: boolean, humanReviewed: boolean, breaking: boolean,
+  editorsPick: boolean, editorsNote) — siehe `backend/src/api/article/content-types/article/schema.json`
+- `Category` (title, slug, emoji, description, articles-Relation) — 7 Hauptkategorien lt. Plan,
+  mit Subkategorien als Tags statt eigenem Content-Type für MVP-Einfachheit
+- `Source` (name, feedUrl, type: lab-blog|newsletter|paper|dev-blog|de-quelle|startup|policy,
+  categorySlug, refreshIntervalMinutes, verified, lastCheckedAt) — admin-only, öffentlich nicht lesbar
+
+Öffentliche Lese-Rechte (nur `find`/`findOne` für Article/Category) werden beim Server-Start
+idempotent gesetzt (`backend/src/index.ts`), ebenso das einmalige Seeding aus
+`backend/data/seed-*.json` (`backend/src/seed.ts`) – kein manueller Klick-Aufwand im Admin-Panel
+nötig, um eine lokale Instanz lauffähig zu bekommen.
 
 ## Offene Punkte für Phase 2
 
-- Entscheidung: Strapi-Plugin vs. externer Worker-Service für RSS-Ingestion
-- Rate-Limiting-Strategie für Claude-API-Aufrufe bei Batch-Summarization
-- Caching-Strategie Frontend (ISR-Intervall pro Kategorie-Seite)
+- ~~Entscheidung: Strapi-Plugin vs. externer Worker-Service für RSS-Ingestion~~ **Entschieden:**
+  externe Node-Skripte (`scripts/`), da sie unabhängig von einem laufenden Strapi-Prozess getestet
+  werden können und die Ingestion so auch ohne Backend (z. B. für den JSON-Export) läuft. Eine
+  spätere Anbindung als Strapi-Cron-Task ist ohne Architekturbruch möglich.
+- Rate-Limiting-Strategie für Claude-API-Aufrufe bei Batch-Summarization — teilweise gelöst
+  (begrenzte Nebenläufigkeit statt unlimitiertem Parallel-Fetch, siehe `scripts/lib/http.mjs`),
+  echtes Anthropic-Rate-Limit-Verhalten aber noch nicht gegen einen produktiven `ANTHROPIC_API_KEY`
+  getestet
+- Caching-Strategie Frontend (ISR-Intervall pro Kategorie-Seite) — weiterhin offen; Frontend nutzt
+  aktuell noch statische Mock-Daten (`frontend/src/lib/articles.ts`), keine Live-Anbindung an die
+  Strapi-API
+- Anbindung Frontend ↔ Strapi-API (aktuell zwei parallele Datenquellen: Mock-Daten im Frontend und
+  eine unabhängig lauffähige, geseedete Strapi-Instanz) — bewusst noch nicht verknüpft, um keine
+  Abhängigkeit von einem laufenden Backend-Prozess für den Frontend-Build einzuführen; siehe
+  `frontend/src/lib/articles.ts` Kommentar

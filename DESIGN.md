@@ -62,8 +62,9 @@ Badge-Style (Redaktions-Badges): `text-xs`, `rounded-full`, `px-2.5 py-0.5`,
 
 ## Responsive Design
 
-- Mobile-First; Nav klappt bei `md:` zu horizontalem Menü aus (aktuell `hidden md:flex` –
-  Mobile-Menü/Hamburger ist offener Punkt für Phase 2, siehe unten).
+- Mobile-First; Nav klappt bei `md:` zu horizontalem Menü aus (`hidden md:flex`), darunter
+  übernimmt ein Hamburger-Menü (`components/Header.tsx`, `useState`-gesteuertes Ausklapp-Panel
+  mit Suche, Nav-Links und Sprachumschalter).
 - Touch-Targets ≥ 44px Höhe für Buttons/Links auf Mobile.
 
 ## Accessibility (WCAG 2.1 AA)
@@ -76,6 +77,9 @@ Badge-Style (Redaktions-Badges): `text-xs`, `rounded-full`, `px-2.5 py-0.5`,
 
 ## Offene Punkte für Phase 2/4
 
-- Mobile-Hamburger-Menü für Header-Navigation
+- ~~Mobile-Hamburger-Menü für Header-Navigation~~ **Erledigt**, siehe oben.
 - Logo als echtes Icon/SVG statt Text-Badge "AI"
 - Illustrations-/Icon-Set für Kategorien (aktuell Emoji als Platzhalter)
+- Card-/Button-Patterns für die neuen Seiten `/suche`, `/verzeichnis` sind bewusst an das
+  bestehende Card-Pattern angelehnt (`ProviderCard`, `BenchmarkCard`), aber noch nicht formal
+  hier dokumentiert – bei nächster größerer Design-Überarbeitung nachziehen.
