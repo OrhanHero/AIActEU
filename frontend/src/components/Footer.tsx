@@ -6,10 +6,13 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 grid gap-8 sm:grid-cols-3 text-sm text-muted">
         <div>
           <p className="font-medium text-foreground mb-2">Quellen-Transparenz</p>
-          <p>
+          <p className="mb-2">
             Jeder Artikel verlinkt zur Originalquelle. Automatisiert kuratierte und
             KI-unterstützt zusammengefasste Inhalte sind entsprechend gekennzeichnet.
           </p>
+          <Link href="/verzeichnis" className="hover:text-foreground transition-colors">
+            Anbieter- & Benchmark-Verzeichnis →
+          </Link>
         </div>
         <div>
           <p className="font-medium text-foreground mb-2">EU-Compliance</p>

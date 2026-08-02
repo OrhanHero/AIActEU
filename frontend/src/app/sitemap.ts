@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/impressum",
     "/datenschutz",
     "/suche",
+    "/verzeichnis",
     ...categories.map((category) => `/kategorien/${category.slug}`),
   ];
 

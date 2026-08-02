@@ -1,0 +1,176 @@
+{
+  "_comment": "Anbieter- & Tools-Verzeichnis (PROJEKTPLAN.md Abschnitt 7 'TOOLS & RESOURCES DIRECTORY'). Reine Link-Directory (Name/URL/Beschreibung) im Gegensatz zu data/sources.json, das ausschließlich RSS-fähige News-/Blog-Quellen für die Ingestion-Pipeline listet. Top 10 je Domäne, ausgewählt nach Marktrelevanz zum Stand 08/2026. Vor Veröffentlichung stichprobenartig auf tote Links prüfen (siehe EDITORIAL_POLICY.md Abschnitt 5, vierteljährliche Quellenprüfung).",
+  "domains": [
+    {
+      "slug": "llm-labs",
+      "emoji": "🧠",
+      "title": "LLM-Anbieter & Foundation-Model-Labs",
+      "description": "Unternehmen und Labs, die die großen Sprachmodelle selbst entwickeln."
+    },
+    {
+      "slug": "rag-vector-db",
+      "emoji": "🔍",
+      "title": "RAG-Frameworks & Vector-Datenbanken",
+      "description": "Retrieval-Augmented-Generation-Frameworks und Vektor-Datenbanken für Wissensanbindung."
+    },
+    {
+      "slug": "agentic-frameworks",
+      "emoji": "🤖",
+      "title": "Agentic AI & Automatisierung",
+      "description": "Frameworks für autonome Agenten, Multi-Agent-Systeme und Workflow-Automatisierung."
+    },
+    {
+      "slug": "multimodal",
+      "emoji": "🎨",
+      "title": "Multimodale KI (Bild, Video, Audio)",
+      "description": "Anbieter für Bild-, Video-, Musik- und Sprachgenerierung."
+    },
+    {
+      "slug": "edge-local-ai",
+      "emoji": "💻",
+      "title": "Lokale & Edge-KI",
+      "description": "Tools und Runtimes für KI-Inferenz auf eigener Hardware statt in der Cloud."
+    },
+    {
+      "slug": "dev-tools-infra",
+      "emoji": "🔨",
+      "title": "Developer-Tools & Infrastruktur",
+      "description": "Plattformen für Modell-Hosting, Fine-Tuning, Monitoring und Deployment."
+    },
+    {
+      "slug": "research",
+      "emoji": "🔬",
+      "title": "Research & Paper-Plattformen",
+      "description": "Anlaufstellen für Preprints, Peer-Review und Forschungsergebnisse."
+    },
+    {
+      "slug": "business",
+      "emoji": "💼",
+      "title": "Business, Startups & Markt",
+      "description": "Marktbeobachtung, Funding-News und Wirtschaftsberichterstattung rund um KI."
+    },
+    {
+      "slug": "policy",
+      "emoji": "⚖️",
+      "title": "Policy, Regulierung & Institutionen",
+      "description": "Behörden, Think Tanks und Institutionen, die KI-Regulierung gestalten oder begleiten."
+    },
+    {
+      "slug": "education",
+      "emoji": "🎓",
+      "title": "Education & Learning",
+      "description": "Kurse, Lernplattformen und offene Materialien zum Einstieg und Vertiefen."
+    }
+  ],
+  "providers": [
+    { "name": "OpenAI", "url": "https://openai.com", "domain": "llm-labs", "description": "GPT-Modellreihe, ChatGPT, API-Plattform." },
+    { "name": "Anthropic", "url": "https://www.anthropic.com", "domain": "llm-labs", "description": "Claude-Modellreihe, Fokus auf Safety & Constitutional AI." },
+    { "name": "Google DeepMind", "url": "https://deepmind.google", "domain": "llm-labs", "description": "Gemini-Modelle, AlphaFold und KI-Grundlagenforschung." },
+    { "name": "Meta AI", "url": "https://ai.meta.com", "domain": "llm-labs", "description": "Llama-Modellreihe, größtenteils offene Gewichte." },
+    { "name": "Microsoft AI", "url": "https://www.microsoft.com/en-us/ai", "domain": "llm-labs", "description": "Copilot, Phi-Modelle, Azure-OpenAI-Integration." },
+    { "name": "xAI", "url": "https://x.ai", "domain": "llm-labs", "description": "Grok-Modellreihe, Integration in X (Twitter)." },
+    { "name": "Mistral AI", "url": "https://mistral.ai", "domain": "llm-labs", "description": "Französisches Lab, EU-Datenresidenz als Positionierung." },
+    { "name": "Cohere", "url": "https://cohere.com", "domain": "llm-labs", "description": "Enterprise-fokussierte LLMs und Embeddings." },
+    { "name": "DeepSeek", "url": "https://www.deepseek.com", "domain": "llm-labs", "description": "Chinesisches Lab, starke Open-Weight-Modelle." },
+    { "name": "Alibaba Cloud Qwen", "url": "https://qwenlm.github.io", "domain": "llm-labs", "description": "Qwen-Modellreihe, breite Open-Source-Veröffentlichung." },
+
+    { "name": "LangChain", "url": "https://www.langchain.com", "domain": "rag-vector-db", "description": "Meistgenutztes Framework für LLM-Anwendungsketten inkl. RAG." },
+    { "name": "LlamaIndex", "url": "https://www.llamaindex.ai", "domain": "rag-vector-db", "description": "Daten-Framework spezialisiert auf Retrieval-Pipelines." },
+    { "name": "Pinecone", "url": "https://www.pinecone.io", "domain": "rag-vector-db", "description": "Managed Vector-Datenbank." },
+    { "name": "Weaviate", "url": "https://weaviate.io", "domain": "rag-vector-db", "description": "Open-Source Vector-Datenbank mit Hybrid-Search." },
+    { "name": "Milvus (Zilliz)", "url": "https://milvus.io", "domain": "rag-vector-db", "description": "Open-Source Vector-Datenbank für große Datenmengen." },
+    { "name": "Chroma", "url": "https://www.trychroma.com", "domain": "rag-vector-db", "description": "Leichtgewichtige, entwicklerfreundliche Vector-Datenbank." },
+    { "name": "Qdrant", "url": "https://qdrant.tech", "domain": "rag-vector-db", "description": "Rust-basierte Open-Source Vector-Datenbank." },
+    { "name": "deepset (Haystack)", "url": "https://haystack.deepset.ai", "domain": "rag-vector-db", "description": "Open-Source-Framework für Search & RAG-Pipelines." },
+    { "name": "DSPy (Stanford NLP)", "url": "https://dspy.ai", "domain": "rag-vector-db", "description": "Programmier-Framework für optimierte LLM-Pipelines statt manuellem Prompting." },
+    { "name": "Vectara", "url": "https://www.vectara.com", "domain": "rag-vector-db", "description": "Managed RAG-as-a-Service-Plattform." },
+
+    { "name": "LangGraph (LangChain)", "url": "https://www.langchain.com/langgraph", "domain": "agentic-frameworks", "description": "Graph-basiertes Framework für zustandsbehaftete Agenten." },
+    { "name": "Microsoft AutoGen", "url": "https://microsoft.github.io/autogen/", "domain": "agentic-frameworks", "description": "Multi-Agent-Konversations-Framework von Microsoft Research." },
+    { "name": "CrewAI", "url": "https://www.crewai.com", "domain": "agentic-frameworks", "description": "Framework für rollenbasierte Multi-Agent-Teams." },
+    { "name": "MetaGPT", "url": "https://github.com/FoundationAgents/MetaGPT", "domain": "agentic-frameworks", "description": "Multi-Agent-Framework, das Software-Firmen-Rollen simuliert." },
+    { "name": "AutoGPT", "url": "https://agpt.co", "domain": "agentic-frameworks", "description": "Frühes, bekanntes autonomes Agenten-Projekt." },
+    { "name": "SuperAGI", "url": "https://superagi.com", "domain": "agentic-frameworks", "description": "Open-Source-Framework zum Bauen und Betreiben autonomer Agenten." },
+    { "name": "OpenHands (All Hands AI)", "url": "https://www.all-hands.dev", "domain": "agentic-frameworks", "description": "Agenten-Plattform mit Fokus auf autonome Software-Entwicklung." },
+    { "name": "CAMEL-AI", "url": "https://www.camel-ai.org", "domain": "agentic-frameworks", "description": "Forschungsorientiertes Multi-Agent-Framework." },
+    { "name": "Microsoft Semantic Kernel", "url": "https://learn.microsoft.com/semantic-kernel/", "domain": "agentic-frameworks", "description": "SDK zur Integration von LLMs/Agenten in bestehende Enterprise-Software." },
+    { "name": "n8n", "url": "https://n8n.io", "domain": "agentic-frameworks", "description": "Workflow-Automatisierung mit wachsendem Fokus auf KI-Agenten." },
+
+    { "name": "Stability AI", "url": "https://stability.ai", "domain": "multimodal", "description": "Stable-Diffusion-Modellreihe für Bildgenerierung." },
+    { "name": "Runway", "url": "https://runwayml.com", "domain": "multimodal", "description": "Video-Generierung und -Bearbeitung mit KI." },
+    { "name": "ElevenLabs", "url": "https://elevenlabs.io", "domain": "multimodal", "description": "Text-to-Speech und Voice-Cloning." },
+    { "name": "Midjourney", "url": "https://www.midjourney.com", "domain": "multimodal", "description": "Bildgenerierung, primär über Discord bedient." },
+    { "name": "Suno", "url": "https://suno.com", "domain": "multimodal", "description": "KI-Musik- und Songgenerierung." },
+    { "name": "Pika", "url": "https://pika.art", "domain": "multimodal", "description": "Text-/Bild-zu-Video-Generierung." },
+    { "name": "Synthesia", "url": "https://www.synthesia.io", "domain": "multimodal", "description": "KI-Avatar-Videos für Unternehmens-Content." },
+    { "name": "Luma AI", "url": "https://lumalabs.ai", "domain": "multimodal", "description": "3D- und Video-Generierungsmodelle (Dream Machine)." },
+    { "name": "HeyGen", "url": "https://www.heygen.com", "domain": "multimodal", "description": "KI-Avatar- und Übersetzungsvideos." },
+    { "name": "Black Forest Labs", "url": "https://blackforestlabs.ai", "domain": "multimodal", "description": "Entwickler der FLUX-Bildmodelle." },
+
+    { "name": "Ollama", "url": "https://ollama.com", "domain": "edge-local-ai", "description": "Einfaches lokales Ausführen offener LLMs." },
+    { "name": "LM Studio", "url": "https://lmstudio.ai", "domain": "edge-local-ai", "description": "Desktop-App zum lokalen Betrieb von LLMs mit GUI." },
+    { "name": "Nomic AI (GPT4All)", "url": "https://www.nomic.ai/gpt4all", "domain": "edge-local-ai", "description": "Open-Source-Ökosystem für lokale LLMs." },
+    { "name": "llama.cpp", "url": "https://github.com/ggml-org/llama.cpp", "domain": "edge-local-ai", "description": "Effiziente C/C++-Inferenz für LLMs auf Consumer-Hardware." },
+    { "name": "MLC-LLM", "url": "https://llm.mlc.ai", "domain": "edge-local-ai", "description": "Compiler/Runtime für LLMs auf diversen Endgeräten." },
+    { "name": "ONNX Runtime", "url": "https://onnxruntime.ai", "domain": "edge-local-ai", "description": "Plattformübergreifende Inferenz-Engine (Microsoft)." },
+    { "name": "Google LiteRT", "url": "https://ai.google.dev/edge/litert", "domain": "edge-local-ai", "description": "Ehemals TensorFlow Lite, On-Device-Inferenz von Google." },
+    { "name": "Hugging Face Transformers.js", "url": "https://huggingface.co/docs/transformers.js", "domain": "edge-local-ai", "description": "ML-Modelle direkt im Browser ausführen." },
+    { "name": "Apple Core ML", "url": "https://developer.apple.com/machine-learning/core-ml/", "domain": "edge-local-ai", "description": "On-Device-ML-Framework für Apple-Geräte." },
+    { "name": "Raspberry Pi Foundation", "url": "https://www.raspberrypi.com", "domain": "edge-local-ai", "description": "Günstige Hardware-Basis für Edge-/IoT-KI-Projekte." },
+
+    { "name": "Hugging Face", "url": "https://huggingface.co", "domain": "dev-tools-infra", "description": "Zentrales Hub für offene Modelle, Datasets und Spaces." },
+    { "name": "Weights & Biases", "url": "https://wandb.ai", "domain": "dev-tools-infra", "description": "Experiment-Tracking und Monitoring für ML-Teams." },
+    { "name": "Together AI", "url": "https://www.together.ai", "domain": "dev-tools-infra", "description": "Managed Inference & Fine-Tuning für offene Modelle." },
+    { "name": "Replicate", "url": "https://replicate.com", "domain": "dev-tools-infra", "description": "Modelle per API ausführen, ohne eigene Infrastruktur." },
+    { "name": "Modal", "url": "https://modal.com", "domain": "dev-tools-infra", "description": "Serverless-Compute-Plattform für ML-Workloads." },
+    { "name": "Fireworks AI", "url": "https://fireworks.ai", "domain": "dev-tools-infra", "description": "Schnelle, günstige Inference-Plattform für offene Modelle." },
+    { "name": "Groq", "url": "https://groq.com", "domain": "dev-tools-infra", "description": "Spezialisierte LPU-Hardware für sehr schnelle Inferenz." },
+    { "name": "Baseten", "url": "https://www.baseten.co", "domain": "dev-tools-infra", "description": "Deployment-Plattform für ML-Modelle in Produktion." },
+    { "name": "RunPod", "url": "https://www.runpod.io", "domain": "dev-tools-infra", "description": "On-Demand-GPU-Cloud für Training und Inferenz." },
+    { "name": "AWS AI/ML (SageMaker)", "url": "https://aws.amazon.com/machine-learning/", "domain": "dev-tools-infra", "description": "Managed-ML-Plattform der größten Cloud." },
+
+    { "name": "arXiv", "url": "https://arxiv.org", "domain": "research", "description": "Zentrales Preprint-Archiv für KI-/ML-Paper." },
+    { "name": "Papers with Code", "url": "https://paperswithcode.com", "domain": "research", "description": "Paper mit zugehörigem Code und Benchmark-Ergebnissen." },
+    { "name": "Semantic Scholar", "url": "https://www.semanticscholar.org", "domain": "research", "description": "KI-gestützte akademische Suchmaschine." },
+    { "name": "OpenReview", "url": "https://openreview.net", "domain": "research", "description": "Offene Peer-Review-Plattform (u. a. ICLR)." },
+    { "name": "ACL Anthology", "url": "https://aclanthology.org", "domain": "research", "description": "Vollständiges Archiv der Computerlinguistik-Konferenzen." },
+    { "name": "Berkeley AI Research (BAIR)", "url": "https://bair.berkeley.edu", "domain": "research", "description": "Forschungsblog der UC Berkeley." },
+    { "name": "Google Research", "url": "https://research.google", "domain": "research", "description": "Publikationen und Blog von Google Research." },
+    { "name": "OpenAI Research", "url": "https://openai.com/research", "domain": "research", "description": "Forschungsveröffentlichungen von OpenAI." },
+    { "name": "DeepMind Publications", "url": "https://deepmind.google/research/publications/", "domain": "research", "description": "Publikationsverzeichnis von Google DeepMind." },
+    { "name": "Transformer Circuits (Anthropic)", "url": "https://transformer-circuits.pub", "domain": "research", "description": "Mechanistic-Interpretability-Forschung von Anthropic." },
+
+    { "name": "TechCrunch", "url": "https://techcrunch.com", "domain": "business", "description": "Führendes Tech-/Startup-Nachrichtenportal." },
+    { "name": "The Information", "url": "https://www.theinformation.com", "domain": "business", "description": "Tiefgehende Tech-Business-Recherchen (kostenpflichtig)." },
+    { "name": "Sifted", "url": "https://sifted.eu", "domain": "business", "description": "Startup-News mit Fokus auf Europa (Financial-Times-Tochter)." },
+    { "name": "Crunchbase News", "url": "https://news.crunchbase.com", "domain": "business", "description": "Funding- und Marktdaten-Nachrichten." },
+    { "name": "VentureBeat", "url": "https://venturebeat.com", "domain": "business", "description": "Tech-News mit eigener KI-Rubrik." },
+    { "name": "Gründerszene", "url": "https://www.gruenderszene.de", "domain": "business", "description": "Deutsches Startup- und Gründer-Portal." },
+    { "name": "Deutsche Startups", "url": "https://www.deutsche-startups.de", "domain": "business", "description": "Unabhängiges deutsches Startup-Nachrichtenportal." },
+    { "name": "Handelsblatt", "url": "https://www.handelsblatt.com", "domain": "business", "description": "Deutsche Wirtschaftszeitung mit KI-/Tech-Berichterstattung." },
+    { "name": "PitchBook", "url": "https://pitchbook.com", "domain": "business", "description": "Marktdaten zu Venture Capital und M&A." },
+    { "name": "Statista", "url": "https://www.statista.com", "domain": "business", "description": "Markt- und Statistikdaten, u. a. zu KI-Investitionen." },
+
+    { "name": "Europäische Kommission – Digitale Strategie", "url": "https://digital-strategy.ec.europa.eu", "domain": "policy", "description": "Offizielle EU-Quelle zu AI Act und Digitalstrategie." },
+    { "name": "Bundesministerium des Innern", "url": "https://www.bmi.bund.de", "domain": "policy", "description": "Zuständig für KI-/Digitalpolitik auf Bundesebene." },
+    { "name": "BfDI (Bundesbeauftragte für Datenschutz)", "url": "https://www.bfdi.bund.de", "domain": "policy", "description": "Deutsche Datenschutzaufsicht, relevant für KI/DSGVO." },
+    { "name": "NIST AI (USA)", "url": "https://www.nist.gov/artificial-intelligence", "domain": "policy", "description": "US-Standardisierungsbehörde, KI-Risk-Management-Framework." },
+    { "name": "UK DSIT", "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology", "domain": "policy", "description": "Britisches Ministerium für KI-/Digitalpolitik." },
+    { "name": "OECD.AI Policy Observatory", "url": "https://oecd.ai", "domain": "policy", "description": "Internationaler Vergleich von KI-Politik-Maßnahmen." },
+    { "name": "Stanford HAI", "url": "https://hai.stanford.edu", "domain": "policy", "description": "Human-Centered AI Institute, u. a. AI Index Report." },
+    { "name": "Future of Life Institute", "url": "https://futureoflife.org", "domain": "policy", "description": "Think Tank zu KI-Sicherheit und -Regulierung." },
+    { "name": "Ada Lovelace Institute", "url": "https://www.adalovelaceinstitute.org", "domain": "policy", "description": "Unabhängige Forschung zu Datenschutz und KI-Governance." },
+    { "name": "Deutscher Bundestag", "url": "https://www.bundestag.de", "domain": "policy", "description": "Gesetzgebungsverfahren zu KI-relevanten Themen in Deutschland." },
+
+    { "name": "DeepLearning.AI", "url": "https://www.deeplearning.ai", "domain": "education", "description": "Kurse und Newsletter (The Batch) von Andrew Ng." },
+    { "name": "Fast.ai", "url": "https://www.fast.ai", "domain": "education", "description": "Praxisorientierte, kostenlose Deep-Learning-Kurse." },
+    { "name": "Stanford Online", "url": "https://online.stanford.edu", "domain": "education", "description": "Öffentlich zugängliche Stanford-Vorlesungen (u. a. CS224N, CS231N)." },
+    { "name": "MIT OpenCourseWare", "url": "https://ocw.mit.edu", "domain": "education", "description": "Kostenlose MIT-Kursmaterialien, auch zu KI/ML." },
+    { "name": "Coursera", "url": "https://www.coursera.org", "domain": "education", "description": "Größte Plattform für ML-/KI-Zertifikatskurse." },
+    { "name": "Kaggle Learn", "url": "https://www.kaggle.com/learn", "domain": "education", "description": "Kostenlose Mini-Kurse plus Wettbewerbe zum Üben." },
+    { "name": "Hugging Face Courses", "url": "https://huggingface.co/learn", "domain": "education", "description": "Kostenlose Kurse zu NLP, Diffusion Models, RL u. a." },
+    { "name": "Google AI Education", "url": "https://ai.google/education/", "domain": "education", "description": "Google-eigene KI-Lernressourcen und Crash-Kurse." },
+    { "name": "freeCodeCamp", "url": "https://www.freecodecamp.org", "domain": "education", "description": "Kostenlose Programmier-/ML-Kurse mit Zertifikaten." },
+    { "name": "Elements of AI", "url": "https://www.elementsofai.com", "domain": "education", "description": "Niedrigschwelliger KI-Einführungskurs der Universität Helsinki." }
+  ]
+}

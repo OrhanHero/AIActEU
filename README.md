@@ -9,17 +9,20 @@ Der vollständige Projektplan steht in [`PROJEKTPLAN.md`](./PROJEKTPLAN.md).
 ```
 .
 ├── frontend/    Next.js (App Router) + TypeScript + Tailwind CSS
-├── backend/     Strapi Headless CMS + PostgreSQL
-├── ARCHITECTURE.md      Technische Architekturentscheidungen
-├── DESIGN.md             Design-System (Farben, Typografie, Komponenten)
-├── COMPLIANCE.md          EU-Verhaltenskodex- & DSGVO-Checkliste
-├── EDITORIAL_POLICY.md    Kuratierungs- und Faktencheck-Richtlinien
-└── data/sources.json      RSS/API-Quellenliste
+├── backend/     Strapi Headless CMS (SQLite lokal, PostgreSQL in Produktion)
+├── scripts/     Standalone Ingestion-/Wartungs-Skripte (RSS-Verifikation, Ingestion)
+├── ARCHITECTURE.md            Technische Architekturentscheidungen
+├── DESIGN.md                  Design-System (Farben, Typografie, Komponenten)
+├── COMPLIANCE.md               EU-Verhaltenskodex- & DSGVO-Checkliste
+├── EDITORIAL_POLICY.md         Kuratierungs- und Faktencheck-Richtlinien
+├── data/sources.json           RSS/API-Quellenliste für die Ingestion-Pipeline
+├── data/tools-directory.json   Anbieter-Verzeichnis (Top 10 je Bereich), siehe /verzeichnis
+└── data/benchmarks.json        Top-3-Benchmark-Plattformen, siehe /verzeichnis
 ```
 
 ## Status
 
-Phase 1 (Foundations) – siehe [`PROJEKTPLAN.md`](./PROJEKTPLAN.md#-projektphasen).
+Phase 2 (Core Content) – siehe [`PROJEKTPLAN.md`](./PROJEKTPLAN.md#-projektphasen).
 
 ## Setup (lokal)
 
@@ -37,4 +40,6 @@ npm install
 npm run develop
 ```
 
-Erfordert eine lokale PostgreSQL-Instanz, siehe `backend/.env.example`.
+Läuft lokal mit SQLite (kein separater DB-Server nötig); PostgreSQL ist für die
+Produktivumgebung vorgesehen, siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md) und
+`backend/.env.example`.
