@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "AIActEU – KI News Hub";
+const title = "AIActEU – KI News, Hardware & Compliance";
 const description =
-  "Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten.";
+  "Zentrale, kuratierte Nachrichten- und Wissensplattform für den deutschsprachigen KI-Sektor – von Hardware & Silicon über Modelle und RAG bis EU-Verhaltenskodex-konformer Compliance-Kennzeichnung.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

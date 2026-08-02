@@ -13,6 +13,10 @@ export function Footer() {
           <Link href="/verzeichnis" className="hover:text-foreground transition-colors">
             Anbieter- & Benchmark-Verzeichnis →
           </Link>
+          <br />
+          <Link href="/tutorials" className="hover:text-foreground transition-colors">
+            Tutorials: Lokale KI →
+          </Link>
         </div>
         <div>
           <p className="font-medium text-foreground mb-2">EU-Compliance</p>

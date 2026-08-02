@@ -18,8 +18,9 @@ export default function Home() {
           Was gibt&apos;s Neues in KI?
         </h1>
         <p className="mt-3 max-w-2xl text-muted leading-relaxed">
-          Kuratierte KI-News für den deutschsprachigen Raum – von Forschung über Startups bis
-          Regulierung. Transparent gekennzeichnet nach dem EU-Verhaltenskodex, siehe{" "}
+          Kuratierte KI-News für den deutschsprachigen Raum – von Forschung über Hardware &amp;
+          Silicon bis Startups und Regulierung. Transparent gekennzeichnet nach dem
+          EU-Verhaltenskodex, siehe{" "}
           <Link href="/compliance" className="text-primary hover:underline">
             Compliance
           </Link>

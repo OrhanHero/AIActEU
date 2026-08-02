@@ -60,6 +60,12 @@
       "emoji": "🎓",
       "title": "Education & Learning",
       "description": "Kurse, Lernplattformen und offene Materialien zum Einstieg und Vertiefen."
+    },
+    {
+      "slug": "hardware-silicon",
+      "emoji": "🖥️",
+      "title": "Hardware, Silicon & Data Centers",
+      "description": "Chip-Hersteller, Supercomputing-Infrastruktur und Dev-Kits für lokale KI-Hardware."
     }
   ],
   "providers": [
@@ -171,6 +177,17 @@
     { "name": "Hugging Face Courses", "url": "https://huggingface.co/learn", "domain": "education", "description": "Kostenlose Kurse zu NLP, Diffusion Models, RL u. a." },
     { "name": "Google AI Education", "url": "https://ai.google/education/", "domain": "education", "description": "Google-eigene KI-Lernressourcen und Crash-Kurse." },
     { "name": "freeCodeCamp", "url": "https://www.freecodecamp.org", "domain": "education", "description": "Kostenlose Programmier-/ML-Kurse mit Zertifikaten." },
-    { "name": "Elements of AI", "url": "https://www.elementsofai.com", "domain": "education", "description": "Niedrigschwelliger KI-Einführungskurs der Universität Helsinki." }
+    { "name": "Elements of AI", "url": "https://www.elementsofai.com", "domain": "education", "description": "Niedrigschwelliger KI-Einführungskurs der Universität Helsinki." },
+
+    { "name": "NVIDIA", "url": "https://www.nvidia.com", "domain": "hardware-silicon", "description": "Marktführer bei KI-Beschleunigern; CUDA-Ökosystem, Blackwell-Architektur." },
+    { "name": "AMD", "url": "https://www.amd.com/en/products/accelerators/instinct.html", "domain": "hardware-silicon", "description": "Instinct-Beschleuniger und ROCm als offene CUDA-Alternative." },
+    { "name": "Intel", "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html", "domain": "hardware-silicon", "description": "Gaudi-Beschleuniger und OpenVINO-Toolkit für Edge-Inferenz." },
+    { "name": "TSMC", "url": "https://www.tsmc.com", "domain": "hardware-silicon", "description": "Weltgrößter Auftragsfertiger, produziert die meisten führenden KI-Chips." },
+    { "name": "ASML", "url": "https://www.asml.com", "domain": "hardware-silicon", "description": "Einziger Hersteller von High-NA-EUV-Lithografie-Systemen, Schlüsselposition in der Chip-Lieferkette." },
+    { "name": "Forschungszentrum Jülich", "url": "https://www.fz-juelich.de", "domain": "hardware-silicon", "description": "Betreibt JUPITER, Europas ersten Exascale-Supercomputer." },
+    { "name": "EuroHPC Joint Undertaking", "url": "https://eurohpc-ju.europa.eu", "domain": "hardware-silicon", "description": "EU-Initiative für europäische Supercomputing-Souveränität (LUMI, Leonardo, MareNostrum 5)." },
+    { "name": "Hetzner", "url": "https://www.hetzner.com", "domain": "hardware-silicon", "description": "Deutscher Cloud-/Server-Anbieter mit souveräner KI-Infrastruktur." },
+    { "name": "Apple Silicon", "url": "https://developer.apple.com/metal/", "domain": "hardware-silicon", "description": "Unified-Memory-Architektur (Mac Studio/Pro) für lokale LLM-Inferenz." },
+    { "name": "Microsoft Surface Devices", "url": "https://www.microsoft.com/en-us/surface/devices", "domain": "hardware-silicon", "description": "Referenz-Hardware für KI-Dev-Kits (Snapdragon-/NVIDIA-Grace-Kombinationen)." }
   ]
 }

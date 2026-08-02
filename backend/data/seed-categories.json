@@ -40,5 +40,11 @@
     "emoji": "🛠️",
     "title": "Tools & Resources",
     "description": "Developer-Tools, Model-Repositories, Benchmark-Tools."
+  },
+  {
+    "slug": "hardware",
+    "emoji": "🖥️",
+    "title": "Hardware & Silicon",
+    "description": "Chips, Supercomputing & Data Centers: NVIDIA, AMD, Intel, EU-Chip-Supply-Chain, Desktop AI Rigs."
   }
 ]

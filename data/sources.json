@@ -57,12 +57,12 @@
     {
       "name": "NVIDIA AI Blog",
       "type": "lab-blog",
-      "category": "technisch",
+      "category": "hardware",
       "feedUrl": "https://blogs.nvidia.com/feed/",
       "refreshIntervalMinutes": 60,
       "verified": true,
       "lastCheckedAt": "2026-08-02",
-      "domain": "llm-labs"
+      "domain": "hardware-silicon"
     },
     {
       "name": "xAI News",
@@ -181,7 +181,7 @@
       "refreshIntervalMinutes": 180,
       "verified": false,
       "lastCheckedAt": "2026-08-02",
-      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
+      "checkNote": "Fehler: timeout",
       "domain": "llm-labs"
     },
     {
@@ -530,6 +530,71 @@
       "domain": "dev-tools-infra",
       "verified": true,
       "lastCheckedAt": "2026-08-02"
+    },
+    {
+      "name": "AMD ROCm Blog",
+      "type": "lab-blog",
+      "category": "hardware",
+      "feedUrl": "https://rocm.blogs.amd.com/rss.xml",
+      "refreshIntervalMinutes": 180,
+      "domain": "hardware-silicon",
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
+    },
+    {
+      "name": "Intel Newsroom – AI",
+      "type": "lab-blog",
+      "category": "hardware",
+      "feedUrl": "https://newsroom.intel.com/artificial-intelligence/feed",
+      "refreshIntervalMinutes": 180,
+      "domain": "hardware-silicon",
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
+    },
+    {
+      "name": "Forschungszentrum Jülich – News",
+      "type": "de-quelle",
+      "category": "hardware",
+      "feedUrl": "https://www.fz-juelich.de/en/news/rss",
+      "refreshIntervalMinutes": 1440,
+      "domain": "hardware-silicon",
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
+    },
+    {
+      "name": "EuroHPC JU – News",
+      "type": "policy",
+      "category": "hardware",
+      "feedUrl": "https://eurohpc-ju.europa.eu/news_en/rss.xml",
+      "refreshIntervalMinutes": 1440,
+      "domain": "hardware-silicon",
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
+    },
+    {
+      "name": "Hetzner Blog",
+      "type": "dev-blog",
+      "category": "hardware",
+      "feedUrl": "https://www.hetzner.com/blog/feed/",
+      "refreshIntervalMinutes": 180,
+      "domain": "hardware-silicon",
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
+    },
+    {
+      "name": "ASML News",
+      "type": "lab-blog",
+      "category": "hardware",
+      "feedUrl": "https://www.asml.com/en/rss",
+      "refreshIntervalMinutes": 1440,
+      "domain": "hardware-silicon",
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     }
   ]
 }

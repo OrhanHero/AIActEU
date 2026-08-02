@@ -5,7 +5,9 @@ export type Category = {
   description: string;
 };
 
-// 7 Hauptkategorien lt. PROJEKTPLAN.md
+// 7 Hauptkategorien lt. PROJEKTPLAN.md, erweitert um "Hardware & Silicon" lt.
+// Docs/📋 AIActEU.docx (Master-Projektplan v2, Abschnitt 2.3/2.4 "Hardware, Silicon &
+// Data Centers" / "Desktop AI Rigs, Dev Kits & Workstations").
 export const categories: Category[] = [
   {
     slug: "breaking-news",
@@ -48,5 +50,12 @@ export const categories: Category[] = [
     emoji: "🛠️",
     title: "Tools & Resources",
     description: "Developer-Tools, Model-Repositories, Benchmark-Tools.",
+  },
+  {
+    slug: "hardware",
+    emoji: "🖥️",
+    title: "Hardware & Silicon",
+    description:
+      "Chips, Supercomputing & Data Centers: NVIDIA, AMD, Intel, EU-Chip-Supply-Chain, Desktop AI Rigs.",
   },
 ];
