@@ -1,0 +1,197 @@
+{
+  "_comment": "RSS/API-Quellenliste gemäß PROJEKTPLAN.md Abschnitt 'Datenquellen & Integration'. 'verified' = false bedeutet: Feed-URL wurde noch nicht per HTTP-Request geprüft (Phase 2 Action Item 'Datenquellen: RSS-Feeds testen & dokumentieren'). Vor Ingestion-Implementierung alle Feeds verifizieren.",
+  "sources": [
+    {
+      "name": "OpenAI News",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://openai.com/news/rss.xml",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Anthropic News",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://www.anthropic.com/news/rss.xml",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://deepmind.google/blog/rss.xml",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Meta AI Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://ai.meta.com/blog/rss/",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Microsoft AI Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://blogs.microsoft.com/ai/feed/",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "NVIDIA AI Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://blogs.nvidia.com/feed/",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Hugging Face Blog",
+      "type": "dev-blog",
+      "category": "tools",
+      "feedUrl": "https://huggingface.co/blog/feed.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": true
+    },
+    {
+      "name": "arXiv cs.AI (Artificial Intelligence)",
+      "type": "paper",
+      "category": "research",
+      "feedUrl": "http://export.arxiv.org/rss/cs.AI",
+      "refreshIntervalMinutes": 120,
+      "verified": true
+    },
+    {
+      "name": "arXiv cs.CL (Computation and Language)",
+      "type": "paper",
+      "category": "research",
+      "feedUrl": "http://export.arxiv.org/rss/cs.CL",
+      "refreshIntervalMinutes": 120,
+      "verified": true
+    },
+    {
+      "name": "Papers with Code – Trending",
+      "type": "paper",
+      "category": "research",
+      "feedUrl": "https://paperswithcode.com/rss/latest",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "LangChain Blog",
+      "type": "dev-blog",
+      "category": "technisch",
+      "feedUrl": "https://blog.langchain.dev/rss/",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Weights & Biases Blog",
+      "type": "dev-blog",
+      "category": "tools",
+      "feedUrl": "https://wandb.ai/site/feed/",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Ollama Blog",
+      "type": "dev-blog",
+      "category": "technisch",
+      "feedUrl": "https://ollama.com/blog/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Heise – KI",
+      "type": "de-quelle",
+      "category": "breaking-news",
+      "feedUrl": "https://www.heise.de/thema/Kuenstliche-Intelligenz/rss.xml",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Golem – KI",
+      "type": "de-quelle",
+      "category": "breaking-news",
+      "feedUrl": "https://rss.golem.de/rss.php?feed=RSS2.0",
+      "refreshIntervalMinutes": 60,
+      "verified": true
+    },
+    {
+      "name": "t3n – Artificial Intelligence",
+      "type": "de-quelle",
+      "category": "breaking-news",
+      "feedUrl": "https://t3n.de/tag/artificial-intelligence/feed/",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "TechCrunch – Artificial Intelligence",
+      "type": "startup",
+      "category": "business",
+      "feedUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "refreshIntervalMinutes": 180,
+      "verified": false
+    },
+    {
+      "name": "Gründerszene – KI",
+      "type": "startup",
+      "category": "business",
+      "feedUrl": "https://www.gruenderszene.de/tag/ki/feed",
+      "refreshIntervalMinutes": 180,
+      "verified": false
+    },
+    {
+      "name": "EU Digital Strategy – News",
+      "type": "policy",
+      "category": "policy",
+      "feedUrl": "https://digital-strategy.ec.europa.eu/en/rss.xml",
+      "refreshIntervalMinutes": 1440,
+      "verified": false
+    },
+    {
+      "name": "Bundesministerium des Innern – Pressemitteilungen",
+      "type": "policy",
+      "category": "policy",
+      "feedUrl": "https://www.bmi.bund.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/rssnewsfeed_pressemitteilungen.xml",
+      "refreshIntervalMinutes": 1440,
+      "verified": false
+    },
+    {
+      "name": "The Batch (DeepLearning.AI Newsletter)",
+      "type": "newsletter",
+      "category": "education",
+      "feedUrl": "https://www.deeplearning.ai/the-batch/feed/",
+      "refreshIntervalMinutes": 1440,
+      "verified": false
+    },
+    {
+      "name": "Import AI (Jack Clark Newsletter)",
+      "type": "newsletter",
+      "category": "policy",
+      "feedUrl": "https://importai.substack.com/feed",
+      "refreshIntervalMinutes": 1440,
+      "verified": true
+    },
+    {
+      "name": "TLDR AI",
+      "type": "newsletter",
+      "category": "breaking-news",
+      "feedUrl": "https://tldr.tech/api/rss/ai",
+      "refreshIntervalMinutes": 1440,
+      "verified": false
+    },
+    {
+      "name": "Ben's Bites",
+      "type": "newsletter",
+      "category": "breaking-news",
+      "feedUrl": "https://www.bensbites.com/feed",
+      "refreshIntervalMinutes": 1440,
+      "verified": false
+    }
+  ]
+}

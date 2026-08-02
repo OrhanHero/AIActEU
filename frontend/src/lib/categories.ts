@@ -1,0 +1,52 @@
+export type Category = {
+  slug: string;
+  emoji: string;
+  title: string;
+  description: string;
+};
+
+// 7 Hauptkategorien lt. PROJEKTPLAN.md
+export const categories: Category[] = [
+  {
+    slug: "breaking-news",
+    emoji: "📰",
+    title: "Breaking News & Weekly Roundups",
+    description: "Globale KI-News (24h) und das deutsche KI-Ökosystem.",
+  },
+  {
+    slug: "technisch",
+    emoji: "🧠",
+    title: "Technische Kategorien",
+    description: "LLMs, RAG, Agentic AI, Multimodal, Edge AI, Dev Tools, Fine-Tuning.",
+  },
+  {
+    slug: "research",
+    emoji: "🔬",
+    title: "Research & Academic",
+    description: "Paper-Tracking, Benchmarks, AI-Safety- und Interpretability-Forschung.",
+  },
+  {
+    slug: "business",
+    emoji: "💼",
+    title: "Business & Market",
+    description: "Startup-Ökosystem, Marktanalysen, Jobs & Karriere.",
+  },
+  {
+    slug: "policy",
+    emoji: "⚖️",
+    title: "Policy, Regulation & Ethics",
+    description: "EU AI Act, Datenschutz, Ethical AI, gesellschaftliche Auswirkungen.",
+  },
+  {
+    slug: "education",
+    emoji: "🎓",
+    title: "Education & Learning",
+    description: "Tutorials, Zertifizierungen, Community-Learning.",
+  },
+  {
+    slug: "tools",
+    emoji: "🛠️",
+    title: "Tools & Resources",
+    description: "Developer-Tools, Model-Repositories, Benchmark-Tools.",
+  },
+];
