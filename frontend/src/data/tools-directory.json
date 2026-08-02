@@ -79,6 +79,8 @@
     { "name": "Cohere", "url": "https://cohere.com", "domain": "llm-labs", "description": "Enterprise-fokussierte LLMs und Embeddings." },
     { "name": "DeepSeek", "url": "https://www.deepseek.com", "domain": "llm-labs", "description": "Chinesisches Lab, starke Open-Weight-Modelle." },
     { "name": "Alibaba Cloud Qwen", "url": "https://qwenlm.github.io", "domain": "llm-labs", "description": "Qwen-Modellreihe, breite Open-Source-Veröffentlichung." },
+    { "name": "Moonshot AI", "url": "https://www.moonshot.ai", "domain": "llm-labs", "description": "Chinesisches Lab hinter Kimi, bekannt für sehr große Kontextfenster." },
+    { "name": "Aleph Alpha", "url": "https://aleph-alpha.com/blog/", "domain": "llm-labs", "description": "Deutsches Lab (Heidelberg), Fokus auf souveräne, EU-konforme Enterprise-KI." },
 
     { "name": "LangChain", "url": "https://www.langchain.com", "domain": "rag-vector-db", "description": "Meistgenutztes Framework für LLM-Anwendungsketten inkl. RAG." },
     { "name": "LlamaIndex", "url": "https://www.llamaindex.ai", "domain": "rag-vector-db", "description": "Daten-Framework spezialisiert auf Retrieval-Pipelines." },
