@@ -43,12 +43,15 @@ Dark Mode wird über `:root[data-theme="dark"]` UND `prefers-color-scheme: dark`
 
 ### Badges / Tags (EU-Verhaltenskodex-Kennzeichnung)
 Pflicht-Badges auf jeder Artikel-Card (siehe COMPLIANCE.md):
-- `🤖 KI-kuratiert` – wenn `aiGenerated: true`
+- **EU-KI-Kennzeichnungs-Icon** ("AI GENERATED", `components/AiGeneratedLabel.tsx`) – wenn
+  `aiGenerated: true`. Icon-Vorlage angelehnt an die EU-Seite zur Kennzeichnung KI-generierter
+  Inhalte; Light-/Dark-Variante schaltet automatisch per Theme um (`ai-label-light`/
+  `ai-label-dark`-Klassen in `globals.css`).
 - `✓ Redaktionell geprüft` – wenn `humanReviewed: true`
 - `⚙️ Automatisiert` – wenn `humanReviewed: false`
 
-Badge-Style: `text-xs`, `rounded-full`, `px-2.5 py-0.5`, `border border-border`,
-Hintergrund `bg-surface`.
+Badge-Style (Redaktions-Badges): `text-xs`, `rounded-full`, `px-2.5 py-0.5`,
+`border border-border`, Hintergrund `bg-surface`.
 
 ### Buttons
 - **Primary**: `bg-primary text-primary-foreground rounded-md`, Hover: leichtes Abdunkeln.

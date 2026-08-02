@@ -12,7 +12,7 @@ KI-generierte Inhalte, Art. 50), DSGVO.
 
 | Maßnahme | Status | Umsetzung |
 |---|---|---|
-| Offenlegung, welche Inhalte KI-generiert/-kuratiert sind | ✅ Pflicht | Badge-System auf jeder Artikel-Card, siehe [`DESIGN.md`](./DESIGN.md#badges--tags-eu-verhaltenskodex-kennzeichnung) |
+| Offenlegung, welche Inhalte KI-generiert/-kuratiert sind | ✅ Pflicht | EU-Kennzeichnungs-Icon "AI GENERATED" auf jeder Artikel-Card, siehe [`DESIGN.md`](./DESIGN.md#badges--tags-eu-verhaltenskodex-kennzeichnung) |
 | Tool-Markierung ("KI-unterstützte Zusammenfassung", "Automatisiertes Tagging") | ✅ Pflicht | Im Artikel-Footer als Metadatenzeile |
 | Human-Review-Flag sichtbar | ✅ Pflicht | `humanReviewed: boolean` im Content-Modell (siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md#content-modell-strapi-collection-types-phase-2)), Badge "✓ Redaktionell geprüft" vs. "⚙️ Automatisiert" |
 | Allgemeiner KI-Nutzungs-Disclaimer | ✅ Pflicht | Footer jeder Seite + dedizierte `/compliance`-Seite |
@@ -59,6 +59,11 @@ KI-generierte Inhalte, Art. 50), DSGVO.
 
 ## Offene Punkte (vor Public-Beta-Launch zu klären)
 
+- [ ] Die aktuell eingebundenen "AI GENERATED"/"AI MODIFIED"-Icons
+  (`frontend/public/labels/`) sind eine KI-Nachbildung der Vorlage von
+  [digital-strategy.ec.europa.eu/.../eu-icons-labelling-ai-generated-content](https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content),
+  kein Download des offiziellen Asset-Kits. Vor Launch gegen das offizielle
+  Kit abgleichen bzw. ersetzen.
 - [ ] Rechtsprüfung Impressum & Datenschutzerklärung durch Fachanwalt/-anwältin
 - [ ] Cookie-Consent-Lösung, sobald Newsletter/Analytics mit Personenbezug eingeführt wird
 - [ ] Auftragsverarbeitungsverträge (AVV) mit allen eingesetzten Drittanbietern (Hosting, ggf. Claude API) abschließen

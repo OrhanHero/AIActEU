@@ -33,23 +33,14 @@ export default function DatenschutzPage() {
 
       <Section title="2. Welche Daten wir aktuell verarbeiten">
         <p>
-          Der aktuelle Stand dieser Seite (Phase 1/2) verwendet noch kein Tracking, keine Cookies
-          mit Personenbezug und keine Newsletter-Datenerfassung – das Anmeldeformular ist derzeit
-          deaktiviert. Sobald diese Funktionen aktiviert werden, wird dieser Abschnitt vor
-          Live-Schaltung um konkrete Verarbeitungszwecke, Rechtsgrundlagen (Art. 6 DSGVO) und
-          Speicherdauern ergänzt.
+          Der aktuelle Stand dieser Seite (Phase 1/2) verwendet noch kein Tracking und keine
+          Cookies mit Personenbezug. Sobald personenbezogene Datenverarbeitung eingeführt wird
+          (z. B. Kontaktformular, Accounts), wird dieser Abschnitt vor Live-Schaltung um konkrete
+          Verarbeitungszwecke, Rechtsgrundlagen (Art. 6 DSGVO) und Speicherdauern ergänzt.
         </p>
       </Section>
 
-      <Section title="3. Geplante Datenverarbeitung (Newsletter)">
-        <p>
-          Bei Aktivierung des Newsletters: Double-Opt-In-Verfahren, Verarbeitung von E-Mail-Adresse
-          zum Zweck des Versands, Abmeldung jederzeit über Link in jeder E-Mail möglich.
-          Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-        </p>
-      </Section>
-
-      <Section title="4. Hosting">
+      <Section title="3. Hosting">
         <p>
           Diese Seite wird auf EU-Infrastruktur gehostet (siehe{" "}
           <code>ARCHITECTURE.md</code>). Mit allen eingesetzten Dienstleistern werden vor
@@ -57,7 +48,7 @@ export default function DatenschutzPage() {
         </p>
       </Section>
 
-      <Section title="5. Ihre Rechte">
+      <Section title="4. Ihre Rechte">
         <p>
           Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
           Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung Ihrer

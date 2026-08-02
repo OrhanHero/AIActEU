@@ -53,3 +53,26 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+/* EU-Kennzeichnungs-Icons (KI-generierte Inhalte): passende Variante je nach
+   aktivem Theme einblenden. Folgt derselben data-theme/prefers-color-scheme-
+   Logik wie die Farb-Tokens oben. */
+.ai-label-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .ai-label-light {
+  display: none;
+}
+:root[data-theme="dark"] .ai-label-dark {
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ai-label-light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .ai-label-dark {
+    display: inline-block;
+  }
+}

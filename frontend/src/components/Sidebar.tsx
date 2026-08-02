@@ -27,38 +27,6 @@ export function Sidebar() {
 
   return (
     <aside className="flex flex-col gap-6">
-      <WidgetCard title="Newsletter">
-        <p className="mb-3 text-sm text-muted leading-relaxed">
-          Wöchentlicher Überblick über die wichtigsten KI-News – kuratiert von der Redaktion.
-        </p>
-        <form className="flex flex-col gap-2">
-          <label htmlFor="newsletter-email" className="sr-only">
-            E-Mail-Adresse
-          </label>
-          <input
-            id="newsletter-email"
-            type="email"
-            placeholder="deine@email.de"
-            className="rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-          />
-          <button
-            type="submit"
-            disabled
-            title="Newsletter-Versand folgt in Phase 2/4 (siehe PROJEKTPLAN.md)"
-            className="rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground opacity-60 cursor-not-allowed"
-          >
-            Anmelden (bald verfügbar)
-          </button>
-          <p className="text-xs text-muted">
-            Double-Opt-In, jederzeit abbestellbar. Siehe{" "}
-            <a href="/datenschutz" className="hover:text-foreground underline">
-              Datenschutz
-            </a>
-            .
-          </p>
-        </form>
-      </WidgetCard>
-
       <WidgetCard title="Trending Themen">
         <ul className="flex flex-wrap gap-1.5">
           {trendingTags.map((tag) => (

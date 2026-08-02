@@ -1,5 +1,5 @@
 {
-  "_comment": "RSS/API-Quellenliste gemäß PROJEKTPLAN.md Abschnitt 'Datenquellen & Integration'. 'verified' = false bedeutet: Feed-URL wurde noch nicht per HTTP-Request geprüft (Phase 2 Action Item 'Datenquellen: RSS-Feeds testen & dokumentieren'). Vor Ingestion-Implementierung alle Feeds verifizieren.",
+  "_comment": "RSS/API-Quellenliste gemäß PROJEKTPLAN.md Abschnitt 'Datenquellen & Integration'. Deckt alle in PROJEKTPLAN 1.1 genannten globalen Labs sowie 'China AI News' (DeepSeek, Alibaba Qwen, Baidu, Tencent, Zhipu, Moonshot) ab. 'verified' = false bedeutet: Feed-URL wurde noch nicht per HTTP-Request geprüft (Phase 2 Action Item 'Datenquellen: RSS-Feeds testen & dokumentieren'). Bei den chinesischen Quellen ist zusätzlich zu prüfen, ob ein offizieller englischsprachiger RSS-Feed überhaupt existiert oder ob stattdessen ein Aggregator/Übersetzungsschritt nötig ist. Vor Ingestion-Implementierung alle Feeds verifizieren.",
   "sources": [
     {
       "name": "OpenAI News",
@@ -47,6 +47,118 @@
       "category": "technisch",
       "feedUrl": "https://blogs.nvidia.com/feed/",
       "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "xAI News",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://x.ai/news/rss.xml",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Mistral AI Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://mistral.ai/news/rss.xml",
+      "refreshIntervalMinutes": 60,
+      "verified": false
+    },
+    {
+      "name": "Cohere Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://cohere.com/blog/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "AWS Machine Learning Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Perplexity Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://www.perplexity.ai/hub/blog/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Stability AI News",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://stability.ai/news/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Runway Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://runwayml.com/research/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "ElevenLabs Blog",
+      "type": "lab-blog",
+      "category": "technisch",
+      "feedUrl": "https://elevenlabs.io/blog/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "DeepSeek News",
+      "type": "lab-blog",
+      "category": "breaking-news",
+      "feedUrl": "https://www.deepseek.com/blog/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Alibaba Qwen Blog",
+      "type": "lab-blog",
+      "category": "breaking-news",
+      "feedUrl": "https://qwenlm.github.io/blog/rss.xml",
+      "refreshIntervalMinutes": 120,
+      "verified": false
+    },
+    {
+      "name": "Baidu ERNIE / Baidu AI News",
+      "type": "lab-blog",
+      "category": "breaking-news",
+      "feedUrl": "https://ai.baidu.com/news/rss.xml",
+      "refreshIntervalMinutes": 180,
+      "verified": false
+    },
+    {
+      "name": "Tencent Hunyuan News",
+      "type": "lab-blog",
+      "category": "breaking-news",
+      "feedUrl": "https://hunyuan.tencent.com/news/rss.xml",
+      "refreshIntervalMinutes": 180,
+      "verified": false
+    },
+    {
+      "name": "Zhipu AI (GLM) Blog",
+      "type": "lab-blog",
+      "category": "breaking-news",
+      "feedUrl": "https://open.bigmodel.cn/news/rss.xml",
+      "refreshIntervalMinutes": 180,
+      "verified": false
+    },
+    {
+      "name": "Moonshot AI (Kimi) News",
+      "type": "lab-blog",
+      "category": "breaking-news",
+      "feedUrl": "https://www.moonshot.cn/news/rss.xml",
+      "refreshIntervalMinutes": 180,
       "verified": false
     },
     {
