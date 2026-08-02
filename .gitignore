@@ -13,6 +13,10 @@ backend/.cache/
 backend/build/
 backend/.tmp/
 backend/exports/
+backend/.strapi/
+
+# Ingestion-Skripte: generierte Ausgabe nicht versionieren
+scripts/output/
 
 # Env files
 .env

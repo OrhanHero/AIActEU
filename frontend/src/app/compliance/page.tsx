@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EU-Verhaltenskodex & Transparenz – AIActEU KI News Hub",
+  title: "EU-Verhaltenskodex & Transparenz",
   description: "Wie AIActEU KI-generierte und kuratierte Inhalte kennzeichnet und den EU-Verhaltenskodex umsetzt.",
 };
 

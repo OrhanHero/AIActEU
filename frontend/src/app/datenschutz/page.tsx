@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutz – AIActEU KI News Hub",
+  title: "Datenschutz",
   description: "Datenschutzerklärung gemäß DSGVO.",
 };
 

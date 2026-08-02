@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,10 +15,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "AIActEU – KI News Hub";
+const description =
+  "Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten.";
+
 export const metadata: Metadata = {
-  title: "AIActEU – KI News Hub",
-  description:
-    "Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten.",
+  metadataBase: new URL(siteUrl),
+  title: { default: title, template: "%s · AIActEU" },
+  description,
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "AIActEU KI News Hub",
+    title,
+    description,
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

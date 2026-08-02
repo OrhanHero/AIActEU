@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Über uns – AIActEU KI News Hub",
+  title: "Über uns",
   description: "Mission, Redaktion und Kontakt der AIActEU KI News Plattform.",
 };
 

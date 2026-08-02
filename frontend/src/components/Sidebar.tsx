@@ -1,17 +1,4 @@
-import { articles } from "@/lib/articles";
-
-function getTrendingTags(limit = 8) {
-  const counts = new Map<string, number>();
-  for (const article of articles) {
-    for (const tag of article.tags) {
-      counts.set(tag, (counts.get(tag) ?? 0) + 1);
-    }
-  }
-  return [...counts.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, limit)
-    .map(([tag]) => tag);
-}
+import { articles, getTopTags } from "@/lib/articles";
 
 function WidgetCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -23,7 +10,7 @@ function WidgetCard({ title, children }: { title: string; children: React.ReactN
 }
 
 export function Sidebar() {
-  const trendingTags = getTrendingTags();
+  const trendingTags = getTopTags(articles, 8);
 
   return (
     <aside className="flex flex-col gap-6">

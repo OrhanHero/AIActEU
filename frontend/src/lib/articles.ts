@@ -290,6 +290,97 @@ export const articles: Article[] = [
     aiGenerated: true,
     humanReviewed: false,
   },
+  {
+    slug: "evaluation-frameworks-agentic-benchmarks",
+    title: "Neue Evaluation-Frameworks für Agentic-Tool-Use veröffentlicht",
+    summary:
+      "Mehrere Open-Source-Benchmarks messen jetzt gezielt, wie zuverlässig Modelle mehrstufige Tool-Aufrufe planen und ausführen – bislang ein blinder Fleck klassischer Leaderboards.",
+    categorySlug: "tools",
+    tags: ["Benchmarks", "Agentic AI", "Open Source"],
+    sourceName: "Weights & Biases Blog",
+    sourceUrl: "https://wandb.ai/site/",
+    publishedAt: "2026-07-18",
+    aiGenerated: true,
+    humanReviewed: false,
+  },
+  {
+    slug: "model-serving-kosten-vergleich",
+    title: "Kostenvergleich: Self-Hosted Model Serving vs. Managed APIs",
+    summary:
+      "Eine aktualisierte Kalkulation zeigt, ab welchem Anfragevolumen selbst gehostetes Serving (vLLM, TensorRT) gegenüber Managed-API-Anbietern günstiger wird.",
+    categorySlug: "tools",
+    tags: ["Deployment", "Kosten", "vLLM"],
+    sourceName: "Hugging Face Blog",
+    sourceUrl: "https://huggingface.co/blog",
+    publishedAt: "2026-07-17",
+    aiGenerated: true,
+    humanReviewed: false,
+  },
+  {
+    slug: "kostenloser-kurs-rag-grundlagen",
+    title: "Neuer kostenloser Kurs: RAG-Systeme von Grund auf verstehen",
+    summary:
+      "Der Kurs behandelt Embedding-Modelle, Retriever-Architekturen und Evaluationsmethoden für Retrieval-Augmented-Generation-Systeme, inklusive Praxisprojekt.",
+    categorySlug: "education",
+    tags: ["Kurs", "RAG", "Einsteiger"],
+    sourceName: "DeepLearning.AI – The Batch",
+    sourceUrl: "https://www.deeplearning.ai/the-batch/",
+    publishedAt: "2026-07-16",
+    aiGenerated: true,
+    humanReviewed: false,
+  },
+  {
+    slug: "reddit-community-diskussion-alignment",
+    title: "Community-Diskussion: Wie realistisch sind aktuelle Alignment-Techniken?",
+    summary:
+      "Eine vielbeachtete Diskussion in der ML-Community fasst Argumente für und gegen die Wirksamkeit von RLHF & Constitutional-AI-Ansätzen zusammen.",
+    categorySlug: "education",
+    tags: ["Community", "AI Safety", "Diskussion"],
+    sourceName: "arXiv cs.CL",
+    sourceUrl: "https://arxiv.org/list/cs.CL/recent",
+    publishedAt: "2026-07-15",
+    aiGenerated: true,
+    humanReviewed: false,
+  },
+  {
+    slug: "ki-konferenz-berlin-ankuendigung",
+    title: "KI-Konferenz Berlin kündigt Programm mit Fokus auf Agentic Systems an",
+    summary:
+      "Die diesjährige Ausgabe der Konferenz legt einen Schwerpunkt auf produktionsreife Agentic-Architekturen und lädt Speaker aus Forschung und Industrie ein.",
+    categorySlug: "breaking-news",
+    tags: ["Events", "Deutschland", "Agentic AI"],
+    sourceName: "Heise Online (allgemein, nach KI filtern)",
+    sourceUrl: "https://www.heise.de/",
+    publishedAt: "2026-07-14",
+    aiGenerated: true,
+    humanReviewed: false,
+  },
+  {
+    slug: "wochenrueckblick-ki-woche-29",
+    title: "Wochenrückblick: Die wichtigsten KI-Meldungen der Woche",
+    summary:
+      "Von neuen Modell-Releases bis Regulierungs-Updates – die kompakte Zusammenfassung der Woche für alle, die nicht jeden Tag News verfolgen können.",
+    categorySlug: "breaking-news",
+    tags: ["Wochenrückblick", "Übersicht"],
+    sourceName: "TLDR AI",
+    sourceUrl: "https://tldr.tech/ai",
+    publishedAt: "2026-07-13",
+    aiGenerated: true,
+    humanReviewed: true,
+  },
+  {
+    slug: "adversarial-robustness-neue-angriffsklasse",
+    title: "Forscher demonstrieren neue Angriffsklasse gegen Guardrail-Systeme",
+    summary:
+      "Die Studie zeigt, wie sich mehrstufige Prompt-Ketten nutzen lassen, um gängige Sicherheitsfilter zu umgehen, und schlägt erste Gegenmaßnahmen vor.",
+    categorySlug: "research",
+    tags: ["AI Safety", "Adversarial ML", "Paper"],
+    sourceName: "arXiv cs.AI",
+    sourceUrl: "https://arxiv.org/list/cs.AI/recent",
+    publishedAt: "2026-07-12",
+    aiGenerated: true,
+    humanReviewed: true,
+  },
 ];
 
 export function getArticlesByCategory(categorySlug: string): Article[] {
@@ -314,4 +405,15 @@ export function getLatestArticles(limit = 6): Article[] {
 
 export function getCategoryForArticle(article: Article) {
   return categories.find((c) => c.slug === article.categorySlug);
+}
+
+export function getTopTags(articlesToCount: Article[], limit = Infinity): string[] {
+  const counts = new Map<string, number>();
+  for (const article of articlesToCount) {
+    for (const tag of article.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([tag]) => tag);
 }

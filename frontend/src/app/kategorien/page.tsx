@@ -3,7 +3,7 @@ import { categories } from "@/lib/categories";
 import { CategoryCard } from "@/components/CategoryCard";
 
 export const metadata: Metadata = {
-  title: "Kategorien – AIActEU KI News Hub",
+  title: "Kategorien",
   description: "Alle 7 Hauptkategorien der AIActEU KI News Plattform im Überblick.",
 };
 

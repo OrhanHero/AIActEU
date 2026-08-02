@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum – AIActEU KI News Hub",
+  title: "Impressum",
   description: "Pflichtangaben gemäß § 5 TMG / § 18 MStV.",
 };
 

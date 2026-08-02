@@ -7,7 +7,8 @@
       "category": "technisch",
       "feedUrl": "https://openai.com/news/rss.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Anthropic News",
@@ -15,7 +16,9 @@
       "category": "technisch",
       "feedUrl": "https://www.anthropic.com/news/rss.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Google DeepMind Blog",
@@ -23,7 +26,8 @@
       "category": "technisch",
       "feedUrl": "https://deepmind.google/blog/rss.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Meta AI Blog",
@@ -31,7 +35,9 @@
       "category": "technisch",
       "feedUrl": "https://ai.meta.com/blog/rss/",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Microsoft AI Blog",
@@ -39,7 +45,9 @@
       "category": "technisch",
       "feedUrl": "https://blogs.microsoft.com/ai/feed/",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 410, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "NVIDIA AI Blog",
@@ -47,7 +55,8 @@
       "category": "technisch",
       "feedUrl": "https://blogs.nvidia.com/feed/",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "xAI News",
@@ -55,7 +64,9 @@
       "category": "technisch",
       "feedUrl": "https://x.ai/news/rss.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 403, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Mistral AI Blog",
@@ -63,7 +74,9 @@
       "category": "technisch",
       "feedUrl": "https://mistral.ai/news/rss.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Cohere Blog",
@@ -71,7 +84,9 @@
       "category": "technisch",
       "feedUrl": "https://cohere.com/blog/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "AWS Machine Learning Blog",
@@ -79,7 +94,8 @@
       "category": "technisch",
       "feedUrl": "https://aws.amazon.com/blogs/machine-learning/feed/",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Perplexity Blog",
@@ -87,7 +103,9 @@
       "category": "technisch",
       "feedUrl": "https://www.perplexity.ai/hub/blog/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 403, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Stability AI News",
@@ -95,7 +113,9 @@
       "category": "technisch",
       "feedUrl": "https://stability.ai/news/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Runway Blog",
@@ -103,7 +123,9 @@
       "category": "technisch",
       "feedUrl": "https://runwayml.com/research/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "ElevenLabs Blog",
@@ -111,7 +133,9 @@
       "category": "technisch",
       "feedUrl": "https://elevenlabs.io/blog/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "DeepSeek News",
@@ -119,7 +143,9 @@
       "category": "breaking-news",
       "feedUrl": "https://www.deepseek.com/blog/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Alibaba Qwen Blog",
@@ -127,7 +153,9 @@
       "category": "breaking-news",
       "feedUrl": "https://qwenlm.github.io/blog/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Baidu ERNIE / Baidu AI News",
@@ -135,7 +163,9 @@
       "category": "breaking-news",
       "feedUrl": "https://ai.baidu.com/news/rss.xml",
       "refreshIntervalMinutes": 180,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "Fehler: timeout"
     },
     {
       "name": "Tencent Hunyuan News",
@@ -143,7 +173,9 @@
       "category": "breaking-news",
       "feedUrl": "https://hunyuan.tencent.com/news/rss.xml",
       "refreshIntervalMinutes": 180,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Zhipu AI (GLM) Blog",
@@ -151,7 +183,9 @@
       "category": "breaking-news",
       "feedUrl": "https://open.bigmodel.cn/news/rss.xml",
       "refreshIntervalMinutes": 180,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Moonshot AI (Kimi) News",
@@ -159,7 +193,9 @@
       "category": "breaking-news",
       "feedUrl": "https://www.moonshot.cn/news/rss.xml",
       "refreshIntervalMinutes": 180,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Hugging Face Blog",
@@ -167,7 +203,8 @@
       "category": "tools",
       "feedUrl": "https://huggingface.co/blog/feed.xml",
       "refreshIntervalMinutes": 120,
-      "verified": true
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "arXiv cs.AI (Artificial Intelligence)",
@@ -175,7 +212,8 @@
       "category": "research",
       "feedUrl": "http://export.arxiv.org/rss/cs.AI",
       "refreshIntervalMinutes": 120,
-      "verified": true
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "arXiv cs.CL (Computation and Language)",
@@ -183,7 +221,8 @@
       "category": "research",
       "feedUrl": "http://export.arxiv.org/rss/cs.CL",
       "refreshIntervalMinutes": 120,
-      "verified": true
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Papers with Code – Trending",
@@ -191,15 +230,18 @@
       "category": "research",
       "feedUrl": "https://paperswithcode.com/rss/latest",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "LangChain Blog",
       "type": "dev-blog",
       "category": "technisch",
-      "feedUrl": "https://blog.langchain.dev/rss/",
+      "feedUrl": "https://blog.langchain.dev/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Weights & Biases Blog",
@@ -207,7 +249,9 @@
       "category": "tools",
       "feedUrl": "https://wandb.ai/site/feed/",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Ollama Blog",
@@ -215,15 +259,18 @@
       "category": "technisch",
       "feedUrl": "https://ollama.com/blog/rss.xml",
       "refreshIntervalMinutes": 120,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
-      "name": "Heise – KI",
+      "name": "Heise Online (allgemein, nach KI filtern)",
       "type": "de-quelle",
       "category": "breaking-news",
-      "feedUrl": "https://www.heise.de/thema/Kuenstliche-Intelligenz/rss.xml",
+      "feedUrl": "https://www.heise.de/rss/heise-atom.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "scopeNote": "Der themenspezifische heise-KI-Feed war nicht erreichbar; dies ist der allgemeine Heise-Feed. Ingestion muss auf KI-Keywords filtern.",
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Golem – KI",
@@ -231,15 +278,18 @@
       "category": "breaking-news",
       "feedUrl": "https://rss.golem.de/rss.php?feed=RSS2.0",
       "refreshIntervalMinutes": 60,
-      "verified": true
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
-      "name": "t3n – Artificial Intelligence",
+      "name": "t3n (allgemein, nach KI filtern)",
       "type": "de-quelle",
       "category": "breaking-news",
-      "feedUrl": "https://t3n.de/tag/artificial-intelligence/feed/",
+      "feedUrl": "https://t3n.de/rss.xml",
       "refreshIntervalMinutes": 60,
-      "verified": false
+      "scopeNote": "Der themenspezifische t3n-KI-Feed war nicht erreichbar; dies ist der allgemeine t3n-Feed. Ingestion muss auf KI-Keywords filtern.",
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "TechCrunch – Artificial Intelligence",
@@ -247,15 +297,18 @@
       "category": "business",
       "feedUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "refreshIntervalMinutes": 180,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
-      "name": "Gründerszene – KI",
+      "name": "Gründerszene (allgemein, nach KI filtern)",
       "type": "startup",
       "category": "business",
-      "feedUrl": "https://www.gruenderszene.de/tag/ki/feed",
+      "feedUrl": "https://www.gruenderszene.de/feed",
       "refreshIntervalMinutes": 180,
-      "verified": false
+      "scopeNote": "Der themenspezifische Gründerszene-KI-Tag-Feed war nicht erreichbar; dies ist der allgemeine Feed. Ingestion muss auf KI-Keywords filtern.",
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "EU Digital Strategy – News",
@@ -263,7 +316,8 @@
       "category": "policy",
       "feedUrl": "https://digital-strategy.ec.europa.eu/en/rss.xml",
       "refreshIntervalMinutes": 1440,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Bundesministerium des Innern – Pressemitteilungen",
@@ -271,7 +325,9 @@
       "category": "policy",
       "feedUrl": "https://www.bmi.bund.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/rssnewsfeed_pressemitteilungen.xml",
       "refreshIntervalMinutes": 1440,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 400, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "The Batch (DeepLearning.AI Newsletter)",
@@ -279,7 +335,9 @@
       "category": "education",
       "feedUrl": "https://www.deeplearning.ai/the-batch/feed/",
       "refreshIntervalMinutes": 1440,
-      "verified": false
+      "verified": false,
+      "lastCheckedAt": "2026-08-02",
+      "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
       "name": "Import AI (Jack Clark Newsletter)",
@@ -287,7 +345,8 @@
       "category": "policy",
       "feedUrl": "https://importai.substack.com/feed",
       "refreshIntervalMinutes": 1440,
-      "verified": true
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "TLDR AI",
@@ -295,7 +354,8 @@
       "category": "breaking-news",
       "feedUrl": "https://tldr.tech/api/rss/ai",
       "refreshIntervalMinutes": 1440,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     },
     {
       "name": "Ben's Bites",
@@ -303,7 +363,8 @@
       "category": "breaking-news",
       "feedUrl": "https://www.bensbites.com/feed",
       "refreshIntervalMinutes": 1440,
-      "verified": false
+      "verified": true,
+      "lastCheckedAt": "2026-08-02"
     }
   ]
 }

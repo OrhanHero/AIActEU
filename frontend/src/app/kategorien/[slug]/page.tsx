@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories } from "@/lib/categories";
 import { getArticlesByCategory } from "@/lib/articles";
-import { ArticleCard } from "@/components/ArticleCard";
+import { CategoryArticleFilter } from "@/components/CategoryArticleFilter";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = categories.find((c) => c.slug === slug);
   if (!category) return {};
   return {
-    title: `${category.title} – AIActEU KI News Hub`,
+    title: category.title,
     description: category.description,
   };
 }
@@ -51,18 +51,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
       </div>
 
-      {categoryArticles.length > 0 ? (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {categoryArticles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-muted">
-          Noch keine Artikel in dieser Kategorie. Die automatisierte Ingestion-Pipeline (Phase 2)
-          befüllt diesen Bereich fortlaufend.
-        </p>
-      )}
+      <CategoryArticleFilter articles={categoryArticles} />
     </div>
   );
 }
