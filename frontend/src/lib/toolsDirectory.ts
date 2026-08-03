@@ -13,6 +13,8 @@ export type Provider = {
   url: string;
   domain: string;
   description: string;
+  /** Kurzer Sicherheits-/Vorsicht-Hinweis, als ⚠️-Tooltip im ProviderCard angezeigt statt im Fließtext. */
+  warning?: string;
 };
 
 export type Benchmark = {
