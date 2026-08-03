@@ -154,6 +154,7 @@
     { "name": "OpenAI Developer", "url": "https://platform.openai.com", "domain": "dev-tools-infra", "description": "Entwickler-Portal für ChatGPT API, GPT-4o, DALL·E, Embeddings und KI-Agenten-Workflows." },
     { "name": "GitHub Developer", "url": "https://docs.github.com", "domain": "dev-tools-infra", "description": "Entwickler-Portal für GitHub REST/GraphQL API, GitHub Actions, Webhooks und GitHub-Copilot-Erweiterungen." },
     { "name": "NVIDIA Developer", "url": "https://developer.nvidia.com", "domain": "dev-tools-infra", "description": "Entwickler-Portal für CUDA, GPU-beschleunigtes Computing, Deep Learning, Omniverse und Jetson (Robotik)." },
+    { "name": "Claude Developer Platform", "url": "https://platform.claude.com/docs/en/home", "domain": "dev-tools-infra", "description": "Offizielle API-Dokumentation von Anthropic: Messages API, Managed Agents, Tool Use, Prompt Caching, SDKs für Python/TypeScript/Go u. a., Modellübersicht und Cookbook." },
 
     { "name": "arXiv", "url": "https://arxiv.org", "domain": "research", "description": "Zentrales Preprint-Archiv für KI-/ML-Paper." },
     { "name": "Papers with Code", "url": "https://paperswithcode.com", "domain": "research", "description": "Paper mit zugehörigem Code und Benchmark-Ergebnissen." },
