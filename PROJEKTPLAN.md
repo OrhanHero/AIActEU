@@ -225,6 +225,67 @@ Umgesetzt als eigene Kategorie `hardware` (Slug), inkl. dediziertem Anbieter-Ber
 
 ---
 
+### 9️⃣ **NACHHALTIGKEIT & UMWELT-IMPACT VON KI** *(ergänzt 2026-08-03)*
+
+Umgesetzt als Kategorie `nachhaltigkeit`, inkl. Anbieter-Bereich "nachhaltigkeit" (Green AI &
+Nachhaltigkeit) im Verzeichnis und eigenem Themenschwerpunkt auf [`/publikationen`](./data/publications.json).
+
+#### 9.1 Messung & Reduktion des Fußabdrucks
+- 🌍 **CodeCarbon**, **AI Energy Score** (Hugging Face/Salesforce), **ML CO2 Impact Calculator**
+- ⚡ **Green Software Foundation** (Carbon-Aware SDK), **WattTime** (Echtzeit-Netz-Emissionsdaten)
+
+#### 9.2 Forschung & Regulierung
+- 🇩🇪 **Umweltbundesamt**, **Borderstep Institut** (Dr. Ralph Hintemann), **Fraunhofer IPA/IAO**
+- 🏢 **Deutsche Telekom** (Grundsätze für grüne KI), **Bitkom**-Unternehmensumfragen
+- 🌐 **UNU-INWEH**, **IEA** ("Energy and AI")
+
+---
+
+### 🔟 **APPLICATIONS & USE CASES** *(ergänzt 2026-08-03)*
+
+Umgesetzt als Kategorie `applications`, inkl. Anbieter-Bereich "applications" im Verzeichnis.
+Branchenlösungen, KI im Alltag, Enterprise-Integration, Creative AI & Consumer Apps — Abgrenzung
+zu 7️⃣ Tools & Resources: dort der Entwickler-Werkzeugkasten, hier fertige Anwendungsfälle.
+
+#### 10.1 Branchen & Enterprise
+- ⚖️ **Harvey** (Legal), 🩺 **Abridge** (Healthcare-Dokumentation), 🔎 **Glean** (Enterprise-Suche)
+
+#### 10.2 Creative & Consumer
+- ✍️ **Jasper** (Marketing-Content), 💬 **Character.AI** (Consumer-Chat), 🔍 **Perplexity** (Antwortmaschine)
+- 🇩🇪 **DeepL** (Köln) als prominentes deutsches Beispiel
+
+---
+
+### 1️⃣1️⃣ **COMMUNITY, EVENTS & ECOSYSTEM** *(ergänzt 2026-08-03)*
+
+Umgesetzt als Kategorie `community`, inkl. Anbieter-Bereich "community" im Verzeichnis.
+Konferenzen, Hackathons, Meetups, Open-Source-Initiativen & Netzwerke — mit Fokus auf die
+deutsche/DACH-Perspektive, passend zu den USPs aus Abschnitt 1.
+
+#### 11.1 DACH-Netzwerke
+- 🇩🇪 **KI Bundesverband** (500+ Mitglieder), **appliedAI Initiative** (München/Heilbronn)
+
+#### 11.2 Europäisch & International
+- 🇪🇺 **CLAIRE** ("AI made in Europe", 3.000+ Wissenschaftler:innen)
+- 📊 **Data Natives** (Berlin), **PyData** (NumFOCUS)
+
+---
+
+### 1️⃣2️⃣ **SAFETY, ALIGNMENT & GOVERNANCE** *(ergänzt 2026-08-03)*
+
+Umgesetzt als Kategorie `safety`, inkl. Anbieter-Bereich "safety" (AI Safety & Alignment) im
+Verzeichnis. Überschneidet sich bewusst leicht mit 3️⃣ Research (Interpretability) und
+5️⃣ Policy (Regulierung), deckt aber das eigenständige Praxisfeld Red Teaming/Model
+Evaluation/Risk Management ab.
+
+#### 12.1 Evaluation & Red Teaming
+- 🔬 **METR**, **Apollo Research**, **UK AI Security Institute (AISI)**
+
+#### 12.2 Alignment-Forschung
+- 🧠 **Center for AI Safety (CAIS)**, **Alignment Research Center (ARC)**, **Redwood Research**
+
+---
+
 ### 📖 **TUTORIALS** *(eigener Bereich außerhalb der 12 Kategorien, `/tutorials`)*
 
 Redaktionelle MDX-Guides für lokale KI-Setups statt automatisiertem News-Feed:
