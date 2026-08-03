@@ -23,6 +23,10 @@ export function Footer() {
           <Link href="/tutorials" className="hover:text-foreground transition-colors">
             Tutorials: Lokale KI →
           </Link>
+          <br />
+          <Link href="/publikationen" className="hover:text-foreground transition-colors">
+            Publikationen →
+          </Link>
         </div>
         <div>
           <p className="font-medium text-foreground mb-2">EU-Compliance</p>

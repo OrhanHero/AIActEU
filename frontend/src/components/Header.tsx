@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/kategorien", label: "Kategorien" },
   { href: "/tutorials", label: "Tutorials" },
   { href: "/verzeichnis", label: "Verzeichnis" },
+  { href: "/publikationen", label: "Publikationen" },
   { href: "/ueber-uns", label: "Über uns & Compliance" },
 ];
 

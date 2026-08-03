@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/suche",
     "/verzeichnis",
     "/tutorials",
+    "/publikationen",
     ...categories.map((category) => `/kategorien/${category.slug}`),
     ...tutorials.map((tutorial) => `/tutorials/${tutorial.slug}`),
   ];

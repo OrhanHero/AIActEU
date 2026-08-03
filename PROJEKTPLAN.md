@@ -194,6 +194,11 @@ Eine **zentrale, kuratierte Nachrichtenplattform** für den deutschsprachigen KI
 - 🧪 **Testing Frameworks** (MLflow, pytest, TensorFlow Testing)
 - 📈 **Analytics** (Hugging Face Spaces Analytics, Usage Statistics)
 
+#### 7.4 Publikationen *(umgesetzt unter `/publikationen`, siehe [`data/publications.json`](./data/publications.json))*
+- 🌍 **Umwelt & Ressourcenverbrauch** (u. a. UNU-INWEH-Report zu Energie-/Wasser-/Landfußabdruck,
+  IEA "Energy and AI", "Making AI Less Thirsty", "Measuring the Carbon Intensity of AI")
+- 🧭 **KI-Landschaft & Sicherheit** (Stanford AI Index Report, International AI Safety Report)
+
 ---
 
 ### 8️⃣ **HARDWARE, SILICON & DATA CENTERS** *(ergänzt, siehe [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx))*

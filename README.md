@@ -18,6 +18,7 @@ Der vollständige Projektplan steht in [`PROJEKTPLAN.md`](./PROJEKTPLAN.md).
 ├── data/sources.json           RSS/API-Quellenliste für die Ingestion-Pipeline (56 Quellen, inkl. Hardware & Silicon)
 ├── data/tools-directory.json   Anbieter-Verzeichnis (112 Anbieter über 11 Domänen, ~10 je Bereich), siehe /verzeichnis
 ├── data/benchmarks.json        Top-3-Benchmark-Plattformen, siehe /verzeichnis
+├── data/publications.json      Kuratierte Forschungsberichte/Papers (Umwelt-Fußabdruck, KI-Landschaft & Sicherheit), siehe /publikationen
 └── Docs/📋 AIActEU.docx        Master-Projektplan v2 (Hardware-Erweiterung, Tutorials)
 ```
 
@@ -38,9 +39,9 @@ npm run dev
 ```
 
 Wichtigste Routen: `/` (Start), `/kategorien` (Übersicht + `/kategorien/[slug]` mit
-Tag-Filter), `/tutorials` (MDX-Guides für lokale KI + `/tutorials/[slug]`), `/suche`
-(Volltextsuche), `/verzeichnis` (Anbieter- & Benchmark-Verzeichnis), `/compliance`,
-`/ueber-uns`, `/impressum`, `/datenschutz`.
+Tag-Filter), `/tutorials` (MDX-Guides für lokale KI + `/tutorials/[slug]`), `/publikationen`
+(kuratierte Forschungsberichte), `/suche` (Volltextsuche), `/verzeichnis` (Anbieter- &
+Benchmark-Verzeichnis), `/compliance`, `/ueber-uns`, `/impressum`, `/datenschutz`.
 
 ### Backend (Strapi)
 ```bash
