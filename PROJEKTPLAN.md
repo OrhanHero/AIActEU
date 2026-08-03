@@ -371,6 +371,10 @@ AIActEU KI News Hub
   `frontend/src/lib/categories.ts`, `backend/data/seed-categories.json` (siehe Abschnitt 8️⃣ oben)
 - [x] MDX-Tutorial-Layer für lokale KI-Setups → `/tutorials`, `frontend/src/content/tutorials/`
   (siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md#tutorial-content-mdx-außerhalb-von-strapi))
+- [x] Kategorie-Seiten mit dem Verzeichnis verknüpft → `categoryProviderDomains`
+  (`frontend/src/lib/toolsDirectory.ts`) ordnet jede Verzeichnis-Domäne genau einer
+  Artikel-Kategorie zu; `/kategorien/[slug]` zeigt passende Anbieter-Vorschau
+  (`components/CategoryProviders.tsx`) statt bei wenigen Artikeln leer zu wirken
 
 ### **Phase 3: AI Integration** (Woche 7-10)
 - [ ] Automated Summarization (Claude API) — Code-Pfad in `scripts/ingest.mjs` vorhanden, benötigt `ANTHROPIC_API_KEY` zum produktiven Einsatz

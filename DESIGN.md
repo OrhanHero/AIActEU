@@ -53,12 +53,28 @@ Pflicht-Badges auf jeder Artikel-Card (siehe COMPLIANCE.md):
 Badge-Style (Redaktions-Badges): `text-xs`, `rounded-full`, `px-2.5 py-0.5`,
 `border border-border`, Hintergrund `bg-surface`.
 
+Zusätzlich im Footer unter "Redaktion" site-weit verankert (nicht nur pro Artikel):
+`AiGeneratedLabel` plus Link "EU-Kennzeichnung →" zur offiziellen EU-Digital-Strategy-Seite.
+
 ### Buttons
 - **Primary**: `bg-primary text-primary-foreground rounded-md`, Hover: leichtes Abdunkeln.
 - **Secondary/Outline**: `border border-border text-muted hover:text-foreground`.
 
 ### Navigation
 - Aktiver Link: `text-foreground font-medium`; inaktiv: `text-muted`.
+- Logo-Lockup im Header: zweizeilig gestapelt (`AIActEU` / `KI News Hub` kleiner, `text-xs
+  text-muted`) statt einzeiliger Wortmarke – verhindert Umbruch der Hauptnavigation bei mehr
+  Nav-Punkten.
+
+### Nach-oben-Button
+`components/BackToTopButton.tsx`: `fixed bottom-6 right-6`, rund (`rounded-full`), gleicher
+Card-Stil (`bg-surface`, `border-border`, Hover: `border-primary/40`). Blendet sich erst ab
+400px Scroll-Tiefe ein, kein Layout-Effekt davor.
+
+### Sicherheits-/Warnhinweise auf Verzeichnis-Cards
+Statt die Card-Beschreibung aufzublähen, trägt `Provider.warning` (optional) ein ⚠️-Symbol
+neben dem Namen mit dem vollen Hinweistext im `title`-Tooltip (`ProviderCard.tsx`). Vorbild:
+OmniRoute-Eintrag im Bereich Developer-Tools & Infrastruktur.
 
 ## Responsive Design
 

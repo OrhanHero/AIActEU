@@ -33,3 +33,23 @@ export const benchmarks: Benchmark[] = benchmarksData.benchmarks;
 export function getProvidersByDomain(domainSlug: string): Provider[] {
   return providers.filter((p) => p.domain === domainSlug);
 }
+
+export function getProviderDomain(domainSlug: string): ProviderDomain | undefined {
+  return providerDomains.find((d) => d.slug === domainSlug);
+}
+
+// Ordnet jede Verzeichnis-Domäne genau einer Artikel-Kategorie (categories.ts) zu, damit
+// Kategorie-Seiten passende Anbieter aus /verzeichnis anzeigen können, statt bei wenigen
+// Artikeln leer zu wirken. "breaking-news" bleibt bewusst ohne Zuordnung (Themenmix statt
+// Tool-Bereich). "technisch" bündelt mehrere Domänen lt. eigener Beschreibung (LLMs, RAG,
+// Agentic AI, Multimodal, Edge AI); "tools" bekommt dev-tools-infra, damit die Domäne nicht
+// doppelt auf zwei Kategorie-Seiten auftaucht.
+export const categoryProviderDomains: Record<string, string[]> = {
+  technisch: ["llm-labs", "rag-vector-db", "agentic-frameworks", "multimodal", "edge-local-ai"],
+  research: ["research"],
+  business: ["business"],
+  policy: ["policy"],
+  education: ["education"],
+  tools: ["dev-tools-infra"],
+  hardware: ["hardware-silicon"],
+};

@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories } from "@/lib/categories";
 import { getArticlesByCategory } from "@/lib/articles";
+import { categoryProviderDomains } from "@/lib/toolsDirectory";
 import { CategoryArticleFilter } from "@/components/CategoryArticleFilter";
+import { CategoryProviders } from "@/components/CategoryProviders";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -52,6 +54,8 @@ export default async function CategoryPage({ params }: Props) {
       </div>
 
       <CategoryArticleFilter articles={categoryArticles} />
+
+      <CategoryProviders domainSlugs={categoryProviderDomains[slug] ?? []} />
     </div>
   );
 }
