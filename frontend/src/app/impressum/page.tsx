@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Pflichtangaben gemäß § 5 TMG / § 18 MStV.",
+  description: "Pflichtangaben gemäß § 5 DDG / § 18 MStV.",
 };
 
 export default function ImpressumPage() {
@@ -12,29 +12,44 @@ export default function ImpressumPage() {
 
       <p className="mb-8 rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-sm leading-relaxed text-foreground">
         Entwurf – noch nicht rechtlich geprüft. Diese Seite darf erst nach anwaltlicher Prüfung
-        und Vervollständigung der Platzhalter live geschaltet werden (siehe{" "}
-        <code>COMPLIANCE.md</code>, Abschnitt &bdquo;Offene Punkte&ldquo;).
+        live geschaltet werden (siehe <code>COMPLIANCE.md</code>, Abschnitt &bdquo;Offene
+        Punkte&ldquo;).
       </p>
 
       <section className="mb-6 text-muted leading-relaxed">
-        <h2 className="mb-2 text-lg font-semibold text-foreground">Angaben gemäß § 5 TMG</h2>
-        <p>[Name / Firmenbezeichnung des Betreibers]</p>
-        <p>[Straße, Hausnummer]</p>
-        <p>[PLZ, Ort]</p>
-        <p>[Land]</p>
+        <h2 className="mb-2 text-lg font-semibold text-foreground">Angaben gemäß § 5 DDG</h2>
+        <p>Orhan Kahraman</p>
+        <p>Weichselstr. 41</p>
+        <p>12045 Berlin</p>
+        <p>Deutschland</p>
       </section>
 
       <section className="mb-6 text-muted leading-relaxed">
         <h2 className="mb-2 text-lg font-semibold text-foreground">Kontakt</h2>
-        <p>E-Mail: [Kontakt-E-Mail]</p>
+        <p>
+          E-Mail:{" "}
+          <a href="mailto:aiacteu@gmail.com" className="text-primary hover:underline">
+            aiacteu@gmail.com
+          </a>
+        </p>
       </section>
 
       <section className="mb-6 text-muted leading-relaxed">
         <h2 className="mb-2 text-lg font-semibold text-foreground">
           Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
         </h2>
-        <p>[Name der verantwortlichen Person]</p>
-        <p>[Anschrift, sofern abweichend]</p>
+        <p>
+          Orhan Kahraman ·{" "}
+          <a
+            href="https://www.linkedin.com/in/orhankahraman/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            LinkedIn
+          </a>
+        </p>
+        <p>Weichselstr. 41, 12045 Berlin</p>
       </section>
 
       <section className="text-muted leading-relaxed">

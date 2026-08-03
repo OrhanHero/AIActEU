@@ -23,7 +23,7 @@ KI-generierte Inhalte, Art. 50), DSGVO.
 |---|---|---|
 | Jeder Artikel verlinkt zur Originalquelle | ✅ Pflicht | Pflichtfeld `sourceUrl` + `sourceName` im Content-Modell, immer sichtbar auf Card & Detailseite |
 | Verantwortliche Person / Editorial Board benannt | ✅ Pflicht | `/ueber-uns`-Seite, Kontakt-E-Mail |
-| Impressum (§5 TMG / §18 MStV) | ✅ Pflicht (rechtlich) | `/impressum`-Seite – **vor Live-Schaltung von Rechtsberatung prüfen lassen** |
+| Impressum (§5 DDG / §18 MStV) | ✅ Pflicht (rechtlich) | `/impressum`-Seite, Angaben ausgefüllt – **vor Live-Schaltung von Rechtsberatung prüfen lassen** |
 | Datenschutzerklärung (DSGVO Art. 13/14) | ✅ Pflicht (rechtlich) | `/datenschutz`-Seite – **vor Live-Schaltung von Rechtsberatung prüfen lassen** |
 
 ## 3. Faktencheck-Prozess

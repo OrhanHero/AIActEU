@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
+    site: "@AIActEUR",
     title,
     description,
   },
