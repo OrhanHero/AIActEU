@@ -62,6 +62,17 @@ in `frontend/src/lib/tutorials.ts`, das Routing lädt den passenden MDX-Body dyn
 Begründung: redaktionelle Long-Form-Guides mit Code-Snippets sind in MDX direkt im Repo
 einfacher zu pflegen (Diff-review, kein CMS-Roundtrip) als über Strapi Rich-Text.
 
+## Dependency-Sicherheit
+
+`frontend/package.json` enthält ein `overrides`-Feld für `postcss` (`^8.5.18`) und `sharp`
+(`^0.35.0`): `next@16.2.12` bündelt/zieht selbst ältere, laut `npm audit` verwundbare Versionen
+dieser beiden Pakete (PostCSS Path-Traversal/XSS-Advisories, sharp/libvips-CVEs). Ein
+`next`-Downgrade (der von `npm audit fix --force` vorgeschlagene Weg) wurde bewusst **nicht**
+gewählt, da er auf `next@9.3.3` zurückfallen würde – stattdessen erzwingen die Overrides die
+gepatchten Versionen im gesamten Abhängigkeitsbaum. Ergebnis: `npm audit` meldet 0
+Schwachstellen, `npm run build` läuft unverändert durch. Bei jedem `next`-Update prüfen, ob die
+Overrides noch nötig sind (ggf. entfernen, sobald `next` selbst gepatchte Versionen zieht).
+
 ## Offene Punkte für Phase 2
 
 - ~~Entscheidung: Strapi-Plugin vs. externer Worker-Service für RSS-Ingestion~~ **Entschieden:**
