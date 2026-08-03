@@ -187,6 +187,7 @@
     { "name": "Kaggle Learn", "url": "https://www.kaggle.com/learn", "domain": "education", "description": "Kostenlose Mini-Kurse plus Wettbewerbe zum Üben." },
     { "name": "Hugging Face Courses", "url": "https://huggingface.co/learn", "domain": "education", "description": "Kostenlose Kurse zu NLP, Diffusion Models, RL u. a." },
     { "name": "Google AI Education", "url": "https://ai.google/education/", "domain": "education", "description": "Google-eigene KI-Lernressourcen und Crash-Kurse." },
+    { "name": "Google Learning", "url": "https://learning.google/", "domain": "education", "description": "Googles übergreifender Lern-Hub für Schule, Beruf und Alltag: Gemini für Bildung, Grow-with-Google-Skilltrainings, Classroom und weitere Tools." },
     { "name": "freeCodeCamp", "url": "https://www.freecodecamp.org", "domain": "education", "description": "Kostenlose Programmier-/ML-Kurse mit Zertifikaten." },
     { "name": "Elements of AI", "url": "https://www.elementsofai.de", "domain": "education", "description": "Niedrigschwelliger, komplett kostenloser KI-Einführungskurs der Universität Helsinki, hier in der deutschen Sprachversion." },
     { "name": "Anthropic Academy", "url": "https://anthropic.skilljar.com/", "domain": "education", "description": "Offizielle, kostenlose Lernpfade direkt von Anthropic für Prompting und Claude-API-/Claude-Code-Entwicklung." },

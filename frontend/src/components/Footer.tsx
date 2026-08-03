@@ -5,6 +5,7 @@ const socialLinks = [
   { label: "TikTok", href: "https://www.tiktok.com/@aiacteu" },
   { label: "YouTube", href: "https://www.youtube.com/@AIActEU" },
   { label: "X", href: "https://x.com/AIActEUR" },
+  { label: "GitHub", href: "https://github.com/OrhanHero" },
 ];
 
 export function Footer() {
