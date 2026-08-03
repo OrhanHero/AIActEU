@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AiGeneratedLabel } from "./AiGeneratedLabel";
 
 const socialLinks = [
   { label: "TikTok", href: "https://www.tiktok.com/@aiacteu" },
@@ -50,10 +51,20 @@ export function Footer() {
         </div>
         <div>
           <p className="font-medium text-foreground mb-2">Redaktion</p>
-          <p>
+          <p className="mb-3">
             Diese Seite nutzt KI zur Inhalts-Kuratierung; die editorielle Kontrolle liegt
             bei Menschen.
           </p>
+          <AiGeneratedLabel className="mb-2" />
+          <br />
+          <a
+            href="https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            EU-Kennzeichnung →
+          </a>
         </div>
         <div>
           <p className="font-medium text-foreground mb-2">Social</p>
