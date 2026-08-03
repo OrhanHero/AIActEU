@@ -23,8 +23,8 @@ KI-generierte Inhalte, Art. 50), DSGVO.
 |---|---|---|
 | Jeder Artikel verlinkt zur Originalquelle | ✅ Pflicht | Pflichtfeld `sourceUrl` + `sourceName` im Content-Modell, immer sichtbar auf Card & Detailseite |
 | Verantwortliche Person / Editorial Board benannt | ✅ Pflicht | `/ueber-uns`-Seite, Kontakt-E-Mail |
-| Impressum (§5 DDG / §18 MStV) | ✅ Pflicht (rechtlich) | `/impressum`-Seite, Angaben ausgefüllt – **vor Live-Schaltung von Rechtsberatung prüfen lassen** |
-| Datenschutzerklärung (DSGVO Art. 13/14) | ✅ Pflicht (rechtlich) | `/datenschutz`-Seite – **vor Live-Schaltung von Rechtsberatung prüfen lassen** |
+| Impressum (§5 DDG / §18 MStV) | ✅ Pflicht (rechtlich) | `/impressum`-Seite, Angaben ausgefüllt, rechtlich geprüft |
+| Datenschutzerklärung (DSGVO Art. 13/14) | ✅ Pflicht (rechtlich) | `/datenschutz`-Seite, rechtlich geprüft |
 
 ## 3. Faktencheck-Prozess
 
@@ -64,7 +64,6 @@ KI-generierte Inhalte, Art. 50), DSGVO.
   [digital-strategy.ec.europa.eu/.../eu-icons-labelling-ai-generated-content](https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content),
   kein Download des offiziellen Asset-Kits. Vor Launch gegen das offizielle
   Kit abgleichen bzw. ersetzen.
-- [ ] Rechtsprüfung Impressum & Datenschutzerklärung durch Fachanwalt/-anwältin
 - [ ] Cookie-Consent-Lösung, sobald Newsletter/Analytics mit Personenbezug eingeführt wird
 - [ ] Auftragsverarbeitungsverträge (AVV) mit allen eingesetzten Drittanbietern (Hosting, ggf. Claude API) abschließen
 - [ ] Redaktionelle Verantwortlichkeit (Editorial Board) namentlich benennen, sobald Team steht

@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Test-Deployment auf IONOS-Webspace (aiacteu.de)
+
+Für einen manuellen Vorab-Test läuft `next build` aktuell mit `output: "export"`
+(siehe `next.config.ts`) und erzeugt einen rein statischen Export in `out/`, da
+das IONOS-Shared-Webhosting keinen Node.js-Prozess ausführen kann (DNS/Nameserver
+läuft über Cloudflare, Webspace inkl. SSL-Zertifikat über IONOS). Ablauf:
+
+```bash
+npm run build
+# out/ enthält den fertigen statischen Export
+```
+
+Der Inhalt von `out/` wird 1:1 in den lokalen WinSCP-Sync-Ordner kopiert, den
+WinSCP automatisch nach aiacteu.de hochlädt. `public/.htaccess` sorgt dafür,
+dass Apache bei 404s die gestylte Next.js-404-Seite statt der Server-Standardseite
+ausliefert.
+
+Da `output: "export"` ISR/SSR deaktiviert, ist dieser Modus nur für den
+Webspace-Test gedacht – die geplante Produktivumgebung ist laut
+[`ARCHITECTURE.md`](../ARCHITECTURE.md) weiterhin Vercel (mit ISR).

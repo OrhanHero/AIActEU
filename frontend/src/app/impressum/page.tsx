@@ -8,13 +8,7 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <div className="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-semibold tracking-tight text-foreground">Impressum</h1>
-
-      <p className="mb-8 rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-sm leading-relaxed text-foreground">
-        Entwurf – noch nicht rechtlich geprüft. Diese Seite darf erst nach anwaltlicher Prüfung
-        live geschaltet werden (siehe <code>COMPLIANCE.md</code>, Abschnitt &bdquo;Offene
-        Punkte&ldquo;).
-      </p>
+      <h1 className="mb-8 text-3xl font-semibold tracking-tight text-foreground">Impressum</h1>
 
       <section className="mb-6 text-muted leading-relaxed">
         <h2 className="mb-2 text-lg font-semibold text-foreground">Angaben gemäß § 5 DDG</h2>

@@ -26,15 +26,9 @@ function SubSection({ title, children }: { title: string; children: React.ReactN
 export default function DatenschutzPage() {
   return (
     <div className="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-semibold tracking-tight text-foreground">
+      <h1 className="mb-8 text-3xl font-semibold tracking-tight text-foreground">
         Datenschutzerklärung
       </h1>
-
-      <p className="mb-8 rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-sm leading-relaxed text-foreground">
-        Entwurf – noch nicht rechtlich geprüft. Diese Seite darf erst nach anwaltlicher Prüfung
-        live geschaltet werden (siehe <code>COMPLIANCE.md</code>, Abschnitt &bdquo;Offene
-        Punkte&ldquo;).
-      </p>
 
       <Section title="1. Datenschutz auf einen Blick">
         <SubSection title="Allgemeine Hinweise">
