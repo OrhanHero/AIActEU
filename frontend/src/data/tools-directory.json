@@ -66,6 +66,30 @@
       "emoji": "🖥️",
       "title": "Hardware, Silicon & Data Centers",
       "description": "Chip-Hersteller, Supercomputing-Infrastruktur und Dev-Kits für lokale KI-Hardware."
+    },
+    {
+      "slug": "nachhaltigkeit",
+      "emoji": "🌱",
+      "title": "Green AI & Nachhaltigkeit",
+      "description": "Tools und Organisationen zur Messung und Reduktion des Energie-/CO2-Fußabdrucks von KI."
+    },
+    {
+      "slug": "applications",
+      "emoji": "🧩",
+      "title": "Applications & Use Cases",
+      "description": "KI-Anwendungen für Branchen, Unternehmen und den Alltag."
+    },
+    {
+      "slug": "community",
+      "emoji": "🤝",
+      "title": "Community & Netzwerke",
+      "description": "Verbände, Initiativen und Community-Netzwerke rund um KI in DACH und Europa."
+    },
+    {
+      "slug": "safety",
+      "emoji": "🛡️",
+      "title": "AI Safety & Alignment",
+      "description": "Forschungsorganisationen zu Red Teaming, Model Evaluation und Alignment."
     }
   ],
   "providers": [
@@ -220,6 +244,33 @@
     { "name": "EuroHPC Joint Undertaking", "url": "https://eurohpc-ju.europa.eu", "domain": "hardware-silicon", "description": "EU-Initiative für europäische Supercomputing-Souveränität (LUMI, Leonardo, MareNostrum 5)." },
     { "name": "Hetzner", "url": "https://www.hetzner.com", "domain": "hardware-silicon", "description": "Deutscher Cloud-/Server-Anbieter mit souveräner KI-Infrastruktur." },
     { "name": "Apple Silicon", "url": "https://developer.apple.com/metal/", "domain": "hardware-silicon", "description": "Unified-Memory-Architektur (Mac Studio/Pro) für lokale LLM-Inferenz." },
-    { "name": "Microsoft Surface Devices", "url": "https://www.microsoft.com/en-us/surface/devices", "domain": "hardware-silicon", "description": "Referenz-Hardware für KI-Dev-Kits (Snapdragon-/NVIDIA-Grace-Kombinationen)." }
+    { "name": "Microsoft Surface Devices", "url": "https://www.microsoft.com/en-us/surface/devices", "domain": "hardware-silicon", "description": "Referenz-Hardware für KI-Dev-Kits (Snapdragon-/NVIDIA-Grace-Kombinationen)." },
+
+    { "name": "CodeCarbon", "url": "https://codecarbon.io/", "domain": "nachhaltigkeit", "description": "Open-Source-Python-Tool zur Messung der CO2-Emissionen von Compute-Jobs während des Trainings/Betriebs." },
+    { "name": "AI Energy Score (Hugging Face)", "url": "https://huggingface.github.io/AIEnergyScore/", "domain": "nachhaltigkeit", "description": "Standardisiertes Energieeffizienz-Rating für KI-Modelle, mitentwickelt von Hugging Face und Salesforce." },
+    { "name": "ML CO2 Impact Calculator", "url": "https://mlco2.github.io/impact/", "domain": "nachhaltigkeit", "description": "Rechner zur Abschätzung der CO2-Emissionen von ML-Trainingsläufen nach Hardware, Laufzeit und Cloud-Region." },
+    { "name": "Green Software Foundation", "url": "https://greensoftware.foundation/", "domain": "nachhaltigkeit", "description": "Non-Profit unter der Linux Foundation für Standards und Best Practices für klimafreundliche Software, inkl. Carbon-Aware SDK." },
+    { "name": "WattTime", "url": "https://watttime.org/", "domain": "nachhaltigkeit", "description": "Non-Profit mit Echtzeit-Emissionsdaten des Stromnetzes für zeit- und ortsabhängiges, CO2-bewusstes Computing." },
+
+    { "name": "Harvey", "url": "https://www.harvey.ai/", "domain": "applications", "description": "KI für die Rechtsbranche: Recherche, Vertragsentwürfe, Due Diligence, Compliance." },
+    { "name": "Abridge", "url": "https://www.abridge.com/", "domain": "applications", "description": "KI-gestützte klinische Dokumentation, entlastet Ärzt:innen bei Behandlungsnotizen." },
+    { "name": "Glean", "url": "https://www.glean.com/", "domain": "applications", "description": "Enterprise-KI-Suche über alle internen Unternehmensdatenquellen hinweg." },
+    { "name": "Perplexity", "url": "https://www.perplexity.ai/", "domain": "applications", "description": "KI-Antwortmaschine/Suchassistent für Endnutzer:innen mit Quellenangaben." },
+    { "name": "Jasper", "url": "https://www.jasper.ai/", "domain": "applications", "description": "Generative KI für Marketing-Content und Kampagnen im Unternehmenskontext." },
+    { "name": "Character.AI", "url": "https://character.ai/", "domain": "applications", "description": "Consumer-Plattform für KI-Charaktere und personalisierte Chat-Erlebnisse." },
+    { "name": "DeepL", "url": "https://www.deepl.com/", "domain": "applications", "description": "Deutsches KI-Unternehmen (Köln) für hochwertige maschinelle Übersetzung und Schreibassistenz." },
+
+    { "name": "KI Bundesverband", "url": "https://ki-verband.de/", "domain": "community", "description": "Größtes KI-Netzwerk Deutschlands mit über 500 Mitgliedsunternehmen." },
+    { "name": "appliedAI Initiative", "url": "https://www.appliedai.de/", "domain": "community", "description": "Größte europäische Initiative für angewandte KI, Teil von UnternehmerTUM (München/Heilbronn)." },
+    { "name": "CLAIRE", "url": "https://claire-ai.org/", "domain": "community", "description": "Europäisches Forschungsnetzwerk (\"AI made in Europe\") mit über 3.000 Wissenschaftler:innen." },
+    { "name": "Data Natives", "url": "https://datanatives.io/", "domain": "community", "description": "Europas größte Data-&-AI-Community, Konferenzen und Meetups mit Sitz in Berlin." },
+    { "name": "PyData", "url": "https://pydata.org/", "domain": "community", "description": "Internationale Meetup- und Konferenzreihe für Data Science/ML rund um das Python-Ökosystem (NumFOCUS)." },
+
+    { "name": "METR", "url": "https://metr.org/", "domain": "safety", "description": "Unabhängige Evaluierung gefährlicher Fähigkeiten von Frontier-Modellen." },
+    { "name": "Apollo Research", "url": "https://www.apolloresearch.ai/", "domain": "safety", "description": "Technische AI-Safety-Organisation mit Fokus auf Scheming/Deception-Risiken bei Frontier-Modellen." },
+    { "name": "UK AI Security Institute (AISI)", "url": "https://www.aisi.gov.uk/", "domain": "safety", "description": "Staatliches britisches Institut für die wissenschaftliche Bewertung von KI-Risiken." },
+    { "name": "Center for AI Safety (CAIS)", "url": "https://safe.ai/", "domain": "safety", "description": "US-Non-Profit für technische AI-Safety-Forschung, Ethik und Feldaufbau." },
+    { "name": "Alignment Research Center (ARC)", "url": "https://alignment.org/", "domain": "safety", "description": "Forschungsinstitut zur Ausrichtung fortgeschrittener KI an menschlichen Werten." },
+    { "name": "Redwood Research", "url": "https://www.redwoodresearch.org/", "domain": "safety", "description": "AI-Control- und Interpretability-Forschung für den sicheren Einsatz auch bei unsicherem Alignment." }
   ]
 }

@@ -52,4 +52,8 @@ export const categoryProviderDomains: Record<string, string[]> = {
   education: ["education"],
   tools: ["dev-tools-infra"],
   hardware: ["hardware-silicon"],
+  nachhaltigkeit: ["nachhaltigkeit"],
+  applications: ["applications"],
+  community: ["community"],
+  safety: ["safety"],
 };

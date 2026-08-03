@@ -374,7 +374,12 @@ AIActEU KI News Hub
 - [x] Kategorie-Seiten mit dem Verzeichnis verknüpft → `categoryProviderDomains`
   (`frontend/src/lib/toolsDirectory.ts`) ordnet jede Verzeichnis-Domäne genau einer
   Artikel-Kategorie zu; `/kategorien/[slug]` zeigt passende Anbieter-Vorschau
-  (`components/CategoryProviders.tsx`) statt bei wenigen Artikeln leer zu wirken
+  (`components/CategoryProviders.tsx`) statt bei wenigen Artikeln leer zu wirken. Für die
+  vier 2026-08-03 ergänzten Kategorien (Nachhaltigkeit, Applications, Community, Safety)
+  wurden mangels passender Bestands-Domäne vier neue, recherchierte Verzeichnis-Domänen
+  angelegt (Green AI & Nachhaltigkeit, Applications & Use Cases, Community & Netzwerke,
+  AI Safety & Alignment) — einzige Kategorie ohne Verzeichnis-Anbindung bleibt bewusst
+  "breaking-news" (Themenmix statt Tool-Bereich)
 
 ### **Phase 3: AI Integration** (Woche 7-10)
 - [ ] Automated Summarization (Claude API) — Code-Pfad in `scripts/ingest.mjs` vorhanden, benötigt `ANTHROPIC_API_KEY` zum produktiven Einsatz
@@ -480,7 +485,7 @@ AIActEU KI News Hub
 1. [x] **Design-Review**: Wireframes & Color Scheme abstimmen → [`DESIGN.md`](./DESIGN.md)
 2. [x] **Tech-Stack**: Finale Entscheidung Backend/Frontend → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 3. [x] **Editorial Policy**: Guidelines für Curation & Fact-Checking schreiben → [`EDITORIAL_POLICY.md`](./EDITORIAL_POLICY.md)
-4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (56 Quellen, davon 24 per HTTP verifiziert, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (129 Anbieter über 11 Domänen — inkl. "Hardware & Silicon", LLM-Gateways/Agent-Tools wie OpenRouter/OpenCode/Composio/Google Antigravity und acht Zertifizierungs-Einträgen im Education-Bereich, u. a. Anthropic Academy, KI-Campus, AI-900, AWS AI Practitioner) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
+4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (56 Quellen, davon 24 per HTTP verifiziert, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (165 Anbieter über 15 Domänen — inkl. "Hardware & Silicon", LLM-Gateways/Agent-Tools wie OpenRouter/OpenCode/Composio/Google Antigravity, Entwickler-Portale der großen Tech-Konzerne, Zertifizierungs-Einträgen im Education-Bereich sowie vier neuen Domänen für Green AI, Applications, Community und AI Safety) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
 5. [ ] **Team Assembly**: Wer macht was? — offen, erfordert Entscheidung außerhalb des Codebase
 6. [ ] **Compliance Audit**: Rechtliche Prüfung (DSGVO, Impressum, etc.) — Entwürfe stehen ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`), rechtliche Prüfung durch Fachanwalt/-anwältin noch ausstehend
 7. [ ] **Timeline**: Konkrete Termine für Phasen 1-5 — offen, erfordert Entscheidung außerhalb des Codebase
