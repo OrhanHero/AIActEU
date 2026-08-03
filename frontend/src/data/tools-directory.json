@@ -164,6 +164,7 @@
     { "name": "Google Research", "url": "https://research.google", "domain": "research", "description": "Publikationen und Blog von Google Research." },
     { "name": "OpenAI Research", "url": "https://openai.com/research", "domain": "research", "description": "Forschungsveröffentlichungen von OpenAI." },
     { "name": "DeepMind Publications", "url": "https://deepmind.google/research/publications/", "domain": "research", "description": "Publikationsverzeichnis von Google DeepMind." },
+    { "name": "Anthropic Research", "url": "https://www.anthropic.com/research", "domain": "research", "description": "Forschungsveröffentlichungen von Anthropic, u. a. zu Safety, Alignment und Interpretability." },
     { "name": "Transformer Circuits (Anthropic)", "url": "https://transformer-circuits.pub", "domain": "research", "description": "Mechanistic-Interpretability-Forschung von Anthropic." },
 
     { "name": "TechCrunch", "url": "https://techcrunch.com", "domain": "business", "description": "Führendes Tech-/Startup-Nachrichtenportal." },
