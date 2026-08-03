@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
+import { Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { articles } from "@/lib/articles";
 import { ArticleCard } from "@/components/ArticleCard";
-
-export const metadata: Metadata = {
-  title: "Suche",
-  description: "Artikel nach Titel, Zusammenfassung oder Tags durchsuchen.",
-};
 
 function search(query: string) {
   const q = query.trim().toLowerCase();
@@ -19,12 +17,9 @@ function search(query: string) {
   );
 }
 
-type Props = {
-  searchParams: Promise<{ q?: string }>;
-};
-
-export default async function SearchPage({ searchParams }: Props) {
-  const { q = "" } = await searchParams;
+function SearchResults() {
+  const searchParams = useSearchParams();
+  const q = searchParams.get("q") ?? "";
   const results = search(q);
 
   return (
@@ -56,5 +51,13 @@ export default async function SearchPage({ searchParams }: Props) {
         ))}
       </div>
     </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={null}>
+      <SearchResults />
+    </Suspense>
   );
 }
