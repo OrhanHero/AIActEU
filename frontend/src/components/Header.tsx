@@ -45,12 +45,13 @@ export function Header() {
   return (
     <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-lg">
+        <Link href="/" className="flex items-center gap-2 font-semibold">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
             AI
           </span>
-          <span>
-            AIActEU <span className="text-muted font-normal">KI News Hub</span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-lg">AIActEU</span>
+            <span className="text-xs text-muted font-normal">KI News Hub</span>
           </span>
         </Link>
 
