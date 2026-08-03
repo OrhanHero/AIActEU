@@ -30,7 +30,7 @@ Dark Mode wird über `:root[data-theme="dark"]` UND `prefers-color-scheme: dark`
 ## Layout & Spacing
 
 - **Max-Width**: `max-w-6xl` für Seiteninhalt (Header/Footer/Main konsistent).
-- **Grid**: 7-Kategorien-Grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`.
+- **Grid**: 8-Kategorien-Grid `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3` (inkl. "Hardware & Silicon").
 - **Abstände**: Tailwind-Spacing-Skala (4/6/8/10/16), keine Custom-Werte.
 - **Sticky Header**: `sticky top-0 z-40` mit `backdrop-blur` (bereits implementiert).
 

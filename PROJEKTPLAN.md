@@ -1,7 +1,9 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
 **Datum:** 02.08.2026  
-**Status:** Planungsphase abgeschlossen; Umsetzung in Phase 2 "Core Content" (siehe unten und [`README.md`](./README.md#status))  
+**Status:** Umsetzungsphase (Phase 2 "Core Content" & Hardware-Erweiterung aktiv, siehe unten,
+[`README.md`](./README.md#status) und [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx) für den
+erweiterten Master-Projektplan v2)  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---
@@ -194,6 +196,37 @@ Eine **zentrale, kuratierte Nachrichtenplattform** für den deutschsprachigen KI
 
 ---
 
+### 8️⃣ **HARDWARE, SILICON & DATA CENTERS** *(ergänzt, siehe [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx))*
+
+Umgesetzt als eigene Kategorie `hardware` (Slug), inkl. dediziertem Anbieter-Bereich
+"hardware-silicon" im Verzeichnis (`/verzeichnis`) und Quellen in `data/sources.json`.
+
+#### 8.1 Chips & Beschleuniger
+- 🟩 **NVIDIA** (Blackwell-Architektur, CUDA/TensorRT)
+- 🟥 **AMD** (Instinct MI300/MI350, ROCm als CUDA-Alternative)
+- 🔷 **Intel** (Gaudi-Beschleuniger, OpenVINO für Edge-Inferenz)
+
+#### 8.2 Supercomputing & Cloud (Deutschland/EU)
+- 🇪🇺 **Forschungszentrum Jülich** (JUPITER Exascale-Supercomputer)
+- 🇪🇺 **EuroHPC JU** (LUMI, Leonardo, MareNostrum 5)
+- 🇩🇪 **Hetzner/StackIT** (souveräne Cloud-Hardware)
+- 🇳🇱 **ASML** (EUV-Lithografie, EU-Chip-Supply-Chain)
+
+#### 8.3 Desktop AI Rigs & Dev Kits
+- 💻 **Microsoft Surface Dev Hardware**, **NVIDIA Jetson/DGX**, **Apple Silicon** (Unified Memory)
+- 💰 **TCO-Vergleich**: Lokales Dev-Rig vs. Cloud-API-Kosten bei 8B/70B/120B-Modellen
+
+---
+
+### 📖 **TUTORIALS** *(eigener Bereich außerhalb der 8 Kategorien, `/tutorials`)*
+
+Redaktionelle MDX-Guides für lokale KI-Setups statt automatisiertem News-Feed:
+Ollama, Open WebUI/LM Studio/Jan.ai, Private RAG (Ollama + Qdrant + AnythingLLM/Dify),
+Continue.dev, ComfyUI/Automatic1111, Faster-Whisper. Siehe
+[`ARCHITECTURE.md`](./ARCHITECTURE.md#tutorial-content-mdx-außerhalb-von-strapi).
+
+---
+
 ## 🎨 Webseite – Technische Struktur
 
 ### Frontend-Architektur
@@ -209,7 +242,7 @@ AIActEU KI News Hub
 │   └── Trending Topics (3-5 Top Stories)
 ├── Content Sections
 │   ├── Breaking News Carousel (Live-Updates)
-│   ├── 7 Kategorien (Cards/Tiles)
+│   ├── 8 Kategorien (Cards/Tiles, inkl. Hardware & Silicon)
 │   ├── Trending Dieser Woche
 │   └── Editor's Picks
 ├── Sidebar/Widgets
@@ -327,6 +360,10 @@ AIActEU KI News Hub
 - [x] RSS-Feed Ingestion für 7 Kategorien → `scripts/verify-sources.mjs` + `scripts/ingest.mjs`, gegen echte Feeds getestet (23/50 Quellen aktuell erreichbar, siehe `data/sources.json`)
 - [x] Datenbank für News-Artikel → SQLite lokal (Strapi), PostgreSQL für Produktivbetrieb weiterhin geplant (siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md))
 - [x] Basic Search & Filter → `/suche` (Volltextsuche) und Tag-Filter auf Kategorie-Seiten
+- [x] Hardware & Silicon als 8. Kategorie → `data/sources.json`, `data/tools-directory.json`,
+  `frontend/src/lib/categories.ts`, `backend/data/seed-categories.json` (siehe Abschnitt 8️⃣ oben)
+- [x] MDX-Tutorial-Layer für lokale KI-Setups → `/tutorials`, `frontend/src/content/tutorials/`
+  (siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md#tutorial-content-mdx-außerhalb-von-strapi))
 
 ### **Phase 3: AI Integration** (Woche 7-10)
 - [ ] Automated Summarization (Claude API) — Code-Pfad in `scripts/ingest.mjs` vorhanden, benötigt `ANTHROPIC_API_KEY` zum produktiven Einsatz
@@ -432,7 +469,7 @@ AIActEU KI News Hub
 1. [x] **Design-Review**: Wireframes & Color Scheme abstimmen → [`DESIGN.md`](./DESIGN.md)
 2. [x] **Tech-Stack**: Finale Entscheidung Backend/Frontend → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 3. [x] **Editorial Policy**: Guidelines für Curation & Fact-Checking schreiben → [`EDITORIAL_POLICY.md`](./EDITORIAL_POLICY.md)
-4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (50 Quellen real per HTTP geprüft, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (100 Anbieter, 10 je Domäne) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
+4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (56 Quellen, davon 24 per HTTP verifiziert, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (112 Anbieter über 11 Domänen, inkl. "Hardware & Silicon" sowie Moonshot AI/Aleph Alpha bei den LLM-Labs) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
 5. [ ] **Team Assembly**: Wer macht was? — offen, erfordert Entscheidung außerhalb des Codebase
 6. [ ] **Compliance Audit**: Rechtliche Prüfung (DSGVO, Impressum, etc.) — Entwürfe stehen ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`), rechtliche Prüfung durch Fachanwalt/-anwältin noch ausstehend
 7. [ ] **Timeline**: Konkrete Termine für Phasen 1-5 — offen, erfordert Entscheidung außerhalb des Codebase

@@ -37,7 +37,8 @@ rechtfertigt.
 - `Article` (title, slug, summary, body, sourceUrl, sourceName, category-Relation, tags: json,
   publishedDate, aiGenerated: boolean, humanReviewed: boolean, breaking: boolean,
   editorsPick: boolean, editorsNote) — siehe `backend/src/api/article/content-types/article/schema.json`
-- `Category` (title, slug, emoji, description, articles-Relation) — 7 Hauptkategorien lt. Plan,
+- `Category` (title, slug, emoji, description, articles-Relation) — 8 Hauptkategorien (7 lt.
+  ursprünglichem Plan + "Hardware & Silicon", siehe [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx)),
   mit Subkategorien als Tags statt eigenem Content-Type für MVP-Einfachheit
 - `Source` (name, feedUrl, type: lab-blog|newsletter|paper|dev-blog|de-quelle|startup|policy,
   categorySlug, refreshIntervalMinutes, verified, lastCheckedAt) — admin-only, öffentlich nicht lesbar
@@ -46,6 +47,18 @@ rechtfertigt.
 idempotent gesetzt (`backend/src/index.ts`), ebenso das einmalige Seeding aus
 `backend/data/seed-*.json` (`backend/src/seed.ts`) – kein manueller Klick-Aufwand im Admin-Panel
 nötig, um eine lokale Instanz lauffähig zu bekommen.
+
+## Tutorial-Content (MDX, außerhalb von Strapi)
+
+Die Tutorials unter `/tutorials` (lokale KI-Setups: Ollama, Open WebUI/LM Studio/Jan.ai,
+Private RAG, Continue.dev, ComfyUI/Automatic1111, Faster-Whisper) sind bewusst **kein** Strapi
+Content-Type, sondern statische MDX-Dateien in `frontend/src/content/tutorials/`, per
+`@next/mdx` eingebunden (`frontend/next.config.ts`). Die Metadaten (Titel, Level, Tags) liegen
+in `frontend/src/lib/tutorials.ts`, das Routing lädt den passenden MDX-Body dynamisch über
+`import(\`@/content/tutorials/${slug}.mdx\`)` in `frontend/src/app/tutorials/[slug]/page.tsx`
+(mit `generateStaticParams`/`dynamicParams: false`, also zur Build-Zeit statisch generiert).
+Begründung: redaktionelle Long-Form-Guides mit Code-Snippets sind in MDX direkt im Repo
+einfacher zu pflegen (Diff-review, kein CMS-Roundtrip) als über Strapi Rich-Text.
 
 ## Offene Punkte für Phase 2
 

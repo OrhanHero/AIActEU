@@ -15,14 +15,18 @@ Der vollständige Projektplan steht in [`PROJEKTPLAN.md`](./PROJEKTPLAN.md).
 ├── DESIGN.md                  Design-System (Farben, Typografie, Komponenten)
 ├── COMPLIANCE.md               EU-Verhaltenskodex- & DSGVO-Checkliste
 ├── EDITORIAL_POLICY.md         Kuratierungs- und Faktencheck-Richtlinien
-├── data/sources.json           RSS/API-Quellenliste für die Ingestion-Pipeline
-├── data/tools-directory.json   Anbieter-Verzeichnis (Top 10 je Bereich), siehe /verzeichnis
-└── data/benchmarks.json        Top-3-Benchmark-Plattformen, siehe /verzeichnis
+├── data/sources.json           RSS/API-Quellenliste für die Ingestion-Pipeline (56 Quellen, inkl. Hardware & Silicon)
+├── data/tools-directory.json   Anbieter-Verzeichnis (112 Anbieter über 11 Domänen, ~10 je Bereich), siehe /verzeichnis
+├── data/benchmarks.json        Top-3-Benchmark-Plattformen, siehe /verzeichnis
+└── Docs/📋 AIActEU.docx        Master-Projektplan v2 (Hardware-Erweiterung, Tutorials)
 ```
 
 ## Status
 
-Phase 2 (Core Content) – siehe [`PROJEKTPLAN.md`](./PROJEKTPLAN.md#-projektphasen).
+Phase 2 (Core Content & Hardware-Erweiterung) – siehe [`PROJEKTPLAN.md`](./PROJEKTPLAN.md#-projektphasen).
+8 Hauptkategorien (inkl. "Hardware & Silicon"); `/tutorials` bietet MDX-Guides für lokale
+KI-Setups (Ollama, Open WebUI/LM Studio/Jan.ai, Private RAG, Continue.dev,
+ComfyUI/Automatic1111, Faster-Whisper).
 
 ## Setup (lokal)
 
@@ -34,8 +38,9 @@ npm run dev
 ```
 
 Wichtigste Routen: `/` (Start), `/kategorien` (Übersicht + `/kategorien/[slug]` mit
-Tag-Filter), `/suche` (Volltextsuche), `/verzeichnis` (Anbieter- & Benchmark-Verzeichnis),
-`/compliance`, `/ueber-uns`, `/impressum`, `/datenschutz`.
+Tag-Filter), `/tutorials` (MDX-Guides für lokale KI + `/tutorials/[slug]`), `/suche`
+(Volltextsuche), `/verzeichnis` (Anbieter- & Benchmark-Verzeichnis), `/compliance`,
+`/ueber-uns`, `/impressum`, `/datenschutz`.
 
 ### Backend (Strapi)
 ```bash
