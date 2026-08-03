@@ -7,7 +7,8 @@ export type Category = {
 
 // 7 Hauptkategorien lt. PROJEKTPLAN.md, erweitert um "Hardware & Silicon" lt.
 // Docs/📋 AIActEU.docx (Master-Projektplan v2, Abschnitt 2.3/2.4 "Hardware, Silicon &
-// Data Centers" / "Desktop AI Rigs, Dev Kits & Workstations").
+// Data Centers" / "Desktop AI Rigs, Dev Kits & Workstations"), sowie 2026-08-03 um vier
+// weitere Kategorien (Nachhaltigkeit, Applications, Community, Safety) ergänzt.
 export const categories: Category[] = [
   {
     slug: "breaking-news",
@@ -57,5 +58,33 @@ export const categories: Category[] = [
     title: "Hardware & Silicon",
     description:
       "Chips, Supercomputing & Data Centers: NVIDIA, AMD, Intel, EU-Chip-Supply-Chain, Desktop AI Rigs.",
+  },
+  {
+    slug: "nachhaltigkeit",
+    emoji: "🌱",
+    title: "Nachhaltigkeit & Umwelt-Impact von KI",
+    description:
+      "Energie-, Wasser- und CO2-Fußabdruck von KI-Training und -Betrieb, Green AI, Carbon Leakage, EU-Regulierung zu Ressourcenverbrauch.",
+  },
+  {
+    slug: "applications",
+    emoji: "🧩",
+    title: "Applications & Use Cases",
+    description:
+      "Branchenlösungen, KI im Alltag, Enterprise-Integration, Creative AI & Consumer Apps.",
+  },
+  {
+    slug: "community",
+    emoji: "🤝",
+    title: "Community, Events & Ecosystem",
+    description:
+      "Konferenzen, Hackathons, Meetups, Open-Source-Initiativen & Netzwerke in DACH.",
+  },
+  {
+    slug: "safety",
+    emoji: "🛡️",
+    title: "Safety, Alignment & Governance",
+    description:
+      "Red Teaming, Model Evaluation, AI Risk Management, Bias-Mitigation & Alignment-Forschung.",
   },
 ];

@@ -225,7 +225,7 @@ Umgesetzt als eigene Kategorie `hardware` (Slug), inkl. dediziertem Anbieter-Ber
 
 ---
 
-### 📖 **TUTORIALS** *(eigener Bereich außerhalb der 8 Kategorien, `/tutorials`)*
+### 📖 **TUTORIALS** *(eigener Bereich außerhalb der 12 Kategorien, `/tutorials`)*
 
 Redaktionelle MDX-Guides für lokale KI-Setups statt automatisiertem News-Feed:
 Ollama, Open WebUI/LM Studio/Jan.ai, Private RAG (Ollama + Qdrant + AnythingLLM/Dify),
@@ -249,7 +249,7 @@ AIActEU KI News Hub
 │   └── Trending Topics (3-5 Top Stories)
 ├── Content Sections
 │   ├── Breaking News Carousel (Live-Updates)
-│   ├── 8 Kategorien (Cards/Tiles, inkl. Hardware & Silicon)
+│   ├── 12 Kategorien (Cards/Tiles, inkl. Hardware & Silicon, Nachhaltigkeit, Safety u. a.)
 │   ├── Trending Dieser Woche
 │   └── Editor's Picks
 ├── Sidebar/Widgets
@@ -432,7 +432,7 @@ AIActEU KI News Hub
 
 ### Funktionale Anforderungen
 - ✅ Täglich aktualisierte News aus 30+ Quellen
-- ✅ 7-8 hauptkategorien mit 50+ Unterkategorien
+- ✅ 12 Hauptkategorien mit 50+ Unterkategorien
 - ✅ Globale + Deutsche Perspektive
 - ✅ Multi-Sprache (DE/EN)
 - ✅ Mobile-responsive & barrierearm

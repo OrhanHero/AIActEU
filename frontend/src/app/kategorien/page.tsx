@@ -4,7 +4,7 @@ import { CategoryCard } from "@/components/CategoryCard";
 
 export const metadata: Metadata = {
   title: "Kategorien",
-  description: "Alle 7 Hauptkategorien der AIActEU KI News Plattform im Überblick.",
+  description: `Alle ${categories.length} Hauptkategorien der AIActEU KI News Plattform im Überblick.`,
 };
 
 export default function KategorienPage() {
@@ -12,8 +12,8 @@ export default function KategorienPage() {
     <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="mb-2 text-3xl font-semibold tracking-tight text-foreground">Kategorien</h1>
       <p className="mb-8 max-w-2xl text-muted leading-relaxed">
-        Sieben Hauptkategorien decken das KI-Ökosystem von Forschung bis Regulierung ab – global
-        und mit deutscher Perspektive.
+        {categories.length} Hauptkategorien decken das KI-Ökosystem von Forschung bis Regulierung
+        ab – global und mit deutscher Perspektive.
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category) => (

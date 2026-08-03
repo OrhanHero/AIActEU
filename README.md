@@ -25,7 +25,9 @@ Der vollständige Projektplan steht in [`PROJEKTPLAN.md`](./PROJEKTPLAN.md).
 ## Status
 
 Phase 2 (Core Content & Hardware-Erweiterung) – siehe [`PROJEKTPLAN.md`](./PROJEKTPLAN.md#-projektphasen).
-8 Hauptkategorien (inkl. "Hardware & Silicon"); `/tutorials` bietet MDX-Guides für lokale
+12 Hauptkategorien (inkl. "Hardware & Silicon", "Nachhaltigkeit & Umwelt-Impact", "Applications
+& Use Cases", "Community, Events & Ecosystem", "Safety, Alignment & Governance"); `/tutorials`
+bietet MDX-Guides für lokale
 KI-Setups (Ollama, Open WebUI/LM Studio/Jan.ai, Private RAG, Continue.dev,
 ComfyUI/Automatic1111, Faster-Whisper).
 
