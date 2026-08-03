@@ -1,6 +1,12 @@
 import type { Publication } from "@/lib/publications";
 
+// publishedDate ist teils nur mit Jahres- oder Monatspräzision bekannt (z. B. bei
+// Studien ohne offizielles Tagesdatum) — zeigt dann keine erfundene Genauigkeit an.
 function formatDate(iso: string) {
+  if (/^\d{4}$/.test(iso)) return iso;
+  if (/^\d{4}-\d{2}$/.test(iso)) {
+    return new Intl.DateTimeFormat("de-DE", { month: "2-digit", year: "numeric" }).format(new Date(`${iso}-01`));
+  }
   return new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" }).format(
     new Date(iso)
   );

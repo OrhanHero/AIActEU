@@ -8,6 +8,12 @@
       "description": "Energie-, Wasser- und Landverbrauch von KI-Training und -Inferenz."
     },
     {
+      "slug": "deutschland",
+      "emoji": "🇩🇪",
+      "title": "Deutsche Forschung & Unternehmen",
+      "description": "Deutsche Institute, Behörden und Unternehmen zum ökologischen Fußabdruck von KI."
+    },
+    {
       "slug": "landschaft-sicherheit",
       "emoji": "🧭",
       "title": "KI-Landschaft & Sicherheit",
@@ -46,6 +52,46 @@
       "publishedDate": "2025-04-10",
       "topic": "umwelt-ressourcen",
       "summary": "Erste umfassende globale Analyse der IEA zum Verhältnis von Energie und KI: Der Stromverbrauch von Rechenzentren weltweit soll sich bis 2030 auf rund 945 TWh mehr als verdoppeln — mehr als der heutige Gesamtstromverbrauch Japans —, wobei KI-optimierte Rechenzentren der stärkste Treiber sind. Grundlage für den Follow-up-Report \"Key Questions on Energy and AI\" (04/2026)."
+    },
+    {
+      "title": "Carbon Leakage in AI-Driven Data Center Growth?",
+      "authors": "Schmid, N., Coroamă, V. C., Dumbravă, O., Eichler, M., Reisser, M., Kaack, L. H., Axenbeck, J., Füssler, J. — Umweltbundesamt (UBA) mit INFRAS & Roegen Centre for Sustainability",
+      "url": "https://www.umweltbundesamt.de/publikationen/carbon-leakage-in-ai-driven-data-center-growth",
+      "publishedDate": "2025-06",
+      "topic": "deutschland",
+      "summary": "Das deutsche Umweltbundesamt untersucht das Risiko von Carbon Leakage beim KI-getriebenen Rechenzentrumswachstum: Der KI-bezogene Energiebedarf von Rechenzentren könnte bis 2028 auf rund 300 TWh steigen (~1 % des weltweiten Stromverbrauchs). Da aktuelle und geplante KI-Rechenkapazitäten stark auf die USA und China konzentriert sind — Länder mit im Vergleich zur EU schwächerer Klimapolitik —, könnte ein CO₂-Preis in der EU Rechenlast eher ins Ausland verlagern als reduzieren. Aktuell schätzt die Studie das Risiko als moderat ein, da der Sektor primär auf Kapazitätsaufbau statt Kostenminimierung setzt."
+    },
+    {
+      "title": "Rechenzentren in Deutschland: Aktuelle Marktentwicklungen (Update 2025)",
+      "authors": "Hintemann, R., Hinterholzer, S. — Borderstep Institut für Innovation und Nachhaltigkeit (im Auftrag von Bitkom)",
+      "url": "https://www.borderstep.de/publikation/hintemann-r-hinterholzer-s-2025-rechenzentren-in-deutschland-aktuelle-marktentwicklungen-update-2025-berlin-bitkom/",
+      "publishedDate": "2025",
+      "topic": "deutschland",
+      "summary": "Jährliche Markterhebung des Borderstep Institut — Dr. Ralph Hintemann zählt zu den bekanntesten deutschen Forschern zum Energiebedarf von Rechenzentren: Deutschlands Rechenzentrumskapazität wuchs 2025 um 9 % auf 2.980 MW, der Stromverbrauch stieg auf 21,3 Mrd. kWh. KI-Rechenzentren sollen sich bis 2030 vervierfachen und dann rund 40 % der Gesamtkapazität ausmachen — der zentrale Treiber des für 2030 erwarteten Kapazitätswachstums von 70 %."
+    },
+    {
+      "title": "Nachhaltigkeit durch KI – Potenziale und Handlungsleitfaden für produzierende Unternehmen",
+      "authors": "Fraunhofer-Institut für Produktionstechnik und Automatisierung IPA, Fraunhofer-Institut für Arbeitswirtschaft und Organisation IAO",
+      "url": "https://www.ipa.fraunhofer.de/de/Publikationen/studien/nachhaltigkeit-durch-kI.html",
+      "publishedDate": "2022",
+      "topic": "deutschland",
+      "summary": "Praxisleitfaden zweier Fraunhofer-Institute für produzierende Unternehmen: zeigt an Beispielen wie recycelbaren Produkten, optimiertem Energieverbrauch und Kreislaufwirtschafts-Anwendungen, wie KI Effizienz und Umweltbilanz gleichzeitig verbessern kann. Liefert einen Sieben-Schritte-Prozess zur Einführung, der auch den Eigenenergiebedarf der KI selbst mitdenkt."
+    },
+    {
+      "title": "Für Umwelt und Menschen: Telekom setzt KI verantwortungsbewusst ein",
+      "authors": "Deutsche Telekom AG",
+      "url": "https://www.telekom.com/en/media/media-information/archive/for-the-environment-and-people-deutsche-telekom-uses-ai-responsibly-1077108",
+      "publishedDate": "2024-09-12",
+      "topic": "deutschland",
+      "summary": "Deutsche Telekom veröffentlicht neun \"Grundsätze für grüne KI\": u. a. Wiederverwendung bestehender Modelle statt Neu-Training und \"Green Coding\" zur Minimierung des Ressourcenverbrauchs. Parallel setzt der Konzern KI selbst zur Effizienzsteigerung ein — etwa zur intelligenten Kühlungssteuerung in Rechenzentren und zum bedarfsgerechten Abschalten von Mobilfunk-Antennen bei geringer Auslastung."
+    },
+    {
+      "title": "Klimafaktor KI: Mehrheit der Unternehmen erwartet CO₂-Einsparungen",
+      "authors": "Bitkom e. V. — Branchenverband der deutschen Digitalwirtschaft (Befragung von 600+ deutschen Unternehmen)",
+      "url": "https://www.bitkom.org/Presse/Presseinformation/Klimafaktor-Unternehmen-erwarten-CO2-Einsparungen",
+      "publishedDate": "2025-12-17",
+      "topic": "deutschland",
+      "summary": "Bitkom-Umfrage unter über 600 deutschen Unternehmen: 84 % sehen KI als Chance für Klimaschutz und Nachhaltigkeit, zwei Drittel erwarten CO₂-Einsparungen durch KI-Einsatz. Gleichzeitig halten 83 % den hohen Energieverbrauch beim Training von KI-Modellen für problematisch und fordern effiziente Algorithmen sowie optimierte Rechenzentren."
     },
     {
       "title": "The 2026 AI Index Report",

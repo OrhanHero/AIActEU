@@ -197,6 +197,8 @@ Eine **zentrale, kuratierte Nachrichtenplattform** für den deutschsprachigen KI
 #### 7.4 Publikationen *(umgesetzt unter `/publikationen`, siehe [`data/publications.json`](./data/publications.json))*
 - 🌍 **Umwelt & Ressourcenverbrauch** (u. a. UNU-INWEH-Report zu Energie-/Wasser-/Landfußabdruck,
   IEA "Energy and AI", "Making AI Less Thirsty", "Measuring the Carbon Intensity of AI")
+- 🇩🇪 **Deutsche Forschung & Unternehmen** (Umweltbundesamt, Borderstep Institut/Ralph Hintemann,
+  Fraunhofer IPA/IAO, Deutsche Telekom, Bitkom)
 - 🧭 **KI-Landschaft & Sicherheit** (Stanford AI Index Report, International AI Safety Report)
 
 ---
