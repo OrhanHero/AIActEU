@@ -4,6 +4,8 @@ import { getBreakingArticles, getEditorsPicks, getLatestArticles } from "@/lib/a
 import { ArticleCard } from "@/components/ArticleCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Sidebar } from "@/components/Sidebar";
+import { LiveIndicator } from "@/components/LiveIndicator";
+import { GlassCard } from "@/components/ui/GlassCard";
 
 export default function Home() {
   const breaking = getBreakingArticles();
@@ -13,33 +15,48 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
       {/* Hero */}
-      <section className="mb-12">
-        <h1 className="max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          Was gibt&apos;s Neues in KI?
-        </h1>
-        <p className="mt-3 max-w-2xl text-muted leading-relaxed">
-          Kuratierte KI-News für den deutschsprachigen Raum – von Forschung über Hardware &amp;
-          Silicon bis Startups und Regulierung. Transparent gekennzeichnet nach dem
-          EU-Verhaltenskodex, siehe{" "}
-          <Link href="/compliance" className="text-primary hover:underline">
-            Compliance
-          </Link>
-          .
-        </p>
+      <section className="relative mb-12 overflow-hidden">
+        <div
+          className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 animate-float rounded-full bg-primary opacity-20 blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -right-16 top-10 h-64 w-64 animate-float rounded-full bg-accent opacity-20 blur-3xl [animation-delay:-3s]"
+          aria-hidden
+        />
 
-        {breaking.length > 0 && (
-          <div className="mt-6 flex flex-col gap-3">
-            <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-accent">
-              <span className="inline-flex h-2 w-2 rounded-full bg-accent" aria-hidden />
-              Breaking News
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {breaking.map((article) => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
+        <GlassCard className="relative p-6 sm:p-8">
+          <LiveIndicator className="mb-4" />
+
+          <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Was gibt&apos;s Neues in KI?
+            </span>
+          </h1>
+          <p className="mt-3 max-w-2xl text-muted leading-relaxed">
+            Kuratierte KI-News für den deutschsprachigen Raum – von Forschung über Hardware &amp;
+            Silicon bis Startups und Regulierung. Transparent gekennzeichnet nach dem
+            EU-Verhaltenskodex, siehe{" "}
+            <Link href="/compliance" className="text-primary hover:underline">
+              Compliance
+            </Link>
+            .
+          </p>
+
+          {breaking.length > 0 && (
+            <div className="mt-6 flex flex-col gap-3">
+              <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-accent">
+                <span className="inline-flex h-2 w-2 rounded-full bg-accent" aria-hidden />
+                Breaking News
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {breaking.map((article) => (
+                  <ArticleCard key={article.slug} article={article} />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </GlassCard>
       </section>
 
       <div className="grid gap-10 lg:grid-cols-[1fr_320px]">

@@ -5,7 +5,7 @@ export function CategoryCard({ category }: { category: Category }) {
   return (
     <Link
       href={`/kategorien/${category.slug}`}
-      className="group flex flex-col gap-2 rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary/40"
+      className="group flex flex-col gap-2 rounded-lg border border-border bg-surface p-5 transition-all duration-300 hover:scale-[1.02] hover:border-primary/50 hover:shadow-lg"
     >
       <span className="text-2xl" aria-hidden>
         {category.emoji}

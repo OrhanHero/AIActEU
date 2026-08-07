@@ -1,11 +1,12 @@
 import { articles, getTopTags } from "@/lib/articles";
+import { GlassCard } from "@/components/ui/GlassCard";
 
 function WidgetCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="rounded-lg border border-border bg-surface p-5">
+    <GlassCard className="p-5">
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted">{title}</h2>
       {children}
-    </section>
+    </GlassCard>
   );
 }
 

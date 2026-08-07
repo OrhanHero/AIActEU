@@ -11,7 +11,7 @@ export function ArticleCard({ article }: { article: Article }) {
   const category = getCategoryForArticle(article);
 
   return (
-    <article className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary/40">
+    <article className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-5 transition-all duration-300 hover:scale-[1.02] hover:border-primary/50 hover:shadow-lg">
       <div className="flex items-center justify-between gap-2 text-xs text-muted">
         {category && (
           <span className="inline-flex items-center gap-1">
