@@ -6,7 +6,7 @@ export type Category = {
 };
 
 // 7 Hauptkategorien lt. PROJEKTPLAN.md, erweitert um "Hardware & Silicon" lt.
-// Docs/📋 AIActEU.docx (Master-Projektplan v2, Abschnitt 2.3/2.4 "Hardware, Silicon &
+// docs/📋 AIActEU.docx (Master-Projektplan v2, Abschnitt 2.3/2.4 "Hardware, Silicon &
 // Data Centers" / "Desktop AI Rigs, Dev Kits & Workstations"), sowie 2026-08-03 um vier
 // weitere Kategorien (Nachhaltigkeit, Applications, Community, Safety) ergänzt.
 export const categories: Category[] = [

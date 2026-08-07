@@ -8,7 +8,7 @@ export type Tutorial = {
 };
 
 // Registry für die MDX-Tutorial-Seiten unter app/tutorials/[slug]/page.mdx.
-// Lt. Docs/📋 AIActEU.docx Abschnitt 2.5 "Tutorials & Local AI Setup Guides".
+// Lt. docs/📋 AIActEU.docx Abschnitt 2.5 "Tutorials & Local AI Setup Guides".
 export const tutorials: Tutorial[] = [
   {
     slug: "ollama-mastery",

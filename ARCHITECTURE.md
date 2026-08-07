@@ -40,7 +40,7 @@ rechtfertigt.
 - `Category` (title, slug, emoji, description, articles-Relation) — 12 Hauptkategorien (7 lt.
   ursprünglichem Plan + "Hardware & Silicon" sowie 2026-08-03 um "Nachhaltigkeit & Umwelt-Impact",
   "Applications & Use Cases", "Community, Events & Ecosystem" und "Safety, Alignment & Governance"
-  erweitert, siehe [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx)),
+  erweitert, siehe [`docs/📋 AIActEU.docx`](./docs/📋%20AIActEU.docx)),
   mit Subkategorien als Tags statt eigenem Content-Type für MVP-Einfachheit
 - `Source` (name, feedUrl, type: lab-blog|newsletter|paper|dev-blog|de-quelle|startup|policy,
   categorySlug, refreshIntervalMinutes, verified, lastCheckedAt) — admin-only, öffentlich nicht lesbar

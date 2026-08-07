@@ -2,7 +2,7 @@
 
 **Datum:** 02.08.2026  
 **Status:** Umsetzungsphase (Phase 2 "Core Content" & Hardware-Erweiterung aktiv, siehe unten,
-[`README.md`](./README.md#status) und [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx) für den
+[`README.md`](./README.md#status) und [`docs/📋 AIActEU.docx`](./docs/📋%20AIActEU.docx) für den
 erweiterten Master-Projektplan v2)  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
@@ -203,7 +203,7 @@ Eine **zentrale, kuratierte Nachrichtenplattform** für den deutschsprachigen KI
 
 ---
 
-### 8️⃣ **HARDWARE, SILICON & DATA CENTERS** *(ergänzt, siehe [`Docs/📋 AIActEU.docx`](./Docs/📋%20AIActEU.docx))*
+### 8️⃣ **HARDWARE, SILICON & DATA CENTERS** *(ergänzt, siehe [`docs/📋 AIActEU.docx`](./docs/📋%20AIActEU.docx))*
 
 Umgesetzt als eigene Kategorie `hardware` (Slug), inkl. dediziertem Anbieter-Bereich
 "hardware-silicon" im Verzeichnis (`/verzeichnis`) und Quellen in `data/sources.json`.

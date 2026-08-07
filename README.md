@@ -19,7 +19,7 @@ Der vollständige Projektplan steht in [`PROJEKTPLAN.md`](./PROJEKTPLAN.md).
 ├── data/tools-directory.json   Anbieter-Verzeichnis (165 Anbieter über 15 Domänen), siehe /verzeichnis
 ├── data/benchmarks.json        Top-3-Benchmark-Plattformen, siehe /verzeichnis
 ├── data/publications.json      Kuratierte Forschungsberichte/Papers (Umwelt-Fußabdruck, KI-Landschaft & Sicherheit), siehe /publikationen
-└── Docs/📋 AIActEU.docx        Master-Projektplan v2 (Hardware-Erweiterung, Tutorials)
+└── docs/📋 AIActEU.docx        Master-Projektplan v2 (Hardware-Erweiterung, Tutorials)
 ```
 
 ## Status

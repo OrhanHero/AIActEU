@@ -31,6 +31,6 @@
 - **`scripts/dump-content.ts`**: Nicht im aktuellen Workflow aufgerufen, aber in `ARCHITECTURE.md` als bewusst zurückgestellt dokumentiert ("Re-Evaluierung in Phase 3"). Kein Löschkandidat.
 - **`Docs/`**: `Docs/agents/*.md` werden von `CLAUDE.md` referenziert, `Docs/📋 AIActEU.docx` von `PROJEKTPLAN.md`. Beides bleibt.
 
-## Bekannter Befund (nicht behoben, außerhalb des Sprint-Scopes)
+## Bekannter Befund (behoben)
 
-`CLAUDE.md` verweist auf `docs/agents/...` (Kleinschreibung), der tatsächliche Ordner heißt `Docs/` (Großschreibung). Auf dem case-insensitiven Windows-Dateisystem funktioniert das, auf case-sensitiven Systemen (z. B. Linux-CI) würde die Referenz fehlschlagen. Empfehlung: bei Gelegenheit `Docs/` → `docs/` umbenennen (`git mv`), separat vom aktuellen Sprint.
+`CLAUDE.md` verweist auf `docs/agents/...` (Kleinschreibung), der tatsächliche Ordner hieß `Docs/` (Großschreibung). Auf dem case-insensitiven Windows-Dateisystem funktionierte das, auf case-sensitiven Systemen (z. B. Linux-CI) wäre die Referenz fehlgeschlagen. Behoben: `Docs/` → `docs/` umbenannt (`git mv`); Referenzen in `ARCHITECTURE.md`, `PROJEKTPLAN.md` und `README.md` entsprechend angepasst.
