@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { SearchBox } from "./SearchBox";
+import { LogoMark } from "./Logo";
 
 const navLinks = [
   { href: "/", label: "Start" },
@@ -47,7 +48,7 @@ export function Header() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 font-semibold">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            AI
+            <LogoMark />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-lg">AIActEU</span>

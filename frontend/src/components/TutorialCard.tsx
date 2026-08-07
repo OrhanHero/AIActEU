@@ -11,7 +11,7 @@ export function TutorialCard({ tutorial }: { tutorial: Tutorial }) {
   return (
     <Link
       href={`/tutorials/${tutorial.slug}`}
-      className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary/40"
+      className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-5 transition-all duration-300 hover:scale-[1.02] hover:border-primary/50 hover:shadow-lg"
     >
       <div className="flex items-center justify-between gap-2 text-xs text-muted">
         <span className="rounded-full border border-border px-2 py-0.5">{tutorial.level}</span>

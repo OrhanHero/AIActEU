@@ -38,10 +38,30 @@ Dark Mode wird über `:root[data-theme="dark"]` UND `prefers-color-scheme: dark`
 
 ## Komponenten-Patterns
 
-### Card (Artikel/Kategorie)
-- `bg-surface`, `border border-border`, `rounded-lg`, Hover: `border-primary/40` + leichte
-  Schatten-Transition.
-- Kein Box-Shadow im Ruhezustand (flaches, ruhiges News-Layout), Shadow nur on-hover.
+### Card (Artikel/Kategorie/Anbieter/Benchmark/Publikation/Tutorial)
+- `bg-surface`, `border border-border`, `rounded-lg`, `p-4`/`p-5` je Informationsdichte.
+- Hover: `transition-all duration-300 hover:scale-[1.02] hover:border-primary/50
+  hover:shadow-lg` – einheitlich auf allen Card-Komponenten (`ArticleCard`, `CategoryCard`,
+  `ProviderCard`, `BenchmarkCard`, `PublicationCard`, `TutorialCard`).
+- Kein Box-Shadow im Ruhezustand (flaches, ruhiges News-Layout), Shadow + leichtes Scale nur
+  on-hover.
+- Genutzt auf `/`, `/kategorien`, `/kategorien/[slug]`, `/verzeichnis`, `/suche`,
+  `/publikationen`, `/tutorials` – ein Pattern für alle Karten-Grids der Seite.
+
+### GlassCard (`components/ui/GlassCard.tsx`)
+- Zweite, "erhobene" Card-Variante für Hero- und Sidebar-Flächen (nicht für dichte
+  Artikel-Grids): `rounded-2xl`, `bg-surface/60`, `backdrop-blur-xl`, `border-border/50`,
+  `shadow-lg`, Hover: `hover:shadow-primary/10`.
+- Aktuell auf der Startseite (Hero-Sektion, Sidebar-Widgets via `WidgetCard`) im Einsatz.
+
+### Kategorie-Icons (`components/CategoryIcon.tsx`)
+- Ersetzt die ursprünglichen Emoji-Platzhalter für die 12 Hauptkategorien durch ein
+  eigenes, konsistentes Strich-Icon-Set (`viewBox 0 0 24 24`, `strokeWidth 1.75`, round
+  caps/joins – gleicher Stil wie `LogoMark`).
+- Ein Icon pro `Category.slug`; eingebunden in `CategoryCard`, `ArticleCard`
+  (Meta-Zeile) und den Header von `/kategorien/[slug]`.
+- `Category.emoji` bleibt als Datenfeld bestehen (z. B. für künftige OG-Metadaten), wird aber
+  in der UI nicht mehr gerendert.
 
 ### Badges / Tags (EU-Verhaltenskodex-Kennzeichnung)
 Pflicht-Badges auf jeder Artikel-Card (siehe COMPLIANCE.md):
@@ -67,6 +87,10 @@ Zusätzlich im Footer unter "Redaktion" site-weit verankert (nicht nur pro Artik
 - Logo-Lockup im Header: zweizeilig gestapelt (`AIActEU` / `KI News Hub` kleiner, `text-xs
   text-muted`) statt einzeiliger Wortmarke – verhindert Umbruch der Hauptnavigation bei mehr
   Nav-Punkten.
+- Logo-Icon (`components/Logo.tsx`, `LogoMark`): eigenes SVG statt Text-Badge "AI" –
+  ein zentraler Hub-Knoten mit drei verbundenen Satelliten (`viewBox 0 0 24 24`, `currentColor`),
+  passend zur "zentrale Nachrichtenplattform"-Positionierung. Im `h-8 w-8 rounded-md
+  bg-primary`-Badge des Headers platziert.
 
 ### Nach-oben-Button
 `components/BackToTopButton.tsx`: `fixed bottom-6 right-6`, rund (`rounded-full`), gleicher
@@ -96,8 +120,11 @@ OmniRoute-Eintrag im Bereich Developer-Tools & Infrastruktur.
 ## Offene Punkte für Phase 2/4
 
 - ~~Mobile-Hamburger-Menü für Header-Navigation~~ **Erledigt**, siehe oben.
-- Logo als echtes Icon/SVG statt Text-Badge "AI"
-- Illustrations-/Icon-Set für Kategorien (aktuell Emoji als Platzhalter)
-- Card-/Button-Patterns für die neuen Seiten `/suche`, `/verzeichnis` sind bewusst an das
-  bestehende Card-Pattern angelehnt (`ProviderCard`, `BenchmarkCard`), aber noch nicht formal
-  hier dokumentiert – bei nächster größerer Design-Überarbeitung nachziehen.
+- ~~Logo als echtes Icon/SVG statt Text-Badge "AI"~~ **Erledigt**, siehe `LogoMark` oben.
+- ~~Illustrations-/Icon-Set für Kategorien (aktuell Emoji als Platzhalter)~~ **Erledigt**, siehe
+  `CategoryIcon` oben.
+- ~~Card-/Button-Patterns für die neuen Seiten `/suche`, `/verzeichnis` formal dokumentieren~~
+  **Erledigt**, siehe "Card"-Abschnitt oben – nutzen dasselbe Pattern wie alle anderen Cards.
+- GlassCard-Pattern bisher nur auf der Startseite (Hero, Sidebar) im Einsatz – Ausrollen auf
+  weitere Hero-/Sidebar-Flächen bei Bedarf, nicht aber auf dichte Artikel-/Anbieter-Grids
+  (dort bleibt das flache Card-Pattern bewusst bestehen, siehe oben).

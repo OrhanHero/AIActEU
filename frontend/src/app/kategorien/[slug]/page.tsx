@@ -6,6 +6,7 @@ import { getArticlesByCategory } from "@/lib/articles";
 import { categoryProviderDomains } from "@/lib/toolsDirectory";
 import { CategoryArticleFilter } from "@/components/CategoryArticleFilter";
 import { CategoryProviders } from "@/components/CategoryProviders";
+import { CategoryIcon } from "@/components/CategoryIcon";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -42,8 +43,8 @@ export default async function CategoryPage({ params }: Props) {
       </Link>
 
       <div className="mt-4 mb-8 flex items-start gap-3">
-        <span className="text-3xl" aria-hidden>
-          {category.emoji}
+        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <CategoryIcon slug={category.slug} className="h-6 w-6" />
         </span>
         <div>
           <h1 className="text-3xl font-semibold tracking-tight text-foreground">

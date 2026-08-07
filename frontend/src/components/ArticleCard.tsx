@@ -1,5 +1,6 @@
 import { getCategoryForArticle, type Article } from "@/lib/articles";
 import { ComplianceBadges } from "./ComplianceBadges";
+import { CategoryIcon } from "./CategoryIcon";
 
 function formatDate(iso: string) {
   return new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" }).format(
@@ -15,7 +16,7 @@ export function ArticleCard({ article }: { article: Article }) {
       <div className="flex items-center justify-between gap-2 text-xs text-muted">
         {category && (
           <span className="inline-flex items-center gap-1">
-            <span aria-hidden>{category.emoji}</span>
+            <CategoryIcon slug={category.slug} className="h-3.5 w-3.5" />
             {category.title}
           </span>
         )}
