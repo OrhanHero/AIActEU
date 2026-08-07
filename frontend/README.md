@@ -47,6 +47,14 @@ npm run build
 # out/ enthält den fertigen statischen Export
 ```
 
+`npm run build` ruft automatisch `scripts/clean-export.mjs` als `postbuild`-Hook auf: Next.js
+schreibt pro Route mehrere `.txt`-Dateien für sein eigenes Client-Router-Prefetching
+(`__next.*.txt`, `index.txt` – reine Navigations-Performance, kein Seiteninhalt, im Code nirgends
+referenziert). Auf einem Node-losen IONOS-Webspace ohne Revalidierung bringt dieser Prefetch
+ohnehin nichts, macht aber ~75% der Export-Dateien aus (293 → 73 Dateien) und hat den manuellen
+WinSCP-Sync unnötig fehleranfällig gemacht (siehe Vorfall 2026-08-07: Upload brach mitten im
+Transfer der `_next/static/chunks/`-Bundles ab). `robots.txt` bleibt davon unberührt.
+
 Der Inhalt von `out/` wird 1:1 in den lokalen WinSCP-Sync-Ordner kopiert, den
 WinSCP automatisch nach aiacteu.de hochlädt. `public/.htaccess` sorgt dafür,
 dass Apache bei 404s die gestylte Next.js-404-Seite statt der Server-Standardseite
