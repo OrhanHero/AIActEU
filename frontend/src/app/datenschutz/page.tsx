@@ -150,10 +150,11 @@ export default function DatenschutzPage() {
           <p className="mb-3">Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
           <p>Orhan Kahraman</p>
           <p className="mb-3">Weichselstr. 41, 12045 Berlin</p>
+          <p className="mb-1">Telefon: 03028603973</p>
           <p>
             E-Mail:{" "}
-            <a href="mailto:aiacteu@gmail.com" className="text-primary hover:underline">
-              aiacteu@gmail.com
+            <a href="mailto:info@aiacteu.de" className="text-primary hover:underline">
+              info@aiacteu.de
             </a>
           </p>
         </SubSection>

@@ -20,10 +20,11 @@ export default function ImpressumPage() {
 
       <section className="mb-6 text-muted leading-relaxed">
         <h2 className="mb-2 text-lg font-semibold text-foreground">Kontakt</h2>
+        <p>Telefon: 03028603973</p>
         <p>
           E-Mail:{" "}
-          <a href="mailto:aiacteu@gmail.com" className="text-primary hover:underline">
-            aiacteu@gmail.com
+          <a href="mailto:info@aiacteu.de" className="text-primary hover:underline">
+            info@aiacteu.de
           </a>
         </p>
       </section>
