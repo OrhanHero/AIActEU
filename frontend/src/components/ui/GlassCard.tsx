@@ -9,7 +9,7 @@ export function GlassCard({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-border/50 bg-surface/60 shadow-lg backdrop-blur-xl transition-all duration-300 hover:shadow-primary/10 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-border/80 bg-surface/80 shadow-xl backdrop-blur-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 ${className}`}
     >
       {children}
     </div>

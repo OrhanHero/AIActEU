@@ -1,82 +1,88 @@
 import Link from "next/link";
 import { AiGeneratedLabel } from "./AiGeneratedLabel";
+import { LogoMark } from "./Logo";
 
 const socialLinks = [
   { label: "TikTok", href: "https://www.tiktok.com/@aiacteu" },
   { label: "YouTube", href: "https://www.youtube.com/@AIActEU" },
-  { label: "X", href: "https://x.com/AIActEUR" },
+  { label: "X (Twitter)", href: "https://x.com/AIActEUR" },
   { label: "GitHub", href: "https://github.com/OrhanHero" },
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t border-border mt-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm text-muted">
-        <div>
-          <p className="font-medium text-foreground mb-2">Quellen-Transparenz</p>
-          <p className="mb-2">
-            Jeder Artikel verlinkt zur Originalquelle. Automatisiert kuratierte und
-            KI-unterstützt zusammengefasste Inhalte sind entsprechend gekennzeichnet.
+    <footer className="mt-20 border-t border-border/80 bg-background/60 backdrop-blur-xl">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 text-sm text-muted sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div className="flex flex-col gap-4">
+          <Link href="/" className="flex items-center gap-2.5 font-bold text-foreground">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 text-white shadow-md">
+              <LogoMark />
+            </span>
+            <span className="text-lg">AIActEU</span>
+          </Link>
+          <p className="text-xs leading-relaxed">
+            Zentralisierte, kuratierte Nachrichten- und Wissensplattform für den deutschsprachigen KI-Sektor.
           </p>
-          <Link href="/verzeichnis" className="hover:text-foreground transition-colors">
-            Anbieter- & Benchmark-Verzeichnis →
-          </Link>
-          <br />
-          <Link href="/tutorials" className="hover:text-foreground transition-colors">
-            Tutorials: Lokale KI →
-          </Link>
-          <br />
-          <Link href="/publikationen" className="hover:text-foreground transition-colors">
-            Publikationen →
-          </Link>
+          <div className="flex flex-col gap-1.5 text-xs font-medium">
+            <Link href="/verzeichnis" className="text-primary hover:underline">
+              Anbieter- & Benchmark-Verzeichnis →
+            </Link>
+            <Link href="/tutorials" className="text-primary hover:underline">
+              Tutorials: Lokale KI & RAG →
+            </Link>
+            <Link href="/publikationen" className="text-primary hover:underline">
+              Publikationen & Research →
+            </Link>
+          </div>
         </div>
+
         <div>
-          <p className="font-medium text-foreground mb-2">EU-Compliance</p>
-          <ul className="space-y-1">
+          <p className="mb-3 font-semibold text-foreground">EU-Compliance & Rechtliches</p>
+          <ul className="flex flex-col gap-2 text-xs">
             <li>
-              <Link href="/compliance" className="hover:text-foreground transition-colors">
+              <Link href="/compliance" className="transition-colors hover:text-foreground">
                 EU-Verhaltenskodex & Transparenz
               </Link>
             </li>
             <li>
-              <Link href="/impressum" className="hover:text-foreground transition-colors">
+              <Link href="/impressum" className="transition-colors hover:text-foreground">
                 Impressum
               </Link>
             </li>
             <li>
-              <Link href="/datenschutz" className="hover:text-foreground transition-colors">
+              <Link href="/datenschutz" className="transition-colors hover:text-foreground">
                 Datenschutz
               </Link>
             </li>
           </ul>
         </div>
+
         <div>
-          <p className="font-medium text-foreground mb-2">Redaktion</p>
-          <p className="mb-3">
-            Diese Seite nutzt KI zur Inhalts-Kuratierung; die editorielle Kontrolle liegt
-            bei Menschen.
+          <p className="mb-3 font-semibold text-foreground">Redaktion & Kennzeichnung</p>
+          <p className="mb-3 text-xs leading-relaxed">
+            Die Redaktion kombiniert automatisiertes Ingestion-Tooling mit menschlicher Kontrolle.
           </p>
           <AiGeneratedLabel className="mb-2" />
-          <br />
           <a
             href="https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
+            className="text-xs text-primary transition-colors hover:underline"
           >
-            EU-Kennzeichnung →
+            EU-Kennzeichnung Dokumentation →
           </a>
         </div>
+
         <div>
-          <p className="font-medium text-foreground mb-2">Social</p>
-          <ul className="space-y-1">
+          <p className="mb-3 font-semibold text-foreground">Social Media & Community</p>
+          <ul className="flex flex-col gap-2 text-xs">
             {socialLinks.map((social) => (
               <li key={social.href}>
                 <a
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
+                  className="inline-flex items-center gap-1 font-medium transition-colors hover:text-primary"
                 >
                   {social.label} ↗
                 </a>
@@ -85,8 +91,9 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-border py-4 text-center text-xs text-muted">
-        © {new Date().getFullYear()} AIActEU
+
+      <div className="border-t border-border/60 py-6 text-center text-xs text-muted">
+        <p>© {new Date().getFullYear()} AIActEU · Alle Rechte vorbehalten · EU AI Act Standard Compliant</p>
       </div>
     </footer>
   );

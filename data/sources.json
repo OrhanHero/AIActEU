@@ -8,7 +8,7 @@
       "feedUrl": "https://openai.com/news/rss.xml",
       "refreshIntervalMinutes": 60,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "llm-labs"
     },
     {
@@ -18,7 +18,7 @@
       "feedUrl": "https://www.anthropic.com/news/rss.xml",
       "refreshIntervalMinutes": 60,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -29,7 +29,7 @@
       "feedUrl": "https://deepmind.google/blog/rss.xml",
       "refreshIntervalMinutes": 60,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "llm-labs"
     },
     {
@@ -39,7 +39,7 @@
       "feedUrl": "https://ai.meta.com/blog/rss/",
       "refreshIntervalMinutes": 60,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -50,7 +50,7 @@
       "feedUrl": "https://blogs.microsoft.com/ai/feed/",
       "refreshIntervalMinutes": 60,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 410, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -61,7 +61,7 @@
       "feedUrl": "https://blogs.nvidia.com/feed/",
       "refreshIntervalMinutes": 60,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "hardware-silicon"
     },
     {
@@ -71,7 +71,7 @@
       "feedUrl": "https://x.ai/news/rss.xml",
       "refreshIntervalMinutes": 60,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 403, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -82,7 +82,7 @@
       "feedUrl": "https://mistral.ai/news/rss.xml",
       "refreshIntervalMinutes": 60,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -93,7 +93,7 @@
       "feedUrl": "https://cohere.com/blog/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -104,7 +104,7 @@
       "feedUrl": "https://aws.amazon.com/blogs/machine-learning/feed/",
       "refreshIntervalMinutes": 120,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "dev-tools-infra"
     },
     {
@@ -114,7 +114,7 @@
       "feedUrl": "https://www.perplexity.ai/hub/blog/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 403, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -125,7 +125,7 @@
       "feedUrl": "https://stability.ai/news/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "multimodal"
     },
@@ -136,7 +136,7 @@
       "feedUrl": "https://runwayml.com/research/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "multimodal"
     },
@@ -147,7 +147,7 @@
       "feedUrl": "https://elevenlabs.io/blog/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "multimodal"
     },
@@ -158,7 +158,7 @@
       "feedUrl": "https://www.deepseek.com/blog/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -169,7 +169,7 @@
       "feedUrl": "https://qwenlm.github.io/blog/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -180,8 +180,8 @@
       "feedUrl": "https://ai.baidu.com/news/rss.xml",
       "refreshIntervalMinutes": 180,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
-      "checkNote": "Fehler: timeout",
+      "lastCheckedAt": "2026-08-09",
+      "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
     {
@@ -191,7 +191,7 @@
       "feedUrl": "https://hunyuan.tencent.com/news/rss.xml",
       "refreshIntervalMinutes": 180,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -202,7 +202,7 @@
       "feedUrl": "https://open.bigmodel.cn/news/rss.xml",
       "refreshIntervalMinutes": 180,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -213,7 +213,7 @@
       "feedUrl": "https://www.moonshot.cn/news/rss.xml",
       "refreshIntervalMinutes": 180,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "llm-labs"
     },
@@ -224,7 +224,7 @@
       "feedUrl": "https://huggingface.co/blog/feed.xml",
       "refreshIntervalMinutes": 120,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "dev-tools-infra"
     },
     {
@@ -234,7 +234,7 @@
       "feedUrl": "http://export.arxiv.org/rss/cs.AI",
       "refreshIntervalMinutes": 120,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "research"
     },
     {
@@ -244,7 +244,7 @@
       "feedUrl": "http://export.arxiv.org/rss/cs.CL",
       "refreshIntervalMinutes": 120,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "research"
     },
     {
@@ -254,7 +254,7 @@
       "feedUrl": "https://paperswithcode.com/rss/latest",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "research"
     },
@@ -265,7 +265,7 @@
       "feedUrl": "https://blog.langchain.dev/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "rag-vector-db"
     },
     {
@@ -275,7 +275,7 @@
       "feedUrl": "https://wandb.ai/site/feed/",
       "refreshIntervalMinutes": 120,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed",
       "domain": "dev-tools-infra"
     },
@@ -286,7 +286,7 @@
       "feedUrl": "https://ollama.com/blog/rss.xml",
       "refreshIntervalMinutes": 120,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "edge-local-ai"
     },
     {
@@ -297,7 +297,7 @@
       "refreshIntervalMinutes": 60,
       "scopeNote": "Der themenspezifische heise-KI-Feed war nicht erreichbar; dies ist der allgemeine Heise-Feed. Ingestion muss auf KI-Keywords filtern.",
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "general-news"
     },
     {
@@ -307,7 +307,7 @@
       "feedUrl": "https://rss.golem.de/rss.php?feed=RSS2.0",
       "refreshIntervalMinutes": 60,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "general-news"
     },
     {
@@ -318,7 +318,7 @@
       "refreshIntervalMinutes": 60,
       "scopeNote": "Der themenspezifische t3n-KI-Feed war nicht erreichbar; dies ist der allgemeine t3n-Feed. Ingestion muss auf KI-Keywords filtern.",
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "general-news"
     },
     {
@@ -328,7 +328,7 @@
       "feedUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "refreshIntervalMinutes": 180,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "business"
     },
     {
@@ -339,7 +339,7 @@
       "refreshIntervalMinutes": 180,
       "scopeNote": "Der themenspezifische Gründerszene-KI-Tag-Feed war nicht erreichbar; dies ist der allgemeine Feed. Ingestion muss auf KI-Keywords filtern.",
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "business"
     },
     {
@@ -349,7 +349,7 @@
       "feedUrl": "https://digital-strategy.ec.europa.eu/en/rss.xml",
       "refreshIntervalMinutes": 1440,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "policy"
     },
     {
@@ -359,7 +359,7 @@
       "feedUrl": "https://www.bmi.bund.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/rssnewsfeed_pressemitteilungen.xml",
       "refreshIntervalMinutes": 1440,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 400, kein erkennbarer RSS/XML-Feed",
       "domain": "policy"
     },
@@ -370,7 +370,7 @@
       "feedUrl": "https://www.deeplearning.ai/the-batch/feed/",
       "refreshIntervalMinutes": 1440,
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed",
       "domain": "education"
     },
@@ -381,7 +381,7 @@
       "feedUrl": "https://importai.substack.com/feed",
       "refreshIntervalMinutes": 1440,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "policy"
     },
     {
@@ -391,7 +391,7 @@
       "feedUrl": "https://tldr.tech/api/rss/ai",
       "refreshIntervalMinutes": 1440,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "general-news"
     },
     {
@@ -401,7 +401,7 @@
       "feedUrl": "https://www.bensbites.com/feed",
       "refreshIntervalMinutes": 1440,
       "verified": true,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "domain": "general-news"
     },
     {
@@ -412,7 +412,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "rag-vector-db",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -423,7 +423,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "rag-vector-db",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -434,7 +434,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "rag-vector-db",
       "verified": true,
-      "lastCheckedAt": "2026-08-02"
+      "lastCheckedAt": "2026-08-09"
     },
     {
       "name": "Qdrant Blog",
@@ -444,7 +444,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "rag-vector-db",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -455,7 +455,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "agentic-frameworks",
       "verified": true,
-      "lastCheckedAt": "2026-08-02"
+      "lastCheckedAt": "2026-08-09"
     },
     {
       "name": "Nomic AI Blog",
@@ -465,7 +465,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "edge-local-ai",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -476,7 +476,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "edge-local-ai",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -487,7 +487,7 @@
       "refreshIntervalMinutes": 1440,
       "domain": "education",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -498,7 +498,7 @@
       "refreshIntervalMinutes": 1440,
       "domain": "education",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -509,7 +509,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "research",
       "verified": true,
-      "lastCheckedAt": "2026-08-02"
+      "lastCheckedAt": "2026-08-09"
     },
     {
       "name": "Together AI Blog",
@@ -519,7 +519,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "dev-tools-infra",
       "verified": true,
-      "lastCheckedAt": "2026-08-02"
+      "lastCheckedAt": "2026-08-09"
     },
     {
       "name": "Replicate Blog",
@@ -529,7 +529,7 @@
       "refreshIntervalMinutes": 120,
       "domain": "dev-tools-infra",
       "verified": true,
-      "lastCheckedAt": "2026-08-02"
+      "lastCheckedAt": "2026-08-09"
     },
     {
       "name": "AMD ROCm Blog",
@@ -539,7 +539,7 @@
       "refreshIntervalMinutes": 180,
       "domain": "hardware-silicon",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -550,7 +550,7 @@
       "refreshIntervalMinutes": 180,
       "domain": "hardware-silicon",
       "verified": true,
-      "lastCheckedAt": "2026-08-02"
+      "lastCheckedAt": "2026-08-09"
     },
     {
       "name": "Forschungszentrum Jülich – News",
@@ -560,7 +560,7 @@
       "refreshIntervalMinutes": 1440,
       "domain": "hardware-silicon",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -571,7 +571,7 @@
       "refreshIntervalMinutes": 1440,
       "domain": "hardware-silicon",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -582,7 +582,7 @@
       "refreshIntervalMinutes": 180,
       "domain": "hardware-silicon",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 200, kein erkennbarer RSS/XML-Feed"
     },
     {
@@ -593,7 +593,7 @@
       "refreshIntervalMinutes": 1440,
       "domain": "hardware-silicon",
       "verified": false,
-      "lastCheckedAt": "2026-08-02",
+      "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
     }
   ]

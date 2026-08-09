@@ -13,43 +13,71 @@ export default function Home() {
   const latest = getLatestArticles(6);
 
   return (
-    <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
-      {/* Hero */}
+    <div className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
+      {/* Hero Banner */}
       <section className="relative mb-12 overflow-hidden">
+        {/* Animated Background Mesh Glows */}
         <div
-          className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 animate-float rounded-full bg-primary opacity-20 blur-3xl"
+          className="pointer-events-none absolute -left-20 -top-20 h-96 w-96 animate-float rounded-full bg-indigo-500/20 blur-3xl"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute -right-16 top-10 h-64 w-64 animate-float rounded-full bg-accent opacity-20 blur-3xl [animation-delay:-3s]"
+          className="pointer-events-none absolute -right-20 top-10 h-96 w-96 animate-float rounded-full bg-cyan-500/20 blur-3xl [animation-delay:-4s]"
           aria-hidden
         />
 
-        <GlassCard className="relative p-6 sm:p-8">
-          <LiveIndicator className="mb-4" />
+        <GlassCard className="relative p-6 sm:p-10">
+          <div className="flex flex-wrap items-center gap-3">
+            <LiveIndicator />
+            <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-[11px] font-semibold text-primary">
+              EU AI ACT COMPLIANT PLATFORM
+            </span>
+          </div>
 
-          <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Was gibt&apos;s Neues in KI?
+          <h1 className="mt-6 max-w-3xl text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Zentrale KI-News, Hardware &amp; Compliance
             </span>
           </h1>
-          <p className="mt-3 max-w-2xl text-muted leading-relaxed">
-            Kuratierte KI-News für den deutschsprachigen Raum – von Forschung über Hardware &amp;
-            Silicon bis Startups und Regulierung. Transparent gekennzeichnet nach dem
-            EU-Verhaltenskodex, siehe{" "}
-            <Link href="/compliance" className="text-primary hover:underline">
-              Compliance
+
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
+            Kuratierte Nachrichten und wissenschaftliche Einblicke für den deutschsprachigen KI-Sektor – von Hardware &amp; Silicon über LLMs und RAG bis EU-Verhaltenskodex-konformer Kennzeichnung. Erfahre mehr unter{" "}
+            <Link href="/compliance" className="font-semibold text-primary underline underline-offset-4 hover:text-cyan-400">
+              Compliance &amp; Transparenz
             </Link>
             .
           </p>
 
+          {/* Quick Metrics Bar */}
+          <div className="mt-8 grid grid-cols-2 gap-4 border-t border-border/80 pt-6 sm:grid-cols-4">
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-foreground">24/7 Feed</span>
+              <span className="text-xs text-muted">Real-Time Ingestion</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-primary">Artikel 50</span>
+              <span className="text-xs text-muted">EU AI Act Kennzeichnung</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-foreground">Hardware &amp; Silicon</span>
+              <span className="text-xs text-muted">NVIDIA, AMD, Exascale</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-foreground">12 Kategorien</span>
+              <span className="text-xs text-muted">Forschung, Business &amp; Tools</span>
+            </div>
+          </div>
+
+          {/* Breaking News Section inside Hero */}
           {breaking.length > 0 && (
-            <div className="mt-6 flex flex-col gap-3">
-              <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-accent">
-                <span className="inline-flex h-2 w-2 rounded-full bg-accent" aria-hidden />
-                Breaking News
-              </h2>
-              <div className="grid gap-4 sm:grid-cols-2">
+            <div className="mt-10 flex flex-col gap-4 border-t border-border/80 pt-8">
+              <div className="flex items-center justify-between">
+                <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-accent">
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-accent animate-ping" aria-hidden />
+                  🚨 Breaking News &amp; Eilmeldungen
+                </h2>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
                 {breaking.map((article) => (
                   <ArticleCard key={article.slug} article={article} />
                 ))}
@@ -59,14 +87,18 @@ export default function Home() {
         </GlassCard>
       </section>
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
+      {/* Main Grid: Content & Sidebar */}
+      <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
         <div className="flex flex-col gap-12">
-          {/* Kategorien */}
+          {/* Kategorien Overview */}
           <section>
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-semibold tracking-tight text-foreground">Kategorien</h2>
-              <Link href="/kategorien" className="text-sm text-primary hover:underline">
-                Alle Kategorien →
+            <div className="mb-6 flex items-center justify-between">
+              <div>
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">Themenbereiche &amp; Kategorien</h2>
+                <p className="text-xs text-muted">Entdecke alle 12 Fachkategorien des AIActEU Hubs</p>
+              </div>
+              <Link href="/kategorien" className="text-sm font-semibold text-primary transition-all hover:translate-x-1 hover:underline">
+                Alle 12 Kategorien →
               </Link>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -79,10 +111,11 @@ export default function Home() {
           {/* Editor's Picks */}
           {editorsPicks.length > 0 && (
             <section>
-              <h2 className="mb-4 text-xl font-semibold tracking-tight text-foreground">
-                Editor&apos;s Picks
-              </h2>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">⭐ Redaktionsempfehlungen (Editor&apos;s Picks)</h2>
+                <p className="text-xs text-muted">Besonders relevante Analysen und Berichte für die KI-Praxis</p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
                 {editorsPicks.map((article) => (
                   <ArticleCard key={article.slug} article={article} />
                 ))}
@@ -92,10 +125,13 @@ export default function Home() {
 
           {/* Trending / Neueste Artikel */}
           <section>
-            <h2 className="mb-4 text-xl font-semibold tracking-tight text-foreground">
-              Trending diese Woche
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="mb-6 flex items-center justify-between">
+              <div>
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">⚡ Neueste Entwicklungen</h2>
+                <p className="text-xs text-muted">Aktuelle Beiträge aus verifizierten KI-Quellen</p>
+              </div>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
               {latest.map((article) => (
                 <ArticleCard key={article.slug} article={article} />
               ))}

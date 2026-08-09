@@ -20,8 +20,8 @@ function LanguageToggleButton({ className }: { className?: string }) {
     <button
       type="button"
       aria-label="Sprache wechseln"
-      title="Mehrsprachigkeit (DE/EN) ist für Phase 2/4 geplant, siehe PROJEKTPLAN.md"
-      className={`rounded-md border border-border text-muted hover:text-foreground hover:border-foreground/30 transition-colors ${className ?? ""}`}
+      title="Mehrsprachigkeit (DE/EN) ist für Phase 2/4 geplant"
+      className={`rounded-full border border-border/80 bg-surface/50 px-3 py-1 text-xs font-medium text-muted transition-all duration-200 hover:border-primary/50 hover:text-foreground hover:shadow-sm ${className ?? ""}`}
     >
       DE / EN
     </button>
@@ -44,25 +44,29 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-semibold">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-xl transition-all duration-300">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="group flex items-center gap-3 font-semibold">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 text-white shadow-md shadow-indigo-500/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-indigo-500/40">
             <LogoMark />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-lg">AIActEU</span>
-            <span className="text-xs text-muted font-normal">KI News Hub</span>
+            <span className="text-lg font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
+              AIActEU
+            </span>
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-muted">
+              KI News Hub
+            </span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm text-muted">
-          <NavLinks className="hover:text-foreground transition-colors" />
+        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+          <NavLinks className="text-muted transition-all duration-200 hover:text-primary hover:scale-105" />
         </nav>
 
         <div className="flex items-center gap-3 text-sm">
-          <SearchBox className="hidden md:block w-48" />
-          <LanguageToggleButton className="hidden sm:inline-flex px-2.5 py-1" />
+          <SearchBox className="hidden w-52 md:block" />
+          <LanguageToggleButton className="hidden sm:inline-flex" />
           <ThemeToggle />
           <button
             type="button"
@@ -70,7 +74,7 @@ export function Header() {
             aria-label={mobileOpen ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border text-muted hover:text-foreground hover:border-foreground/30 transition-colors md:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:border-primary/50 hover:text-foreground md:hidden"
           >
             <span className="sr-only">Menü</span>
             {mobileOpen ? (
@@ -87,16 +91,16 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div id="mobile-nav" className="border-t border-border md:hidden">
-          <div className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-4">
+        <div id="mobile-nav" className="border-t border-border bg-background/95 backdrop-blur-2xl md:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4">
             <SearchBox onSubmit={() => setMobileOpen(false)} />
-            <nav className="flex flex-col gap-1 text-sm">
+            <nav className="flex flex-col gap-1 text-sm font-medium">
               <NavLinks
-                className="rounded-md px-2 py-2 text-muted hover:bg-surface hover:text-foreground transition-colors"
+                className="rounded-lg px-3 py-2 text-muted transition-all hover:bg-surface-hover hover:text-foreground"
                 onNavigate={() => setMobileOpen(false)}
               />
             </nav>
-            <LanguageToggleButton className="self-start px-2.5 py-1 text-sm" />
+            <LanguageToggleButton className="self-start" />
           </div>
         </div>
       )}

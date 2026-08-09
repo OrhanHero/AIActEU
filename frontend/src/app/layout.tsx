@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: title, template: "%s · AIActEU" },
   description,
+  referrer: "strict-origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "de_DE",
