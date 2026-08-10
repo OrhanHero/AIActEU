@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { SearchBox } from "./SearchBox";
-import { LogoMark } from "./Logo";
 
 const navLinks = [
   { href: "/", label: "Start" },
@@ -47,8 +47,15 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-xl transition-all duration-300">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-3 font-semibold">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 text-white shadow-md shadow-indigo-500/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-indigo-500/40">
-            <LogoMark />
+          {/* Logo Button mit EU AI Act Governance Bild */}
+          <span className="relative inline-flex h-10 w-10 overflow-hidden rounded-xl border border-primary/30 shadow-md shadow-primary/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/60 group-hover:shadow-primary/40">
+            <Image
+              src="/images/hero_ai_act_governance.png"
+              alt="AIActEU Logo"
+              fill
+              sizes="40px"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+            />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-lg font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
