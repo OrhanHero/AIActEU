@@ -12,7 +12,7 @@ export function ArticleCard({ article }: { article: Article }) {
   const category = getCategoryForArticle(article);
 
   return (
-    <article className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border/80 bg-surface/90 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
+    <article className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border/70 bg-surface/90 p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
       <div className="flex flex-col gap-3">
         <div className="flex items-center justify-between gap-2 text-xs">
           {category && (
@@ -26,15 +26,15 @@ export function ArticleCard({ article }: { article: Article }) {
           </time>
         </div>
 
-        <h3 className="text-lg font-bold leading-snug tracking-tight text-foreground transition-colors duration-200 group-hover:text-primary">
+        <h3 className="font-serif-heading text-lg font-bold leading-snug tracking-tight text-foreground transition-colors duration-200 group-hover:text-primary">
           {article.title}
         </h3>
 
-        <p className="text-sm leading-relaxed text-muted">{article.summary}</p>
+        <p className="text-sm leading-relaxed text-muted line-clamp-3">{article.summary}</p>
 
         {article.editorsNote && (
           <div className="rounded-xl border border-accent/30 bg-accent/10 p-3 text-xs leading-relaxed text-foreground">
-            <span className="font-semibold text-accent">Editor&apos;s Pick:</span> {article.editorsNote}
+            <span className="font-semibold text-accent">Redaktions-Tipp:</span> {article.editorsNote}
           </div>
         )}
 
@@ -42,7 +42,7 @@ export function ArticleCard({ article }: { article: Article }) {
           {article.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-lg border border-border/60 bg-background/60 px-2.5 py-1 text-[11px] text-muted transition-colors group-hover:border-primary/30"
+              className="rounded-md border border-border/60 bg-background/60 px-2 py-0.5 font-mono text-[10px] text-muted transition-colors group-hover:border-primary/30"
             >
               #{tag}
             </span>
@@ -50,13 +50,13 @@ export function ArticleCard({ article }: { article: Article }) {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-border/80 pt-3">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-border/70 pt-3">
         <ComplianceBadges article={article} />
         <a
           href={article.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-xs font-semibold text-primary transition-all group-hover:translate-x-0.5 hover:underline"
+          className="inline-flex items-center gap-1 text-xs font-semibold text-primary transition-transform group-hover:translate-x-0.5 hover:underline"
         >
           {article.sourceName} <span className="text-[10px]">↗</span>
         </a>
@@ -64,3 +64,4 @@ export function ArticleCard({ article }: { article: Article }) {
     </article>
   );
 }
+
