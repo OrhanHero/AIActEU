@@ -30,38 +30,63 @@ jobs:
         run: npm run build
         working-directory: frontend
 
-      - name: Parse SFTP URL (Connection String)
+      - name: Parse SFTP Credentials & Set Environment Variables
         id: sftp_parse
         run: |
           node -e '
-            const raw = process.env.SFTP_URL || process.env.IONOS_URL || "";
+            const fs = require("fs");
+            function setEnv(key, val) {
+              if (val) {
+                fs.appendFileSync(process.env.GITHUB_ENV, `${key}=${val}\n`);
+              }
+            }
+
+            const raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
+
             if (raw) {
               try {
-                const u = new URL(raw);
-                const server = u.hostname;
-                const username = decodeURIComponent(u.username);
-                const password = decodeURIComponent(u.password);
-                const port = u.port || "22";
-                const dir = u.pathname || "/aiacteu/";
-                const fs = require("fs");
-                fs.appendFileSync(process.env.GITHUB_ENV, `SFTP_SERVER=${server}\nSFTP_USERNAME=${username}\nSFTP_PASSWORD=${password}\nSFTP_PORT=${port}\nSFTP_REMOTE_DIR=${dir}\n`);
-                console.log("Successfully parsed SFTP URL for host:", server);
+                if (raw.startsWith("{")) {
+                  const parsed = JSON.parse(raw);
+                  setEnv("SFTP_SERVER", parsed.server);
+                  setEnv("SFTP_USERNAME", parsed.username);
+                  setEnv("SFTP_PASSWORD", parsed.password);
+                  setEnv("SFTP_PORT", parsed.port || "22");
+                  setEnv("SFTP_REMOTE_DIR", parsed.remote_dir || "/aiacteu/");
+                } else {
+                  let str = raw;
+                  if (!str.includes("://")) {
+                    str = "sftp://" + str;
+                  }
+                  const u = new URL(str);
+                  setEnv("SFTP_SERVER", u.hostname);
+                  if (u.username) setEnv("SFTP_USERNAME", decodeURIComponent(u.username));
+                  if (u.password) setEnv("SFTP_PASSWORD", decodeURIComponent(u.password));
+                  setEnv("SFTP_PORT", u.port || "22");
+                  const dir = u.pathname && u.pathname !== "/" ? u.pathname : "/aiacteu/";
+                  setEnv("SFTP_REMOTE_DIR", dir.endsWith("/") ? dir : dir + "/");
+                }
+                console.log("SFTP Credentials successfully configured.");
               } catch (err) {
-                console.error("Failed to parse SFTP URL:", err.message);
+                console.error("Warning: Failed to parse SFTP_URL format:", err.message);
               }
             }
           '
         env:
           SFTP_URL: ${{ secrets.SFTP_URL }}
           IONOS_URL: ${{ secrets.IONOS_URL }}
+          IONOS_SFTP: ${{ secrets.IONOS_SFTP }}
+          SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
 
       - name: Sync Static Files to IONOS Webspace via SFTP
+        if: env.SFTP_SERVER != '' && env.SFTP_PASSWORD != ''
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ env.SFTP_SERVER || secrets.SFTP_SERVER || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).server) }}
-          username: ${{ env.SFTP_USERNAME || secrets.SFTP_USERNAME || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).username) }}
-          password: ${{ env.SFTP_PASSWORD || secrets.SFTP_PASSWORD || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).password) }}
+          server: ${{ env.SFTP_SERVER }}
+          username: ${{ env.SFTP_USERNAME }}
+          password: ${{ env.SFTP_PASSWORD }}
           port: ${{ env.SFTP_PORT || 22 }}
           protocol: sftp
           local-dir: frontend/out/
-          server-dir: ${{ env.SFTP_REMOTE_DIR || secrets.SFTP_REMOTE_DIR || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).remote_dir) || '/aiacteu/' }}
+          server-dir: ${{ env.SFTP_REMOTE_DIR || '/aiacteu/' }}
