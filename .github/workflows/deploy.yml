@@ -33,10 +33,10 @@ jobs:
       - name: Sync Static Files to IONOS Webspace via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.SFTP_SERVER }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_SERVER || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).server) }}
+          username: ${{ secrets.SFTP_USERNAME || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).username) }}
+          password: ${{ secrets.SFTP_PASSWORD || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).password) }}
           port: 22
           protocol: sftp
           local-dir: frontend/out/
-          server-dir: ${{ secrets.SFTP_REMOTE_DIR || '/aiacteu/' }}
+          server-dir: ${{ secrets.SFTP_REMOTE_DIR || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).remote_dir) || '/aiacteu/' }}
