@@ -55,6 +55,15 @@ async function main() {
   const seenSlugs = new Set();
   const processedArticles = [];
 
+function cleanTitle(title) {
+  if (!title) return "";
+  return title
+    .replace(/[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[\u{1F600}-\u{1F64F}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E6}-\u{1F1FF}]/gu, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*,/g, ",")
+    .trim();
+}
+
   for (const item of ingested) {
     if (!item.title || !item.sourceUrl) continue;
     
@@ -69,9 +78,11 @@ async function main() {
     let categorySlug = validCategorySlugs.has(item.categorySlug) ? item.categorySlug : "technisch";
     const tags = item.tags && item.tags.length > 0 ? item.tags : deriveTags(item.title, item.summary, item.sourceName);
 
+    const cleanedTitle = cleanTitle(item.title);
+
     const article = {
       slug,
-      title: item.title,
+      title: cleanedTitle,
       summary: item.summary,
       categorySlug,
       tags,

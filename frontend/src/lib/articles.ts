@@ -20,7 +20,7 @@ export type Article = {
 export const articles: Article[] = [
   {
     "slug": "openai-astra-pause-claude-code-cross-session-how-cursor-router-works",
-    "title": "OpenAI Astra pause 🚨, Claude Code cross-session 🤖, how Cursor Router works 🔀",
+    "title": "OpenAI Astra pause, Claude Code cross-session, how Cursor Router works",
     "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
     "categorySlug": "breaking-news",
     "tags": [
