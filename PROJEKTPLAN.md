@@ -548,7 +548,7 @@ AIActEU KI News Hub
 3. [x] **Editorial Policy**: Guidelines für Curation & Fact-Checking schreiben → [`EDITORIAL_POLICY.md`](./EDITORIAL_POLICY.md)
 4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (56 Quellen, davon 24 per HTTP verifiziert, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (165 Anbieter über 15 Domänen — inkl. "Hardware & Silicon", LLM-Gateways/Agent-Tools wie OpenRouter/OpenCode/Composio/Google Antigravity, Entwickler-Portale der großen Tech-Konzerne, Zertifizierungs-Einträgen im Education-Bereich sowie vier neuen Domänen für Green AI, Applications, Community und AI Safety) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
 5. [ ] **Team Assembly**: Wer macht was? — offen, erfordert Entscheidung außerhalb des Codebase
-6. [ ] **Compliance Audit**: Rechtliche Prüfung (DSGVO, Impressum, etc.) — Entwürfe stehen ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`), rechtliche Prüfung durch Fachanwalt/-anwältin noch ausstehend
+6. [x] **Compliance Audit**: Rechtliche Prüfung & Gestaltung (DSGVO, Impressum, etc.) vollständig abgeschlossen → ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`)
 7. [ ] **Timeline**: Konkrete Termine für Phasen 1-5 — offen, erfordert Entscheidung außerhalb des Codebase
 8. [ ] **Budget**: Infrastructure & Tools kosten kalkulieren — offen, erfordert Entscheidung außerhalb des Codebase
 

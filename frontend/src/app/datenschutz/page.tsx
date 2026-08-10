@@ -244,10 +244,6 @@ export default function DatenschutzPage() {
           findet dabei nicht statt.
         </p>
       </Section>
-
-      <p className="mt-8 text-xs text-muted">
-        Rechtstext-Basis erstellt mit dem Datenschutz-Generator von e-recht24.de.
-      </p>
     </div>
   );
 }
