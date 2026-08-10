@@ -66,7 +66,6 @@ jobs:
                   if (colon !== -1) {
                     username = safeDecode(userPass.substring(0, colon));
                     let passRaw = userPass.substring(colon + 1);
-                    // Strip IONOS session metadata (e.g. ;fingerprint=...;x-name=...)
                     if (passRaw.includes(";")) {
                       passRaw = passRaw.split(";")[0];
                     }
@@ -110,6 +109,8 @@ jobs:
             console.log("=================================================");
 
             const localDir = path.resolve("out");
+            let sftpErrorMessage = "";
+            let ftpsErrorMessage = "";
 
             async function run() {
               // Attempt 1: SFTP (SSH Port 22)
@@ -121,7 +122,7 @@ jobs:
                   port: port,
                   username: username,
                   password: password,
-                  readyTimeout: 20000,
+                  readyTimeout: 25000,
                   retries: 1,
                   algorithms: { serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"] }
                 });
@@ -132,32 +133,49 @@ jobs:
                 console.log("🎉 SFTP-Upload erfolgreich abgeschlossen!");
                 return;
               } catch (sftpErr) {
-                console.log(`⚠️ SFTP-Hinweis: ${sftpErr.message}. Wechsle automatisch zu FTPS (Port 21)...`);
+                sftpErrorMessage = sftpErr.message || String(sftpErr);
+                console.log(`⚠️ SFTP-Fehler: ${sftpErrorMessage}. Wechsle automatisch zu FTPS (Port 21)...`);
               }
 
               // Attempt 2: FTPS (TLS Port 21)
               console.log(`[Versuch 2/2] Verbinde über FTPS (TLS Port 21)...`);
               const ftpClient = new ftp.Client(30000);
+              let ftpsConnected = false;
+
               try {
                 await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: true, secureOptions: { rejectUnauthorized: false } });
+                ftpsConnected = true;
               } catch (e1) {
-                await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: false });
+                try {
+                  await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: false });
+                  ftpsConnected = true;
+                } catch (e2) {
+                  ftpsErrorMessage = e2.message || String(e2);
+                }
               }
-              console.log("✅ FTPS-Verbindung erfolgreich! Übertrage Dateien...");
-              await ftpClient.ensureDir(remoteDir);
-              await ftpClient.clearWorkingDir();
-              await ftpClient.uploadFromDir(localDir);
-              ftpClient.close();
-              console.log("🎉 FTPS-Upload erfolgreich abgeschlossen!");
+
+              if (ftpsConnected) {
+                console.log("✅ FTPS-Verbindung erfolgreich! Übertrage Dateien...");
+                await ftpClient.ensureDir(remoteDir);
+                await ftpClient.clearWorkingDir();
+                await ftpClient.uploadFromDir(localDir);
+                ftpClient.close();
+                console.log("🎉 FTPS-Upload erfolgreich abgeschlossen!");
+                return;
+              }
+
+              throw new Error(`SFTP-Fehler: [${sftpErrorMessage}] | FTPS-Fehler: [${ftpsErrorMessage}]`);
             }
 
             run().catch(err => {
               console.error("❌ FEHLER BEIM DEPLOYMENT ZU IONOS:");
-              console.error(err.stack || err.message);
+              console.error(err.message);
               console.error("-------------------------------------------------");
-              console.error("Bitte überprüfe das Secret SFTP_URL in deinen GitHub Settings:");
-              console.error("Format: sftp://BENUTZERNAME:PASSWORT@HOST/aiacteu/");
-              console.error("Beispiel-Host bei IONOS: accessXXXXXXXX.webspace-host.com");
+              console.error("Erkennungs-Details:");
+              console.error(`- Host: ${server}`);
+              console.error(`- User: ${username}`);
+              console.error(`- SFTP-Meldung: ${sftpErrorMessage}`);
+              console.error(`- FTPS-Meldung: ${ftpsErrorMessage}`);
               console.error("-------------------------------------------------");
               process.exit(1);
             });
