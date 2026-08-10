@@ -7,7 +7,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { LiveIndicator } from "@/components/LiveIndicator";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { CategoryIcon } from "@/components/CategoryIcon";
-import { ComplianceBadges } from "@/components/ComplianceBadges";
+import { AiGeneratedLabel } from "@/components/AiGeneratedLabel";
 
 export default function Home() {
   const breaking = getBreakingArticles();
@@ -48,12 +48,14 @@ export default function Home() {
           <div className="lg:col-span-8">
             <GlassCard className="group relative flex h-full flex-col justify-between overflow-hidden p-6 sm:p-8 gradient-border-glow">
               <div className="flex flex-col gap-4">
-                <div className="flex flex-wrap items-center justify-between gap-2">
+                <div className="flex items-center justify-between gap-2">
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 font-mono text-[11px] font-semibold text-accent uppercase tracking-wider">
                     <span className="h-2 w-2 rounded-full bg-accent animate-ping" />
                     Hauptstory der Woche
                   </span>
-                  {leadArticle && <ComplianceBadges article={leadArticle} />}
+                  <span className="font-mono text-xs text-muted">
+                    {leadArticle ? new Date(leadArticle.publishedAt).toLocaleDateString("de-DE") : "Heute"}
+                  </span>
                 </div>
 
                 <h1 className="font-serif-heading text-2xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl group-hover:text-primary transition-colors">
@@ -64,25 +66,42 @@ export default function Home() {
                   {leadArticle?.summary || "Kuratierte Nachrichten und wissenschaftliche Einblicke für den deutschsprachigen KI-Sektor – von Hardware & Silicon über LLMs und RAG bis EU-Verhaltenskodex-konformer Kennzeichnung."}
                 </p>
 
-                {/* Hero Editorial Cover Image */}
-                <div className="relative mt-2 h-56 w-full overflow-hidden rounded-xl border border-border/60 sm:h-72">
+                {/* Hero Editorial Cover Image Window */}
+                <div className="relative mt-3 h-64 w-full overflow-hidden rounded-2xl border border-border/80 bg-slate-950/80 shadow-2xl sm:h-80">
                   <Image
                     src="/images/hero_ai_act_governance.png"
                     alt="EU AI Act Governance Illustration"
                     fill
                     priority
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
-                    <span className="rounded-md border border-white/20 bg-black/60 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent pointer-events-none" />
+                  
+                  {/* Top Overlay Badges */}
+                  <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 z-10">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded-lg border border-white/20 bg-black/70 px-2.5 py-1 font-mono text-[11px] font-semibold text-white backdrop-blur-md shadow-md">
+                        🇪🇺 EU AI ACT ART. 50
+                      </span>
+                      <AiGeneratedLabel className="rounded-lg border border-white/20 bg-black/70 px-2 py-0.5 backdrop-blur-md shadow-md" />
+                    </div>
+                    {leadArticle?.humanReviewed && (
+                      <span className="rounded-lg border border-emerald-500/40 bg-emerald-950/80 px-2.5 py-1 font-mono text-[11px] font-semibold text-emerald-300 backdrop-blur-md shadow-md">
+                        ✓ Redaktionell verifiziert
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Bottom Overlay Controls */}
+                  <div className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 z-10">
+                    <span className="rounded-lg border border-white/20 bg-black/70 px-3 py-1 text-xs font-medium text-white backdrop-blur-md shadow-md">
                       Quelle: {leadArticle?.sourceName || "KI Redaktion"}
                     </span>
                     <a
                       href={leadArticle?.sourceUrl || "/compliance"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-bold text-primary-foreground shadow-xl transition-all duration-200 hover:scale-105 hover:bg-primary/90"
                     >
                       Vollständigen Artikel lesen ↗
                     </a>
