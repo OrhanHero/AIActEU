@@ -7,6 +7,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  ACTIONS_RUNNER_FORCE_NODE24: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -52,7 +55,7 @@ jobs:
                   setEnv("SFTP_USERNAME", parsed.username);
                   setEnv("SFTP_PASSWORD", parsed.password);
                   setEnv("SFTP_PORT", parsed.port || "22");
-                  setEnv("SFTP_REMOTE_DIR", parsed.remote_dir || "/aiacteu/");
+                  setEnv("SFTP_REMOTE_DIR", (parsed.remote_dir || "/aiacteu").replace(/\/+$/, "") || "/aiacteu");
                   console.log("JSON SFTP credentials parsed for host:", parsed.server);
                 } else {
                   let clean = raw.replace(/^(sftp|ftp):\/\//i, "");
@@ -71,10 +74,10 @@ jobs:
 
                     const slash = hostPath.indexOf("/");
                     let hostPort = hostPath;
-                    let dir = "/aiacteu/";
+                    let dir = "/aiacteu";
                     if (slash !== -1) {
                       hostPort = hostPath.substring(0, slash);
-                      dir = hostPath.substring(slash);
+                      dir = hostPath.substring(slash).replace(/\/+$/, "") || "/aiacteu";
                     }
                     
                     const hostPortColon = hostPort.indexOf(":");
@@ -85,8 +88,8 @@ jobs:
                       setEnv("SFTP_SERVER", hostPort);
                       setEnv("SFTP_PORT", "22");
                     }
-                    setEnv("SFTP_REMOTE_DIR", dir.endsWith("/") ? dir : dir + "/");
-                    console.log("SFTP URL parsed successfully.");
+                    setEnv("SFTP_REMOTE_DIR", dir);
+                    console.log("SFTP URL parsed successfully for user:", userPass.substring(0, colon !== -1 ? colon : 3) + "***");
                   } else {
                     setEnv("SFTP_SERVER", clean);
                     console.log("SFTP Server hostname parsed:", clean);
@@ -126,29 +129,36 @@ jobs:
                 port: parseInt(process.env.SFTP_PORT || "22", 10),
                 username: process.env.SFTP_USERNAME,
                 password: process.env.SFTP_PASSWORD,
-                readyTimeout: 30000,
-                retries: 2,
+                readyTimeout: 35000,
+                retries: 3,
                 algorithms: {
                   serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"]
                 }
               };
 
-              console.log(`Connecting via SFTP to ${config.host}:${config.port} as ${config.username}...`);
+              console.log(`Connecting via SFTP to ${config.host}:${config.port} as user "${config.username}"...`);
               await sftp.connect(config);
+              console.log("SFTP Connection established!");
 
               const localDir = path.resolve("frontend/out");
-              const remoteDir = process.env.SFTP_REMOTE_DIR || "/aiacteu/";
+              const remoteDir = process.env.SFTP_REMOTE_DIR || "/aiacteu";
 
               console.log(`Syncing local directory (${localDir}) to remote (${remoteDir})...`);
-              try { await sftp.mkdir(remoteDir, true); } catch (e) {}
+              
+              // Ensure remote directory exists
+              try {
+                await sftp.mkdir(remoteDir, true);
+              } catch (e) {
+                console.log("Remote directory notice:", e.message);
+              }
 
               const result = await sftp.uploadDir(localDir, remoteDir);
-              console.log("SFTP Upload finished successfully.");
+              console.log("SFTP Upload finished successfully:", result);
               await sftp.end();
             }
 
             main().catch(err => {
-              console.error("SFTP Deployment Details:", err.message);
+              console.error("SFTP Deployment Failed:", err.stack || err.message);
               process.exit(1);
             });
           '
@@ -157,4 +167,4 @@ jobs:
           SFTP_USERNAME: ${{ env.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ env.SFTP_PASSWORD }}
           SFTP_PORT: ${{ env.SFTP_PORT || '22' }}
-          SFTP_REMOTE_DIR: ${{ env.SFTP_REMOTE_DIR || '/aiacteu/' }}
+          SFTP_REMOTE_DIR: ${{ env.SFTP_REMOTE_DIR || '/aiacteu' }}
