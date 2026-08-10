@@ -90,18 +90,26 @@ jobs:
             }
 
             if (!server || !password) {
-              console.log("Notice: SFTP_URL or login credentials not provided in GitHub Secrets yet. Skipping deployment.");
+              console.log("⚠️ Hinweis: Keines der Secrets (SFTP_URL oder SFTP_SERVER / SFTP_PASSWORD) wurde in den GitHub Secrets gefunden.");
+              console.log("Deployment wird übersprungen. Bitte erstelle das Secret SFTP_URL in deinen GitHub Repository Settings.");
               process.exit(0);
             }
 
-            console.log(`Connecting to ${server}:${port} as user "${username}" (Target Dir: ${remoteDir})...`);
+            console.log("=================================================");
+            console.log("🚀 SFTP/FTPS Deployment Diagnostik:");
+            console.log(`   Host: "${server}"`);
+            console.log(`   Port: ${port}`);
+            console.log(`   Benutzer: "${username}"`);
+            console.log(`   Passwort vorhanden: ${password ? "JA (****)" : "NEIN"}`);
+            console.log(`   Ziel-Verzeichnis: "${remoteDir}"`);
+            console.log("=================================================");
 
             const localDir = path.resolve("out");
 
             async function run() {
               // Attempt 1: SFTP (SSH Port 22)
               try {
-                console.log(`[Attempt 1/2] Connecting via SFTP (SSH Port ${port})...`);
+                console.log(`[Versuch 1/2] Verbinde über SFTP (SSH Port ${port})...`);
                 const sftp = new SFTPClient();
                 await sftp.connect({
                   host: server,
@@ -112,34 +120,40 @@ jobs:
                   retries: 1,
                   algorithms: { serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"] }
                 });
-                console.log("SFTP Connected successfully! Uploading files...");
+                console.log("✅ SFTP-Verbindung erfolgreich! Übertrage Dateien...");
                 try { await sftp.mkdir(remoteDir, true); } catch (e) {}
                 await sftp.uploadDir(localDir, remoteDir);
                 await sftp.end();
-                console.log("SFTP Upload finished successfully!");
+                console.log("🎉 SFTP-Upload erfolgreich abgeschlossen!");
                 return;
               } catch (sftpErr) {
-                console.log(`SFTP Note: ${sftpErr.message}. Switching to FTPS (TLS Port 21)...`);
+                console.log(`⚠️ SFTP-Hinweis: ${sftpErr.message}. Wechsle automatisch zu FTPS (Port 21)...`);
               }
 
               // Attempt 2: FTPS (TLS Port 21)
-              console.log(`[Attempt 2/2] Connecting via FTPS (TLS Port 21)...`);
+              console.log(`[Versuch 2/2] Verbinde über FTPS (TLS Port 21)...`);
               const ftpClient = new ftp.Client(30000);
               try {
                 await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: true, secureOptions: { rejectUnauthorized: false } });
               } catch (e1) {
                 await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: false });
               }
-              console.log("FTPS Connected successfully! Uploading files...");
+              console.log("✅ FTPS-Verbindung erfolgreich! Übertrage Dateien...");
               await ftpClient.ensureDir(remoteDir);
               await ftpClient.clearWorkingDir();
               await ftpClient.uploadFromDir(localDir);
               ftpClient.close();
-              console.log("FTPS Upload finished successfully!");
+              console.log("🎉 FTPS-Upload erfolgreich abgeschlossen!");
             }
 
             run().catch(err => {
-              console.error("Deployment Error Details:", err.stack || err.message);
+              console.error("❌ FEHLER BEIM DEPLOYMENT ZU IONOS:");
+              console.error(err.stack || err.message);
+              console.error("-------------------------------------------------");
+              console.error("Bitte überprüfe das Secret SFTP_URL in deinen GitHub Settings:");
+              console.error("Format: sftp://BENUTZERNAME:PASSWORT@HOST/aiacteu/");
+              console.error("Beispiel-Host bei IONOS: accessXXXXXXXX.webspace-data.io");
+              console.error("-------------------------------------------------");
               process.exit(1);
             });
           '
