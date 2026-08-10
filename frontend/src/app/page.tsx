@@ -166,6 +166,54 @@ export default function Home() {
                   </a>
                 </div>
               ))}
+
+              {/* Karte 1: Top 10 KI-Modelle Register Shortcut */}
+              <Link
+                href="/verzeichnis"
+                className="group relative flex flex-col justify-between rounded-xl border border-primary/30 bg-primary/5 p-4 transition-all duration-300 hover:border-primary/60 hover:bg-primary/10 hover:shadow-lg"
+              >
+                <div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-mono font-bold text-primary">🏆 TRANSPARENZ-REGISTER</span>
+                    <span className="rounded-full bg-amber-500/20 px-2 py-0.5 font-mono text-[10px] font-bold text-amber-400">
+                      ART. 53
+                    </span>
+                  </div>
+                  <h3 className="font-serif-heading text-sm font-bold text-foreground mt-1.5 group-hover:text-primary transition-colors">
+                    Top 10 KI-Frontier-Modelle &amp; Daten-Herkunft
+                  </h3>
+                  <p className="mt-1 text-[11px] text-muted leading-relaxed">
+                    Claude 3.5, OpenAI o1, DeepSeek-R1 u.v.m. mit Knowledge Cutoffs &amp; Quellen-Breakdown.
+                  </p>
+                </div>
+                <span className="mt-2.5 inline-flex items-center gap-1 text-[11px] font-semibold text-primary group-hover:underline">
+                  Modell-Register öffnen →
+                </span>
+              </Link>
+
+              {/* Karte 2: EU AI Act Art. 50 Compliance Guide Shortcut */}
+              <Link
+                href="/compliance"
+                className="group relative flex flex-col justify-between rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-4 transition-all duration-300 hover:border-emerald-500/60 hover:bg-emerald-500/10 hover:shadow-lg"
+              >
+                <div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-mono font-bold text-emerald-400">🇪🇺 COMPLIANCE GUIDE</span>
+                    <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 font-mono text-[10px] font-bold text-emerald-400">
+                      ART. 50
+                    </span>
+                  </div>
+                  <h3 className="font-serif-heading text-sm font-bold text-foreground mt-1.5 group-hover:text-emerald-400 transition-colors">
+                    EU AI Act Kennzeichnung &amp; Transparenz
+                  </h3>
+                  <p className="mt-1 text-[11px] text-muted leading-relaxed">
+                    Vorgaben für KI-generierte Inhalte, Wasserzeichen &amp; redaktionelle Prüfung.
+                  </p>
+                </div>
+                <span className="mt-2.5 inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400 group-hover:underline">
+                  Compliance-Guidelines lesen →
+                </span>
+              </Link>
             </div>
           </div>
         </div>
