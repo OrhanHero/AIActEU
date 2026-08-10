@@ -34,18 +34,18 @@ jobs:
           node -e '
             const fs = require("fs");
             function setEnv(key, val) {
-              if (val) {
-                fs.appendFileSync(process.env.GITHUB_ENV, `${key}=${val}\n`);
+              if (val && typeof val === "string" && val.trim()) {
+                fs.appendFileSync(process.env.GITHUB_ENV, `${key}=${val.trim()}\n`);
               }
             }
 
-            let raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
-            if ((raw.startsWith("\"") && raw.endsWith("\"")) || (raw.startsWith("\'") && raw.endsWith("\'"))) {
-              raw = raw.slice(1, -1).trim();
-            }
+            try {
+              let raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
+              if ((raw.startsWith("\"") && raw.endsWith("\"")) || (raw.startsWith("\'") && raw.endsWith("\'"))) {
+                raw = raw.slice(1, -1).trim();
+              }
 
-            if (raw) {
-              try {
+              if (raw) {
                 if (raw.startsWith("{")) {
                   const parsed = JSON.parse(raw);
                   setEnv("SFTP_SERVER", parsed.server);
@@ -53,26 +53,50 @@ jobs:
                   setEnv("SFTP_PASSWORD", parsed.password);
                   setEnv("SFTP_PORT", parsed.port || "22");
                   setEnv("SFTP_REMOTE_DIR", parsed.remote_dir || "/aiacteu/");
-                  console.log("JSON credentials parsed for server:", parsed.server);
+                  console.log("JSON SFTP credentials parsed for host:", parsed.server);
                 } else {
-                  let str = raw;
-                  if (!str.includes("://")) {
-                    str = "sftp://" + str;
+                  let clean = raw.replace(/^(sftp|ftp):\/\//i, "");
+                  const lastAt = clean.lastIndexOf("@");
+                  if (lastAt !== -1) {
+                    const userPass = clean.substring(0, lastAt);
+                    const hostPath = clean.substring(lastAt + 1);
+                    
+                    const colon = userPass.indexOf(":");
+                    if (colon !== -1) {
+                      setEnv("SFTP_USERNAME", decodeURIComponent(userPass.substring(0, colon)));
+                      setEnv("SFTP_PASSWORD", decodeURIComponent(userPass.substring(colon + 1)));
+                    } else {
+                      setEnv("SFTP_USERNAME", decodeURIComponent(userPass));
+                    }
+
+                    const slash = hostPath.indexOf("/");
+                    let hostPort = hostPath;
+                    let dir = "/aiacteu/";
+                    if (slash !== -1) {
+                      hostPort = hostPath.substring(0, slash);
+                      dir = hostPath.substring(slash);
+                    }
+                    
+                    const hostPortColon = hostPort.indexOf(":");
+                    if (hostPortColon !== -1) {
+                      setEnv("SFTP_SERVER", hostPort.substring(0, hostPortColon));
+                      setEnv("SFTP_PORT", hostPort.substring(hostPortColon + 1));
+                    } else {
+                      setEnv("SFTP_SERVER", hostPort);
+                      setEnv("SFTP_PORT", "22");
+                    }
+                    setEnv("SFTP_REMOTE_DIR", dir.endsWith("/") ? dir : dir + "/");
+                    console.log("SFTP URL parsed successfully.");
+                  } else {
+                    setEnv("SFTP_SERVER", clean);
+                    console.log("SFTP Server hostname parsed:", clean);
                   }
-                  const u = new URL(str);
-                  setEnv("SFTP_SERVER", u.hostname);
-                  if (u.username) setEnv("SFTP_USERNAME", decodeURIComponent(u.username));
-                  if (u.password) setEnv("SFTP_PASSWORD", decodeURIComponent(u.password));
-                  setEnv("SFTP_PORT", u.port || "22");
-                  const dir = u.pathname && u.pathname !== "/" ? u.pathname : "/aiacteu/";
-                  setEnv("SFTP_REMOTE_DIR", dir.endsWith("/") ? dir : dir + "/");
-                  console.log("SFTP URL parsed for host:", u.hostname);
                 }
-              } catch (err) {
-                console.error("Warning: Failed to parse SFTP_URL format:", err.message);
+              } else {
+                console.log("No SFTP_URL secret detected yet.");
               }
-            } else {
-              console.log("No SFTP_URL secret found. Skipping SFTP deployment.");
+            } catch (err) {
+              console.log("Notice: SFTP URL parsing note:", err.message);
             }
           '
         env:
@@ -124,7 +148,7 @@ jobs:
             }
 
             main().catch(err => {
-              console.error("SFTP Deployment Error:", err.message);
+              console.error("SFTP Deployment Details:", err.message);
               process.exit(1);
             });
           '
