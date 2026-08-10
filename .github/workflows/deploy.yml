@@ -83,11 +83,16 @@ jobs:
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
 
-      - name: Deploy to IONOS via LFTP (Robust SFTP Mirror)
+      - name: Deploy to IONOS via LFTP (SSH-Bypass SFTP Mirror)
         if: ${{ env.SFTP_SERVER != '' && env.SFTP_PASSWORD != '' }}
         run: |
-          sudo apt-get update && sudo apt-get install -y lftp
-          lftp -u "$SFTP_USERNAME","$SFTP_PASSWORD" -p "$SFTP_PORT" -e "set sftp:auto-confirm yes; set ssl:verify-certificate no; mirror -R --delete frontend/out $SFTP_REMOTE_DIR; quit" "sftp://$SFTP_SERVER"
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          mkdir -p ~/.lftp
+          echo "set sftp:auto-confirm yes" > ~/.lftp/rc
+          echo "set sftp:connect-program \"ssh -a -x -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null\"" >> ~/.lftp/rc
+          echo "set ssl:verify-certificate no" >> ~/.lftp/rc
+          echo "Connecting to $SFTP_SERVER port $SFTP_PORT..."
+          lftp -u "$SFTP_USERNAME","$SFTP_PASSWORD" -p "$SFTP_PORT" -e "mirror -R --delete frontend/out $SFTP_REMOTE_DIR; quit" "sftp://$SFTP_SERVER"
         env:
           SFTP_SERVER: ${{ env.SFTP_SERVER }}
           SFTP_USERNAME: ${{ env.SFTP_USERNAME }}
