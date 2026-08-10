@@ -19,9 +19,29 @@ export type Article = {
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen
 export const articles: Article[] = [
   {
+    "slug": "meta-veroeffentlicht-muse-glimmer-offenes-30-milliarden-parameter-modell",
+    "title": "Zuckerbergs KI-Offensive: Meta veröffentlicht Muse-Glimmer – Offenes 30-Milliarden-Parameter-Modell",
+    "summary": "Meta setzt auf Open Source: Mark Zuckerberg möchte KI-Fähigkeiten für alle zugänglich machen und veröffentlicht das leistungsstarke 30-Milliarden-Parameter-Modell Muse-Glimmer zur freien Nutzung.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Meta",
+      "Open Source",
+      "LLM",
+      "Muse-Glimmer"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Meta-veroeffentlicht-Muse-Glimmer-Offenes-30-Milliarden-Parameter-Modell-11409218.html",
+    "publishedAt": "2026-08-10",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "breaking": true,
+    "editorsPick": true,
+    "editorsNote": "Exklusive Heise-Meldung: Mark Zuckerberg öffnet ein weiteres Top-Modell für die weltweite Entwickler-Community."
+  },
+  {
     "slug": "openai-astra-pause-claude-code-cross-session-how-cursor-router-works",
-    "title": "OpenAI Astra pause 🚨, Claude Code cross-session 🤖, how Cursor Router works 🔀",
-    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
+    "title": "OpenAI Astra pause, Claude Code cross-session, how Cursor Router works",
+    "summary": "Analysen zu OpenAIs Projekt Astra Pause, Anthropic Claude Code Cross-Session Management und der Funktionsweise von Cursors Modell-Router.",
     "categorySlug": "breaking-news",
     "tags": [
       "OpenAI",
@@ -31,7 +51,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://tldr.tech/ai/2026-08-10",
     "publishedAt": "2026-08-10",
     "aiGenerated": false,
-    "humanReviewed": false,
+    "humanReviewed": true,
     "breaking": true
   },
   {
