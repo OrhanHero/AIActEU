@@ -30,13 +30,38 @@ jobs:
         run: npm run build
         working-directory: frontend
 
+      - name: Parse SFTP URL (Connection String)
+        id: sftp_parse
+        run: |
+          node -e '
+            const raw = process.env.SFTP_URL || process.env.IONOS_URL || "";
+            if (raw) {
+              try {
+                const u = new URL(raw);
+                const server = u.hostname;
+                const username = decodeURIComponent(u.username);
+                const password = decodeURIComponent(u.password);
+                const port = u.port || "22";
+                const dir = u.pathname || "/aiacteu/";
+                const fs = require("fs");
+                fs.appendFileSync(process.env.GITHUB_ENV, `SFTP_SERVER=${server}\nSFTP_USERNAME=${username}\nSFTP_PASSWORD=${password}\nSFTP_PORT=${port}\nSFTP_REMOTE_DIR=${dir}\n`);
+                console.log("Successfully parsed SFTP URL for host:", server);
+              } catch (err) {
+                console.error("Failed to parse SFTP URL:", err.message);
+              }
+            }
+          '
+        env:
+          SFTP_URL: ${{ secrets.SFTP_URL }}
+          IONOS_URL: ${{ secrets.IONOS_URL }}
+
       - name: Sync Static Files to IONOS Webspace via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.SFTP_SERVER || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).server) }}
-          username: ${{ secrets.SFTP_USERNAME || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).username) }}
-          password: ${{ secrets.SFTP_PASSWORD || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).password) }}
-          port: 22
+          server: ${{ env.SFTP_SERVER || secrets.SFTP_SERVER || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).server) }}
+          username: ${{ env.SFTP_USERNAME || secrets.SFTP_USERNAME || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).username) }}
+          password: ${{ env.SFTP_PASSWORD || secrets.SFTP_PASSWORD || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).password) }}
+          port: ${{ env.SFTP_PORT || 22 }}
           protocol: sftp
           local-dir: frontend/out/
-          server-dir: ${{ secrets.SFTP_REMOTE_DIR || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).remote_dir) || '/aiacteu/' }}
+          server-dir: ${{ env.SFTP_REMOTE_DIR || secrets.SFTP_REMOTE_DIR || (secrets.IONOS_SFTP && fromJson(secrets.IONOS_SFTP).remote_dir) || '/aiacteu/' }}
