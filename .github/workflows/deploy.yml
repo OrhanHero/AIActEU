@@ -65,7 +65,12 @@ jobs:
                   const colon = userPass.indexOf(":");
                   if (colon !== -1) {
                     username = safeDecode(userPass.substring(0, colon));
-                    password = safeDecode(userPass.substring(colon + 1));
+                    let passRaw = userPass.substring(colon + 1);
+                    // Strip IONOS session metadata (e.g. ;fingerprint=...;x-name=...)
+                    if (passRaw.includes(";")) {
+                      passRaw = passRaw.split(";")[0];
+                    }
+                    password = safeDecode(passRaw);
                   } else {
                     username = safeDecode(userPass);
                   }
@@ -152,7 +157,7 @@ jobs:
               console.error("-------------------------------------------------");
               console.error("Bitte überprüfe das Secret SFTP_URL in deinen GitHub Settings:");
               console.error("Format: sftp://BENUTZERNAME:PASSWORT@HOST/aiacteu/");
-              console.error("Beispiel-Host bei IONOS: accessXXXXXXXX.webspace-data.io");
+              console.error("Beispiel-Host bei IONOS: accessXXXXXXXX.webspace-host.com");
               console.error("-------------------------------------------------");
               process.exit(1);
             });
