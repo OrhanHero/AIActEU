@@ -39,4 +39,4 @@ jobs:
           port: 22
           protocol: sftp
           local-dir: frontend/out/
-          server-dir: ${{ secrets.SFTP_REMOTE_DIR || '/' }}
+          server-dir: ${{ secrets.SFTP_REMOTE_DIR || '/aiacteu/' }}
