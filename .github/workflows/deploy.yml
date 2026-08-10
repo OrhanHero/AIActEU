@@ -23,11 +23,13 @@ jobs:
         working-directory: frontend
 
       - name: Deploy to IONOS (SFTP/FTPS Auto-Connect Engine)
+        working-directory: frontend
         run: |
           node -e '
             const path = require("path");
             const fs = require("fs");
-            const { execSync } = require("child_process");
+            const SFTPClient = require("ssh2-sftp-client");
+            const ftp = require("basic-ftp");
 
             let raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
             if ((raw.startsWith("\"") && raw.endsWith("\"")) || (raw.startsWith("\'") && raw.endsWith("\'"))) {
@@ -94,12 +96,7 @@ jobs:
 
             console.log(`Connecting to ${server}:${port} as user "${username}" (Target Dir: ${remoteDir})...`);
 
-            const tmp = fs.mkdtempSync(path.join(require("os").tmpdir(), "deploy-"));
-            execSync("npm install ssh2-sftp-client@11.0.0 basic-ftp@5.0.5", { cwd: tmp, stdio: "inherit" });
-
-            const SFTPClient = require(path.join(tmp, "node_modules", "ssh2-sftp-client"));
-            const ftp = require(path.join(tmp, "node_modules", "basic-ftp"));
-            const localDir = path.resolve("frontend/out");
+            const localDir = path.resolve("out");
 
             async function run() {
               // Attempt 1: SFTP (SSH Port 22)
