@@ -19,29 +19,9 @@ export type Article = {
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen
 export const articles: Article[] = [
   {
-    "slug": "meta-veroeffentlicht-muse-glimmer-offenes-30-milliarden-parameter-modell",
-    "title": "Zuckerbergs KI-Offensive: Meta veröffentlicht Muse-Glimmer – Offenes 30-Milliarden-Parameter-Modell",
-    "summary": "Meta setzt auf Open Source: Mark Zuckerberg möchte KI-Fähigkeiten für alle zugänglich machen und veröffentlicht das leistungsstarke 30-Milliarden-Parameter-Modell Muse-Glimmer zur freien Nutzung.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Meta",
-      "Open Source",
-      "LLM",
-      "Muse-Glimmer"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Meta-veroeffentlicht-Muse-Glimmer-Offenes-30-Milliarden-Parameter-Modell-11409218.html",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": true,
-    "breaking": true,
-    "editorsPick": true,
-    "editorsNote": "Exklusive Heise-Meldung: Mark Zuckerberg öffnet ein weiteres Top-Modell für die weltweite Entwickler-Community."
-  },
-  {
     "slug": "openai-astra-pause-claude-code-cross-session-how-cursor-router-works",
-    "title": "OpenAI Astra pause, Claude Code cross-session, how Cursor Router works",
-    "summary": "Analysen zu OpenAIs Projekt Astra Pause, Anthropic Claude Code Cross-Session Management und der Funktionsweise von Cursors Modell-Router.",
+    "title": "OpenAI Astra pause 🚨, Claude Code cross-session 🤖, how Cursor Router works 🔀",
+    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
     "categorySlug": "breaking-news",
     "tags": [
       "OpenAI",
@@ -51,7 +31,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://tldr.tech/ai/2026-08-10",
     "publishedAt": "2026-08-10",
     "aiGenerated": false,
-    "humanReviewed": true,
+    "humanReviewed": false,
     "breaking": true
   },
   {
@@ -218,15 +198,17 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "powerbank-zwingt-passagierflugzeug-zur-zwischenlandung-was-fur-externe-akkus-an-",
-    "title": "Powerbank zwingt Passagierflugzeug zur Zwischenlandung: Was für externe Akkus an Bord gilt",
-    "summary": "Wegen einer Powerbank musste ein Passagierflugzeug der Lufthansa-Tochter Swiss zwischenlanden. Von dem Gerät ging eine Rauchentwicklung aus. Es ist nicht der erste Vorfall dieser Art. Bei vielen Airlines gelten deshalb neue Regeln.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
+    "slug": "tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym",
+    "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+    "summary": "An OpenClaw agent hacked into a gym's reservation system to bump its human boss higher on a class' waitlist. And the tech industry took notice.",
+    "categorySlug": "business",
     "tags": [
-      "EU AI Act"
+      "Anthropic",
+      "Agentic AI",
+      "Hardware"
     ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/powerbank-flugzeug-externe-akkus-regeln-1757311/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
     "publishedAt": "2026-08-10",
     "aiGenerated": false,
     "humanReviewed": false,
@@ -356,6 +338,20 @@ export const articles: Article[] = [
     ],
     "sourceName": "t3n (allgemein, nach KI filtern)",
     "sourceUrl": "https://t3n.de/news/windows-11-wetter-app-bremst-computer-aus-1757341/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "unerwartetes-signal-was-im-hellsten-objekt-des-universums-wirklich-vor-sich-geht",
+    "title": "Unerwartetes Signal: Was im hellsten Objekt des Universums wirklich vor sich geht",
+    "summary": "Astronom:innen haben das Leuchten der hellsten Objekte im All 20 Jahre lang beobachtet. Die gesammelten Daten zeigen: Etablierte Modelle greifen zu kurz. Ein unerwartetes Signal wirft nun ein vollkommen neues Licht auf tiefgreifende kosmische Prozesse.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/blazar-pks-2155-304-astrophysik-raetsel-langzeitstudie-1757407/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-08-10",
     "aiGenerated": false,
     "humanReviewed": false
@@ -504,6 +500,34 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
+    "slug": "heise-usb-c-hubs-im-test-mehr-buchsen-fur-das-macbook-inklusive-neo",
+    "title": "heise+ | USB-C-Hubs im Test: Mehr Buchsen für das MacBook – inklusive Neo",
+    "summary": "USB-C-Hubs geben Apple-Geräten mehr Ports. Wir testen neun Geräte mit HDMI und Power Delivery, die sich besonders gut fürs MacBook Neo eignen – aber nicht nur.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/tests/USB-C-Hubs-im-Test-Mehr-Buchsen-fuer-das-MacBook-inklusive-Neo-11379552.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+    "publishedAt": "2026-08-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "erste-lufthansa-maschine-mit-starlink-internet-an-bord-startet-in-kurze",
+    "title": "Erste Lufthansa-Maschine mit Starlink-Internet an Bord startet in Kürze",
+    "summary": "Fluggäste von Lufthansa können in Kürze in einem ersten Airbus schnelles Internet von Starlink nutzen.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/news/Erste-Lufthansa-Maschine-mit-Starlink-Internet-an-Bord-startet-in-Kuerze-11409248.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
     "slug": "meta-veroffentlicht-muse-glimmer-offenes-30-milliarden-parameter-modell",
     "title": "Meta veröffentlicht Muse Glimmer: Offenes 30-Milliarden-Parameter-Modell",
     "summary": "Meta hat mit Muse Glimmer ein offenes 30-Milliarden-Parameter-Modell veröffentlicht, das lokal auf Consumer-Hardware läuft und kommerziell nutzbar ist.",
@@ -606,43 +630,15 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "heise-wie-autonome-drohnen-kunftig-giftdampfe-und-gefahrstoffe-finden-und-erkenn",
-    "title": "heise+ | Wie autonome Drohnen künftig Giftdämpfe und Gefahrstoffe finden und erkennen",
-    "summary": "Bei Havarien spüren Rover und Drohnen künftig Gefahrstoffe und Giftwolken auf. DLR-Forscher demonstrierten ferngesteuerte und autonome Systeme für den Einsatz.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/hintergrund/Wie-autonome-Drohnen-kuenftig-Giftdaempfe-und-Gefahrstoffe-finden-und-erkennen-11347497.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "heise-kreativkomplize-logoist-6-fur-mac-iphone-und-ipad-im-test",
-    "title": "heise+ | Kreativkomplize: Logoist 6 für Mac, iPhone und iPad im Test",
-    "summary": "Ob mit Vorlagen oder KI: Die Vektorgrafik-Lösung Logoist 6 erstellt im Nu ansprechende Grafiken und Logos, die sich weiterverwenden lassen.",
+    "slug": "amazon-grunder-jeff-bezos-vor-einstieg-bei-ex-klub-von-jurgen-klopp",
+    "title": "Amazon-Gründer Jeff Bezos vor Einstieg bei Ex-Klub von Jürgen Klopp",
+    "summary": "Eine Investorengruppe um Bezos steht Medienberichten zufolge kurz vor einer Einigung über den Erwerb eines Anteils am Premier-League-Klub FC Liverpool.",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
     ],
     "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/tests/Kreativkomplize-Logoist-6-fuer-Mac-iPhone-und-iPad-im-Test-11379666.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "heise-usb-c-hubs-im-test-mehr-buchsen-fur-das-macbook-inklusive-neo",
-    "title": "heise+ | USB-C-Hubs im Test: Mehr Buchsen für das MacBook – inklusive Neo",
-    "summary": "USB-C-Hubs geben Apple-Geräten mehr Ports. Wir testen neun Geräte mit HDMI und Power Delivery, die sich besonders gut fürs MacBook Neo eignen – aber nicht nur.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/tests/USB-C-Hubs-im-Test-Mehr-Buchsen-fuer-das-MacBook-inklusive-Neo-11379552.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+    "sourceUrl": "https://www.heise.de/news/Amazon-Gruender-Jeff-Bezos-vor-Einstieg-bei-Ex-Club-von-Juergen-Klopp-11409386.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-08-10",
     "aiGenerated": false,
     "humanReviewed": false
@@ -889,20 +885,6 @@ export const articles: Article[] = [
     ],
     "sourceName": "arXiv cs.AI (Artificial Intelligence)",
     "sourceUrl": "https://arxiv.org/abs/2608.06410",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "interpretable-unsupervised-community-detection-with-llm-symbolized-structured-pr",
-    "title": "Interpretable Unsupervised Community Detection with LLM-Symbolized Structured Processes",
-    "summary": "arXiv:2608.06402v1 Announce Type: new \nAbstract: Community detection is a fundamental task in graph analytics that aims to identify cohesive groups of entities with similar behaviors or interests. Classic objective-driven methods struggle with complex graph structures, while deep",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2608.06402",
     "publishedAt": "2026-08-10",
     "aiGenerated": false,
     "humanReviewed": false
