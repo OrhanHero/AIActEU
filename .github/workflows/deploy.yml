@@ -30,7 +30,7 @@ jobs:
         run: npm run build
         working-directory: frontend
 
-      - name: Parse SFTP Credentials & Set Environment Variables
+      - name: Parse SFTP Credentials & Prepare Environment
         id: sftp_parse
         run: |
           node -e '
@@ -41,7 +41,12 @@ jobs:
               }
             }
 
-            const raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
+            let raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
+            
+            // Strip quotes if user wrapped string in quotes
+            if ((raw.startsWith("\"") && raw.endsWith("\"")) || (raw.startsWith("\'") && raw.endsWith("\'"))) {
+              raw = raw.slice(1, -1).trim();
+            }
 
             if (raw) {
               try {
@@ -52,6 +57,7 @@ jobs:
                   setEnv("SFTP_PASSWORD", parsed.password);
                   setEnv("SFTP_PORT", parsed.port || "22");
                   setEnv("SFTP_REMOTE_DIR", parsed.remote_dir || "/aiacteu/");
+                  console.log("JSON credentials parsed for server:", parsed.server);
                 } else {
                   let str = raw;
                   if (!str.includes("://")) {
@@ -64,11 +70,13 @@ jobs:
                   setEnv("SFTP_PORT", u.port || "22");
                   const dir = u.pathname && u.pathname !== "/" ? u.pathname : "/aiacteu/";
                   setEnv("SFTP_REMOTE_DIR", dir.endsWith("/") ? dir : dir + "/");
+                  console.log("SFTP URL parsed for host:", u.hostname, "user:", u.username ? "***" : "missing");
                 }
-                console.log("SFTP Credentials successfully configured.");
               } catch (err) {
-                console.error("Warning: Failed to parse SFTP_URL format:", err.message);
+                console.error("Error parsing SFTP credentials:", err.message);
               }
+            } else {
+              console.log("No SFTP_URL secret detected yet.");
             }
           '
         env:
@@ -80,7 +88,7 @@ jobs:
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
 
       - name: Sync Static Files to IONOS Webspace via SFTP
-        if: env.SFTP_SERVER != '' && env.SFTP_PASSWORD != ''
+        if: ${{ env.SFTP_SERVER != '' && env.SFTP_PASSWORD != '' }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ env.SFTP_SERVER }}
@@ -88,5 +96,6 @@ jobs:
           password: ${{ env.SFTP_PASSWORD }}
           port: ${{ env.SFTP_PORT || 22 }}
           protocol: sftp
-          local-dir: frontend/out/
+          local-dir: ./frontend/out/
           server-dir: ${{ env.SFTP_REMOTE_DIR || '/aiacteu/' }}
+          security: loose
