@@ -42,8 +42,10 @@ export default function UeberUnsPage() {
         <h2 className="mb-2 text-xl font-semibold tracking-tight text-foreground">Kontakt</h2>
         <p className="text-muted leading-relaxed">
           Für Presseanfragen, Korrektur-Hinweise oder Feedback:{" "}
-          <span className="text-foreground">[Kontakt-E-Mail folgt]</span>. Rechtliche
-          Pflichtangaben finden sich im{" "}
+          <a href="mailto:info@aiacteu.de" className="text-primary font-medium hover:underline">
+            info@aiacteu.de
+          </a>
+          . Rechtliche Pflichtangaben finden sich im{" "}
           <Link href="/impressum" className="text-primary hover:underline">
             Impressum
           </Link>

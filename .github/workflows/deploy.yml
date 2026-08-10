@@ -83,16 +83,51 @@ jobs:
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
 
-      - name: Deploy to IONOS via LFTP (SSH-Bypass SFTP Mirror)
+      - name: Deploy to IONOS via Node.js SFTP Client
         if: ${{ env.SFTP_SERVER != '' && env.SFTP_PASSWORD != '' }}
         run: |
-          sudo apt-get install -y lftp || true
-          mkdir -p ~/.lftp
-          echo "set sftp:auto-confirm yes" > ~/.lftp/rc
-          echo "set sftp:connect-program \"ssh -a -x -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null\"" >> ~/.lftp/rc
-          echo "set ssl:verify-certificate no" >> ~/.lftp/rc
-          echo "Connecting to $SFTP_SERVER port $SFTP_PORT..."
-          lftp -u "$SFTP_USERNAME","$SFTP_PASSWORD" -p "$SFTP_PORT" -e "mirror -R --delete frontend/out $SFTP_REMOTE_DIR; quit" "sftp://$SFTP_SERVER"
+          node -e '
+            const path = require("path");
+            const fs = require("fs");
+            const { execSync } = require("child_process");
+
+            const tmp = fs.mkdtempSync(path.join(require("os").tmpdir(), "sftp-"));
+            execSync("npm install ssh2-sftp-client@11.0.0", { cwd: tmp, stdio: "inherit" });
+            const Client = require(path.join(tmp, "node_modules", "ssh2-sftp-client"));
+            const sftp = new Client();
+
+            async function main() {
+              const config = {
+                host: process.env.SFTP_SERVER,
+                port: parseInt(process.env.SFTP_PORT || "22", 10),
+                username: process.env.SFTP_USERNAME,
+                password: process.env.SFTP_PASSWORD,
+                readyTimeout: 30000,
+                retries: 2,
+                algorithms: {
+                  serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"]
+                }
+              };
+
+              console.log(`Connecting via SFTP to ${config.host}:${config.port} as ${config.username}...`);
+              await sftp.connect(config);
+
+              const localDir = path.resolve("frontend/out");
+              const remoteDir = process.env.SFTP_REMOTE_DIR || "/aiacteu/";
+
+              console.log(`Syncing local directory (${localDir}) to remote (${remoteDir})...`);
+              try { await sftp.mkdir(remoteDir, true); } catch (e) {}
+
+              const result = await sftp.uploadDir(localDir, remoteDir);
+              console.log("SFTP Upload finished successfully.");
+              await sftp.end();
+            }
+
+            main().catch(err => {
+              console.error("SFTP Deployment Error:", err.message);
+              process.exit(1);
+            });
+          '
         env:
           SFTP_SERVER: ${{ env.SFTP_SERVER }}
           SFTP_USERNAME: ${{ env.SFTP_USERNAME }}
