@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,7 +37,8 @@ jobs:
             const fs = require("fs");
             function setEnv(key, val) {
               if (val && typeof val === "string" && val.trim()) {
-                fs.appendFileSync(process.env.GITHUB_ENV, `${key}=${val.trim()}\n`);
+                const delimiter = "GH_ENV_" + Math.random().toString(36).substring(2);
+                fs.appendFileSync(process.env.GITHUB_ENV, `${key}<<${delimiter}\n${val.trim()}\n${delimiter}\n`);
               }
             }
 
