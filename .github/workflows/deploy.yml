@@ -6,9 +6,6 @@ on:
       - GoogleAntigravityIDE
   workflow_dispatch:
 
-env:
-  ACTIONS_RUNNER_FORCE_NODE24: "true"
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,127 +22,86 @@ jobs:
         run: npm run build
         working-directory: frontend
 
-      - name: Parse SFTP Credentials & Prepare Environment
-        id: sftp_parse
-        run: |
-          node -e '
-            const fs = require("fs");
-
-            function safeDecode(str) {
-              try { return decodeURIComponent(str); } catch (e) { return str; }
-            }
-
-            function setEnv(key, val) {
-              if (val && typeof val === "string" && val.trim()) {
-                const delimiter = "GH_ENV_" + Math.random().toString(36).substring(2);
-                fs.appendFileSync(process.env.GITHUB_ENV, `${key}<<${delimiter}\n${val.trim()}\n${delimiter}\n`);
-              }
-            }
-
-            try {
-              let raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
-              if ((raw.startsWith("\"") && raw.endsWith("\"")) || (raw.startsWith("\'") && raw.endsWith("\'"))) {
-                raw = raw.slice(1, -1).trim();
-              }
-
-              // Mode 1: Direct Individual Secrets
-              if (process.env.DIRECT_SERVER && process.env.DIRECT_PASSWORD) {
-                setEnv("SFTP_SERVER", process.env.DIRECT_SERVER);
-                setEnv("SFTP_USERNAME", process.env.DIRECT_USERNAME);
-                setEnv("SFTP_PASSWORD", process.env.DIRECT_PASSWORD);
-                setEnv("SFTP_PORT", process.env.DIRECT_PORT || "22");
-                setEnv("SFTP_REMOTE_DIR", (process.env.DIRECT_DIR || "/aiacteu").replace(/\/+$/, "") || "/aiacteu");
-                console.log("Loaded individual SFTP secrets for server:", process.env.DIRECT_SERVER);
-              } 
-              // Mode 2: SFTP_URL Connection String
-              else if (raw) {
-                if (raw.startsWith("{")) {
-                  const parsed = JSON.parse(raw);
-                  setEnv("SFTP_SERVER", parsed.server);
-                  setEnv("SFTP_USERNAME", parsed.username);
-                  setEnv("SFTP_PASSWORD", parsed.password);
-                  setEnv("SFTP_PORT", parsed.port || "22");
-                  setEnv("SFTP_REMOTE_DIR", (parsed.remote_dir || "/aiacteu").replace(/\/+$/, "") || "/aiacteu");
-                  console.log("JSON SFTP credentials parsed for host:", parsed.server);
-                } else {
-                  let clean = raw.replace(/^(sftp|ftps|ftp):\/\//i, "");
-                  const lastAt = clean.lastIndexOf("@");
-                  if (lastAt !== -1) {
-                    const userPass = clean.substring(0, lastAt);
-                    const hostPath = clean.substring(lastAt + 1);
-                    
-                    const colon = userPass.indexOf(":");
-                    if (colon !== -1) {
-                      setEnv("SFTP_USERNAME", safeDecode(userPass.substring(0, colon)));
-                      setEnv("SFTP_PASSWORD", safeDecode(userPass.substring(colon + 1)));
-                    } else {
-                      setEnv("SFTP_USERNAME", safeDecode(userPass));
-                    }
-
-                    const slash = hostPath.indexOf("/");
-                    let hostPort = hostPath;
-                    let dir = "/aiacteu";
-                    if (slash !== -1) {
-                      hostPort = hostPath.substring(0, slash);
-                      dir = hostPath.substring(slash).replace(/\/+$/, "") || "/aiacteu";
-                    }
-                    
-                    const hostPortColon = hostPort.indexOf(":");
-                    if (hostPortColon !== -1) {
-                      setEnv("SFTP_SERVER", hostPort.substring(0, hostPortColon));
-                      setEnv("SFTP_PORT", hostPort.substring(hostPortColon + 1));
-                    } else {
-                      setEnv("SFTP_SERVER", hostPort);
-                      setEnv("SFTP_PORT", "22");
-                    }
-                    setEnv("SFTP_REMOTE_DIR", dir);
-                    console.log("SFTP_URL successfully parsed!");
-                  } else {
-                    setEnv("SFTP_SERVER", clean);
-                    console.log("SFTP Server hostname parsed:", clean);
-                  }
-                }
-              } else {
-                console.log("No SFTP_URL secret detected in GitHub Secrets yet.");
-              }
-            } catch (err) {
-              console.log("Notice: SFTP URL parsing note:", err.message);
-            }
-          '
-        env:
-          DIRECT_SERVER: ${{ secrets.SFTP_SERVER }}
-          DIRECT_USERNAME: ${{ secrets.SFTP_USERNAME }}
-          DIRECT_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-          DIRECT_PORT: ${{ secrets.SFTP_PORT }}
-          DIRECT_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
-          SFTP_URL: ${{ secrets.SFTP_URL }}
-          IONOS_URL: ${{ secrets.IONOS_URL }}
-          IONOS_SFTP: ${{ secrets.IONOS_SFTP }}
-
-      - name: Deploy to IONOS via Dual SFTP/FTPS Engine
-        if: ${{ env.SFTP_SERVER != '' && env.SFTP_PASSWORD != '' }}
+      - name: Deploy to IONOS (SFTP/FTPS Auto-Connect Engine)
         run: |
           node -e '
             const path = require("path");
             const fs = require("fs");
             const { execSync } = require("child_process");
 
+            let raw = (process.env.SFTP_URL || process.env.IONOS_URL || process.env.IONOS_SFTP || "").trim();
+            if ((raw.startsWith("\"") && raw.endsWith("\"")) || (raw.startsWith("\'") && raw.endsWith("\'"))) {
+              raw = raw.slice(1, -1).trim();
+            }
+
+            let server = process.env.DIRECT_SERVER || "";
+            let username = process.env.DIRECT_USERNAME || "";
+            let password = process.env.DIRECT_PASSWORD || "";
+            let port = parseInt(process.env.DIRECT_PORT || "22", 10);
+            let remoteDir = (process.env.DIRECT_DIR || "/aiacteu").replace(/\/+$/, "") || "/aiacteu";
+
+            function safeDecode(str) {
+              try { return decodeURIComponent(str); } catch (e) { return str; }
+            }
+
+            if (!server && raw) {
+              if (raw.startsWith("{")) {
+                try {
+                  const p = JSON.parse(raw);
+                  server = p.server || "";
+                  username = p.username || "";
+                  password = p.password || "";
+                  port = parseInt(p.port || "22", 10);
+                  remoteDir = (p.remote_dir || "/aiacteu").replace(/\/+$/, "") || "/aiacteu";
+                } catch (e) {}
+              } else {
+                let clean = raw.replace(/^(sftp|ftps|ftp):\/\//i, "");
+                const lastAt = clean.lastIndexOf("@");
+                if (lastAt !== -1) {
+                  const userPass = clean.substring(0, lastAt);
+                  const hostPath = clean.substring(lastAt + 1);
+                  const colon = userPass.indexOf(":");
+                  if (colon !== -1) {
+                    username = safeDecode(userPass.substring(0, colon));
+                    password = safeDecode(userPass.substring(colon + 1));
+                  } else {
+                    username = safeDecode(userPass);
+                  }
+                  const slash = hostPath.indexOf("/");
+                  let hostPort = hostPath;
+                  if (slash !== -1) {
+                    hostPort = hostPath.substring(0, slash);
+                    remoteDir = hostPath.substring(slash).replace(/\/+$/, "") || "/aiacteu";
+                  }
+                  const hpColon = hostPort.indexOf(":");
+                  if (hpColon !== -1) {
+                    server = hostPort.substring(0, hpColon);
+                    port = parseInt(hostPort.substring(hpColon + 1), 10);
+                  } else {
+                    server = hostPort;
+                    port = 22;
+                  }
+                } else {
+                  server = clean;
+                }
+              }
+            }
+
+            if (!server || !password) {
+              console.log("Notice: SFTP_URL or login credentials not provided in GitHub Secrets yet. Skipping deployment.");
+              process.exit(0);
+            }
+
+            console.log(`Connecting to ${server}:${port} as user "${username}" (Target Dir: ${remoteDir})...`);
+
             const tmp = fs.mkdtempSync(path.join(require("os").tmpdir(), "deploy-"));
             execSync("npm install ssh2-sftp-client@11.0.0 basic-ftp@5.0.5", { cwd: tmp, stdio: "inherit" });
 
             const SFTPClient = require(path.join(tmp, "node_modules", "ssh2-sftp-client"));
             const ftp = require(path.join(tmp, "node_modules", "basic-ftp"));
+            const localDir = path.resolve("frontend/out");
 
-            async function deploy() {
-              const server = process.env.SFTP_SERVER;
-              const username = process.env.SFTP_USERNAME;
-              const password = process.env.SFTP_PASSWORD;
-              const port = parseInt(process.env.SFTP_PORT || "22", 10);
-              const remoteDir = process.env.SFTP_REMOTE_DIR || "/aiacteu";
-              const localDir = path.resolve("frontend/out");
-
-              console.log(`Connecting to ${server} for user "${username}"...`);
-
+            async function run() {
               // Attempt 1: SFTP (SSH Port 22)
               try {
                 console.log(`[Attempt 1/2] Connecting via SFTP (SSH Port ${port})...`);
@@ -157,9 +113,7 @@ jobs:
                   password: password,
                   readyTimeout: 20000,
                   retries: 1,
-                  algorithms: {
-                    serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"]
-                  }
+                  algorithms: { serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"] }
                 });
                 console.log("SFTP Connected successfully! Uploading files...");
                 try { await sftp.mkdir(remoteDir, true); } catch (e) {}
@@ -168,33 +122,17 @@ jobs:
                 console.log("SFTP Upload finished successfully!");
                 return;
               } catch (sftpErr) {
-                console.log(`SFTP Attempt note: ${sftpErr.message}. Trying FTPS (Port 21)...`);
+                console.log(`SFTP Note: ${sftpErr.message}. Switching to FTPS (TLS Port 21)...`);
               }
 
-              // Attempt 2: FTPS (FTP over TLS Port 21)
+              // Attempt 2: FTPS (TLS Port 21)
               console.log(`[Attempt 2/2] Connecting via FTPS (TLS Port 21)...`);
               const ftpClient = new ftp.Client(30000);
-              ftpClient.ftp.verbose = true;
-              
               try {
-                await ftpClient.access({
-                  host: server,
-                  port: 21,
-                  user: username,
-                  password: password,
-                  secure: true,
-                  secureOptions: { rejectUnauthorized: false }
-                });
-              } catch (ftpsErr) {
-                await ftpClient.access({
-                  host: server,
-                  port: 21,
-                  user: username,
-                  password: password,
-                  secure: false
-                });
+                await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: true, secureOptions: { rejectUnauthorized: false } });
+              } catch (e1) {
+                await ftpClient.access({ host: server, port: 21, user: username, password: password, secure: false });
               }
-
               console.log("FTPS Connected successfully! Uploading files...");
               await ftpClient.ensureDir(remoteDir);
               await ftpClient.clearWorkingDir();
@@ -203,14 +141,17 @@ jobs:
               console.log("FTPS Upload finished successfully!");
             }
 
-            deploy().catch(err => {
-              console.error("Deployment Details Failed:", err.stack || err.message);
+            run().catch(err => {
+              console.error("Deployment Error Details:", err.stack || err.message);
               process.exit(1);
             });
           '
         env:
-          SFTP_SERVER: ${{ env.SFTP_SERVER }}
-          SFTP_USERNAME: ${{ env.SFTP_USERNAME }}
-          SFTP_PASSWORD: ${{ env.SFTP_PASSWORD }}
-          SFTP_PORT: ${{ env.SFTP_PORT || '22' }}
-          SFTP_REMOTE_DIR: ${{ env.SFTP_REMOTE_DIR || '/aiacteu' }}
+          SFTP_URL: ${{ secrets.SFTP_URL }}
+          IONOS_URL: ${{ secrets.IONOS_URL }}
+          IONOS_SFTP: ${{ secrets.IONOS_SFTP }}
+          DIRECT_SERVER: ${{ secrets.SFTP_SERVER }}
+          DIRECT_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          DIRECT_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          DIRECT_PORT: ${{ secrets.SFTP_PORT }}
+          DIRECT_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
