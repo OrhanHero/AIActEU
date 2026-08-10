@@ -3,32 +3,34 @@ import Link from "next/link";
 import { providerDomains, benchmarks, getProvidersByDomain } from "@/lib/toolsDirectory";
 import { ProviderCard } from "@/components/ProviderCard";
 import { BenchmarkCard } from "@/components/BenchmarkCard";
+import { TopModelsLeaderboard } from "@/components/TopModelsLeaderboard";
 
 export const metadata: Metadata = {
-  title: "Anbieter- & Benchmark-Verzeichnis",
+  title: "Top 10 KI-Modelle & Benchmark-Verzeichnis",
   description:
-    "Die wichtigsten KI-Anbieter, Frameworks und Tools nach Bereich sortiert, plus die drei meistgenutzten Benchmark-Plattformen.",
+    "Transparenz-Register der Top 10 KI-Frontier-Modelle aus den globalen Benchmarks inklusive Datenstichtag und Herkunft der Trainingsdaten gemäß EU AI Act Art. 53.",
 };
 
 export default function VerzeichnisPage() {
   return (
     <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-semibold tracking-tight text-foreground">
-        Anbieter- & Benchmark-Verzeichnis
+      <h1 className="font-serif-heading mb-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        Anbieter- &amp; Benchmark-Verzeichnis
       </h1>
-      <p className="mb-10 max-w-2xl text-muted leading-relaxed">
-        Die jeweils zehn relevantesten Anbieter je Bereich sowie die drei meistgenutzten
-        Benchmark-Plattformen der Branche – als Nachschlagewerk, nicht als Newsfeed. Für laufende
-        Berichterstattung siehe die{" "}
+      <p className="mb-10 max-w-3xl text-muted leading-relaxed">
+        Die führenden KI-Frontier-Modelle aus globalen Evaluationen inklusive Datenstichtag und Trainingsdaten-Aufschlüsselung nach EU-Transparenz-Kriterien sowie die wichtigsten Anbieter und Tools. Für laufende Berichterstattung siehe die{" "}
         <Link href="/kategorien" className="text-primary hover:underline">
           Kategorien
         </Link>
         .
       </p>
 
+      {/* Top 10 KI-Modelle Leaderboard */}
+      <TopModelsLeaderboard />
+
       {/* Benchmarks */}
-      <section className="mb-14">
-        <h2 className="mb-1 text-xl font-semibold tracking-tight text-foreground">
+      <section className="mb-14 border-t border-border/70 pt-10">
+        <h2 className="font-serif-heading mb-1 text-2xl font-bold tracking-tight text-foreground">
           Top-3-Benchmark-Plattformen
         </h2>
         <p className="mb-4 text-sm text-muted">
