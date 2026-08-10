@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/ https://unpkg.com/ https://cdnjs.cloudflare.com/ https://esm.sh/ https://esm.run/ https://cdn.tailwindcss.com https://aiacteu.de; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/ https://cdnjs.cloudflare.com/ https://cdn.tailwindcss.com; img-src 'self' data: https://aiacteu.de/; font-src 'self' https://cdn.jsdelivr.net/ https://cdnjs.cloudflare.com/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' https://aiacteu.de; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://aiacteu.de/; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';",
           },
           {
             key: "Strict-Transport-Security",
