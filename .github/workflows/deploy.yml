@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - GoogleAntigravityIDE
+  schedule:
+    # Automatische Ausführung alle 4 Stunden (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
+    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,6 +19,12 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: frontend
+
+      - name: Fetch Latest RSS Feeds & Update News Database
+        run: |
+          node ../scripts/ingest.mjs || true
+          node ../scripts/update-frontend-articles.mjs || true
         working-directory: frontend
 
       - name: Build Next.js Static Export
