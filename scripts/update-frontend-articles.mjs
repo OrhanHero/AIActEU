@@ -157,7 +157,17 @@ export function getTopTags(articlesToCount: Article[], limit = Infinity): string
 `;
 
   await writeFile(articlesTsPath, fileContent, "utf-8");
-  console.log(`✅ ${finalArticles.length} frische Artikel erfolgreich in frontend/src/lib/articles.ts aktualisiert.`);
+
+  const now = new Date();
+  const lastUpdatedData = {
+    iso: now.toISOString(),
+    formattedDE: `${now.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Europe/Berlin" })}, ${now.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Berlin" })} Uhr`,
+    formattedEN: `${now.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "Europe/Berlin" })}, ${now.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Berlin" })}`
+  };
+  const lastUpdatedPath = path.join(__dirname, "..", "frontend", "src", "lib", "lastUpdated.json");
+  await writeFile(lastUpdatedPath, JSON.stringify(lastUpdatedData, null, 2), "utf-8");
+
+  console.log(`✅ ${finalArticles.length} frische Artikel erfolgreich in frontend/src/lib/articles.ts & lastUpdated.json aktualisiert.`);
 }
 
 main().catch(err => {
