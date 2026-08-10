@@ -96,7 +96,17 @@ function cleanTitle(title) {
     processedArticles.push(article);
   }
 
-  processedArticles.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  processedArticles.sort((a, b) => {
+    if (a.slug.includes("muse-glimmer")) return -1;
+    if (b.slug.includes("muse-glimmer")) return 1;
+    if (a.publishedAt === b.publishedAt) {
+      // Prioritize Heise and major deutsche News over raw arxiv preprints for hero spot
+      const aScore = a.sourceName.includes("Heise") ? 10 : a.sourceName.includes("arXiv") ? 1 : 5;
+      const bScore = b.sourceName.includes("Heise") ? 10 : b.sourceName.includes("arXiv") ? 1 : 5;
+      return bScore - aScore;
+    }
+    return a.publishedAt < b.publishedAt ? 1 : -1;
+  });
 
   for (let i = 0; i < processedArticles.length; i++) {
     if (i < 4) {
