@@ -1,72 +1,74 @@
 # AIActEU – KI News Hub
 
-Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten.
+Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten (EU AI Act Art. 50 & Art. 53).
 
-Der vollständige Projektplan steht in [`PROJEKTPLAN.md`](./PROJEKTPLAN.md).
+---
 
-## Projektstruktur
+## 🚀 Technologie & Architektur
 
-```
+- **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
+- **Typografie:** Newsreader (Editorial Serif) + Plus Jakarta Sans (Sans-Serif) – 100 % lokal gehostet.
+- **Export & Hosting:** Statischer Export (`output: "export"`), gehostet auf IONOS Webspace (`/aiacteu/`).
+- **Mehrsprachigkeit (i18n):** Leichtgewichtiges Single-File Wörterbuch (`lib/i18n.ts`) & React Context für flüssiges DE/EN-Umschalten ohne Ordner-Wildwuchs.
+- **DSGVO & Compliance:** 0 Tracking-Cookies, 0 externe Font-Calls, rechtssichere Pflichtangaben (Impressum & Datenschutz).
+- **Automatisierte SFTP-Pipeline:** `.github/workflows/deploy.yml` baut das Projekt bei jedem Push auf den Branch `GoogleAntigravityIDE` und spiegelt die statischen Dateien automatisiert zu IONOS.
+
+---
+
+## 📁 Projektstruktur
+
+```text
 .
-├── frontend/    Next.js (App Router) + TypeScript + Tailwind CSS
-├── backend/     Strapi Headless CMS (SQLite lokal, PostgreSQL in Produktion)
-├── scripts/     Standalone Ingestion-/Wartungs-Skripte (RSS-Verifikation, Ingestion)
-├── ARCHITECTURE.md            Technische Architekturentscheidungen
-├── DESIGN.md                  Design-System (Farben, Typografie, Komponenten)
-├── COMPLIANCE.md               EU-Verhaltenskodex- & DSGVO-Checkliste
-├── EDITORIAL_POLICY.md         Kuratierungs- und Faktencheck-Richtlinien
-├── data/sources.json           RSS/API-Quellenliste für die Ingestion-Pipeline (56 Quellen, inkl. Hardware & Silicon)
-├── data/tools-directory.json   Anbieter-Verzeichnis (165 Anbieter über 15 Domänen), siehe /verzeichnis
-├── data/benchmarks.json        Top-3-Benchmark-Plattformen, siehe /verzeichnis
-├── data/publications.json      Kuratierte Forschungsberichte/Papers (Umwelt-Fußabdruck, KI-Landschaft & Sicherheit), siehe /publikationen
-└── docs/📋 AIActEU.docx        Master-Projektplan v2 (Hardware-Erweiterung, Tutorials)
+├── frontend/                   Next.js App Router (TypeScript, Tailwind CSS)
+│   ├── src/
+│   │   ├── app/                Seiten (Start, Verzeichnis, Compliance, Tutorials, etc.)
+│   │   ├── components/         UI-Komponenten (Header, Footer, Leaderboard, Cards)
+│   │   ├── context/            LanguageContext (DE / EN Umschaltung)
+│   │   └── lib/                Daten & Hilfsfunktionen (i18n, articles, topModels)
+│   └── public/                 Statische Assets & .htaccess (HSTS & strikte CSP)
+├── .github/workflows/
+│   └── deploy.yml              GitHub Action für automatischen IONOS SFTP-Upload
+├── ARCHITECTURE.md             Technische Architekturentscheidungen
+├── DESIGN.md                   Design-System (Farben, Typografie, Glassmorphismus)
+├── COMPLIANCE.md              EU-Verhaltenskodex- & DSGVO-Checkliste
+└── PROJEKTPLAN.md              Projektverlauf & Roadmap
 ```
 
-## Status
+---
 
-Phase 2 (Core Content & Hardware-Erweiterung) – siehe [`PROJEKTPLAN.md`](./PROJEKTPLAN.md#-projektphasen).
-12 Hauptkategorien (inkl. "Hardware & Silicon", "Nachhaltigkeit & Umwelt-Impact", "Applications
-& Use Cases", "Community, Events & Ecosystem", "Safety, Alignment & Governance"); `/tutorials`
-bietet MDX-Guides für lokale
-KI-Setups (Ollama, Open WebUI/LM Studio/Jan.ai, Private RAG, Continue.dev,
-ComfyUI/Automatic1111, Faster-Whisper).
+## 🛠️ Lokale Entwicklung
 
-## Setup (lokal)
-
-### Frontend
+### 1. Abhängigkeiten installieren & Entwicklungs-Server starten
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+Die Anwendung läuft anschließend unter `http://localhost:3000`.
 
-Wichtigste Routen: `/` (Start), `/kategorien` (Übersicht + `/kategorien/[slug]` mit
-Tag-Filter), `/tutorials` (MDX-Guides für lokale KI + `/tutorials/[slug]`), `/publikationen`
-(kuratierte Forschungsberichte), `/suche` (Volltextsuche), `/verzeichnis` (Anbieter- &
-Benchmark-Verzeichnis), `/compliance`, `/ueber-uns`, `/impressum`, `/datenschutz`.
-
-### Backend (Strapi)
+### 2. Linting & Produktions-Build testen
 ```bash
-cd backend
-npm install
-npm run develop
+npm run lint      # Code-Qualitätsprüfung (0 Fehler)
+npm run build     # Compiliert den statischen Export nach frontend/out/
 ```
 
-Läuft lokal mit SQLite (kein separater DB-Server nötig); PostgreSQL ist für die
-Produktivumgebung vorgesehen, siehe [`ARCHITECTURE.md`](./ARCHITECTURE.md) und
-`backend/.env.example`. Beim ersten Start werden Kategorien/Artikel automatisch aus
-`backend/data/seed-*.json` geseedet und öffentliche Lese-Rechte für die Artikel-/
-Kategorien-API gesetzt (`backend/src/index.ts`).
+---
 
-### Ingestion-Skripte
-```bash
-cd scripts
-npm install
-node verify-sources.mjs        # prüft alle Feeds in data/sources.json per echtem HTTP-Request
-node ingest.mjs --limit 5      # zieht Artikel aus den ersten 5 verifizierten Quellen
-```
+## 🚢 Automatisches Deployment (GitHub Actions -> IONOS)
 
-Mit gesetztem `ANTHROPIC_API_KEY` erzeugt `ingest.mjs` zusätzlich KI-Zusammenfassungen
-(`aiGenerated: true`); ohne Key wird der Rohtext des Feeds übernommen. Ergebnis landet in
-`scripts/output/ingested.json` (nicht versioniert) und muss vor einer Übernahme in Strapi
-redaktionell geprüft werden, siehe [`EDITORIAL_POLICY.md`](./EDITORIAL_POLICY.md).
+Das Deployment erfolgt vollautomatisch bei jedem Git Push auf den Branch **`GoogleAntigravityIDE`**.
+
+### GitHub Secret Konfiguration:
+Im GitHub Repository unter **Settings -> Secrets and variables -> Actions** muss ein einziges Secret hinterlegt sein:
+
+- **Secret Name:** `SFTP_URL`
+- **Secret Value Format:** `sftp://BENUTZERNAME:PASSWORT@HOST/aiacteu/`
+
+Die GitHub Action parst das Secret automatisch, isoliert Passwörter mit Sonderzeichen sicher und spiegelt den Stand nach `/aiacteu/` auf deinen IONOS Webspace.
+
+---
+
+## 🇪🇺 EU AI Act Compliance
+
+- **Art. 50 Transparenz:** Automatische Kennzeichnung KI-generierter Artikel und Grafiken mit dem `AI GENERATED` / `EU AI ACT ART. 50` Siegel.
+- **Art. 53 Transparenz-Register (`/verzeichnis`):** Verzeichnis der Top 10 KI-Frontier-Modelle (Claude 3.5 Sonnet, OpenAI o1/o3-mini, DeepSeek-R1, GPT-4o etc.) mit Knowledge Cutoff-Stichtagen und aufklappbarer Herkunfts-Aufschlüsselung nach 4 Quellen-Kategorien (Web, Bücher, Code, Medien).
