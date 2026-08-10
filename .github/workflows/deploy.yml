@@ -1,0 +1,38 @@
+name: Build and Deploy to IONOS via SFTP/FTPS
+
+on:
+  push:
+    branches:
+      - GoogleAntigravityIDE
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.2.2
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: frontend
+
+      - name: Build Next.js Static Export
+        run: |
+          cp -r ../data ./data || true
+          npm run build
+        working-directory: frontend
+
+      - name: Deploy to IONOS (SFTP/FTPS Auto-Connect Engine)
+        working-directory: frontend
+        run: node scripts/deploy.mjs
+        env:
+          SFTP_URL: ${{ secrets.SFTP_URL }}
+          IONOS_URL: ${{ secrets.IONOS_URL }}
+          IONOS_SFTP: ${{ secrets.IONOS_SFTP }}
+          DIRECT_SERVER: ${{ secrets.SFTP_SERVER }}
+          DIRECT_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          DIRECT_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          DIRECT_PORT: ${{ secrets.SFTP_PORT }}
+          DIRECT_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
