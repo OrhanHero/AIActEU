@@ -5,30 +5,38 @@ import Image from "next/image";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { SearchBox } from "./SearchBox";
-
-const navLinks = [
-  { href: "/", label: "Start" },
-  { href: "/kategorien", label: "Kategorien" },
-  { href: "/tutorials", label: "Tutorials" },
-  { href: "/verzeichnis", label: "Verzeichnis" },
-  { href: "/publikationen", label: "Publikationen" },
-  { href: "/ueber-uns", label: "Über uns & Compliance" },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 function LanguageToggleButton({ className }: { className?: string }) {
+  const { lang, toggleLanguage } = useLanguage();
+
   return (
     <button
       type="button"
-      aria-label="Sprache wechseln"
-      title="Mehrsprachigkeit (DE/EN) ist für Phase 2/4 geplant"
-      className={`rounded-full border border-border/80 bg-surface/50 px-3 py-1 text-xs font-medium text-muted transition-all duration-200 hover:border-primary/50 hover:text-foreground hover:shadow-sm ${className ?? ""}`}
+      onClick={toggleLanguage}
+      aria-label="Sprache / Language"
+      title="Sprache zwischen Deutsch und Englisch umschalten"
+      className={`inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-xs font-semibold text-primary transition-all duration-200 hover:scale-105 hover:bg-primary/20 hover:shadow-sm ${className ?? ""}`}
     >
-      DE / EN
+      <span className={lang === "de" ? "font-bold text-primary" : "text-muted"}>DE</span>
+      <span className="text-muted">/</span>
+      <span className={lang === "en" ? "font-bold text-primary" : "text-muted"}>EN</span>
     </button>
   );
 }
 
 function NavLinks({ className, onNavigate }: { className?: string; onNavigate?: () => void }) {
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { href: "/", label: t("navStart") },
+    { href: "/kategorien", label: t("navKategorien") },
+    { href: "/tutorials", label: t("navTutorials") },
+    { href: "/verzeichnis", label: t("navVerzeichnis") },
+    { href: "/publikationen", label: t("navPublikationen") },
+    { href: "/ueber-uns", label: t("navUeberUns") },
+  ];
+
   return (
     <>
       {navLinks.map((link) => (

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { topModels, type TopModel } from "@/lib/topModels";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function TopModelsLeaderboard() {
   const [expandedModel, setExpandedModel] = useState<number | null>(1); // Default rank 1 expanded
+  const { t } = useLanguage();
 
   return (
     <section className="my-12">
@@ -12,15 +14,15 @@ export function TopModelsLeaderboard() {
       <div className="mb-6 flex flex-col gap-2 border-b border-border/70 pb-4">
         <div className="flex items-center gap-2">
           <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-[11px] font-semibold text-primary uppercase tracking-wider">
-            EU AI ACT ART. 53 TRANSPARENZ-REGISTER
+            {t("leaderboardBadge")}
           </span>
-          <span className="font-mono text-xs text-muted">Stand: 2026</span>
+          <span className="font-mono text-xs text-muted">2026</span>
         </div>
         <h2 className="font-serif-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          🏆 Top 10 KI-Frontier-Modelle: Benchmarks &amp; Trainingsdaten-Herkunft
+          {t("leaderboardTitle")}
         </h2>
         <p className="text-sm leading-relaxed text-muted">
-          Die führenden Large Language &amp; Multimodal Models aus globalen Evaluationen (u. a. LMSYS Chatbot Arena, MMLU-Pro, SWE-bench, MATH) – inklusive **Datenstichtag (Knowledge Cutoff)** und Aufschlüsselung der **Trainingsquellen** nach EU-Transparenz-Kriterien.
+          {t("leaderboardDesc")}
         </p>
       </div>
 
@@ -75,7 +77,7 @@ export function TopModelsLeaderboard() {
                 <div className="flex flex-wrap items-center gap-3">
                   {/* Cutoff Pill */}
                   <span className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 font-mono text-xs font-medium text-foreground shadow-sm">
-                    📅 Stichtag: <strong className="text-primary">{model.cutoff}</strong>
+                    {t("cutoffLabel")}: <strong className="text-primary">{model.cutoff}</strong>
                   </span>
 
                   {/* License Pill */}
@@ -114,18 +116,18 @@ export function TopModelsLeaderboard() {
               {isExpanded && (
                 <div className="border-t border-border/70 bg-background/40 p-5 sm:p-6 backdrop-blur-md">
                   <div className="mb-4 rounded-xl border border-primary/20 bg-primary/5 p-3 text-xs leading-relaxed text-foreground">
-                    <strong className="text-primary">Stärken im Benchmark:</strong> {model.strengths}
+                    <strong className="text-primary">{t("strengthsLabel")}:</strong> {model.strengths}
                   </div>
 
                   <h4 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
-                    📑 Zusammensetzung der Trainingsdaten (Quellen-Herkunft)
+                    {t("sourcesBreakdown")}
                   </h4>
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     {/* Webinhalte */}
                     <div className="rounded-xl border border-border/60 bg-surface/90 p-3.5 shadow-sm">
                       <div className="mb-1 flex items-center gap-2 text-xs font-bold text-foreground">
-                        <span>🌐</span> Webinhalte &amp; Online-Medien
+                        {t("webSources")}
                       </div>
                       <p className="text-xs leading-relaxed text-muted">{model.dataSources.web}</p>
                     </div>
@@ -133,7 +135,7 @@ export function TopModelsLeaderboard() {
                     {/* Bücher & Fachliteratur */}
                     <div className="rounded-xl border border-border/60 bg-surface/90 p-3.5 shadow-sm">
                       <div className="mb-1 flex items-center gap-2 text-xs font-bold text-foreground">
-                        <span>📚</span> Bücher &amp; Fachliteratur
+                        {t("bookSources")}
                       </div>
                       <p className="text-xs leading-relaxed text-muted">{model.dataSources.books}</p>
                     </div>
@@ -141,7 +143,7 @@ export function TopModelsLeaderboard() {
                     {/* Quellcode */}
                     <div className="rounded-xl border border-border/60 bg-surface/90 p-3.5 shadow-sm">
                       <div className="mb-1 flex items-center gap-2 text-xs font-bold text-foreground">
-                        <span>💻</span> Quellcode &amp; Repositories
+                        {t("codeSources")}
                       </div>
                       <p className="text-xs leading-relaxed text-muted">{model.dataSources.code}</p>
                     </div>
@@ -149,7 +151,7 @@ export function TopModelsLeaderboard() {
                     {/* Mediendateien */}
                     <div className="rounded-xl border border-border/60 bg-surface/90 p-3.5 shadow-sm">
                       <div className="mb-1 flex items-center gap-2 text-xs font-bold text-foreground">
-                        <span>🖼️</span> Mediendateien (Multimodal)
+                        {t("mediaSources")}
                       </div>
                       <p className="text-xs leading-relaxed text-muted">{model.dataSources.media}</p>
                     </div>
