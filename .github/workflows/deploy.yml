@@ -1,10 +1,13 @@
-name: Build and Deploy to IONOS via SFTP
+name: Build and Deploy to IONOS via SFTP/FTPS
 
 on:
   push:
     branches:
       - GoogleAntigravityIDE
   workflow_dispatch:
+
+env:
+  ACTIONS_RUNNER_FORCE_NODE24: "true"
 
 jobs:
   build-and-deploy:
@@ -65,7 +68,7 @@ jobs:
                   setEnv("SFTP_REMOTE_DIR", (parsed.remote_dir || "/aiacteu").replace(/\/+$/, "") || "/aiacteu");
                   console.log("JSON SFTP credentials parsed for host:", parsed.server);
                 } else {
-                  let clean = raw.replace(/^(sftp|ftp):\/\//i, "");
+                  let clean = raw.replace(/^(sftp|ftps|ftp):\/\//i, "");
                   const lastAt = clean.lastIndexOf("@");
                   if (lastAt !== -1) {
                     const userPass = clean.substring(0, lastAt);
@@ -119,7 +122,7 @@ jobs:
           IONOS_URL: ${{ secrets.IONOS_URL }}
           IONOS_SFTP: ${{ secrets.IONOS_SFTP }}
 
-      - name: Deploy to IONOS via Node.js SFTP Client
+      - name: Deploy to IONOS via Dual SFTP/FTPS Engine
         if: ${{ env.SFTP_SERVER != '' && env.SFTP_PASSWORD != '' }}
         run: |
           node -e '
@@ -127,46 +130,81 @@ jobs:
             const fs = require("fs");
             const { execSync } = require("child_process");
 
-            const tmp = fs.mkdtempSync(path.join(require("os").tmpdir(), "sftp-"));
-            execSync("npm install ssh2-sftp-client@11.0.0", { cwd: tmp, stdio: "inherit" });
-            const Client = require(path.join(tmp, "node_modules", "ssh2-sftp-client"));
-            const sftp = new Client();
+            const tmp = fs.mkdtempSync(path.join(require("os").tmpdir(), "deploy-"));
+            execSync("npm install ssh2-sftp-client@11.0.0 basic-ftp@5.0.5", { cwd: tmp, stdio: "inherit" });
 
-            async function main() {
-              const config = {
-                host: process.env.SFTP_SERVER,
-                port: parseInt(process.env.SFTP_PORT || "22", 10),
-                username: process.env.SFTP_USERNAME,
-                password: process.env.SFTP_PASSWORD,
-                readyTimeout: 35000,
-                retries: 3,
-                algorithms: {
-                  serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"]
-                }
-              };
+            const SFTPClient = require(path.join(tmp, "node_modules", "ssh2-sftp-client"));
+            const ftp = require(path.join(tmp, "node_modules", "basic-ftp"));
 
-              console.log(`Connecting via SFTP to ${config.host}:${config.port} as user "${config.username}"...`);
-              await sftp.connect(config);
-              console.log("SFTP Connection established successfully!");
-
-              const localDir = path.resolve("frontend/out");
+            async function deploy() {
+              const server = process.env.SFTP_SERVER;
+              const username = process.env.SFTP_USERNAME;
+              const password = process.env.SFTP_PASSWORD;
+              const port = parseInt(process.env.SFTP_PORT || "22", 10);
               const remoteDir = process.env.SFTP_REMOTE_DIR || "/aiacteu";
+              const localDir = path.resolve("frontend/out");
 
-              console.log(`Syncing local directory (${localDir}) to remote (${remoteDir})...`);
-              
+              console.log(`Connecting to ${server} for user "${username}"...`);
+
+              // Attempt 1: SFTP (SSH Port 22)
               try {
-                await sftp.mkdir(remoteDir, true);
-              } catch (e) {
-                console.log("Remote directory notice:", e.message);
+                console.log(`[Attempt 1/2] Connecting via SFTP (SSH Port ${port})...`);
+                const sftp = new SFTPClient();
+                await sftp.connect({
+                  host: server,
+                  port: port,
+                  username: username,
+                  password: password,
+                  readyTimeout: 20000,
+                  retries: 1,
+                  algorithms: {
+                    serverHostKey: ["ssh-rsa", "ecdsa-sha2-nistp256", "ecdsa-sha2-nistp384", "ecdsa-sha2-nistp521", "ssh-ed25519"]
+                  }
+                });
+                console.log("SFTP Connected successfully! Uploading files...");
+                try { await sftp.mkdir(remoteDir, true); } catch (e) {}
+                await sftp.uploadDir(localDir, remoteDir);
+                await sftp.end();
+                console.log("SFTP Upload finished successfully!");
+                return;
+              } catch (sftpErr) {
+                console.log(`SFTP Attempt note: ${sftpErr.message}. Trying FTPS (Port 21)...`);
               }
 
-              const result = await sftp.uploadDir(localDir, remoteDir);
-              console.log("SFTP Upload finished successfully:", result);
-              await sftp.end();
+              // Attempt 2: FTPS (FTP over TLS Port 21)
+              console.log(`[Attempt 2/2] Connecting via FTPS (TLS Port 21)...`);
+              const ftpClient = new ftp.Client(30000);
+              ftpClient.ftp.verbose = true;
+              
+              try {
+                await ftpClient.access({
+                  host: server,
+                  port: 21,
+                  user: username,
+                  password: password,
+                  secure: true,
+                  secureOptions: { rejectUnauthorized: false }
+                });
+              } catch (ftpsErr) {
+                await ftpClient.access({
+                  host: server,
+                  port: 21,
+                  user: username,
+                  password: password,
+                  secure: false
+                });
+              }
+
+              console.log("FTPS Connected successfully! Uploading files...");
+              await ftpClient.ensureDir(remoteDir);
+              await ftpClient.clearWorkingDir();
+              await ftpClient.uploadFromDir(localDir);
+              ftpClient.close();
+              console.log("FTPS Upload finished successfully!");
             }
 
-            main().catch(err => {
-              console.error("SFTP Deployment Details:", err.stack || err.message);
+            deploy().catch(err => {
+              console.error("Deployment Details Failed:", err.stack || err.message);
               process.exit(1);
             });
           '
