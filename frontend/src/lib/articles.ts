@@ -19,17 +19,18 @@ export type Article = {
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen
 export const articles: Article[] = [
   {
-    "slug": "meta-veroffentlicht-muse-glimmer-offenes-30-milliarden-parameter-modell",
-    "title": "Meta veröffentlicht Muse Glimmer: Offenes 30-Milliarden-Parameter-Modell",
-    "summary": "Meta hat mit Muse Glimmer ein offenes 30-Milliarden-Parameter-Modell veröffentlicht, das lokal auf Consumer-Hardware läuft und kommerziell nutzbar ist.",
+    "slug": "muse-glimmer-openai-cyber-claude-vs-riemann-hypothesis",
+    "title": "Muse Glimmer, OpenAI Cyber ️, Claude vs Riemann Hypothesis",
+    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
     "categorySlug": "breaking-news",
     "tags": [
-      "Meta AI",
-      "Hardware"
+      "OpenAI",
+      "Anthropic",
+      "AI Safety"
     ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Meta-veroeffentlicht-Muse-Glimmer-Offenes-30-Milliarden-Parameter-Modell-11409218.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
+    "sourceName": "TLDR AI",
+    "sourceUrl": "https://tldr.tech/ai/2026-08-11",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false,
     "breaking": true
@@ -71,623 +72,761 @@ export const articles: Article[] = [
     "breaking": true
   },
   {
-    "slug": "amazon-grunder-jeff-bezos-vor-einstieg-bei-ex-klub-von-jurgen-klopp",
-    "title": "Amazon-Gründer Jeff Bezos vor Einstieg bei Ex-Klub von Jürgen Klopp",
-    "summary": "Eine Investorengruppe um Bezos steht Medienberichten zufolge kurz vor einer Einigung über den Erwerb eines Anteils am Premier-League-Klub FC Liverpool.",
+    "slug": "patch-seit-mai-verfugbar-ransomware-attackiert-microsoft-sharepoint",
+    "title": "Patch seit Mai verfügbar: Ransomware attackiert Microsoft Sharepoint",
+    "summary": "Eine schwere Sicherheitslücke in Microsoft SharePoint wird nun von Ransomware ausgenutzt. Ein Patch steht bereit, ungeschützte Systeme auch.",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
     ],
     "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Amazon-Gruender-Jeff-Bezos-vor-Einstieg-bei-Ex-Club-von-Juergen-Klopp-11409386.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.heise.de/news/Ransomware-attackiert-ungepatchte-Sharepoint-Instanzen-11410721.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false,
     "breaking": true
   },
   {
-    "slug": "top-10-android-auto-wireless-nachrusten-die-besten-adapter-im-test",
-    "title": "Top 10: Android Auto Wireless nachrüsten – die besten Adapter im Test",
-    "summary": "Android-Smartphone drahtlos mit dem Auto verbinden? Wir zeigen die besten Wireless-Adapter für Android Auto im Vergleich.",
+    "slug": "top-10-der-beste-mini-bluetooth-lautsprecher-im-test-marshall-vor-teufel-jbl",
+    "title": "Top 10: Der beste Mini-Bluetooth-Lautsprecher im Test: Marshall vor Teufel & JBL",
+    "summary": "Klein, leicht, überraschend laut: Das sind die zehn besten Mini-Bluetooth-Lautsprecher aus unseren Tests.",
     "categorySlug": "breaking-news",
     "tags": [
-      "KI News"
+      "EU AI Act"
     ],
     "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/bestenlisten/testsieger/top-10-android-auto-wireless-nachruesten-die-besten-adapter-im-test/nv5rxl9?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.heise.de/bestenlisten/testsieger/top-10-der-beste-mini-bluetooth-lautsprecher-im-test-marshall-vor-teufel-und-jbl/zdbvdhp?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "chatgpt-im-gerichtssaal-hessische-richter-kopieren-erkennbar-ki-quellen",
-    "title": "ChatGPT im Gerichtssaal: Hessische Richter kopieren erkennbar KI-Quellen",
-    "summary": "Am Hessischen Verwaltungsgerichtshof hinterlässt ChatGPT Spuren in einem Beschluss für den EuGH. Das verschärft die Debatte über Risiken von KI in der Justiz.",
+    "slug": "brandenburg-cyberangriff-legt-it-system-der-gedenkstatten-lahm",
+    "title": "Brandenburg: Cyberangriff legt IT-System der Gedenkstätten lahm",
+    "summary": "Die Stiftung Brandenburgische Gedenkstätten wurde Opfer eines Ransomware-Angriffs. IT-Systeme sind derzeit außer Betrieb, ein Datenabfluss wird vermutet.",
     "categorySlug": "breaking-news",
     "tags": [
-      "OpenAI",
-      "EU AI Act"
+      "AI Safety"
     ],
     "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/ChatGPT-im-Gerichtssaal-Hessische-Richter-kopieren-erkennbar-KI-Quellen-11409312.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.heise.de/news/Brandenburg-Cyberangriff-legt-IT-System-der-Gedenkstaetten-lahm-11410695.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false,
     "editorsPick": true,
     "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
-    "slug": "lahmer-x86-befehl-hebelt-triviale-schutzfunktion-aus",
-    "title": "Lahmer x86-Befehl hebelt triviale Schutzfunktion aus",
-    "summary": "Der mächtige System Management Mode (SMM) von x86-Prozessoren ist ein bevorzugtes Ziel von Angriffen. Ein Trick hebelt eine SMM-Schutzfunktion aus.",
+    "slug": "heimliche-filmerei-petition-gegen-metas-smart-glasses",
+    "title": "Heimliche Filmerei: Petition gegen Metas Smart Glasses",
+    "summary": "Das Zentrum für Digitalrechte und Demokratie verlangt ein Eingreifen der Bundesnetzagentur gegen heimliche Videoaufnahmen im Alltag. Es drängt auf ein Verbot.",
     "categorySlug": "breaking-news",
     "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Lahmer-x86-Befehl-hebelt-triviale-Schutzfunktion-aus-11409272.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "grafikkarten-werden-nochmals-rund-20-prozent-teurer",
-    "title": "Grafikkarten werden nochmals rund 20 Prozent teurer",
-    "summary": "Spiele-Grafikkarten werden erneut teurer, weil Nvidia die Preise für Bundles aus GPU und RAM erhöht hat. Auch AMD-Karten sind betroffen.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "NVIDIA",
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Grafikkarten-werden-nochmals-rund-20-Prozent-teurer-11409262.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "dobrindt-baut-drohnenabwehr-nach-vorfall-in-leipzig-massiv-aus",
-    "title": "Dobrindt baut Drohnenabwehr nach Vorfall in Leipzig massiv aus",
-    "summary": "Nach dem versuchten Drohnenanschlag auf dem Leipziger Flughafen wächst der politische Druck. Innenminister Dobrindt reagiert mit mehr Abwehreinheiten.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Debatte-um-Drohnenabwehr-Bundespolizei-soll-mehr-koennen-11409300.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "bundesregierung-nutzt-ki-als-arbeitswerkzeug-ohne-kennzeichnungspflicht",
-    "title": "Bundesregierung nutzt KI als Arbeitswerkzeug ohne Kennzeichnungspflicht",
-    "summary": "Die Bundesregierung nutzt KI zunehmend als Werkzeug. Während Schulungen für Beamte verpflichtend sind, bleibt die Transparenz bei KI-generierten Reden vage.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/KI-in-der-Bundesregierung-Wenn-ein-Sprachmodell-die-Ministerrede-schreibt-11409212.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "erste-lufthansa-maschine-mit-starlink-internet-an-bord-startet-in-kurze",
-    "title": "Erste Lufthansa-Maschine mit Starlink-Internet an Bord startet in Kürze",
-    "summary": "Fluggäste von Lufthansa können in Kürze in einem ersten Airbus schnelles Internet von Starlink nutzen.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/news/Erste-Lufthansa-Maschine-mit-Starlink-Internet-an-Bord-startet-in-Kuerze-11409248.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "heise-usb-c-hubs-im-test-mehr-buchsen-fur-das-macbook-inklusive-neo",
-    "title": "heise+ | USB-C-Hubs im Test: Mehr Buchsen für das MacBook – inklusive Neo",
-    "summary": "USB-C-Hubs geben Apple-Geräten mehr Ports. Wir testen neun Geräte mit HDMI und Power Delivery, die sich besonders gut fürs MacBook Neo eignen – aber nicht nur.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.heise.de/tests/USB-C-Hubs-im-Test-Mehr-Buchsen-fuer-das-MacBook-inklusive-Neo-11379552.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "openai-s-letter-to-governor-abbott-on-responsible-ai-infrastructure-in-texas",
-    "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
-    "summary": "OpenAI sent Governor Greg Abbott a letter outlining its commitment to responsible AI infrastructure in Texas. The letter supports reliable, transparent growth that benefits Texans.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/responsible-ai-infrastructure-texas",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "model-ml-completes-finance-work-more-efficiently-with-gpt-5-6-sol",
-    "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
-    "summary": "Model ML uses GPT-5.6 Sol to carry finance work from research and analysis through editable, traceable PowerPoint decks and Excel workbooks.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/model-ml",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "what-building-an-ai-native-finance-function-taught-me",
-    "title": "What building an AI-native finance function taught me",
-    "summary": "OpenAI CFO Sarah Friar shares five lessons for building an AI-native finance function, from automated forecasting to stronger controls and AI ROI.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/building-an-ai-native-finance-function",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "expanding-daybreak-as-the-cyber-defense-window-narrows",
-    "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
-    "summary": "Meet GPT-5.6-Cyber, OpenAI’s cybersecurity-specific model available through Daybreak Red for authorized vulnerability research, exploit validation, and security testing.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI",
-      "AI Safety"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "putting-frontier-cyber-models-in-more-trusted-hands",
-    "title": "Putting frontier cyber models in more trusted hands",
-    "summary": "Approved Daybreak partners can use OpenAI’s frontier cyber models to deliver authorized, governed cybersecurity services to customers.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI",
-      "AI Safety"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "premium-seats-are-coming-to-chatgpt-business",
-    "title": "Premium seats are coming to ChatGPT Business",
-    "summary": "Premium seats are coming to ChatGPT Business. Sign up by August 20 to get $100 in workspace credits and unlock higher usage for your team's most demanding work.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/premium-seats-chatgpt-business",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "run-interactive-ides-on-amazon-eks-with-sagemaker-ai-to-power-up-your-ai-workflo",
-    "title": "Run interactive IDEs on Amazon EKS with SageMaker AI to power up your AI workflows",
-    "summary": "The Amazon SageMaker AI Spaces add-on for Amazon EKS runs managed JupyterLab and Code Editor environments on the cluster your ML team already operates. This post shows how to install and configure the add-on, connect from the browser and from VS Code over SSH-over-SSM, and move y",
-    "categorySlug": "technisch",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/run-interactive-ides-on-amazon-eks-with-sagemaker-ai-to-power-up-your-ai-workflows/",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "how-nops-shipped-finops-agents-75-faster-with-amazon-bedrock-agentcore",
-    "title": "How nOps shipped FinOps agents 75% faster with Amazon Bedrock AgentCore",
-    "summary": "nOps rebuilt its Clara FinOps AI agent on Amazon Bedrock AgentCore, replacing a self-managed Amazon EKS stack running LangChain and LangGraph. The move cut time-to-production by 75% (from 10-12 months to 4 months), improved response quality, and reduced operational overhead while",
-    "categorySlug": "technisch",
-    "tags": [
+      "Meta AI",
       "Agentic AI"
     ],
-    "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-nops-shipped-finops-agents-75-faster-with-amazon-bedrock-agentcore/",
-    "publishedAt": "2026-08-10",
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/news/Kamerabrillen-Digitalrechtler-starten-Petition-gegen-Metas-Smart-Glasses-11410637.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "build-low-latency-multilingual-voice-agents-open-weights-full-deployment-control",
-    "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
-    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
-    "categorySlug": "tools",
+    "slug": "windows-11-fur-komplett-pcs-und-notebooks-soll-teurer-werden",
+    "title": "Windows 11 für Komplett-PCs und Notebooks soll teurer werden",
+    "summary": "Microsoft verlangt für OEM-Windows-Lizenzen angeblich bis zu zehn Prozent mehr Geld. Preiserhöhungen gingen bisher wohl unter.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/news/Windows-11-fuer-Komplett-PCs-und-Notebooks-soll-teurer-werden-11410587.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-ethikchefin-verlasst-openai-nach-weniger-als-einem-jahr",
+    "title": "KI-Ethikchefin verlässt OpenAI nach weniger als einem Jahr",
+    "summary": "OpenAI verliert seine für KI-Ethik zuständige Führungskraft. Zugleich arbeitet die frühere Robotikchefin Caitlin Kalinowski nun für Anthropic.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "OpenAI",
+      "Anthropic"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/news/OpenAI-KI-Ethikchefin-geht-nach-weniger-als-einem-Jahr-11410597.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "claude-ki-wasserzeichen-ein-barendienst-fur-die-wahrheit",
+    "title": "Claude: KI-Wasserzeichen – ein Bärendienst für die Wahrheit",
+    "summary": "Die EU fordert eine Kennzeichnung für KI-Inhalte. Anthropic reagiert mit Wasserzeichen in Claude – doch die Technik birgt Risiken für Nutzer und die Wahrheit.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Anthropic",
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/meinung/KI-Wasserzeichen-in-Text-Ein-Stempel-der-falsche-Sicherheit-schafft-11410549.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "heise-revolution-im-daten-dschungel-ki-erfindet-die-testdatengenerierung-neu",
+    "title": "heise+ | Revolution im Daten-Dschungel: KI erfindet die Testdatengenerierung neu",
+    "summary": "Die Bereitstellung von Testdaten ist komplex. GenAI ermöglicht eine automatisierte, effiziente Erzeugung plausibler und datenschutzkonformer Testdatensätze.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/hintergrund/Revolution-im-Daten-Dschungel-KI-erfindet-die-Testdatengenerierung-neu-11394240.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "behorde-erlasst-beschrankungen-bei-panamakanaldurchfahrt-wegen-el-nino",
+    "title": "Behörde erlässt Beschränkungen bei Panamakanaldurchfahrt wegen El Niño",
+    "summary": "Wegen des niedrigen Wasserstandes hat die Kanalbehörde Beschränkungen beim Passieren des Panamakanals verhängt. Das könnte den weltweiten Handel beeinflussen.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/news/Behoerde-erlaesst-Beschraenkungen-bei-Panamakanaldurchfahrt-wegen-El-Nino-11410577.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "akku-rasenmaher-litheli-u20-33-cm-im-test-maht-sehr-leise-und-ist-wendig",
+    "title": "Akku-Rasenmäher Litheli U20 33 cm im Test: mäht sehr leise und ist wendig",
+    "summary": "Leise, wendig und leicht: Der Akku-Rasenmäher Litheli U20 33 cm ist bestens ausgestattet, um in kleinen Gärten für einen sauber gemähten Rasen zu sorgen.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.heise.de/bestenlisten/testbericht/akku-rasenmaeher-litheli-u20-33-cm-im-test-maeht-sehr-leise-und-ist-wendig/2048j3c?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "testing-ads-in-chatgpt",
+    "title": "Testing ads in ChatGPT",
+    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+    "categorySlug": "technisch",
+    "tags": [
+      "OpenAI"
+    ],
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/index/testing-ads-in-chatgpt",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "why-scaling-ai-compute-performance-requires-a-new-power-architecture",
+    "title": "Why Scaling AI Compute Performance Requires a New Power Architecture",
+    "summary": "Every new generation of accelerated computing demands more from the infrastructure underneath it — more compute performance, higher rack density and more efficient, scalable power distribution. The bottleneck isn’t just wattage. It’s how power gets from the grid to the GPU.  In t",
+    "categorySlug": "hardware",
+    "tags": [
+      "NVIDIA"
+    ],
+    "sourceName": "NVIDIA AI Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "nvidia-and-local-ai-community-fuel-open-source-models-and-intelligent-agents",
+    "title": "NVIDIA and Local AI Community Fuel Open Source Models and Intelligent Agents",
+    "summary": "The open source ecosystem is making it easier for AI enthusiasts and developers to build, customize and run increasingly capable agents locally.  Throughout August, NVIDIA is celebrating the partners and open source communities moving local AI forward, along with the models, appl",
+    "categorySlug": "hardware",
     "tags": [
       "NVIDIA",
-      "Hugging Face",
-      "Open Source"
+      "Open Source",
+      "Agentic AI"
     ],
-    "sourceName": "Hugging Face Blog",
-    "sourceUrl": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
-    "publishedAt": "2026-08-10",
+    "sourceName": "NVIDIA AI Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "making-knowledge-distillation-cheap-enough-to-run-at-scale",
-    "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+    "slug": "nvidia-nemotron-3-5-lightning-and-nemo-switchyard-deliver-faster-smarter-more-ef",
+    "title": "NVIDIA Nemotron 3.5 Lightning and NeMo Switchyard Deliver Faster, Smarter, More Efficient Agentic AI",
+    "summary": "As AI shifts from chatbots to autonomous agents, open models are serving market demands for full control over where AI runs and how it’s deployed and evolves. Today, NVIDIA is expanding its Nemotron 3 model family with Nemotron 3.5 Lightning, the highest-efficiency model in its c",
+    "categorySlug": "hardware",
+    "tags": [
+      "NVIDIA",
+      "Agentic AI"
+    ],
+    "sourceName": "NVIDIA AI Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic",
+    "title": "How ONESTRUCTION built the Ishigaki-IDS foundation model with AWS GenAIIC",
+    "summary": "ONESTRUCTION, with technical advisory from the AWS Generative AI Innovation Center, built Ishigaki-IDS, a foundation model specialized for construction and BIM workflows. This architectural case study shows how they combined synthetic data, a three-stage training pipeline, and ve",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-pixieset-achieved-35-ai-feature-adoption-by-solving-the-right-problem-with-a",
+    "title": "How Pixieset achieved 35% AI feature adoption by solving the right problem with Amazon Bedrock",
+    "summary": "Photographers are among the most skeptical audiences for generative AI. Learn how Pixieset used Amazon Bedrock to launch an AI-generated alt text feature to millions of users in four months, reaching 35% adoption by automating the tedious image SEO work photographers avoid, witho",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-pixieset-achieved-35-ai-feature-adoption-by-solving-the-right-problem-with-amazon-bedrock/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "first-orion-accelerates-qa-automation-using-amazon-nova-act",
+    "title": "First Orion accelerates QA automation using Amazon Nova Act",
+    "summary": "Learn how First Orion, a branded communications company, shifted from brittle script-based UI testing to AI-driven QA automation with Amazon Nova Act. By describing tests in plain English instead of maintaining selector-based code, they cut QA cycle times, freed engineering capac",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/first-orion-accelerates-qa-automation-using-amazon-nova-act/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "deploying-anthropic-claude-apps-gateway-for-aws-for-enterprise-workloads",
+    "title": "Deploying Anthropic Claude apps gateway for AWS for enterprise workloads",
+    "summary": "Claude apps gateway is a self-hosted governance layer between Claude Code and Claude Desktop and Amazon Bedrock or Claude Platform on AWS. This post presents a production reference deployment covering end-to-end architecture, enterprise deployment patterns, cost, and implementati",
+    "categorySlug": "technisch",
+    "tags": [
+      "Anthropic"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/deploying-anthropic-claude-apps-gateway-for-aws-for-enterprise-workloads/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "thinking-of-ace-we-can-do-it-with-fewer-tokens",
+    "title": "Thinking of ACE? We Can Do It with Fewer Tokens",
     "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
     "categorySlug": "tools",
     "tags": [
       "Hugging Face"
     ],
     "sourceName": "Hugging Face Blog",
-    "sourceUrl": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://huggingface.co/blog/ibm-research/altk-evolve-sldd",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "anzeige-wera-winkelschlussel-bei-amazon-auf-14-39-euro-gefallen",
-    "title": "Anzeige: Wera Winkelschlüssel bei Amazon auf 14,39 Euro gefallen",
-    "summary": "Bei Amazon gibt es ein Winkelschlüssel-Set aus dem Hause Wera für unter 15 Euro. Der Preis gilt nur kurze Zeit. (Technik/Hardware)",
+    "slug": "how-many-of-your-agent-s-calls-actually-need-a-frontier-model",
+    "title": "How many of your agent's calls actually need a frontier model?",
+    "summary": "We benchmarked NVIDIA NeMo Switchyard on 145 agent tasks. Only 7% of turns needed a frontier model, and routing cut cost 74% for six points of accuracy.",
+    "categorySlug": "technisch",
+    "tags": [
+      "NVIDIA",
+      "Agentic AI"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/switchyard-agent-routing-benchmark",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "nvidia-nemotron-3-5-lightning",
+    "title": "NVIDIA Nemotron 3.5 Lightning",
+    "summary": "NVIDIA Nemotron 3.5 Lightning is now available on Ollama. It's a 30 billion parameter (3B active) open model built for agents that stay running, gathering context, calling tools, and working through multi-step tasks on your own hardware.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Meta AI",
+      "NVIDIA",
+      "Agentic AI"
+    ],
+    "sourceName": "Ollama Blog",
+    "sourceUrl": "https://ollama.com/blog/nemotron-3-5-lightning",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "digital-networks-acts-kupferabschaltung-ist-keine-enteignung",
+    "title": "Digital Networks Acts: Kupferabschaltung ist keine Enteignung",
+    "summary": "Die Abschaltung der alten Kupfernetze in der EU ist keine entschädigungspflichtige Enteignung. Zu diesem Ergebnis kommt ein Rechtsgutachten des Breko. (Glasfaser, DSL)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem – KI",
+    "sourceUrl": "https://www.golem.de/news/digital-networks-acts-kupferabschaltung-ist-keine-enteignung-2608-211830.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "anzeige-hazet-smartcase-mit-69-teilen-bei-amazon-gunstiger",
+    "title": "Anzeige: Hazet Smartcase mit 69 Teilen bei Amazon günstiger",
+    "summary": "Das Hazet Smartcase mit kurzen und langen Bits ist bei Amazon günstiger als in vielen anderen Shops. (Technik/Hardware)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "Golem – KI",
+    "sourceUrl": "https://www.golem.de/news/anzeige-hazet-smartcase-mit-69-teilen-bei-amazon-guenstiger-2608-211828.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "anzeige-beliebtes-akku-multifunktionswerkzeug-von-fanttik-gunstig-wie-seit-monat",
+    "title": "Anzeige: Beliebtes Akku-Multifunktionswerkzeug von Fanttik günstig wie seit Monaten nicht",
+    "summary": "Das unter Amazon-Kunden beliebte Fanttik F2 Master Mini-Akku-Multifunktionswerkzeug ist für unter 60 Euro im Angebot. (Technik/Hardware, Amazon)",
     "categorySlug": "breaking-news",
     "tags": [
       "EU AI Act",
       "Hardware"
     ],
     "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-wera-winkelschluessel-bei-amazon-auf-14-39-euro-gefallen-2608-211781.html",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.golem.de/news/anzeige-beliebtes-akku-multifunktionswerkzeug-von-fanttik-guenstig-wie-seit-monaten-nicht-2608-211829.html",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "anzeige-24-5-zoll-gro-er-gaming-monitor-mit-400-hz-fur-unter-198-euro-bei-amazon",
-    "title": "Anzeige: 24,5 Zoll großer Gaming-Monitor mit 400 Hz für unter 198 Euro bei Amazon",
-    "summary": "Wenigstens gute Gaming-Monitore werden immer preiswerter: Ein 400-Hz-Modell von KTC ist bei Amazon rund 50 Euro reduziert. Günstiger war er bisher nur einmal. (Technik/Hardware, Display)",
+    "slug": "frequenzen-starlink-konkurrent-iris2-wird-kein-direct-to-device-beherrschen",
+    "title": "Frequenzen: Starlink-Konkurrent Iris² wird kein Direct-to-Device beherrschen",
+    "summary": "Eutelsat hatte groß angekündigt, dass Iris² mit dem 5G-Standard für Non-Terrestrial Networks arbeiten wird. Doch das ist eher aus der Not geboren. (Satelliteninternet, Politik)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem – KI",
+    "sourceUrl": "https://www.golem.de/news/frequenzen-starlink-konkurrent-iris-wird-kein-direct-to-device-beherrschen-2608-211826.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "anzeige-reiserouter-mit-wi-fi-7-wieder-zum-tiefstpreis",
+    "title": "Anzeige: Reiserouter mit Wi-Fi 7 wieder zum Tiefstpreis",
+    "summary": "War noch nie günstiger als jetzt: Amazon verkauft den GL.iNet EL-E5800 Reiserouter mit über 50 Euro Rabatt. (Router, WLAN)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem – KI",
+    "sourceUrl": "https://www.golem.de/news/anzeige-reiserouter-mit-wi-fi-7-wieder-zum-tiefstpreis-2608-211825.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "g-artificial-intelligence-the-ai-threat-to-india-s-it-jobs-machine",
+    "title": "(g+) Artificial Intelligence: The AI threat to India's IT jobs machine",
+    "summary": "The country has bet big on tech services but disruption is coming Von Chris Kay (Wirtschaft, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "Golem – KI",
+    "sourceUrl": "https://www.golem.de/news/artificial-intelligence-the-ai-threat-to-india-s-it-jobs-machine-2608-211823.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "anzeige-jbl-tune-530bt-kopfhorer-zum-tiefstpreis-fur-nur-34-99-euro",
+    "title": "Anzeige: JBL Tune 530BT Kopfhörer zum Tiefstpreis für nur 34,99 Euro",
+    "summary": "Die kabellosen JBL Tune 530BT On-Ear-Kopfhörer bieten eine sehr lange Akkulaufzeit und aktives Noise Cancelling. Bei Amazon gibt es die Kopfhörer zum Bestpreis. (Technik/Hardware, Kopfhörer)",
     "categorySlug": "breaking-news",
     "tags": [
       "EU AI Act",
       "Hardware"
     ],
     "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-24-5-zoll-grosser-gaming-monitor-mit-400-hz-fuer-unter-198-euro-bei-amazon-2608-211783.html",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.golem.de/news/anzeige-jbl-tune-530bt-kopfhoerer-zum-tiefstpreis-fuer-nur-34-99-euro-2608-211821.html",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "g-argentina-the-argentine-ranch-where-tech-ceos-plan-to-ride-out-the-apocalypse",
-    "title": "(g+) Argentina: The Argentine ranch where tech CEOs plan to ride out the apocalypse",
-    "summary": "Drawn by wild landscapes and an eccentric president, executives are building a refuge Von Ciara Nugent (Wirtschaft, Mark Zuckerberg)",
+    "slug": "porsche-bmw-audi-elektrische-luxusautos-mit-kaufpramie-finanziert",
+    "title": "Porsche, BMW, Audi: Elektrische Luxusautos mit Kaufprämie finanziert",
+    "summary": "Die Kaufprämie für E-Autos richtet sich an Haushalte mit niedrigem Einkommen. Doch gefördert wurden auch ein BMW i7 oder ein Porsche Taycan. (Elektroauto, Auto)",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
     ],
     "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/argentina-the-argentine-ranch-where-tech-ceos-plan-to-ride-out-the-apocalypse-2608-211779.html",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.golem.de/news/porsche-bmw-audi-elektrische-luxusautos-mit-kaufpraemie-finanziert-2608-211822.html",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "anzeige-microsoft-365-mit-zero-trust-absichern",
-    "title": "Anzeige: Microsoft 365 mit Zero Trust absichern",
-    "summary": "Microsoft 365 Zero Trust verlangt klare Kontrollen für Identitäten, Daten und Geräte. Ein Online-Workshop zeigt, wie Schutzmechanismen und Monitoring strukturiert umgesetzt werden. (Golem Karrierewelt, Server-Applikationen)",
+    "slug": "meta-chef-ignoriert-realitat-mark-zuckerberg-traumt-von-positiver-ki-zukunft",
+    "title": "Meta-Chef ignoriert Realität: Mark Zuckerberg träumt von positiver KI-Zukunft",
+    "summary": "Mark Zuckerbergs Vorstellungen einer Zukunft mit KI enthalten viele Floskeln und kaum Neues. (KI, Mark Zuckerberg)",
     "categorySlug": "breaking-news",
     "tags": [
-      "KI News"
+      "Meta AI",
+      "EU AI Act"
     ],
     "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-microsoft-365-mit-zero-trust-absichern-2608-210522.html",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.golem.de/news/meta-chef-ignoriert-realitaet-mark-zuckerberg-traeumt-von-positiver-ki-zukunft-2608-211819.html",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "zhbm-znand-hbf-stapelspeicher-fur-ki-hardware-soll-schneller-und-gro-er-werden",
-    "title": "zHBM, zNAND & HBF: Stapelspeicher für KI-Hardware soll schneller und größer werden",
-    "summary": "Samsung und SK Hynix haben beim Future Memory Summit ihre Neuerungen bei 3D-Speicher vorgestellt. Direkt aufgestapelter HBM soll die Bandbreite steigern. (3D-Speicher, KI)",
+    "slug": "anzeige-bluetooth-tastatur-fur-ios-und-android-fur-16-97-euro-bei-amazon",
+    "title": "Anzeige: Bluetooth-Tastatur für iOS und Android für 16,97 Euro bei Amazon",
+    "summary": "Eine schlanke Bluetooth-Tastatur mit Akku für komfortable Eingaben auf dem Smartphone und Tablet ist bei Amazon zum Schnäppchenpreis erhältlich. (Tastatur, Eingabegerät)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem – KI",
+    "sourceUrl": "https://www.golem.de/news/anzeige-bluetooth-tastatur-fuer-ios-und-android-fuer-16-97-euro-bei-amazon-2608-211818.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "abseits-der-schlagzeilen-warum-deutschlands-wichtigste-ki-projekte-in-fabriken-s",
+    "title": "Abseits der Schlagzeilen: Warum Deutschlands wichtigste KI-Projekte in Fabriken stattfinden",
+    "summary": "Deutschland ist nicht für seine KI-Modelle und -Infrastruktur bekannt. Im industriellen Mittelstand steht die Bundesrepublik aber gut da – noch. Kann KI „Made iweiterlesen auf t3n.de",
     "categorySlug": "breaking-news",
     "tags": [
       "EU AI Act",
-      "Hardware"
+      "Deutschland"
     ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/zhbm-znand-hbf-stapelspeicher-fuer-ki-hardware-soll-schneller-und-groesser-werden-2608-211778.html",
-    "publishedAt": "2026-08-10",
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/deutschland-industrial-ai-1750801/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "extrem-beliebt-smart-glasses-von-duckduckgo-sind-einfach-nur-sonnenbrillen",
-    "title": "Extrem beliebt: Smart Glasses von Duckduckgo sind einfach nur Sonnenbrillen",
-    "summary": "Die neue Sonnenbrille der Suchmaschine ist ein Symbol für den Protest gegen Smart Glasses, mit denen Menschen heimlich aufgenommen werden. (Duckduckgo, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/extrem-beliebt-smart-glasses-von-duckduckgo-sind-einfach-nur-sonnenbrillen-2608-211780.html",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anzeige-drehmomentschlussel-furs-fahrrad-zum-sparpreis-bei-amazon",
-    "title": "Anzeige: Drehmomentschlüssel fürs Fahrrad zum Sparpreis bei Amazon",
-    "summary": "Ein Drehmomentschlüssel für Fahrrad und Motorrad mit 15 Teilen und einem Messbereich von 2 bis 26 Nm ist bei Amazon reduziert. (Technik/Hardware)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-drehmomentschluessel-fuers-fahrrad-zum-sparpreis-bei-amazon-2608-211776.html",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "cloud-und-netzwerkprobleme-verbindungsfehler-kosten-mehr-als-einen-arbeitstag-pr",
-    "title": "Cloud- und Netzwerkprobleme: Verbindungsfehler kosten mehr als einen Arbeitstag pro Woche",
-    "summary": "Viele IT-Entscheider halten ihre Netzwerke für Cloud- und KI-Dienste geeignet. Dennoch muss viel Zeit in die Fehlerbehebung investiert werden. (Infrastruktur, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/cloud-und-netzwerkprobleme-verbindungsfehler-kosten-mehr-als-einen-arbeitstag-pro-woche-2608-211777.html",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anzeige-vielseitiger-enders-grill-bei-amazon-gunstig-wie-nie-zuvor",
-    "title": "Anzeige: Vielseitiger Enders-Grill bei Amazon günstig wie nie zuvor",
-    "summary": "Bei Amazon gibt es derzeit den Enders Explorer II im Angebot. Der vielseitige Gasgrill ist günstig wie nie zuvor erhältlich. (Küche, Amazon)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/anzeige-vielseitiger-enders-grill-bei-amazon-guenstig-wie-nie-zuvor-2608-211765.html",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "430-millionen-pfund-unterseekabel-wegen-dobbys-grab-aus-harry-potter-verlegt",
-    "title": "430 Millionen Pfund: Unterseekabel wegen Dobbys Grab aus Harry Potter verlegt",
-    "summary": "Das Greenlink-Kabel zerstört nicht mehr die Pilgerstätte von Harry-Potter-Fans. Es führt nun aber an echten Funden der Bronzezeit vorbei. (Seekabel, Kabelnetz)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Golem – KI",
-    "sourceUrl": "https://www.golem.de/news/430-millionen-pfund-unterseekabel-wegen-dobbys-grab-aus-harry-potter-verlegt-2608-211773.html",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "unerwartetes-signal-was-im-hellsten-objekt-des-universums-wirklich-vor-sich-geht",
-    "title": "Unerwartetes Signal: Was im hellsten Objekt des Universums wirklich vor sich geht",
-    "summary": "Astronom:innen haben das Leuchten der hellsten Objekte im All 20 Jahre lang beobachtet. Die gesammelten Daten zeigen: Etablierte Modelle greifen zu kurz. Ein unerwartetes Signal wirft nun ein vollkommen neues Licht auf tiefgreifende kosmische Prozesse.\nweiterlesen auf t3n.de",
+    "slug": "bucher-im-internet-verkaufen-warum-jeff-bezos-idee-im-jahr-1995-fur-viele-absurd",
+    "title": "Bücher im Internet verkaufen? Warum Jeff Bezos’ Idee im Jahr 1995 für viele absurd klang",
+    "summary": "In der Gründungsphase eines Unternehmens ist das Einsammeln von Startkapital oft eine frustrierende Angelegenheit. Selbst bei den heute wertvollsten Konzernen der Welt lief das nicht anders. Eine Rückschau zeigt erstaunliche Parallelen zur Gegenwart.\nweiterlesen auf t3n.de",
     "categorySlug": "breaking-news",
     "tags": [
       "EU AI Act"
     ],
     "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/blazar-pks-2155-304-astrophysik-raetsel-langzeitstudie-1757407/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://t3n.de/news/jeff-bezos-amazon-1995-1751769/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "windows-11-wie-die-wetter-app-deinen-computer-ausbremst",
-    "title": "Windows 11: Wie die Wetter-App deinen Computer ausbremst",
-    "summary": "Wer die Wetter-App unter Windows 11 nutzt, könnte damit unabsichtlich den eigenen PC langsamer machen. Die Anwendung verbraucht unverhältnismäßig viel Arbeitsspeicher – und das selbst im Ruhezustand. Woran das liegt.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/windows-11-wetter-app-bremst-computer-aus-1757341/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "verlorene-nasa-sonde-maven-lost-ratsel-so-entstehen-die-polarlichter-auf-dem-mar",
-    "title": "Verlorene Nasa-Sonde Maven löst Rätsel: So entstehen die Polarlichter auf dem Mars",
-    "summary": "Der Mars birgt ein Geheimnis, das bisherige Annahmen der Astrophysik herausfordert. Historische Messdaten einer längst verstummten Weltraumsonde offenbaren nun ein Wetterphänomen, das dort eigentlich nicht existieren dürfte.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/nasa-maven-daten-mars-polarlichter-1757344/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "apple-watch-mit-rundem-display-und-whoop-konkurrent-so-sollen-apples-plane-ausse",
-    "title": "Apple Watch mit rundem Display und Whoop-Konkurrent? So sollen Apples Pläne aussehen",
-    "summary": "Gibt es bald eine Apple Watch mit rundem Display? Einem Insider zufolge soll der Hersteller über neue Designoptionen nachdenken. Auch ein Konkurrenzgerät für Whoop und Fitbit könnte auf dem Zettel stehen.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/apple-watch-mit-rundem-display-und-whoop-konkurrent-so-sollen-apples-plaene-aussehen-1757347/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "android-ohne-hande-steuern-wie-du-die-bedienungshilfen-auf-deinem-smartphone-ric",
-    "title": "Android ohne Hände steuern: Wie du die Bedienungshilfen auf deinem Smartphone richtig nutzt",
-    "summary": "Zahlreiche Menschen können aufgrund einer körperlichen Einschränkung Smartphones nicht benutzen. Unter Android gibt es allerdings ein Tool, das die Geräte rein über Sprache steuerbar macht. Was damit möglich ist.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/android-ohne-haende-steuern-bedienungshilfen-smartphone-1756590/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "chatbots-vor-der-wahl-ki-uberzeugt-besser-als-menschen-es-gibt-aber-eine-entsche",
-    "title": "Chatbots vor der Wahl: KI überzeugt besser als Menschen – es gibt aber eine entscheidende Hürde",
-    "summary": "Große Sprachmodelle können Menschen unter bestimmten Umständen dazu bringen, ihre politische Position zu ändern. Manchmal sogar besser als geschulte Kampagnen-Mweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/chatbots-vor-der-wahl-ki-ueberzeugt-besser-als-menschen-es-gibt-aber-eine-entscheidende-huerde-1756226/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "33-millionen-tonnen-co2-pro-jahr-warum-amazon-jetzt-ein-riesiges-erdgaskraftwerk",
-    "title": "33 Millionen Tonnen CO2 pro Jahr: Warum Amazon jetzt ein riesiges Erdgaskraftwerk bauen will",
-    "summary": "Eigentlich hat sich Amazon vorgenommen, bis 2040 klimaneutral zu sein. Trotzdem soll ein neues KI-Rechenzentrum mit Strom aus Erdgas betrieben werden – und könnte so zum größten Klimakiller der USA werden.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/33-millionen-tonnen-co2-pro-jahr-warum-amazon-jetzt-ein-riesiges-erdgaskraftwerk-bauen-will-1757328/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mehrere-minuten-taglich-diese-android-einstellung-spart-dir-viel-zeit",
-    "title": "Mehrere Minuten täglich: Diese Android-Einstellung spart dir viel Zeit",
-    "summary": "Wer häufig das Android-Smartphone entsperren muss, verschwendet damit viel Zeit. Denn es gibt eine Einstellung auf den Geräten, die dir Zeit und Nerven spart, ohne die Sicherheit deines Geräts zu gefährden.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/android-einstellungen-zeit-sparen-1757296/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "cyberkriminalitat-warum-hackergruppen-bei-google-jetzt-einen-vor-und-nachnamen-h",
-    "title": "Cyberkriminalität: Warum Hackergruppen bei Google jetzt einen Vor- und Nachnamen haben",
-    "summary": "Codenamen sollen dabei helfen, die Aktivitäten von Hackergruppen besser verfolgen und entsprechend reagieren zu können. Trotzdem fällt es selbst Expert:innen manchmal schwer, den Überblick zu behalten.\nweiterlesen auf t3n.de",
+    "slug": "update-garantie-fur-smartphones-so-lange-kannst-du-die-gerate-von-samsung-apple-",
+    "title": "Update-Garantie für Smartphones: So lange kannst du die Geräte von Samsung, Apple und Google nutzen",
+    "summary": "Wer sich ein neues Smartphone aussucht, sollte nicht nur auf gute Hardware achten. Ebenso wichtig ist, wie lange Android-Geräte und iPhones Updates erhalten. Wie lange unterstützen die Hersteller ihre Smartphones?\nweiterlesen auf t3n.de",
     "categorySlug": "breaking-news",
     "tags": [
       "Google DeepMind",
-      "AI Safety"
+      "EU AI Act",
+      "Hardware"
     ],
     "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/cyberkriminalitaet-warum-hackergruppen-bei-google-jetzt-einen-vor-und-nachnamen-haben-1757307/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://t3n.de/news/update-garantie-smartphones-apple-google-samsung-1757485/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "ki-projekte-skalieren-so-gelingt-der-weg-vom-pilot-zum-impact",
-    "title": "KI-Projekte skalieren: So gelingt der Weg vom Pilot zum Impact",
-    "summary": "Viele Unternehmen haben überzeugende KI-Piloten und trotzdem keinen messbaren ROI. Die Ursache liegt selten in der Technologie. Sie liegt in der Lücke zwischen Demo und produktivem Alltag. Was erfolgreiche Transformation von steckengebliebenen Piloten unterscheidet und worauf es ",
+    "slug": "digitale-barrierefreiheit-warum-es-um-viel-mehr-als-nur-das-vermeiden-von-bu-gel",
+    "title": "Digitale Barrierefreiheit: Warum es um viel mehr als nur das Vermeiden von Bußgeldern geht",
+    "summary": "Wer Websites und andere digitale Touchpoints barrierefrei gestaltet, erfüllt nicht nur gesetzliche Vorgaben, sondern verbessert gleichzeitig Reichweite, Sichtbaweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/digitale-barrierefreiheit-marketing-1753917/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "world-train-map-diese-karte-zeigt-mehr-als-1-200-zugrouten-auf-der-ganzen-welt",
+    "title": "World Train Map: Diese Karte zeigt mehr als 1.200 Zugrouten auf der ganzen Welt",
+    "summary": "Ein norwegischer Entwickler hat ein Projekt veröffentlicht, das tief in die komplexe Struktur weltweiter Verkehrsdaten blickt. Das interaktive Ergebnis offenbart die Herausforderungen bei der fehlerfreien Kombination offener Datenquellen zu einem Gesamtbild.\nweiterlesen auf t3n.d",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/world-train-map-architektur-globale-bahnkarte-1757600/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "flugsicherheit-in-den-usa-warum-ausgerechnet-gamer-fluglotsen-ersetzen-sollen",
+    "title": "Flugsicherheit in den USA: Warum ausgerechnet Gamer Fluglotsen ersetzen sollen",
+    "summary": "In Videospielen wie Fortnite sind Konzentration und schnelle Entscheidungen gefragt. Da diese Fähigkeiten auch bei der Sicherung des Flugverkehrs zählen, rekrutiert die US-Regierung jetzt in der Gaming-Szene.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "RAG"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/flugsicherheit-in-den-usa-warum-ausgerechnet-gamer-fluglotsen-ersetzen-sollen-1757567/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "zu-abhangig-von-google-und-meta-so-machst-du-deine-marketing-infrastruktur-krise",
+    "title": "Zu abhängig von Google und Meta? So machst du deine Marketing-Infrastruktur krisenfest",
+    "summary": "Die Abhängigkeit von US-amerikanischen Tech-Giganten ist massiv. Cloud-Speicher, Werbe-Technologien, Daten – viele Bereiche sind auch im Marketing betroffen. Waweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Google DeepMind",
+      "Meta AI"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/abhaengig-von-google-und-meta-1732343/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "bastler-bringen-macos-aufs-ipad-warum-du-das-nicht-nachmachen-solltest",
+    "title": "Bastler bringen macOS aufs iPad: Warum du das nicht nachmachen solltest",
+    "summary": "Ein Open-Source-Projekt hat eine Möglichkeit entwickelt, ein echtes Mac-Betriebssystem auf Apple-Tablets zu installieren. Was man dafür braucht und welche Nachteile das hat.weiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Open Source"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/bastler-bringen-macos-aufs-ipad-warum-du-das-nicht-nachmachen-solltest-1757523/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "funf-tage-so-gut-wie-fruher-einer-wie-der-dwd-mit-ki-satelliten-und-flugzeugen-b",
+    "title": "„Fünf Tage so gut wie früher einer“: Wie der DWD mit KI, Satelliten und Flugzeugen bessere Wetterprognosen erstellt",
+    "summary": "Seit 65 Jahren schon macht der Deutsche Wetterdienst Wettervorhersagen. Vieles lässt sich mittlerweile gut berechnen, doch vor allem ein atmosphärisches Phänomeweiterlesen auf t3n.de",
     "categorySlug": "breaking-news",
     "tags": [
       "EU AI Act"
     ],
     "sourceName": "t3n (allgemein, nach KI filtern)",
-    "sourceUrl": "https://t3n.de/news/ki-piloten-erfolgsschwelle-business-impact-1756968/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://t3n.de/news/fuenf-tage-so-gut-wie-frueher-einer-wie-der-dwd-mit-ki-satelliten-und-flugzeugen-bessere-wetterprognosen-erstellt-1757329/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym",
-    "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
-    "summary": "An OpenClaw agent hacked into a gym's reservation system to bump its human boss higher on a class' waitlist. And the tech industry took notice.",
+    "slug": "85-prozent-der-ki-projekte-scheitern-und-die-technologie-ist-nicht-schuld",
+    "title": "85 Prozent der KI-Projekte scheitern – und die Technologie ist nicht schuld",
+    "summary": "Laut einer neuen Umfrage zählt KI für Marketingentscheider zu den wichtigsten strategischen Themen. Viele Projekte kommen jedoch nicht über den Pilotmodus hinaus und scheitern. Was Unternehmen anders machen, die Künstliche Intelligenz wirklich erfolgreich in der Organisation vera",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "RAG",
+      "EU AI Act",
+      "Hardware"
+    ],
+    "sourceName": "t3n (allgemein, nach KI filtern)",
+    "sourceUrl": "https://t3n.de/news/wieso-85-prozent-der-ki-projekte-scheitern-1754718/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "openai-launches-chatgpt-desktop-app-for-linux",
+    "title": "OpenAI launches ChatGPT desktop app for Linux",
+    "summary": "OpenAI is finally bringing a dedicated ChatGPT desktop app to Linux operating systems.",
     "categorySlug": "business",
     "tags": [
-      "Anthropic",
+      "OpenAI",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "google-s-gemini-app-surges-to-one-billion-users",
+    "title": "Google’s Gemini app surges to one billion users",
+    "summary": "Gemini is keeping pace with OpenAI’s ChatGPT, which hit 1 billion monthly active users back in June.",
+    "categorySlug": "business",
+    "tags": [
+      "OpenAI",
+      "Google DeepMind",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "brad-lightcap-openai-s-longtime-coo-is-leaving-to-start-something-new",
+    "title": "Brad Lightcap, OpenAI’s longtime COO, is leaving to ‘start something new’",
+    "summary": "One of OpenAI's longest-serving executives is headed out the door, although the longtime COO told staff that he was \"excited to help you all advance the mission from a different vantage point.\"",
+    "categorySlug": "business",
+    "tags": [
+      "OpenAI",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/brad-lightcap-openais-longtime-coo-is-leaving-to-start-something-new/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "general-catalyst-leads-1-1b-round-into-2-month-old-river-ai",
+    "title": "General Catalyst leads $1.1B round into 2-month-old River AI",
+    "summary": "River AI, a startup founded by xAI co-founder Igor Babuschkin, has a fascinating vision for personal agents and secured $1.1 billion out of the gate.",
+    "categorySlug": "business",
+    "tags": [
       "Agentic AI",
       "Hardware"
     ],
     "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "meta-s-new-glimmer-ai-model-offers-a-hint-at-zuckerberg-s-personal-intelligence-",
-    "title": "Meta’s new Glimmer AI model offers a hint at Zuckerberg’s personal intelligence vision",
-    "summary": "Meta’s new open-weight Muse Glimmer model offers a glimpse of Mark Zuckerberg’s personal superintelligence vision, as well as  the emerging divide between AI users can own and access.",
+    "slug": "an-unreleased-anthropic-model-made-progress-on-one-of-math-s-biggest-unsolved-pr",
+    "title": "An unreleased Anthropic model made progress on one of math’s biggest unsolved problems",
+    "summary": "For more than 150 years, the Riemann hypothesis has stood as one of the major unsolved problems in mathematics. Anthropic hasn't solved it — but the company's models made more progress than you might expect.",
     "categorySlug": "business",
     "tags": [
-      "Meta AI",
+      "Anthropic",
       "Hardware"
     ],
     "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "discovered-materials-is-playing-ai-whack-a-mole-to-hunt-cooler-chips",
-    "title": "Discovered Materials is playing AI whack-a-mole to hunt cooler chips",
-    "summary": "Discovered Materials raised $9 million to fund the hunt for more novel materials to build more efficient chips.",
+    "slug": "spotify-will-label-ai-persona-profiles-and-exclude-their-music-from-recommendati",
+    "title": "Spotify will label ‘AI Persona’ profiles and exclude their music from recommendations",
+    "summary": "Spotify is introducing “AI Persona” labels for artist profiles that represent AI-generated identities and will exclude their music from editorial, algorithmic, and personalized recommendations by default.",
     "categorySlug": "business",
     "tags": [
       "Hardware"
     ],
     "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/10/discovered-materials-is-playing-ai-whack-a-mole-to-hunt-cooler-chips/",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/spotify-will-label-ai-persona-profiles-and-exclude-their-music-from-recommendations/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "diese-7-ki-startups-haben-einen-uberraschenden-investor-die-telekom",
-    "title": "Diese 7 KI-Startups haben einen überraschenden Investor: die Telekom",
-    "summary": "Von der Telefonzelle zum Unicorn-Hirten. Die Telekom hat in einige der namhaftesten deutschen Technologie-Startups investiert.",
+    "slug": "anthropic-says-it-will-watermark-text-generated-by-its-ai-models",
+    "title": "Anthropic says it will watermark text generated by its AI models",
+    "summary": "Anthropic will extend support for watermarking AI generations for older models as well.",
     "categorySlug": "business",
     "tags": [
-      "EU AI Act"
+      "Anthropic",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "openai-reportedly-completed-a-7-billion-employee-tender-offer",
+    "title": "OpenAI reportedly completed a $7 billion employee tender offer",
+    "summary": "San Francisco's housing market is in trouble again.",
+    "categorySlug": "business",
+    "tags": [
+      "OpenAI",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/10/openai-reportedly-completed-a-7-billion-employee-tender-offer/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "39-minuten-lesezeit-ich-habe-mark-zuckerbergs-ki-essay-gelesen-damit-ihr-es-nich",
+    "title": "39 Minuten Lesezeit: Ich habe Mark Zuckerbergs KI-Essay gelesen, damit ihr es nicht müsst",
+    "summary": "Hat sich sonst noch irgendwer die Zeit genommen? Zuckerberg schafft es trotz der vielen Worte nicht so richtig, eine positive Vision von KI zu entwickeln.",
+    "categorySlug": "business",
+    "tags": [
+      "KI News"
     ],
     "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/diese-7-ki-startups-haben-einen-ueberraschenden-investor-die-telekom/",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/ich-habe-mark-zuckerbergs-ki-essay-gelesen-damit-ihr-es-nicht-muesst/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "wie-gewinnt-man-die-ersten-kunden-diese-grunder-setzen-auf-einen-ungewohnlichen-",
+    "title": "Wie gewinnt man die ersten Kunden? Diese Gründer setzen auf einen ungewöhnlichen (Party)-Trick",
+    "summary": "Garry Lazovskis und Minh Vu Ngo haben ihr Produkt fertiggestellt – und wollen es jetzt mit einer Party bekannt machen.",
+    "categorySlug": "business",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/wie-gewinnt-man-die-ersten-kunden-gruender-setzen-auf-einen-party-trick/",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "dieses-wort-verrat-ob-grunder-ihre-bewerbung-fur-den-beruhmtesten-startup-accele",
+    "title": "Dieses Wort verrät, ob Gründer ihre Bewerbung für den berühmtesten Startup-Accelerator von KI schreiben ließen",
+    "summary": "Y Combinator-Bewerbungen werden länger – und klingen zunehmend nach KI. Welche Wörter und Schreibweisen seit dem Siegeszug von ChatGPT häufiger auftauchen.",
+    "categorySlug": "business",
+    "tags": [
+      "OpenAI"
+    ],
+    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/news/dieses-wort-verraet-ob-gruender-ihre-bewerbung-von-ki-schreiben-liessen/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
@@ -701,7 +840,23 @@ export const articles: Article[] = [
     ],
     "sourceName": "Gründerszene (allgemein, nach KI filtern)",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/news/8-investoren-2-neuzugaenge-das-ist-das-neue-loewenrudel-in-staffel-20-von-die-hoehle-der-loewen/",
-    "publishedAt": "2026-08-10",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "will-google-dieses-startup-fur-1-5-milliarden-dollar-kaufen",
+    "title": "Will Google dieses Startup für 1,5 Milliarden Dollar kaufen?",
+    "summary": "Programmierende Agenten gehören derzeit zu den gefragtesten Anwendungsfällen für KI. Wie Insider berichten, plant Google dafür den Kauf eines Startups.",
+    "categorySlug": "business",
+    "tags": [
+      "Google DeepMind",
+      "RAG",
+      "Agentic AI"
+    ],
+    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/business/will-google-dieses-startup-fuer-15-milliarden-dollar-kaufen/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
@@ -714,181 +869,36 @@ export const articles: Article[] = [
       "KI News"
     ],
     "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/gruenderszene-sucht-die-super-gruender/fellows/so-habe-ich-meine-app-in-den-app-store-gebracht-schritt-fuer-schritt/",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/gruenderszene-sucht-die-super-gruender/fellows/app-in-den-app-store-bringen-schritt-fuer-schritt/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "warum-der-richtige-startup-name-oft-die-gro-te-herausforderung-ist",
-    "title": "Warum der richtige Startup-Name oft die größte Herausforderung ist",
-    "summary": "„Libelle“ heißt die neue GLP-1-App von Jolina van Laaten – zumindest vorerst. Warum die Gründerin mit dem Branding hadert, aber dem Rat eines Investors folgt.",
+    "slug": "diese-7-ki-startups-haben-einen-uberraschenden-investor-die-telekom",
+    "title": "Diese 7 KI-Startups haben einen überraschenden Investor: die Telekom",
+    "summary": "Von der Telefonzelle zum Unicorn-Hirten. Die Telekom hat in einige der namhaftesten deutschen Technologie-Startups investiert.",
     "categorySlug": "business",
     "tags": [
       "EU AI Act"
     ],
     "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/warum-der-richtige-startup-name-oft-die-groesste-herausforderung-ist/",
-    "publishedAt": "2026-08-10",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/ki-startups-diese-7-haben-einen-ueberraschenden-investor/",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "ich-nutze-ki-statt-praktikanten-und-bin-damit-produktiver",
-    "title": "Ich nutze KI statt Praktikanten – und bin damit produktiver",
-    "summary": "VCs investieren nicht nur in KI, sondern nutzen sie auch immer stärker selbst. Wie dabei sogar Praktikanten ersetzt werden, zeigt dieser VC.",
-    "categorySlug": "business",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/ich-nutze-ki-statt-praktikanten-und-bin-damit-produktiver/",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "openai-kauft-nextslide-dieses-neue-tool-konnte-jetzt-fur-chatgpt-kommen",
-    "title": "OpenAI kauft NextSlide: Dieses neue Tool könnte jetzt für ChatGPT kommen",
-    "summary": "OpenAI hat Nextslide übernommen. Das Startup hat eine KI gebaut, die Präsentationen per Prompt erstellt.",
-    "categorySlug": "business",
-    "tags": [
-      "OpenAI",
-      "EU AI Act"
-    ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/openai-kauft-nextslide-dieses-neue-tool-koennte-jetzt-fuer-chatgpt-kommen/",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "unbekannte-alternative-zu-aktien-grunder-bauen-neobroker-fur-genossenschaften",
-    "title": "Unbekannte Alternative zu Aktien: Gründer bauen Neobroker für Genossenschaften",
-    "summary": "Genossenschaften betreiben Wohnungen, Weinhandel und Windparks. Valueverde will sie allen zugänglich machen. Spekulation ausgeschlossen, Rendite keineswegs.",
-    "categorySlug": "business",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Gründerszene (allgemein, nach KI filtern)",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/unbekannte-alternative-zu-aktien-das-ist-der-grosse-unterschied/",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "join-the-inaugural-d-tect-forum",
-    "title": "Join the Inaugural D-TECT Forum",
-    "summary": "Join the Inaugural D-TECT Forum\nlobacni\nMon, 08/10/2026 - 14:07\n\n\n\n  \n \n      11 November 2026\n  \nThe Drone Tech for Countering Threats (D-TECT) Forum is the EU industrial coordination mechanism for drone and counter-drone technologies.\n\n\n          © Marcus Jacobi\n          \n  \nT",
-    "categorySlug": "policy",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "EU Digital Strategy – News",
-    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/events/join-inaugural-d-tect-forum",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "import-ai-468-23-rsi-ideas-posttrainbench-and-how-trust-and-transparency-interpl",
-    "title": "Import AI 468: 23 RSI ideas; PostTrainBench+; and how trust and transparency interplay with AI racing",
-    "summary": "Which galaxy will you choose?",
-    "categorySlug": "policy",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Import AI (Jack Clark Newsletter)",
-    "sourceUrl": "https://importai.substack.com/p/import-ai-468-23-rsi-ideas-posttrainbench",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "openai-astra-pause-claude-code-cross-session-how-cursor-router-works",
-    "title": "OpenAI Astra pause, Claude Code cross-session, how Cursor Router works",
-    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
+    "slug": "make-it-readable",
+    "title": "Make it readable",
+    "summary": "an ai future for everyone",
     "categorySlug": "breaking-news",
     "tags": [
-      "OpenAI",
-      "Anthropic"
+      "KI News"
     ],
-    "sourceName": "TLDR AI",
-    "sourceUrl": "https://tldr.tech/ai/2026-08-10",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "towards-multi-label-graph-foundation-models-from-single-vector-representation-le",
-    "title": "Towards Multi-Label Graph Foundation Models: from Single-Vector Representation Learning to Multi-Semantic Basis Learning",
-    "summary": "arXiv:2608.06394v1 Announce Type: new \nAbstract: Multi-label node classification is an important yet challenging task in graph learning, where nodes exhibit multiple semantics simultaneously. Existing methods for multi-label node classification can effectively model multiple labe",
-    "categorySlug": "research",
-    "tags": [
-      "RAG",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2608.06394",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "entropymoe-entropy-aware-sparse-expert-routing-for-tokenizer-free-llms",
-    "title": "EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs",
-    "summary": "arXiv:2608.06398v1 Announce Type: new \nAbstract: Recent byte-level large language models (LLMs) have made tokenizer-free modeling increasingly competitive by grouping bytes into dynamically sized patches. However, existing byte-patch architectures still apply the same dense feed-",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2608.06398",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "beyond-routing-weights-faithful-response-level-interpretation-of-mixture-of-expe",
-    "title": "Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast",
-    "summary": "arXiv:2608.06400v1 Announce Type: new \nAbstract: Reward models are central to learning from human preferences, yet identifying what drives their predictions remains challenging. Recent sparse Mixture-of-Experts (MoE) reward models seek to improve interpretability by routing promp",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2608.06400",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "interpretable-unsupervised-community-detection-with-llm-symbolized-structured-pr",
-    "title": "Interpretable Unsupervised Community Detection with LLM-Symbolized Structured Processes",
-    "summary": "arXiv:2608.06402v1 Announce Type: new \nAbstract: Community detection is a fundamental task in graph analytics that aims to identify cohesive groups of entities with similar behaviors or interests. Classic objective-driven methods struggle with complex graph structures, while deep",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2608.06402",
-    "publishedAt": "2026-08-10",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "adias-automated-design-of-interactive-agentic-systems",
-    "title": "ADIAS: Automated Design of Interactive Agentic Systems",
-    "summary": "arXiv:2608.06410v1 Announce Type: new \nAbstract: Automated agent design improves agent harnesses through iterative revision, evaluation, and feedback summarization. Existing methods are largely candidate-centric: cross-round experience is organized around candidate agents, which ",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "AI Safety",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2608.06410",
-    "publishedAt": "2026-08-10",
+    "sourceName": "Ben's Bites",
+    "sourceUrl": "https://www.bensbites.com/p/make-it-readable",
+    "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false
   }
