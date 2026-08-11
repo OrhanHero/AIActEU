@@ -19,6 +19,26 @@ export type Article = {
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen
 export const articles: Article[] = [
   {
+    "slug": "chatgpt-im-gerichtssaal-hessische-richter-kopieren-erkennbar-ki-quellen",
+    "title": "ChatGPT im Gerichtssaal: Hessische Richter kopieren erkennbar KI-Quellen",
+    "summary": "Am Hessischen Verwaltungsgerichtshof hinterlässt ChatGPT Spuren in einem Beschluss für den EuGH. Der Fall löst eine Grundsatzdebatte über Halluzinationen, Transparenz und Risiken beim Einsatz generativer KI in der Justiz aus.",
+    "categorySlug": "policy",
+    "tags": [
+      "ChatGPT",
+      "Justiz",
+      "EU AI Act",
+      "Deutschland"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/ChatGPT-im-Gerichtssaal-Hessische-Richter-kopieren-erkennbar-KI-Quellen-11409312.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "breaking": true,
+    "editorsPick": true,
+    "editorsNote": "🔥 Hauptstory der Woche: KI-Einsatz in der Justiz und unkritische Übernahme von ChatGPT-Quellennachweisen bei Gerichtsbeschlüssen."
+  },
+  {
     "slug": "e-recht24-ki-kennzeichnungspflicht-fuer-unternehmer-ai-act",
     "title": "KI-Kennzeichnungspflicht für Unternehmer: Was gilt ab August 2026?",
     "summary": "Am 2. August 2026 tritt die Kennzeichnungspflicht der EU-KI-Verordnung (AI Act Art. 50) in Kraft. eRecht24 analysiert die Anforderungen an KI-generierte Texte, Bilder, Audio-Inhalte und Deepfakes für Unternehmen und Solo-Selbstständige.",
