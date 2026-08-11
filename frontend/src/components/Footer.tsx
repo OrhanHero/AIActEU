@@ -53,17 +53,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className="flex flex-col gap-1.5 text-xs font-medium">
-            <Link href="/verzeichnis" className="text-primary hover:underline">
-              {t("navVerzeichnis")} →
-            </Link>
-            <Link href="/tutorials" className="text-primary hover:underline">
-              {t("navTutorials")} →
-            </Link>
-            <Link href="/publikationen" className="text-primary hover:underline">
-              {t("navPublikationen")} →
-            </Link>
-          </div>
+
         </div>
 
         <div>
