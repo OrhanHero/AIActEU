@@ -94,7 +94,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="text-xs text-primary transition-colors hover:underline"
           >
-            EU-Kennzeichnung Dokumentation →
+            EU-Kennzeichnung →
           </a>
         </div>
 
