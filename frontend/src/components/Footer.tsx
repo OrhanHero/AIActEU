@@ -70,6 +70,11 @@ export function Footer() {
           <p className="mb-3 font-semibold text-foreground">{t("footerLegal")}</p>
           <ul className="flex flex-col gap-2 text-xs">
             <li>
+              <Link href="/ueber-uns" className="transition-colors hover:text-foreground">
+                {t("navUeberUns")}
+              </Link>
+            </li>
+            <li>
               <Link href="/compliance" className="transition-colors hover:text-foreground">
                 {t("complianceTitle")}
               </Link>

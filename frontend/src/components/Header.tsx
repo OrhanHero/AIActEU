@@ -35,7 +35,6 @@ function NavLinks({ className, onNavigate }: { className?: string; onNavigate?: 
     { href: "/tutorials", label: t("navTutorials") },
     { href: "/verzeichnis", label: t("navVerzeichnis") },
     { href: "/publikationen", label: t("navPublikationen") },
-    { href: "/ueber-uns", label: t("navUeberUns") },
   ];
 
   return (
