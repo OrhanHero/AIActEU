@@ -19,6 +19,26 @@ export type Article = {
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen
 export const articles: Article[] = [
   {
+    "slug": "e-recht24-ki-kennzeichnungspflicht-fuer-unternehmer-ai-act",
+    "title": "KI-Kennzeichnungspflicht für Unternehmer: Was gilt ab August 2026?",
+    "summary": "Am 2. August 2026 tritt die Kennzeichnungspflicht der EU-KI-Verordnung (AI Act Art. 50) in Kraft. eRecht24 analysiert die Anforderungen an KI-generierte Texte, Bilder, Audio-Inhalte und Deepfakes für Unternehmen und Solo-Selbstständige.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "Kennzeichnungspflicht",
+      "Compliance",
+      "Deutschland"
+    ],
+    "sourceName": "eRecht24",
+    "sourceUrl": "https://www.e-recht24.de/ki/13336-ki-kennzeichnungspflicht-fuer-unternehmer.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "breaking": true,
+    "editorsPick": true,
+    "editorsNote": "Wichtige rechtliche Analyse von eRecht24 zur praktischen Umsetzung der KI-Kennzeichnungspflicht gemäß EU AI Act Art. 50."
+  },
+  {
     "slug": "muse-glimmer-openai-cyber-claude-vs-riemann-hypothesis",
     "title": "Muse Glimmer, OpenAI Cyber ️, Claude vs Riemann Hypothesis",
     "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
@@ -72,6 +92,24 @@ export const articles: Article[] = [
     "breaking": true
   },
   {
+    "slug": "e-recht24-ki-kennzeichnungspflicht-fuer-unternehmer-ai-act",
+    "title": "KI-Kennzeichnungspflicht für Unternehmer: Was gilt ab August 2026?",
+    "summary": "Am 2. August 2026 tritt die Kennzeichnungspflicht der EU-KI-Verordnung (AI Act) in Kraft. eRecht24 analysiert die rechtlichen Anforderungen an KI-generierte Texte, Bilder, Audio-Inhalte und Deepfakes für Unternehmen und Solo-Selbstständige.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "Kennzeichnungspflicht",
+      "Compliance",
+      "Deutschland"
+    ],
+    "sourceName": "eRecht24",
+    "sourceUrl": "https://www.e-recht24.de/ki/13336-ki-kennzeichnungspflicht-fuer-unternehmer.html",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "breaking": true
+  },
+  {
     "slug": "patch-seit-mai-verfugbar-ransomware-attackiert-microsoft-sharepoint",
     "title": "Patch seit Mai verfügbar: Ransomware attackiert Microsoft Sharepoint",
     "summary": "Eine schwere Sicherheitslücke in Microsoft SharePoint wird nun von Ransomware ausgenutzt. Ein Patch steht bereit, ungeschützte Systeme auch.",
@@ -83,8 +121,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/news/Ransomware-attackiert-ungepatchte-Sharepoint-Instanzen-11410721.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-08-11",
     "aiGenerated": false,
-    "humanReviewed": false,
-    "breaking": true
+    "humanReviewed": false
   },
   {
     "slug": "top-10-der-beste-mini-bluetooth-lautsprecher-im-test-marshall-vor-teufel-jbl",
@@ -98,7 +135,9 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/bestenlisten/testsieger/top-10-der-beste-mini-bluetooth-lautsprecher-im-test-marshall-vor-teufel-und-jbl/zdbvdhp?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-08-11",
     "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "brandenburg-cyberangriff-legt-it-system-der-gedenkstatten-lahm",
@@ -112,9 +151,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/news/Brandenburg-Cyberangriff-legt-IT-System-der-Gedenkstaetten-lahm-11410695.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-08-11",
     "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+    "humanReviewed": false
   },
   {
     "slug": "heimliche-filmerei-petition-gegen-metas-smart-glasses",
@@ -201,7 +238,9 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/news/Behoerde-erlaesst-Beschraenkungen-bei-Panamakanaldurchfahrt-wegen-El-Nino-11410577.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-08-11",
     "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "akku-rasenmaher-litheli-u20-33-cm-im-test-maht-sehr-leise-und-ist-wendig",
@@ -215,9 +254,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/bestenlisten/testbericht/akku-rasenmaeher-litheli-u20-33-cm-im-test-maeht-sehr-leise-und-ist-wendig/2048j3c?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-08-11",
     "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+    "humanReviewed": false
   },
   {
     "slug": "testing-ads-in-chatgpt",
@@ -884,20 +921,6 @@ export const articles: Article[] = [
     ],
     "sourceName": "Gründerszene (allgemein, nach KI filtern)",
     "sourceUrl": "https://www.businessinsider.de/gruenderszene/ki-startups-diese-7-haben-einen-ueberraschenden-investor/",
-    "publishedAt": "2026-08-11",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "make-it-readable",
-    "title": "Make it readable",
-    "summary": "an ai future for everyone",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Ben's Bites",
-    "sourceUrl": "https://www.bensbites.com/p/make-it-readable",
     "publishedAt": "2026-08-11",
     "aiGenerated": false,
     "humanReviewed": false

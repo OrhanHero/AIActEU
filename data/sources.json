@@ -595,6 +595,16 @@
       "verified": false,
       "lastCheckedAt": "2026-08-09",
       "checkNote": "HTTP 404, kein erkennbarer RSS/XML-Feed"
+    },
+    {
+      "name": "eRecht24",
+      "type": "legal-tech",
+      "category": "policy",
+      "feedUrl": "http://feeds.feedburner.com/erecht24",
+      "refreshIntervalMinutes": 60,
+      "verified": true,
+      "lastCheckedAt": "2026-08-11",
+      "domain": "legal"
     }
   ]
 }
