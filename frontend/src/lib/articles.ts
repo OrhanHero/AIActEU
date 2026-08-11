@@ -59,6 +59,26 @@ export const articles: Article[] = [
     "editorsNote": "Wichtige rechtliche Analyse von eRecht24 zur praktischen Umsetzung der KI-Kennzeichnungspflicht gemäß EU AI Act Art. 50."
   },
   {
+    "slug": "berlin-de-kuenstliche-intelligenz-in-der-verwaltung",
+    "title": "Künstliche Intelligenz in der Berliner Verwaltung",
+    "summary": "Der Regierende Bürgermeister von Berlin informiert über Strategie, Anwendungsbereiche und Richtlinien zum Einsatz von Künstlicher Intelligenz in der öffentlichen Verwaltung der Hauptstadt.",
+    "categorySlug": "policy",
+    "tags": [
+      "Verwaltung",
+      "Berlin",
+      "EU AI Act",
+      "Public Sector"
+    ],
+    "sourceName": "Berlin.de",
+    "sourceUrl": "https://www.berlin.de/moderne-verwaltung/sicherheit-technik/ki-in-der-verwaltung-1509923.php",
+    "publishedAt": "2026-08-11",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "breaking": false,
+    "editorsPick": true,
+    "editorsNote": "💡 Redaktionsempfehlung: Strategie und Praxisleitfaden des Landes Berlin für KI in der öffentlichen Verwaltung."
+  },
+  {
     "slug": "muse-glimmer-openai-cyber-claude-vs-riemann-hypothesis",
     "title": "Muse Glimmer, OpenAI Cyber ️, Claude vs Riemann Hypothesis",
     "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
