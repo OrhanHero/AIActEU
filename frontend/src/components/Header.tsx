@@ -75,7 +75,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-4 text-sm font-medium md:flex lg:gap-6">
           <NavLinks className="text-muted transition-all duration-200 hover:text-primary hover:scale-105" />
         </nav>
 
