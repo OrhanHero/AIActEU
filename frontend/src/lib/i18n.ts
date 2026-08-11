@@ -5,6 +5,7 @@ export const translations = {
     // Header
     navStart: "Start",
     navKategorien: "Kategorien",
+    navKiAnalyse: "🔬 KI-Analyse",
     navTutorials: "Tutorials",
     navVerzeichnis: "Verzeichnis",
     navPublikationen: "Publikationen",
@@ -69,6 +70,7 @@ export const translations = {
     // Header
     navStart: "Home",
     navKategorien: "Categories",
+    navKiAnalyse: "🔬 AI Analysis",
     navTutorials: "Tutorials",
     navVerzeichnis: "Directory",
     navPublikationen: "Publications",

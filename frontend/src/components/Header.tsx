@@ -31,6 +31,7 @@ function NavLinks({ className, onNavigate }: { className?: string; onNavigate?: 
   const navLinks = [
     { href: "/", label: t("navStart") },
     { href: "/kategorien", label: t("navKategorien") },
+    { href: "/ki-analyse", label: t("navKiAnalyse") },
     { href: "/tutorials", label: t("navTutorials") },
     { href: "/verzeichnis", label: t("navVerzeichnis") },
     { href: "/publikationen", label: t("navPublikationen") },
