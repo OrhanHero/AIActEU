@@ -171,4 +171,15 @@ async function main() {
   }
 }
 
-main();
+// Explizites Beenden ist hier notwendig, nicht optional: laeuft ein Feed in
+// den rss-parser-Timeout (z.B. LangChain Blog), lehnt parseURL zwar das
+// Promise ab, laesst den zugehoerigen Socket aber offen. Nodes Event-Loop
+// wird dadurch nie leer und der Prozess haengt nach getaner Arbeit endlos -
+// im CI bis zum Job-Limit, obwohl ingested.json laengst geschrieben ist.
+// Alle Schreibvorgaenge sind zu diesem Zeitpunkt awaited und damit auf Platte.
+main()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error("Fehler bei der Ingestion:", err);
+    process.exit(1);
+  });

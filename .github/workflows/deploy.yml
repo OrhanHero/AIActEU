@@ -12,6 +12,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Sicherheitsnetz: ohne Limit laeuft ein haengender Schritt bis zum
+    # GitHub-Standard von 6 Stunden weiter und verbrennt Actions-Minuten.
+    timeout-minutes: 20
 
     steps:
       - name: Checkout Code
