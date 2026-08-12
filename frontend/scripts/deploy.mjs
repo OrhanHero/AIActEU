@@ -81,12 +81,29 @@ if (!server || !password) {
   process.exit(1);
 }
 
+// Dieses Repository ist oeffentlich, und damit sind es auch die Actions-Logs.
+// Host und Benutzername stammen zwar aus einem Secret, GitHub maskiert aber
+// nur den exakten Secret-Wert - aus ihm herausgeparste Teilstrings wie Host
+// oder Benutzername werden im Klartext geloggt. Deshalb hier nur noch
+// Vorhanden-Status statt der Werte selbst.
+const status = (value) => (value ? "gesetzt" : "FEHLT");
+
+// Entfernt Zugangsdaten aus Fremdtexten (Fehlermeldungen von ssh2 / basic-ftp
+// enthalten je nach Fehlerbild Host oder Benutzernamen).
+function redact(text) {
+  let out = String(text ?? "");
+  for (const secret of [password, username, server].filter(Boolean)) {
+    out = out.split(secret).join("***");
+  }
+  return out;
+}
+
 console.log("=================================================");
 console.log("🚀 SFTP/FTPS Deployment Diagnostik:");
-console.log(`   Host: "${server}"`);
+console.log(`   Host: ${status(server)}`);
 console.log(`   Port: ${port}`);
-console.log(`   Benutzer: "${username}"`);
-console.log(`   Passwort vorhanden: ${password ? "JA" : "NEIN"}`);
+console.log(`   Benutzer: ${status(username)}`);
+console.log(`   Passwort: ${status(password)}`);
 console.log(`   Ziel-Verzeichnis: "${remoteDir}"`);
 console.log("=================================================");
 
@@ -125,7 +142,7 @@ async function run() {
     console.log("🎉 SFTP-Upload erfolgreich abgeschlossen!");
     return;
   } catch (sftpErr) {
-    sftpErrorMessage = sftpErr.message || String(sftpErr);
+    sftpErrorMessage = redact(sftpErr.message || String(sftpErr));
     console.log(`⚠️ SFTP-Hinweis: ${sftpErrorMessage}. Wechsle automatisch zu FTPS (Port 21)...`);
   }
 
@@ -155,7 +172,7 @@ async function run() {
       });
       ftpsConnected = true;
     } catch (e2) {
-      ftpsErrorMessage = e2.message || String(e2);
+      ftpsErrorMessage = redact(e2.message || String(e2));
     }
   }
 
@@ -174,11 +191,11 @@ async function run() {
 
 run().catch((err) => {
   console.error("❌ FEHLER BEIM DEPLOYMENT ZU IONOS:");
-  console.error(err.message);
+  console.error(redact(err.message));
   console.error("-------------------------------------------------");
   console.error("Erkennungs-Details:");
-  console.error(`- Host: ${server}`);
-  console.error(`- User: ${username}`);
+  console.error(`- Host: ${status(server)}`);
+  console.error(`- User: ${status(username)}`);
   console.error(`- SFTP-Meldung: ${sftpErrorMessage}`);
   console.error(`- FTPS-Meldung: ${ftpsErrorMessage}`);
   console.error("-------------------------------------------------");
