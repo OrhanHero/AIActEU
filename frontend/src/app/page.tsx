@@ -97,14 +97,27 @@ export default function Home() {
                     <span className="rounded-lg border border-white/20 bg-black/70 px-3 py-1 text-xs font-medium text-white backdrop-blur-md shadow-md">
                       Quelle: {leadArticle?.sourceName || "KI Redaktion"}
                     </span>
-                    <a
-                      href={leadArticle?.sourceUrl || "/compliance"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-bold text-primary-foreground shadow-xl transition-all duration-200 hover:scale-105 hover:bg-primary/90"
-                    >
-                      Vollständigen Artikel lesen ↗
-                    </a>
+                    <div className="flex flex-wrap items-center gap-2">
+                      {leadArticle?.studyUrl && (
+                        <a
+                          href={leadArticle.studyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={leadArticle.studyLabel || "Zugrundeliegende Studie"}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/25 bg-black/70 px-3.5 py-1.5 text-xs font-bold text-white backdrop-blur-md shadow-xl transition-all duration-200 hover:scale-105 hover:bg-black/85"
+                        >
+                          📄 Studie lesen ↗
+                        </a>
+                      )}
+                      <a
+                        href={leadArticle?.sourceUrl || "/compliance"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-1.5 text-xs font-bold text-primary-foreground shadow-xl transition-all duration-200 hover:scale-105 hover:bg-primary/90"
+                      >
+                        Vollständigen Artikel lesen ↗
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

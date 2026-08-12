@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ingestedPath = path.join(__dirname, "output", "ingested.json");
 const articlesTsPath = path.join(__dirname, "..", "frontend", "src", "lib", "articles.ts");
+const featuredPath = path.join(__dirname, "..", "data", "featured.json");
 
 const validCategorySlugs = new Set([
   "breaking-news",
@@ -46,12 +47,44 @@ function deriveTags(title, summary, sourceName) {
   return Array.from(tags).slice(0, 3);
 }
 
+// Vergleichsform fuer URLs, damit derselbe Artikel aus data/featured.json und
+// aus dem RSS-Feed als identisch erkannt wird (Protokoll, www, Query-Parameter
+// und abschliessender Slash unterscheiden sich je nach Quelle).
+function normalizeUrl(url) {
+  if (!url) return "";
+  try {
+    const u = new URL(url);
+    return `${u.hostname.replace(/^www\./, "")}${u.pathname.replace(/\/+$/, "")}`.toLowerCase();
+  } catch {
+    return url.trim().toLowerCase();
+  }
+}
+
+// Redaktionell gesetzte Hauptstories. Fehlt oder bricht die Datei, laeuft die
+// Generierung rein automatisch weiter - eine kaputte Kurationsdatei darf nie
+// den gesamten News-Stand der Seite blockieren.
+async function loadFeatured() {
+  try {
+    const parsed = JSON.parse(await readFile(featuredPath, "utf-8"));
+    const entries = Array.isArray(parsed.featured) ? parsed.featured : [];
+    return entries.filter((entry) => entry && entry.title && entry.sourceUrl);
+  } catch (err) {
+    if (err.code === "ENOENT") {
+      console.log("Hinweis: data/featured.json nicht vorhanden - keine kuratierten Hauptstories.");
+    } else {
+      console.error(`Warnung: data/featured.json unlesbar (${err.message}) - fahre ohne Kuration fort.`);
+    }
+    return [];
+  }
+}
+
 async function main() {
   const rawIngested = await readFile(ingestedPath, "utf-8");
   const ingested = JSON.parse(rawIngested);
 
   console.log(`Gelesen: ${ingested.length} ingestierte Artikel.`);
 
+  const featuredRaw = await loadFeatured();
   const seenSlugs = new Set();
   const processedArticles = [];
 
@@ -64,9 +97,31 @@ function cleanTitle(title) {
     .trim();
 }
 
+  // Kuratierte Hauptstories zuerst aufbauen: ihre Slugs und URLs blockieren
+  // anschliessend die RSS-Duplikate, damit derselbe Artikel nicht zweimal
+  // erscheint - einmal redaktionell aufbereitet, einmal als roher Feed-Text.
+  const featuredArticles = featuredRaw.map((entry) => {
+    const slug = entry.slug || "featured-" + Math.random().toString(36).substring(2, 8);
+    seenSlugs.add(slug);
+    return {
+      ...entry,
+      slug,
+      title: cleanTitle(entry.title),
+      categorySlug: validCategorySlugs.has(entry.categorySlug) ? entry.categorySlug : "breaking-news",
+      tags: entry.tags?.length ? entry.tags : deriveTags(entry.title, entry.summary, entry.sourceName),
+      sourceName: entry.sourceName || "KI Redaktion",
+      aiGenerated: entry.aiGenerated ?? false,
+      humanReviewed: entry.humanReviewed ?? true,
+      breaking: true,
+      editorsPick: true,
+    };
+  });
+  const featuredUrls = new Set(featuredArticles.map((a) => normalizeUrl(a.sourceUrl)));
+
   for (const item of ingested) {
     if (!item.title || !item.sourceUrl) continue;
-    
+    if (featuredUrls.has(normalizeUrl(item.sourceUrl))) continue;
+
     let slug = item.slug || "news-" + Math.random().toString(36).substring(2, 8);
     let originalSlug = slug;
     let counter = 1;
@@ -96,9 +151,12 @@ function cleanTitle(title) {
     processedArticles.push(article);
   }
 
+  // Anmerkung: Die frueher hier stehende Sonderbehandlung fuer die Slugs
+  // "e-recht24" und "muse-glimmer" ist entfallen. Sie war kein gueltiger
+  // Comparator (fuer a==b lieferte sie -1 statt 0, und sie war weder
+  // antisymmetrisch noch transitiv), und die Pin-Funktion uebernimmt jetzt
+  // data/featured.json - ohne fest verdrahtete Slugs im Code.
   processedArticles.sort((a, b) => {
-    if (a.slug.includes("e-recht24") || a.slug.includes("muse-glimmer")) return -1;
-    if (b.slug.includes("e-recht24") || b.slug.includes("muse-glimmer")) return 1;
     if (a.publishedAt === b.publishedAt) {
       // Prioritize Heise, eRecht24 and major deutsche News over raw arxiv preprints for hero spot
       const aScore = (a.sourceName.includes("Heise") || a.sourceName.includes("eRecht24")) ? 10 : a.sourceName.includes("arXiv") ? 1 : 5;
@@ -108,8 +166,12 @@ function cleanTitle(title) {
     return a.publishedAt < b.publishedAt ? 1 : -1;
   });
 
+  // Kuratierte Stories sind bereits als breaking markiert; automatisch wird nur
+  // noch aufgefuellt, damit die Eilmeldungen-Leiste unveraendert vier Eintraege
+  // fuehrt und die Kuration sie nicht verdraengt.
+  const autoBreakingCount = Math.max(0, 4 - featuredArticles.length);
   for (let i = 0; i < processedArticles.length; i++) {
-    if (i < 4) {
+    if (i < autoBreakingCount) {
       processedArticles[i].breaking = true;
     }
     if (i === 1 || i === 5 || i === 12) {
@@ -118,7 +180,9 @@ function cleanTitle(title) {
     }
   }
 
-  const finalArticles = processedArticles.slice(0, 60);
+  // featuredArticles zuerst: die Hero-Sektion der Startseite liest
+  // getBreakingArticles()[0], also den ersten Eintrag dieses Arrays.
+  const finalArticles = [...featuredArticles, ...processedArticles].slice(0, 60);
 
   const fileContent = `import { categories, type Category } from "./categories";
 
@@ -136,9 +200,14 @@ export type Article = {
   breaking?: boolean;
   editorsPick?: boolean;
   editorsNote?: string;
+  // Optionale Primaerquelle hinter einer Meldung, z.B. das zugehoerige Paper -
+  // gesetzt ueber data/featured.json.
+  studyUrl?: string;
+  studyLabel?: string;
 };
 
 // Automatisch aktualisierte KI-News Artikel aus den verifizierten RSS-Quellen
+// plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = ${JSON.stringify(finalArticles, null, 2)};
 
 export function getArticlesByCategory(categorySlug: string): Article[] {
