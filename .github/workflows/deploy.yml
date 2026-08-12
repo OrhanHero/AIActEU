@@ -101,6 +101,37 @@ jobs:
           DIRECT_PORT: ${{ secrets.SFTP_PORT }}
           DIRECT_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
 
+      # Beweist, dass die Dateien wirklich auf aiacteu.de gelandet sind. Ein
+      # erfolgreicher SFTP-Upload allein sagt das nicht: liefern die Zugangsdaten
+      # ein anderes Home-Verzeichnis, laedt der Upload sauber an die falsche
+      # Stelle hoch und die Live-Seite serviert stumm weiter den alten Stand.
+      # Der Zeitstempel aus lastUpdated.json ist pro Lauf eindeutig und dient
+      # hier als Fingerabdruck des soeben gebauten Stands.
+      - name: Verify Live Deployment
+        working-directory: frontend
+        run: |
+          EXPECTED=$(node -p "require('./src/lib/lastUpdated.json').formattedDE")
+          echo "🔎 Erwarteter Stand auf https://aiacteu.de : $EXPECTED"
+
+          for attempt in 1 2 3 4 5 6; do
+            LIVE=$(curl -fsSL --max-time 20 "https://aiacteu.de/?cachebust=${GITHUB_RUN_ID}-${attempt}" || true)
+
+            if printf '%s' "$LIVE" | grep -qF "$EXPECTED"; then
+              echo "✅ Live-Verifikation erfolgreich (Versuch $attempt): aiacteu.de liefert den Stand dieses Runs."
+              exit 0
+            fi
+
+            if [ -z "$LIVE" ]; then
+              echo "   [Versuch $attempt/6] Seite nicht erreichbar, neuer Versuch in 10s..."
+            else
+              echo "   [Versuch $attempt/6] Seite erreichbar, aber noch alter Stand: $(printf '%s' "$LIVE" | grep -oE 'Stand: [0-9.]+, [0-9:]+ Uhr' | head -1)"
+            fi
+            sleep 10
+          done
+
+          echo "::error title=Live-Verifikation fehlgeschlagen::Der Upload meldete Erfolg, aber https://aiacteu.de liefert nicht den Stand dieses Runs ($EXPECTED). Zielverzeichnis der SFTP-Zugangsdaten pruefen."
+          exit 1
+
       # Bewusst NACH dem Deploy: die Seite geht auch bei kaputter Ingestion mit
       # dem letzten guten Stand online, aber der Run wird rot, damit ein
       # stehengebliebener News-Stand nicht unbemerkt bleibt.

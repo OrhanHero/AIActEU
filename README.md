@@ -66,6 +66,26 @@ Im GitHub Repository unter **Settings -> Secrets and variables -> Actions** muss
 
 Die GitHub Action parst das Secret automatisch, isoliert Passwörter mit Sonderzeichen sicher und spiegelt den Stand nach `/aiacteu/` auf deinen IONOS Webspace.
 
+> **Sicherheitshinweis:** Dieses Repository ist öffentlich, damit sind auch die Actions-Logs öffentlich lesbar. GitHub maskiert ausschließlich den **exakten** Secret-Wert – Teilstrings, die der Code daraus herausparst (Host, Benutzername), erkennt die Maskierung **nicht**. `frontend/scripts/deploy.mjs` gibt deshalb nur noch `gesetzt`/`FEHLT` aus und filtert Zugangsdaten über `redact()` aus fremden Fehlermeldungen. Beim Anpassen der Diagnose-Ausgaben diese Regel beibehalten: niemals Host, Benutzername oder Passwort in ein `console.log` schreiben.
+
+### Zugangsdaten wechseln (IONOS-Benutzer rotieren)
+
+1. Im IONOS-Kundenmenü den neuen SFTP-Benutzer anlegen und dessen Zielverzeichnis notieren.
+2. Secret `SFTP_URL` in den GitHub Repository Settings auf das neue Format aktualisieren.
+3. Deployment auslösen – entweder per Push auf `GoogleAntigravityIDE` oder unter **Actions -> Build and Deploy to IONOS -> Run workflow** (`workflow_dispatch`).
+4. Den Schritt **Verify Live Deployment** im Run prüfen (siehe unten). Er ist der eigentliche Beleg dafür, dass die neuen Zugangsdaten funktionieren.
+
+### Verifikation: Warum ein grüner Upload nicht genügt
+
+Ein erfolgreicher SFTP-Upload beweist nur, dass die Verbindung stand – **nicht**, dass die Dateien dort gelandet sind, wo der Webserver sie ausliefert. Liefert ein neu angelegter IONOS-Benutzer ein abweichendes Home-Verzeichnis, lädt der Upload sauber an die falsche Stelle hoch, meldet Erfolg, und aiacteu.de serviert stumm weiter den alten Stand. Genau diese Lücke schließt der Schritt **Verify Live Deployment**:
+
+- `frontend/src/lib/lastUpdated.json` wird bei jedem Lauf neu geschrieben und ist damit ein pro Run eindeutiger Fingerabdruck des gebauten Stands.
+- Nach dem Upload ruft der Schritt `https://aiacteu.de` ab und vergleicht den dort ausgelieferten Zeitstempel mit dem erwarteten.
+- Bis zu 6 Versuche im Abstand von 10 Sekunden fangen Verzögerungen beim Ausliefern ab.
+- Schlägt der Abgleich fehl, wird der Run **rot** – mit dem Hinweis, das Zielverzeichnis der Zugangsdaten zu prüfen.
+
+Damit macht jeder grüne Run eine belastbare Aussage: gebaut, hochgeladen **und** live nachweisbar.
+
 ---
 
 ## 🇪🇺 EU AI Act Compliance
