@@ -74,9 +74,11 @@ if (!server && raw) {
 }
 
 if (!server || !password) {
-  console.log("⚠️ Hinweis: Keines der Secrets (SFTP_URL oder SFTP_SERVER / SFTP_PASSWORD) wurde gefunden.");
-  console.log("Deployment wird übersprungen. Bitte erstelle das Secret SFTP_URL in deinen GitHub Repository Settings.");
-  process.exit(0);
+  console.error("❌ Keines der Secrets (SFTP_URL oder SFTP_SERVER / SFTP_PASSWORD) wurde gefunden.");
+  console.error("Deployment nicht möglich. Bitte das Secret SFTP_URL in den GitHub Repository Settings hinterlegen.");
+  // Bewusst exit 1: ein stillschweigend übersprungenes Deployment liesse den
+  // Workflow gruen erscheinen, obwohl die Live-Seite nie aktualisiert wurde.
+  process.exit(1);
 }
 
 console.log("=================================================");

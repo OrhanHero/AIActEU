@@ -31,11 +31,34 @@ jobs:
           echo "✅ Dependencies installed"
         working-directory: frontend
 
+      # Die Ingestion-Skripte sind ein eigenes npm-Paket (scripts/package.json,
+      # u.a. rss-parser). Node löst ESM-Imports relativ zur Datei auf, nicht zum
+      # cwd - ohne diesen Schritt findet scripts/ingest.mjs seine Abhängigkeiten
+      # nicht und bricht mit ERR_MODULE_NOT_FOUND ab.
+      - name: Install Ingestion Script Dependencies
+        run: |
+          echo "📦 Installing ingestion script dependencies..."
+          npm ci
+          echo "✅ Script dependencies installed"
+        working-directory: scripts
+
       - name: Fetch Latest RSS Feeds & Update News Database
+        id: ingest
         run: |
           echo "📡 Starting news ingestion..."
-          node ../scripts/ingest.mjs && echo "✅ Ingestion complete" || echo "⚠️  Ingestion failed (non-fatal)"
-          node ../scripts/update-frontend-articles.mjs && echo "✅ Articles updated" || echo "⚠️  Article update failed (non-fatal)"
+          if node ../scripts/ingest.mjs; then
+            echo "✅ Ingestion complete"
+          else
+            echo "::error title=RSS-Ingestion fehlgeschlagen::scripts/ingest.mjs ist abgebrochen. Es wird mit dem zuletzt eingecheckten Artikelstand deployt."
+            echo "ingest_failed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if node ../scripts/update-frontend-articles.mjs; then
+            echo "✅ Articles updated"
+          else
+            echo "::error title=Artikel-Update fehlgeschlagen::scripts/update-frontend-articles.mjs ist abgebrochen. Es wird mit dem zuletzt eingecheckten Artikelstand deployt."
+            echo "ingest_failed=true" >> "$GITHUB_OUTPUT"
+          fi
         working-directory: frontend
 
       - name: Build Next.js Static Export
@@ -74,3 +97,13 @@ jobs:
           DIRECT_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
           DIRECT_PORT: ${{ secrets.SFTP_PORT }}
           DIRECT_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
+
+      # Bewusst NACH dem Deploy: die Seite geht auch bei kaputter Ingestion mit
+      # dem letzten guten Stand online, aber der Run wird rot, damit ein
+      # stehengebliebener News-Stand nicht unbemerkt bleibt.
+      - name: Report Ingestion Status
+        if: steps.ingest.outputs.ingest_failed == 'true'
+        run: |
+          echo "❌ Deployment lief durch, aber die News-Ingestion ist fehlgeschlagen."
+          echo "   Der Live-Stand der Seite entspricht dem zuletzt eingecheckten Artikelstand."
+          exit 1
