@@ -20,7 +20,6 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          # Cache wird im frontend-Unterordner gesucht
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install Dependencies
@@ -38,5 +37,4 @@ jobs:
           cd frontend
           node scripts/deploy.mjs
         env:
-          # Sicherer Zusammenbau aus den einzelnen Secrets — schützt User, Host & Pfad vor Log-Leaks!
           SFTP_URL: sftp://${{ secrets.SFTP_USER }}:${{ secrets.SFTP_PASS }};fingerprint=ssh-ed25519-1gx2w8Rtv3wCgi7Jh8myf_KVd72cRQbow03UP8P095Q;x-name=${{ secrets.SFTP_HOST }};x-proxyport=0@${{ secrets.SFTP_HOST }}/${{ secrets.SFTP_PATH }}/
