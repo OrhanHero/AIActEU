@@ -6,30 +6,105 @@ on:
     types: [completed]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-public
+  cancel-in-progress: false
+
+env:
+  PUBLIC_REPO: OrhanHero/AIActEU-code
+  PUBLIC_BRANCH: main
+
 jobs:
   publish-clean:
-    if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
+      - name: Check Publish Token
+        env:
+          PUBLIC_REPO_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
+        run: |
+          if [ -z "$PUBLIC_REPO_TOKEN" ]; then
+            echo "::error::Secret PUBLIC_REPO_TOKEN fehlt oder ist leer."
+            echo "::error::Anlegen unter Settings -> Secrets and variables -> Actions."
+            echo "::error::Benoetigt wird ein PAT mit Schreibrecht (Contents: write) auf ${PUBLIC_REPO}."
+            exit 1
+          fi
+
       - name: Checkout Private Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          # Bei workflow_run wird sonst der Default-Branch-HEAD ausgecheckt statt
+          # genau des Stands, der gerade erfolgreich deployt wurde.
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 1
+          path: source
+          persist-credentials: false
 
-      - name: Delete Sensitive Files Directly
+      - name: Build Clean Snapshot
         run: |
-          # Löscht die geschützten Daten direkt im aktuellen Ordner
-          rm -rf .github/
-          rm -f frontend/scripts/deploy.mjs
-          rm -f frontend/public/.htaccess
+          set -euo pipefail
+          rm -rf snapshot
+          mkdir snapshot
+          # git archive exportiert ausschliesslich versionierte Dateien des
+          # Commits - ohne .git-Historie und ohne unversionierte Reste.
+          git -C source archive --format=tar HEAD | tar -x -C snapshot
+          # Vertrauliche Pfade entfernen. Neue Geheimnisse hier UND in der
+          # Liste in "Verify Snapshot" ergaenzen.
+          rm -rf snapshot/.github
+          rm -f snapshot/frontend/scripts/deploy.mjs
+          rm -f snapshot/frontend/public/.htaccess
+          find snapshot \( -name '.env' -o -name '.env.*' \) ! -name '.env.example' -delete
+
+      - name: Verify Snapshot
+        run: |
+          set -euo pipefail
+          fail=0
+          for path in .git .github frontend/scripts/deploy.mjs frontend/public/.htaccess; do
+            if [ -e "snapshot/$path" ]; then
+              echo "::error::Vertraulicher Pfad im Snapshot: $path"
+              fail=1
+            fi
+          done
+          leftover="$(find snapshot \( -name '.env' -o -name '.env.*' \) ! -name '.env.example')"
+          if [ -n "$leftover" ]; then
+            echo "::error::Env-Dateien im Snapshot:"
+            echo "$leftover"
+            fail=1
+          fi
+          if [ "$fail" -ne 0 ]; then
+            exit 1
+          fi
+          echo "Snapshot ist sauber."
 
       - name: Push to Public Repo
-        uses: cpina/github-action-push-to-another-repository@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.PUBLIC_REPO_TOKEN }}
-        with:
-          source-directory: '.'
-          destination-github-username: 'OrhanHero'
-          destination-repository-name: 'AIActEU-code'
-          user-email: 'orhan.kahraman@iu-study.org'
-          target-branch: 'main'
+          PUBLIC_REPO_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
+          SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          set -euo pipefail
+          # Das oeffentliche Repo wird geklont und dessen .git behalten, damit nur
+          # der Snapshot uebertragen wird - niemals die Historie des privaten Repos.
+          git clone --no-checkout \
+            "https://x-access-token:${PUBLIC_REPO_TOKEN}@github.com/${PUBLIC_REPO}.git" public
+          cd public
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git rev-parse --verify --quiet "origin/${PUBLIC_BRANCH}" >/dev/null; then
+            git checkout -B "${PUBLIC_BRANCH}" "origin/${PUBLIC_BRANCH}"
+          else
+            git checkout --orphan "${PUBLIC_BRANCH}"
+          fi
+          # Alten Stand loeschen (ohne .git), damit im privaten Repo entfernte
+          # Dateien auch oeffentlich verschwinden.
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a ../snapshot/. ./
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Keine Aenderungen - nichts zu pushen."
+            exit 0
+          fi
+          git commit -m "Sync clean code from private repo (${SOURCE_SHA})"
+          git push origin "${PUBLIC_BRANCH}"
