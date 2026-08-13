@@ -1,7 +1,6 @@
 name: Publish Clean Code to Public Repo
 
 on:
-  # Startet automatisch, sobald das IONOS-Deployment erfolgreich abgeschlossen ist
   workflow_run:
     workflows: ["Build and Deploy to IONOS via SFTP/FTPS"]
     types: [completed]
@@ -17,19 +16,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Prepare Clean Directory
+      - name: Delete Sensitive Files Directly
         run: |
-          # Wir erstellen einen sauberen Ordner außerhalb des Git-Verzeichnisses
-          mkdir ../clean-code
-          # Kopiere alle Dateien, schließe aber den geheimen .github-Ordner und die Skripte komplett aus
-          rsync -arv --exclude='.github' --exclude='frontend/scripts/deploy.mjs' --exclude='scripts' . ../clean-code/
+          # Löscht die geschützten Daten direkt im aktuellen Ordner
+          rm -rf .github/
+          rm -f frontend/scripts/deploy.mjs
+          rm -f frontend/public/.htaccess
 
       - name: Push to Public Repo
         uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.PUBLIC_REPO_TOKEN }}
         with:
-          source-directory: '../clean-code'
+          source-directory: '.'
           destination-github-username: 'OrhanHero'
           destination-repository-name: 'AIActEU-code'
           user-email: 'orhan.kahraman@iu-study.org'
