@@ -5,9 +5,8 @@
 // statischen Hosting ohne Node-Prozess ohnehin wirkungslos, da der Prefetch-Mechanismus
 // serverseitige Revalidierung voraussetzt, die es dort nicht gibt.
 //
-// Auf dieser Seite sind das ca. 75% aller Export-Dateien (siehe PROJEKTPLAN.md-Historie,
-// 2026-08-07) – das hat jeden Upload des Exports unnötig fehleranfällig
-// gemacht. Dieses Skript entfernt sie nach jedem Build, ohne dass Seiteninhalte verloren gehen:
+// Auf dieser Seite sind das ca. 75% aller Export-Dateien (293 → 73). Dieses Skript entfernt
+// sie nach jedem Build, ohne dass Seiteninhalte verloren gehen:
 // Next.js fällt beim Fehlen der Prefetch-Datei automatisch auf eine normale Vollnavigation
 // zurück (Standardverhalten von next/link).
 //

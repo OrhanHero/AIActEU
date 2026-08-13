@@ -50,23 +50,23 @@ npm run build
 schreibt pro Route mehrere `.txt`-Dateien für sein eigenes Client-Router-Prefetching
 (`__next.*.txt`, `index.txt` – reine Navigations-Performance, kein Seiteninhalt, im Code nirgends
 referenziert). Ohne serverseitige Revalidierung bringt dieser Prefetch ohnehin nichts, macht aber
-~75% der Export-Dateien aus (293 → 73 Dateien) und damit jeden Upload unnötig fehleranfällig
-(siehe Vorfall 2026-08-07: Transfer brach mitten in den `_next/static/chunks/`-Bundles ab).
-`robots.txt` bleibt davon unberührt.
+~75% der Export-Dateien aus (293 → 73 Dateien). `robots.txt` bleibt davon unberührt.
 
 Da `output: "export"` ISR/SSR deaktiviert, ist dieser Modus als Zwischenschritt
 gedacht – die geplante Produktivumgebung ist laut
 [`ARCHITECTURE.md`](../ARCHITECTURE.md) weiterhin Vercel (mit ISR).
 
 <!-- deploy-only:start -->
-## Test-Deployment auf IONOS-Webspace (aiacteu.de)
+## Deployment auf IONOS-Webspace (aiacteu.de)
 
 Der statische Export ist nötig, weil das IONOS-Shared-Webhosting keinen
 Node.js-Prozess ausführen kann (DNS/Nameserver läuft über Cloudflare, Webspace
 inkl. SSL-Zertifikat über IONOS).
 
-Der Inhalt von `out/` wird 1:1 in den lokalen WinSCP-Sync-Ordner kopiert, den
-WinSCP automatisch nach aiacteu.de hochlädt. `public/.htaccess` sorgt dafür,
-dass Apache bei 404s die gestylte Next.js-404-Seite statt der Server-Standardseite
-ausliefert.
+Der Upload läuft automatisiert über `.github/workflows/deploy.yml`: Der Workflow
+baut das Projekt und spiegelt den Inhalt von `out/` per SFTP auf den Webspace.
+Ablauf, Secret-Format und Rotation der Zugangsdaten stehen in der
+[`README.md`](../README.md) im Projektwurzelverzeichnis. `public/.htaccess` sorgt
+dafür, dass Apache bei 404s die gestylte Next.js-404-Seite statt der
+Server-Standardseite ausliefert.
 <!-- deploy-only:end -->
