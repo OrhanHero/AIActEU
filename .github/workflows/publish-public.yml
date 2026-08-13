@@ -163,9 +163,13 @@ jobs:
 
           if [ "${RESET_HISTORY:-false}" = "true" ]; then
             # Bewusst verworfene Historie: ein wurzelloser Branch ersetzt per
-            # Force-Push alles Bisherige durch genau einen Commit. Gedacht zum
-            # Aufraeumen von Alt-Commits und als Notfallschalter, falls je etwas
-            # Vertrauliches oeffentlich geworden ist.
+            # Force-Push alles Bisherige durch genau einen Commit.
+            #
+            # Gedacht zum Aufraeumen von Alt-Commits. Als Reaktion auf ein
+            # geleaktes Geheimnis reicht das NICHT: GitHub haelt unerreichbare
+            # Commits noch eine Weile vor und liefert sie ueber die direkte
+            # SHA-URL weiter aus, Forks und Caches ebenso. Dann gilt zuerst das
+            # Geheimnis rotieren, danach GitHub Support zum Entfernen bitten.
             echo "::warning::Historie von ${PUBLIC_REPO} wird verworfen und durch einen Commit ersetzt."
             git checkout --orphan __reset
             git rm -rq --cached . 2>/dev/null || true
