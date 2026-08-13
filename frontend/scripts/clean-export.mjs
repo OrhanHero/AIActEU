@@ -1,12 +1,12 @@
 // Next.js schreibt in den statischen Export (`output: "export"`, next.config.ts) pro Route
 // zusätzlich mehrere .txt-Dateien (`__next.*.txt`, `index.txt`) für das eigene Client-Router-
 // Segment-Prefetching. Das ist reine Navigations-Performance (schnelleres Vorladen beim Klick
-// auf einen Link) – kein Seiteninhalt, im eigenen Code nirgends referenziert und für ein
-// IONOS-Shared-Webhosting ohne Node-Prozess ohnehin wirkungslos, da der Prefetch-Mechanismus
+// auf einen Link) – kein Seiteninhalt, im eigenen Code nirgends referenziert und beim
+// statischen Hosting ohne Node-Prozess ohnehin wirkungslos, da der Prefetch-Mechanismus
 // serverseitige Revalidierung voraussetzt, die es dort nicht gibt.
 //
 // Auf dieser Seite sind das ca. 75% aller Export-Dateien (siehe PROJEKTPLAN.md-Historie,
-// 2026-08-07) – das hat den manuellen WinSCP-Sync auf aiacteu.de unnötig fehleranfällig
+// 2026-08-07) – das hat jeden Upload des Exports unnötig fehleranfällig
 // gemacht. Dieses Skript entfernt sie nach jedem Build, ohne dass Seiteninhalte verloren gehen:
 // Next.js fällt beim Fehlen der Prefetch-Datei automatisch auf eine normale Vollnavigation
 // zurück (Standardverhalten von next/link).

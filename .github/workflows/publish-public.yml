@@ -17,6 +17,19 @@ env:
   PUBLIC_REPO: OrhanHero/AIActEU-code
   PUBLIC_BRANCH: main
 
+  # Einzige Pflegestelle fuer alles, was zum Deployment gehoert und deshalb im
+  # privaten Repo bleibt. Wird sowohl beim Entfernen als auch beim Pruefen
+  # verwendet - eine Ergaenzung hier reicht aus.
+  DEPLOY_PATHS: |
+    .github
+    frontend/scripts/deploy.mjs
+    frontend/public/.htaccess
+
+  # npm-Pakete, die ausschliesslich deploy.mjs benoetigt. Sie werden aus
+  # frontend/package.json entfernt und das Lockfile passend neu erzeugt, damit
+  # 'npm ci' im oeffentlichen Repo weiterhin funktioniert.
+  DEPLOY_DEPS: basic-ftp ssh2-sftp-client
+
 jobs:
   publish-clean:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
@@ -43,6 +56,11 @@ jobs:
           path: source
           persist-credentials: false
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Build Clean Snapshot
         run: |
           set -euo pipefail
@@ -51,29 +69,71 @@ jobs:
           # git archive exportiert ausschliesslich versionierte Dateien des
           # Commits - ohne .git-Historie und ohne unversionierte Reste.
           git -C source archive --format=tar HEAD | tar -x -C snapshot
-          # Vertrauliche Pfade entfernen. Neue Geheimnisse hier UND in der
-          # Liste in "Verify Snapshot" ergaenzen.
-          rm -rf snapshot/.github
-          rm -f snapshot/frontend/scripts/deploy.mjs
-          rm -f snapshot/frontend/public/.htaccess
+
+          # 1. Deployment-Pfade entfernen.
+          while read -r path; do
+            [ -n "$path" ] || continue
+            rm -rf "snapshot/$path"
+          done <<< "$DEPLOY_PATHS"
+
+          # 2. Env-Dateien entfernen (Beispieldateien bleiben).
           find snapshot \( -name '.env' -o -name '.env.*' \) ! -name '.env.example' -delete
+
+          # 3. Deployment-Abschnitte aus der Dokumentation entfernen.
+          while IFS= read -r doc; do
+            awk '
+              /<!-- deploy-only:start -->/ { skip = 1 }
+              !skip                        { print }
+              /<!-- deploy-only:end -->/   { skip = 0 }
+            ' "$doc" > "$doc.tmp"
+            mv "$doc.tmp" "$doc"
+          done < <(find snapshot -name '*.md')
+
+          # 4. Deployment-Abhaengigkeiten entfernen und Lockfile angleichen.
+          cd snapshot/frontend
+          for dep in $DEPLOY_DEPS; do
+            npm pkg delete "dependencies.$dep" "devDependencies.$dep"
+          done
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
 
       - name: Verify Snapshot
         run: |
           set -euo pipefail
           fail=0
-          for path in .git .github frontend/scripts/deploy.mjs frontend/public/.htaccess; do
+
+          if [ -e snapshot/.git ]; then
+            echo "::error::Private Git-Historie im Snapshot"
+            fail=1
+          fi
+
+          while read -r path; do
+            [ -n "$path" ] || continue
             if [ -e "snapshot/$path" ]; then
-              echo "::error::Vertraulicher Pfad im Snapshot: $path"
+              echo "::error::Deployment-Pfad im Snapshot: $path"
               fail=1
             fi
-          done
+          done <<< "$DEPLOY_PATHS"
+
           leftover="$(find snapshot \( -name '.env' -o -name '.env.*' \) ! -name '.env.example')"
           if [ -n "$leftover" ]; then
             echo "::error::Env-Dateien im Snapshot:"
             echo "$leftover"
             fail=1
           fi
+
+          if grep -rl 'deploy-only:start' snapshot >/dev/null 2>&1; then
+            echo "::error::Nicht entfernte deploy-only-Abschnitte:"
+            grep -rl 'deploy-only:start' snapshot
+            fail=1
+          fi
+
+          for dep in $DEPLOY_DEPS; do
+            if grep -q "\"$dep\"" snapshot/frontend/package.json snapshot/frontend/package-lock.json; then
+              echo "::error::Deployment-Abhaengigkeit noch vorhanden: $dep"
+              fail=1
+            fi
+          done
+
           if [ "$fail" -ne 0 ]; then
             exit 1
           fi

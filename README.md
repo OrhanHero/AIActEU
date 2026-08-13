@@ -8,10 +8,13 @@ Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor m
 
 - **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
 - **Typografie:** Newsreader (Editorial Serif) + Plus Jakarta Sans (Sans-Serif) – 100 % lokal gehostet.
-- **Export & Hosting:** Statischer Export (`output: "export"`), gehostet auf IONOS Webspace (`/aiacteu/`).
+- **Export:** Statischer Export (`output: "export"`).
 - **Mehrsprachigkeit (i18n):** Leichtgewichtiges Single-File Wörterbuch (`lib/i18n.ts`) & React Context für flüssiges DE/EN-Umschalten ohne Ordner-Wildwuchs.
 - **DSGVO & Compliance:** 0 Tracking-Cookies, 0 externe Font-Calls, rechtssichere Pflichtangaben (Impressum & Datenschutz).
+<!-- deploy-only:start -->
+- **Hosting:** IONOS Webspace (`/aiacteu/`).
 - **Automatisierte SFTP-Pipeline:** `.github/workflows/deploy.yml` baut das Projekt bei jedem Push auf den Branch `GoogleAntigravityIDE` und spiegelt die statischen Dateien automatisiert zu IONOS.
+<!-- deploy-only:end -->
 
 ---
 
@@ -25,9 +28,7 @@ Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor m
 │   │   ├── components/         UI-Komponenten (Header, Footer, Leaderboard, Cards)
 │   │   ├── context/            LanguageContext (DE / EN Umschaltung)
 │   │   └── lib/                Daten & Hilfsfunktionen (i18n, articles, topModels)
-│   └── public/                 Statische Assets & .htaccess (HSTS & strikte CSP)
-├── .github/workflows/
-│   └── deploy.yml              GitHub Action für automatischen IONOS SFTP-Upload
+│   └── public/                 Statische Assets
 ├── ARCHITECTURE.md             Technische Architekturentscheidungen
 ├── DESIGN.md                   Design-System (Farben, Typografie, Glassmorphismus)
 ├── COMPLIANCE.md              EU-Verhaltenskodex- & DSGVO-Checkliste
@@ -54,6 +55,7 @@ npm run build     # Compiliert den statischen Export nach frontend/out/
 
 ---
 
+<!-- deploy-only:start -->
 ## 🚢 Automatisches Deployment (GitHub Actions -> IONOS)
 
 Das Deployment erfolgt vollautomatisch bei jedem Git Push auf den Branch **`GoogleAntigravityIDE`**.
@@ -66,7 +68,7 @@ Im GitHub Repository unter **Settings -> Secrets and variables -> Actions** muss
 
 Die GitHub Action parst das Secret automatisch, isoliert Passwörter mit Sonderzeichen sicher und spiegelt den Stand nach `/aiacteu/` auf deinen IONOS Webspace.
 
-> **Sicherheitshinweis:** Dieses Repository ist öffentlich, damit sind auch die Actions-Logs öffentlich lesbar. GitHub maskiert ausschließlich den **exakten** Secret-Wert – Teilstrings, die der Code daraus herausparst (Host, Benutzername), erkennt die Maskierung **nicht**. `frontend/scripts/deploy.mjs` gibt deshalb nur noch `gesetzt`/`FEHLT` aus und filtert Zugangsdaten über `redact()` aus fremden Fehlermeldungen. Beim Anpassen der Diagnose-Ausgaben diese Regel beibehalten: niemals Host, Benutzername oder Passwort in ein `console.log` schreiben.
+> **Sicherheitshinweis:** Dieses Deployment-Repository ist privat, die Actions-Logs sind es damit ebenfalls. Die folgende Regel gilt trotzdem unverändert, weil ein einzelner Fehlgriff (Repo wieder öffentlich, Log-Export, geteilter Screenshot) die Zugangsdaten sonst sofort preisgibt. GitHub maskiert ausschließlich den **exakten** Secret-Wert – Teilstrings, die der Code daraus herausparst (Host, Benutzername), erkennt die Maskierung **nicht**. `frontend/scripts/deploy.mjs` gibt deshalb nur noch `gesetzt`/`FEHLT` aus und filtert Zugangsdaten über `redact()` aus fremden Fehlermeldungen. Beim Anpassen der Diagnose-Ausgaben diese Regel beibehalten: niemals Host, Benutzername oder Passwort in ein `console.log` schreiben.
 
 ### Zugangsdaten wechseln (IONOS-Benutzer rotieren)
 
@@ -87,6 +89,7 @@ Ein erfolgreicher SFTP-Upload beweist nur, dass die Verbindung stand – **nicht
 Damit macht jeder grüne Run eine belastbare Aussage: gebaut, hochgeladen **und** live nachweisbar.
 
 ---
+<!-- deploy-only:end -->
 
 ## 🇪🇺 EU AI Act Compliance
 
