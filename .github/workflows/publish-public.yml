@@ -5,6 +5,13 @@ on:
     workflows: ["Build and Deploy to IONOS via SFTP/FTPS"]
     types: [completed]
   workflow_dispatch:
+    inputs:
+      reset_history:
+        description: >-
+          Historie im oeffentlichen Repo verwerfen und durch einen einzigen
+          Commit ersetzen (Force-Push). Nur manuell ausloesbar.
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -143,6 +150,7 @@ jobs:
         env:
           PUBLIC_REPO_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
           SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+          RESET_HISTORY: ${{ github.event.inputs.reset_history }}
         run: |
           set -euo pipefail
           # Das oeffentliche Repo wird geklont und dessen .git behalten, damit nur
@@ -152,16 +160,33 @@ jobs:
           cd public
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git rev-parse --verify --quiet "origin/${PUBLIC_BRANCH}" >/dev/null; then
+
+          if [ "${RESET_HISTORY:-false}" = "true" ]; then
+            # Bewusst verworfene Historie: ein wurzelloser Branch ersetzt per
+            # Force-Push alles Bisherige durch genau einen Commit. Gedacht zum
+            # Aufraeumen von Alt-Commits und als Notfallschalter, falls je etwas
+            # Vertrauliches oeffentlich geworden ist.
+            echo "::warning::Historie von ${PUBLIC_REPO} wird verworfen und durch einen Commit ersetzt."
+            git checkout --orphan __reset
+            git rm -rq --cached . 2>/dev/null || true
+          elif git rev-parse --verify --quiet "origin/${PUBLIC_BRANCH}" >/dev/null; then
             git checkout -B "${PUBLIC_BRANCH}" "origin/${PUBLIC_BRANCH}"
           else
             git checkout --orphan "${PUBLIC_BRANCH}"
           fi
+
           # Alten Stand loeschen (ohne .git), damit im privaten Repo entfernte
           # Dateien auch oeffentlich verschwinden.
           find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           cp -a ../snapshot/. ./
           git add -A
+
+          if [ "${RESET_HISTORY:-false}" = "true" ]; then
+            git commit -m "Clean code snapshot from private repo (${SOURCE_SHA})"
+            git push --force origin "HEAD:${PUBLIC_BRANCH}"
+            exit 0
+          fi
+
           if git diff --cached --quiet; then
             echo "Keine Aenderungen - nichts zu pushen."
             exit 0
