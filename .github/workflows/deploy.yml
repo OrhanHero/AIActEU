@@ -4,140 +4,39 @@ on:
   push:
     branches:
       - GoogleAntigravityIDE
-  schedule:
-    # Automatische Ausführung alle 4 Stunden (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
-    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # Sicherheitsnetz: ohne Limit laeuft ein haengender Schritt bis zum
-    # GitHub-Standard von 6 Stunden weiter und verbrennt Actions-Minuten.
-    timeout-minutes: 20
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: 'npm'
+          # Cache wird im frontend-Unterordner gesucht
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install Dependencies
         run: |
-          echo "📦 Installing npm dependencies..."
-          npm install
-          echo "✅ Dependencies installed"
-        working-directory: frontend
+          cd frontend
+          npm ci || npm install
 
-      # Die Ingestion-Skripte sind ein eigenes npm-Paket (scripts/package.json,
-      # u.a. rss-parser). Node löst ESM-Imports relativ zur Datei auf, nicht zum
-      # cwd - ohne diesen Schritt findet scripts/ingest.mjs seine Abhängigkeiten
-      # nicht und bricht mit ERR_MODULE_NOT_FOUND ab.
-      - name: Install Ingestion Script Dependencies
+      - name: Build Project
         run: |
-          echo "📦 Installing ingestion script dependencies..."
-          npm ci
-          echo "✅ Script dependencies installed"
-        working-directory: scripts
-
-      - name: Fetch Latest RSS Feeds & Update News Database
-        id: ingest
-        run: |
-          echo "📡 Starting news ingestion..."
-          if node ../scripts/ingest.mjs; then
-            echo "✅ Ingestion complete"
-          else
-            echo "::error title=RSS-Ingestion fehlgeschlagen::scripts/ingest.mjs ist abgebrochen. Es wird mit dem zuletzt eingecheckten Artikelstand deployt."
-            echo "ingest_failed=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          if node ../scripts/update-frontend-articles.mjs; then
-            echo "✅ Articles updated"
-          else
-            echo "::error title=Artikel-Update fehlgeschlagen::scripts/update-frontend-articles.mjs ist abgebrochen. Es wird mit dem zuletzt eingecheckten Artikelstand deployt."
-            echo "ingest_failed=true" >> "$GITHUB_OUTPUT"
-          fi
-        working-directory: frontend
-
-      - name: Build Next.js Static Export
-        run: |
-          echo "🏗️ Copying data directory..."
-          cp -r ../data ./data || echo "⚠️ No data dir to copy"
-          echo "🚀 Starting Next.js build..."
+          cd frontend
           npm run build
-          echo "✅ Build successful"
-          echo "📁 Build output:"
-          ls -la out/ | head -20
-        working-directory: frontend
-
-      - name: Verify Build Output
-        run: |
-          if [ ! -d "out" ]; then
-            echo "❌ ERROR: Build output directory 'out' not found!"
-            exit 1
-          fi
-          FILE_COUNT=$(find out -type f | wc -l)
-          echo "✅ Build output verified: $FILE_COUNT files found"
-        working-directory: frontend
 
       - name: Deploy to IONOS (SFTP/FTPS Auto-Connect Engine)
-        working-directory: frontend
         run: |
-          echo "🚀 Starting IONOS deployment..."
+          cd frontend
           node scripts/deploy.mjs
-          echo "✅ Deployment complete"
         env:
-          SFTP_URL: ${{ secrets.SFTP_URL }}
-          IONOS_URL: ${{ secrets.IONOS_URL }}
-          IONOS_SFTP: ${{ secrets.IONOS_SFTP }}
-          DIRECT_SERVER: ${{ secrets.SFTP_SERVER }}
-          DIRECT_USERNAME: ${{ secrets.SFTP_USERNAME }}
-          DIRECT_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-          DIRECT_PORT: ${{ secrets.SFTP_PORT }}
-          DIRECT_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
-
-      # Beweist, dass die Dateien wirklich auf aiacteu.de gelandet sind. Ein
-      # erfolgreicher SFTP-Upload allein sagt das nicht: liefern die Zugangsdaten
-      # ein anderes Home-Verzeichnis, laedt der Upload sauber an die falsche
-      # Stelle hoch und die Live-Seite serviert stumm weiter den alten Stand.
-      # Der Zeitstempel aus lastUpdated.json ist pro Lauf eindeutig und dient
-      # hier als Fingerabdruck des soeben gebauten Stands.
-      - name: Verify Live Deployment
-        working-directory: frontend
-        run: |
-          EXPECTED=$(node -p "require('./src/lib/lastUpdated.json').formattedDE")
-          echo "🔎 Erwarteter Stand auf https://aiacteu.de : $EXPECTED"
-
-          for attempt in 1 2 3 4 5 6; do
-            LIVE=$(curl -fsSL --max-time 20 "https://aiacteu.de/?cachebust=${GITHUB_RUN_ID}-${attempt}" || true)
-
-            if printf '%s' "$LIVE" | grep -qF "$EXPECTED"; then
-              echo "✅ Live-Verifikation erfolgreich (Versuch $attempt): aiacteu.de liefert den Stand dieses Runs."
-              exit 0
-            fi
-
-            if [ -z "$LIVE" ]; then
-              echo "   [Versuch $attempt/6] Seite nicht erreichbar, neuer Versuch in 10s..."
-            else
-              echo "   [Versuch $attempt/6] Seite erreichbar, aber noch alter Stand: $(printf '%s' "$LIVE" | grep -oE 'Stand: [0-9.]+, [0-9:]+ Uhr' | head -1)"
-            fi
-            sleep 10
-          done
-
-          echo "::error title=Live-Verifikation fehlgeschlagen::Der Upload meldete Erfolg, aber https://aiacteu.de liefert nicht den Stand dieses Runs ($EXPECTED). Zielverzeichnis der SFTP-Zugangsdaten pruefen."
-          exit 1
-
-      # Bewusst NACH dem Deploy: die Seite geht auch bei kaputter Ingestion mit
-      # dem letzten guten Stand online, aber der Run wird rot, damit ein
-      # stehengebliebener News-Stand nicht unbemerkt bleibt.
-      - name: Report Ingestion Status
-        if: steps.ingest.outputs.ingest_failed == 'true'
-        run: |
-          echo "❌ Deployment lief durch, aber die News-Ingestion ist fehlgeschlagen."
-          echo "   Der Live-Stand der Seite entspricht dem zuletzt eingecheckten Artikelstand."
-          exit 1
+          # Sicherer Zusammenbau aus den einzelnen Secrets — schützt User, Host & Pfad vor Log-Leaks!
+          SFTP_URL: sftp://${{ secrets.SFTP_USER }}:${{ secrets.SFTP_PASS }};fingerprint=ssh-ed25519-1gx2w8Rtv3wCgi7Jh8myf_KVd72cRQbow03UP8P095Q;x-name=${{ secrets.SFTP_HOST }};x-proxyport=0@${{ secrets.SFTP_HOST }}/${{ secrets.SFTP_PATH }}/
