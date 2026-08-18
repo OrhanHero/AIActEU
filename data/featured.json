@@ -2,6 +2,43 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "openai-loest-preparedness-team-fuer-ki-risiken-auf",
+      "title": "OpenAI löst Preparedness-Team für KI-Risiken auf: Umstrukturierung sorgt für Debatte",
+      "summary": "OpenAI hat sein eigenständiges 'Preparedness'-Team für KI-Risiken aufgelöst und die Zuständigkeiten in allgemeine Forschungsteams integriert. Das Team war maßgeblich dafür verantwortlich, katastrophale Risiken moderner Frontier-Modelle zu bewerten und Sicherheitsgrenzen zu definieren. Die Umstrukturierung erfolgt unmittelbar nach dem Durchsetzungsstart des EU AI Act und löst in der internationalen Sicherheitsforschung sowie unter europäischen Regulierungsbehörden Debatten über die künftige Governance von KI-Systemen mit Systemrisiko aus.",
+      "categorySlug": "safety",
+      "tags": [
+        "AI Safety",
+        "OpenAI",
+        "EU AI Act"
+      ],
+      "sourceName": "Heise Online",
+      "sourceUrl": "https://www.heise.de/news/OpenAI-loest-Preparedness-Team-fuer-KI-Risiken-auf-11416601.html",
+      "publishedAt": "2026-08-17",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Die Umstrukturierung der Sicherheitsarchitektur bei OpenAI fällt zeitlich direkt mit der Inkraftsetzung des EU AI Act zusammen. Sie stellt Fragen an die künftige Governance und Risikoevaluierung von Frontier-Modellen mit Systemrisiko.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "Heise Online",
+          "label": "OpenAI löst Preparedness-Team für KI-Risiken auf",
+          "url": "https://www.heise.de/news/OpenAI-loest-Preparedness-Team-fuer-KI-Risiken-auf-11416601.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "TechCrunch",
+          "label": "OpenAI reorganizes AI safety divisions as EU AI Act takes effect",
+          "url": "https://techcrunch.com/category/artificial-intelligence/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "Europäische Kommission",
+          "label": "EU AI Act: Regelungen und Governance für General-Purpose AI mit Systemrisiko",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/de/ip_26_1714"
+        }
+      ]
+    },
+    {
       "slug": "claude-wasserzeichen-nutzer-kritisieren-anthropic",
       "title": "Claude: Nutzer äußern wegen des neuen Wasserzeichens Kritik an Anthropic",
       "summary": "Anthropic versieht die Textausgaben von Claude seit August 2026 mit einem unsichtbaren, maschinenlesbaren Wasserzeichen – ein für Menschen nicht wahrnehmbares Muster, das direkt im Text steckt und auch das Kopieren und Einfügen an anderer Stelle übersteht; bei Dateien kommt zusätzlich signierte Herkunfts-Metadatierung nach dem C2PA-Standard hinzu. Ausgerollt wird die Kennzeichnung nicht nur in der EU, sondern weltweit und über alle Claude-Produkte hinweg. Auslöser sind die seit dem 2. August 2026 durchgesetzten Transparenzpflichten des EU AI Act. In der Nutzerschaft löst der Schritt eine Kontroverse aus: Ein Teil fürchtet, dass Arbeitgeber und Hochschulen den KI-Einsatz nun nachweisen können, ein anderer begrüßt die Kennzeichnung ausdrücklich als Mittel gegen verschleierten KI-Einsatz.",

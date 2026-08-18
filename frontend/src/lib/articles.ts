@@ -36,6 +36,45 @@ export type RelatedLink = {
 // plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = [
   {
+    "slug": "openai-loest-preparedness-team-fuer-ki-risiken-auf",
+    "title": "OpenAI löst Preparedness-Team für KI-Risiken auf: Umstrukturierung sorgt für Debatte",
+    "summary": "OpenAI hat sein eigenständiges 'Preparedness'-Team für KI-Risiken aufgelöst und die Zuständigkeiten in allgemeine Forschungsteams integriert. Das Team war maßgeblich dafür verantwortlich, katastrophale Risiken moderner Frontier-Modelle zu bewerten und Sicherheitsgrenzen zu definieren. Die Umstrukturierung erfolgt unmittelbar nach dem Durchsetzungsstart des EU AI Act und löst in der internationalen Sicherheitsforschung sowie unter europäischen Regulierungsbehörden Debatten über die künftige Governance von KI-Systemen mit Systemrisiko aus.",
+    "categorySlug": "safety",
+    "tags": [
+      "AI Safety",
+      "OpenAI",
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/OpenAI-loest-Preparedness-Team-fuer-KI-Risiken-auf-11416601.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "editorsNote": "Hauptstory der Woche: Die Umstrukturierung der Sicherheitsarchitektur bei OpenAI fällt zeitlich direkt mit der Inkraftsetzung des EU AI Act zusammen. Sie stellt Fragen an die künftige Governance und Risikoevaluierung von Frontier-Modellen mit Systemrisiko.",
+    "relatedLinks": [
+      {
+        "group": "berichterstattung",
+        "sourceName": "Heise Online",
+        "label": "OpenAI löst Preparedness-Team für KI-Risiken auf",
+        "url": "https://www.heise.de/news/OpenAI-loest-Preparedness-Team-fuer-KI-Risiken-auf-11416601.html"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "TechCrunch",
+        "label": "OpenAI reorganizes AI safety divisions as EU AI Act takes effect",
+        "url": "https://techcrunch.com/category/artificial-intelligence/"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "Europäische Kommission",
+        "label": "EU AI Act: Regelungen und Governance für General-Purpose AI mit Systemrisiko",
+        "url": "https://ec.europa.eu/commission/presscorner/detail/de/ip_26_1714"
+      }
+    ],
+    "breaking": true,
+    "editorsPick": true
+  },
+  {
     "slug": "claude-wasserzeichen-nutzer-kritisieren-anthropic",
     "title": "Claude: Nutzer äußern wegen des neuen Wasserzeichens Kritik an Anthropic",
     "summary": "Anthropic versieht die Textausgaben von Claude seit August 2026 mit einem unsichtbaren, maschinenlesbaren Wasserzeichen – ein für Menschen nicht wahrnehmbares Muster, das direkt im Text steckt und auch das Kopieren und Einfügen an anderer Stelle übersteht; bei Dateien kommt zusätzlich signierte Herkunfts-Metadatierung nach dem C2PA-Standard hinzu. Ausgerollt wird die Kennzeichnung nicht nur in der EU, sondern weltweit und über alle Claude-Produkte hinweg. Auslöser sind die seit dem 2. August 2026 durchgesetzten Transparenzpflichten des EU AI Act. In der Nutzerschaft löst der Schritt eine Kontroverse aus: Ein Teil fürchtet, dass Arbeitgeber und Hochschulen den KI-Einsatz nun nachweisen können, ein anderer begrüßt die Kennzeichnung ausdrücklich als Mittel gegen verschleierten KI-Einsatz.",
@@ -136,528 +175,826 @@ export const articles: Article[] = [
     "editorsPick": true
   },
   {
-    "slug": "heise-laysie-ki-songs-mit-raspberry-pi-generieren",
-    "title": "heise+ | LAYSIE: KI-Songs mit Raspberry Pi generieren",
-    "summary": "Kein Instrument, keine Übung – kein Problem. LAYSIE generiert per KI individuelle Songs aus gesprochenen Ideen und spielt sie über Bluetooth ab.",
+    "slug": "fragwurdige-zusammenarbeit-world-liberty-financial-kooperiert-mit-worldclaw",
+    "title": "Fragwürdige Zusammenarbeit: World Liberty Financial kooperiert mit WorldClaw",
+    "summary": "Von US-Präsident Trump unterstützte Krypto-Firma arbeitet laut einem Bericht mit dem Anbieter von KI-Modellen sanktionierter chinesischer Unternehmen zusammen.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "RAG"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Fragwuerdige-Zusammenarbeit-World-Liberty-Financial-kooperiert-mit-WorldClaw-11416689.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-training-und-urheberrecht-heftiger-streit-uber-daten-und-lizenzen",
+    "title": "KI-Training und Urheberrecht: Heftiger Streit über Daten und Lizenzen",
+    "summary": "Eine EU-Konsultation legt Gräben zwischen Tech-Branche und Rechteinhabern beim KI-Training offen. Zwischen Extrempositionen keimen aber auch Kompromissansätze.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/KI-Training-und-Urheberrecht-Heftiger-Streit-ueber-Daten-und-Lizenzen-11416611.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "30-jahre-itsg-wie-aus-einem-trust-center-ein-zentraler-it-dienstleister-wurde",
+    "title": "30 Jahre ITSG: Wie aus einem Trust Center ein zentraler IT-Dienstleister wurde",
+    "summary": "ITSG feiert 30 Jahre. Ein Interview über den Datenaustausch, IT-Sicherheit und Strategien zu KI und Open Source.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Open Source"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/hintergrund/30-Jahre-ITSG-Wie-aus-einem-Trust-Center-ein-zentraler-IT-Dienstleister-wurde-11415866.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-firmen-zerstoren-bucher-was-steckt-dahinter",
+    "title": "KI-Firmen zerstören Bücher: Was steckt dahinter?",
+    "summary": "KI-Unternehmen kaufen massenhaft gebrauchte Bücher, scannen sie und zerstören sie dabei. Was steckt dahinter und ist das legal?",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
     ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/ratgeber/LAYSIE-KI-Songs-mit-Raspberry-Pi-generieren-11368294.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "breaking": true
-  },
-  {
-    "slug": "from-assistance-to-execution-how-enterprises-put-ai-to-work",
-    "title": "From assistance to execution: How enterprises put AI to work",
-    "summary": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI",
-      "Agentic AI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/how-enterprises-put-ai-to-work",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "putting-sign-language-ai-into-users-hands",
-    "title": "Putting sign language AI into users’ hands",
-    "summary": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
-    "categorySlug": "technisch",
-    "tags": [
-      "Google DeepMind"
-    ],
-    "sourceName": "Google DeepMind Blog",
-    "sourceUrl": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-    "publishedAt": "2026-08-12",
+    "sourceUrl": "https://www.heise.de/news/KI-Firmen-zerstoeren-Buecher-Was-steckt-dahinter-11416278.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "nvidia-ceo-tops-glassdoor-s-2026-list-of-best-ceos",
-    "title": "NVIDIA CEO Tops Glassdoor’s 2026 List of Best CEOs",
-    "summary": "NVIDIA founder and CEO Jensen Huang is ranked No. 1 on Glassdoor’s Best CEOs list for 2026. In the just-released ranking, recognition is earned directly from the people who know their leadership the best — employees. Huang topped the list, with 99% of employees approving of the j",
-    "categorySlug": "hardware",
+    "slug": "weitere-nvidia-prozessoren-in-russischem-marschflugkorper-entdeckt",
+    "title": "Weitere Nvidia-Prozessoren in russischem Marschflugkörper entdeckt",
+    "summary": "In Russlands Marschflugkörper steckt offenbar Nvidias Jetson Orin NX. Die integrierte GPU könnte bei der Zielfindung assistieren.",
+    "categorySlug": "breaking-news",
     "tags": [
       "NVIDIA"
     ],
-    "sourceName": "NVIDIA AI Blog",
-    "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-glassdoor-best-ceo-2026/",
-    "publishedAt": "2026-08-12",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Ukraine-findet-weiter-Nvidias-Auto-Prozessoren-in-russischen-Waffen-11416368.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "nvidia-ai-factory-compute-is-becoming-an-investable-asset-class",
-    "title": "NVIDIA AI Factory Compute Is Becoming an Investable Asset Class",
-    "summary": "We announced partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish independent financing platforms designed to mobilize over $500 billion of third-party capital to support the buildout of AI infrastructure over time. This is a major miles",
-    "categorySlug": "hardware",
-    "tags": [
-      "NVIDIA"
-    ],
-    "sourceName": "NVIDIA AI Blog",
-    "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "part-2-amazon-bedrock-cost-attribution-with-amazon-athena-and-cudos",
-    "title": "Part 2: Amazon Bedrock cost attribution with Amazon Athena and CUDOS",
-    "summary": "Learn how to visualize and analyze Amazon Bedrock cost attribution using Amazon Athena and CUDOS dashboards. This post shows how to set up CUR 2.0 with IAM principal data, query Bedrock spend by principal, project, and team, and build dashboards to track AI costs across your orga",
-    "categorySlug": "technisch",
+    "slug": "ki-update-kompakt-ki-brillen-selbstbewusstsein-sicherheitslucken-ki-musik",
+    "title": "KI-Update kompakt: KI-Brillen, Selbstbewusstsein, Sicherheitslücken, KI-Musik",
+    "summary": "Das \"KI-Update\" liefert drei mal pro Woche eine Zusammenfassung der wichtigsten KI-Entwicklungen.",
+    "categorySlug": "breaking-news",
     "tags": [
       "KI News"
     ],
-    "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/part-2-amazon-bedrock-cost-attribution-with-amazon-athena-and-cudos/",
-    "publishedAt": "2026-08-12",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/KI-Update-kompakt-KI-Brillen-Selbstbewusstsein-Sicherheitsluecken-KI-Musik-11416088.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false,
     "editorsPick": true,
     "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
-    "slug": "how-oneadvanced-deployed-over-50-ai-agents-on-uk-sovereign-aws",
-    "title": "How OneAdvanced deployed over 50 AI agents on UK-sovereign AWS",
-    "summary": "Learn how OneAdvanced, a UK enterprise software provider, built a UK-sovereign AI platform by self-hosting Llama 4 Maverick and Llama Guard 4 on Amazon SageMaker AI, with a RAG pipeline on pgvector and over 50 agents built with Strands Agents SDK on Amazon ECS.",
-    "categorySlug": "technisch",
+    "slug": "gefahr-durch-sonnensturme-ki-modell-sagt-aktive-region-auf-sonne-fruher-vorher",
+    "title": "Gefahr durch Sonnenstürme: KI-Modell sagt aktive Region auf Sonne früher vorher",
+    "summary": "Heftige Sonneneruptionen können auf der Erde Schäden anrichten. Ein KI-Modell kann mögliche erste Hinweise viel früher erkennen als bisherige Technik.",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Meta AI",
-      "RAG",
-      "Agentic AI"
+      "KI News"
     ],
-    "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-oneadvanced-deployed-over-50-ai-agents-on-uk-sovereign-aws/",
-    "publishedAt": "2026-08-12",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Gefahr-durch-Sonnenstuerme-KI-Modell-sagt-aktive-Region-auf-Sonne-frueher-vorher-11415886.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "pay-with-confidence-how-solv-labs-built-verifiable-auditable-agent-payments-on-a",
-    "title": "Pay with confidence: How Solv Labs built verifiable, auditable agent payments on Amazon Bedrock AgentCore payments",
-    "summary": "Solv Labs built a governed agent-payments workflow on Amazon Bedrock AgentCore payments, where every transaction is authorized, attested in an AWS Nitro Enclave, priced for risk, and anchored to a public blockchain before settlement. See how the pattern gives enterprises a verifi",
-    "categorySlug": "technisch",
+    "slug": "nvidia-kappt-openai-garantie-auf-rund-100-milliarden-dollar",
+    "title": "Nvidia kappt OpenAI-Garantie auf rund 100 Milliarden Dollar",
+    "summary": "Nvidia und OpenAI stehen kurz vor einem Deal für eines der größten KI-Rechenzentren der Welt, aber mit einer kleineren Garantiesumme als zunächst berichtet.",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Agentic AI"
-    ],
-    "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/pay-with-confidence-how-solv-labs-built-verifiable-auditable-agent-payments-on-amazon-bedrock-agentcore-payments/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "tiered-kv-cache-for-large-llms-on-amazon-sagemaker-hyperpod-with-curvine",
-    "title": "Tiered KV cache for large LLMs on Amazon SageMaker HyperPod with Curvine",
-    "summary": "Running large language model inference at scale forces a KV cache trade-off: oversized GPU instances or slow time-to-first-token. This post builds a tiered KV cache on Amazon SageMaker HyperPod that extends the cache into a shared, distributed NVMe pool with Curvine, so replicas ",
-    "categorySlug": "technisch",
-    "tags": [
+      "OpenAI",
       "NVIDIA"
     ],
-    "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/tiered-kv-cache-for-large-llms-on-amazon-sagemaker-hyperpod-with-curvine/",
-    "publishedAt": "2026-08-12",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Nvidia-will-Milliardenrisiko-bei-OpenAIs-Rechenzentrum-begrenzen-11415946.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "introducing-olmoearth-embeddings-custom-embedding-exports-from-olmoearth-studio-",
-    "title": "Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis",
-    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
-    "categorySlug": "tools",
+    "slug": "heise-angebot-last-call-ki-im-unternehmen-verankern-vom-use-case-zu-skalierter-k",
+    "title": "heise-Angebot: Last Call: KI im Unternehmen verankern – vom Use Case zu skalierter KI-Strategie",
+    "summary": "In fünf Sessions lernen IT-Entscheider, KI strategisch im Unternehmen zu verankern und dabei Mitarbeitende mitzunehmen – alles im Einklang mit dem EU AI Act.",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Hugging Face"
+      "EU AI Act"
     ],
-    "sourceName": "Hugging Face Blog",
-    "sourceUrl": "https://huggingface.co/blog/allenai/olmoearth-embeddings",
-    "publishedAt": "2026-08-12",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Last-Call-KI-im-Unternehmen-verankern-vom-Use-Case-zu-skalierter-KI-Strategie-11353416.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "lfm2-5-vl-3b-for-better-and-faster-vision-capabilities-for-the-edge",
-    "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge",
-    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
-    "categorySlug": "tools",
-    "tags": [
-      "Hugging Face"
-    ],
-    "sourceName": "Hugging Face Blog",
-    "sourceUrl": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "langsmith-byoc-on-aws-is-generally-available",
-    "title": "LangSmith BYOC on AWS is generally available",
-    "summary": "LangSmith Bring Your Own Cloud is now generally available on AWS, giving Enterprise teams managed observability, evaluation, and deployment inside their own VPC.",
+    "slug": "the-defender-s-window",
+    "title": "The Defender’s Window",
+    "summary": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
     "categorySlug": "technisch",
     "tags": [
+      "OpenAI",
       "AI Safety"
     ],
-    "sourceName": "LangChain Blog",
-    "sourceUrl": "https://www.langchain.com/blog/langsmith-byoc-is-now-generally-available-on-aws",
-    "publishedAt": "2026-08-12",
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/index/the-defenders-window",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "what-is-an-ai-agent",
-    "title": "What is an AI agent?",
-    "summary": "Learn what AI agents are, how they work in an LLM loop, and where workflows fit so you can build reliable, production-ready autonomous systems.",
+    "slug": "openai-joins-ports-pike-project",
+    "title": "OpenAI joins PORTS-Pike project",
+    "summary": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
     "categorySlug": "technisch",
-    "tags": [
-      "Agentic AI"
-    ],
-    "sourceName": "LangChain Blog",
-    "sourceUrl": "https://www.langchain.com/blog/what-is-an-agent",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "neue-finanzierungsidee-nvidia-macht-rechenzentren-zum-finanzprodukt",
-    "title": "Neue Finanzierungsidee: Nvidia macht Rechenzentren zum Finanzprodukt",
-    "summary": "Nvidia will weiter günstige Finanzierungsmöglichkeiten für seine GPUs ermöglichen. Dafür hat der Konzern Vermögensverwalter ins Boot geholt. (Nvidia, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "NVIDIA",
-      "EU AI Act"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/neue-finanzierungsidee-nvidia-macht-rechenzentren-zum-finanzprodukt-2608-211874.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "arbeitsmarktprognose-deutsche-firmen-erwarten-sinkende-lohne-wegen-ki",
-    "title": "Arbeitsmarktprognose: Deutsche Firmen erwarten sinkende Löhne wegen KI",
-    "summary": "Von sinkenden Löhnen durch KI sollen vor allem Berufseinsteiger und Beschäftigte ohne Hochschulabschluss betroffen sein. (Gehalt, Studien)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/arbeitsmarktprognose-deutsche-firmen-erwarten-sinkende-loehne-wegen-ki-2608-211868.html",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "direkter-draht-zum-chef-wie-openai-interne-burokratie-bekampft",
-    "title": "Direkter Draht zum Chef: Wie OpenAI interne Bürokratie bekämpft",
-    "summary": "In stark wachsenden Organisationen schleichen sich schnell ineffiziente Abläufe ein, die den Alltag belasten. OpenAI setzt nun auf einen direkten Kanal zur Chefetage, um genau das zu verhindern.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
     "tags": [
       "OpenAI"
     ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/openai-friction-email-buerokratie-1757818/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/index/openai-joins-ports-pike-project",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "grok-bot-vorgestellt-das-kann-der-neue-ki-agent-von-elon-musks-ki-firma",
-    "title": "Grok Bot vorgestellt: Das kann der neue KI-Agent von Elon Musks KI-Firma",
-    "summary": "Nachdem Anthropic und OpenAI ihre Chatbots um agentische Funktionen erweitert haben, zieht jetzt SpaceXAI mit einer eigenen Lösung nach. Die Agenten sollen selbstständig arbeiten und kontinuierlich dazulernen.\nweiterlesen auf t3n.de",
+    "slug": "new-policy-ideas-for-the-intelligence-age",
+    "title": "New policy ideas for the Intelligence Age",
+    "summary": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
+    "categorySlug": "technisch",
+    "tags": [
+      "OpenAI",
+      "EU AI Act",
+      "Hardware"
+    ],
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "securing-the-infrastructure-of-intelligence",
+    "title": "Securing the Infrastructure of Intelligence",
+    "summary": "AI factories are the defining infrastructure of the AI era — where compute transforms energy and data into intelligence that powers every business, industry and country. In the AI economy, compute is revenue. AI factories require a full stack of critical resources: advanced chips",
+    "categorySlug": "hardware",
+    "tags": [
+      "NVIDIA",
+      "Hardware"
+    ],
+    "sourceName": "NVIDIA AI Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "nvidia-nemotron-3-5-lightning-now-available-in-amazon-sagemaker-jumpstart",
+    "title": "NVIDIA Nemotron 3.5 Lightning now available in Amazon SageMaker JumpStart",
+    "summary": "NVIDIA Nemotron 3.5 Lightning, an open model built for high-volume agentic workloads, is now available in Amazon SageMaker JumpStart. This post shows how to deploy the 30B Mixture-of-Experts model (3B active), which delivers up to 4x higher throughput and up to 30% faster task co",
+    "categorySlug": "technisch",
+    "tags": [
+      "NVIDIA",
+      "Agentic AI"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-lightning-now-available-in-amazon-sagemaker-jumpstart/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments",
+    "title": "Build OpenClaw agents that transact with Amazon Bedrock AgentCore payments",
+    "summary": "Give an autonomous agent a wallet and spending guardrails so it can pay for paywalled APIs, MCP servers, and web content. This post connects OpenClaw to Amazon Bedrock AgentCore payments and the x402 protocol, using the aws-agents-pay plugin to make bounded, human-approved testne",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "same-cluster-33-points-more-utilization-what-changed-was-the-order",
+    "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
+    "categorySlug": "tools",
+    "tags": [
+      "Hugging Face"
+    ],
+    "sourceName": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "agentcore-payments-middleware-for-langchain-agents",
+    "title": "AgentCore Payments middleware for LangChain agents",
+    "summary": "Let your LangChain agents pay for APIs with deterministic session budgets. AgentCore Payments middleware signs x402 payments; LangSmith traces every one.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/langchain-agentcore-payments",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "g-luxury-goods-the-new-ai-super-rich-are-reshaping-the-market-for-jets-yachts-an",
+    "title": "(g+) Luxury Goods: The new AI super-rich are reshaping the market for jets, yachts and cars",
+    "summary": "Those making fortunes in Silicon Valley are ditching the champagne for premium water while splashing their bitcoin Von Stephanie Stacey (Wirtschaft, Ferrari)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/luxury-goods-the-new-ai-super-rich-are-reshaping-the-market-for-jets-yachts-and-cars-2608-212005.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "qwen-wird-zum-standard-china-dominiert-veroffentlichungen-gro-er-frontier-ki-mod",
+    "title": "Qwen wird zum Standard: China dominiert Veröffentlichungen großer Frontier-KI-Modelle",
+    "summary": "Während chinesische KI-Labore sehr große Modelle veröffentlichen, konzentrieren sich US-Unternehmen auf Hardware-Optimierung. (KI, Open Source)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Open Source",
+      "Hardware"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/qwen-wird-zum-standard-china-dominiert-veroeffentlichungen-grosser-frontier-ki-modelle-2608-212009.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "7-milliarden-us-dollar-stripe-soll-ki-startup-openrouter-gekauft-haben",
+    "title": "7 Milliarden US-Dollar: Stripe soll KI-Startup Openrouter gekauft haben",
+    "summary": "Stripe hat sich laut Bloomberg mit dem kalifornischen KI-Start-up Openrouter auf eine Übernahme geeinigt. (API, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/7-milliarden-us-dollar-stripe-soll-ki-startup-openrouter-gekauft-haben-2608-212001.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "g-ki-agenten-im-entwickleralltag-wie-ki-agenten-jira-git-slack-und-ci-cd-verande",
+    "title": "(g+) KI-Agenten im Entwickleralltag: Wie KI-Agenten Jira, Git, Slack und CI/CD verändern",
+    "summary": "KI-Agenten schreiben nicht nur Code. Sie koordinieren Jira, Git, Slack und CI/CD - und verändern so den gesamten Softwareentwicklungsprozess. Wir erklären, wie. Ein Ratgebertext von Klaus Manhart (Die Agenten kommen, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/ki-agenten-im-entwickleralltag-wie-ki-agenten-jira-git-slack-und-ci-cd-veraendern-2608-211994.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "nasdaq-die-technologiewerte-fahren-achterbahn",
+    "title": "NASDAQ: Die Technologiewerte fahren Achterbahn",
+    "summary": "Bis Ende Juli büßte der Nasdaq-Index rund 2.000 Punkte ein, legte im August wieder zu - und ist nun etwa auf dem Stand ex ante. Wie die Ankündigungspolitik von Nvidia die Aktienkurse seiner Kunden künstlich hochhält. Eine Analyse von Erich Moechel (Börse, Nvidia)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "NVIDIA"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/nasdaq-die-technologiewerte-fahren-achterbahn-2608-211985.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "prompt-injection-klager-versteckt-ki-anweisungen-in-schriftsatzen",
+    "title": "Prompt Injection: Kläger versteckt KI-Anweisungen in Schriftsätzen",
+    "summary": "Weil er ein KI-System bei Gericht vermutete, versteckt ein Kläger in den USA geheime Anweisungen in seinen Schriftsätzen. (KI, Politik)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/prompt-injection-klaeger-versteckt-ki-anweisungen-in-schriftsaetzen-2608-211992.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "umsetzung-der-eu-vorgaben-claudes-wasserzeichen-lasst-sich-kaum-entfernen",
+    "title": "Umsetzung der EU-Vorgaben: Claudes Wasserzeichen lässt sich kaum entfernen",
+    "summary": "Anthropic erklärt, wie das Wasserzeichen in Claude-Texten funktioniert, woher die Methode stammt und wie leicht es sich umgehen lässt. (Claude, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Anthropic",
+      "EU AI Act"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/umsetzung-der-eu-vorgaben-claudes-wasserzeichen-laesst-sich-kaum-entfernen-2608-211982.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "aufrustung-nato-plant-digitalen-schutzschild-an-ostflanke",
+    "title": "Aufrüstung: Nato plant digitalen Schutzschild an Ostflanke",
+    "summary": "Ein Netzwerk aus Drohnen, Sensoren und KI soll die Nato-Ostgrenze sichern. Über Angriffe entscheiden aber weiterhin menschliche Operatoren. (Militär, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/aufruestung-nato-plant-digitales-schutzschild-an-ostflanke-2608-211979.html",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "in-diesem-game-kannst-du-einen-ki-chatbot-spielen-und-usern-antworten-schreiben",
+    "title": "In diesem Game kannst du einen KI-Chatbot spielen – und Usern Antworten schreiben",
+    "summary": "Millionen Menschen nutzen täglich Chatbots, um Fragen beantwortet zu bekommen. Doch was, wenn du plötzlich in die Rolle der KI geworfen wirst? Dieses Spiel zeigt dir, wie es ist, für deine Nutzer:innen Texte und Bilder zu generieren.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "RAG"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-chatbot-spiel-1758468/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "was-wei-chatgpt-uber-mich-dieses-tool-wertet-deine-chats-aus",
+    "title": "Was weiß ChatGPT über mich? Dieses Tool wertet deine Chats aus",
+    "summary": "Künstliche Intelligenz wird für viele Nutzer:innen zur Alltagshilfe – auch bei sensiblen Fragen. Doch mit den eingegebenen Daten können die Anbieter leicht einen Einblick ins Privatleben erhaschen. Ein neues Tool soll deswegen zeigen, was ChatGPT und Claude über euch wissen. Unse",
     "categorySlug": "breaking-news",
     "tags": [
       "OpenAI",
       "Anthropic",
-      "Agentic AI"
+      "RAG"
     ],
     "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/grok-bot-vorgestellt-das-kann-der-neue-ki-agent-von-elon-musks-ki-firma-1757749/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
+    "sourceUrl": "https://t3n.de/news/chatgpt-claude-nutzerdaten-wissen-chats-tool-analyse-1758355/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "wissenschaft-am-ende-ex-google-chef-eric-schmidt-erklart-wie-forscher-mit-ki-wir",
-    "title": "Wissenschaft am Ende? Ex-Google-Chef Eric Schmidt erklärt, wie Forscher mit KI wirklich weiterkommen",
-    "summary": "Das Tool Alphafold hat vorgemacht, wie KI die Forschung zu neuen Ufern bringen kann. Dieser Durchbruch fühlt sich wie ein Ende für wissenschaftliche Durchbrücheweiterlesen auf t3n.de",
+    "slug": "openai-lost-krisen-team-fur-ki-sicherheit-auf-warum-dieser-schritt-jetzt-erfolgt",
+    "title": "OpenAI löst Krisen-Team für KI-Sicherheit auf: Warum dieser Schritt jetzt erfolgt",
+    "summary": "OpenAI hat interne Veränderungen vorgenommen. Laut Insider:innen soll der ChatGPT-Entwickler ein wichtiges Team aufgelöst und auf andere Bereiche des Unternehmens aufgeteilt haben. Die Mitarbeiter:innen haben sich mit dem Risiko von KI-Modellen beschäftigt.\nweiterlesen auf t3n.de",
     "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind",
-      "EU AI Act"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/wissenschaft-am-ende-ex-google-chef-eric-schmidt-erklaert-wie-forscher-mit-ki-wirklich-weiterkommen-1757410/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mit-nur-einer-zeile-dieses-ki-tool-erschafft-per-prompt-komplette-3d-welten",
-    "title": "Mit nur einer Zeile: Dieses KI-Tool erschafft per Prompt komplette 3D-Welten",
-    "summary": "Ein neues KI-Tool namens „Worldclaw“ ist in der Lage, ganze 3D-Welten aus kurzen Prompts zu erstellen. Dabei kommen mehrere Techniken zum Einsatz, damit die Welten nicht nur wild aus Elementen zusammengeworfen werden.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/ki-tool-3d-welten-einzeiliger-prompt-1757702/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "google-ads-und-analytics-bekommen-neue-ki-funktionen-was-sich-jetzt-andert",
-    "title": "Google Ads und Analytics bekommen neue KI-Funktionen: Was sich jetzt ändert",
-    "summary": "Google integriert neue agentische Features in Google Ads und Analytics, die dank des Ask-Advisors-Analyse-Workflows deutlich vereinfachen. Dazu gehören neue Homepage-Insights, Dashboards mit visuellem Reporting und Kampagnenvergleiche für dein Unternehmen.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind",
-      "Agentic AI",
-      "EU AI Act"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/google-ads-und-analytics-bekommen-neue-ki-funktionen-was-sich-jetzt-aendert-1757759/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuatio",
-    "title": "AI coding startup Cognition reportedly already in talks to raise at $40B valuation",
-    "summary": "Cognition may be looking to raise another mega round just a few months after raising $1 billion at a $26 billion valuation.",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open",
-    "title": "As AI safety concerns mount, three pioneers make the case for staying open",
-    "summary": "At Ai4, three of the world's most respected AI experts—Geoffrey Hinton, Fei-Fei Li, and Andrew Ng—debated regulation, open-source access, and how America can compete as China advances in Asia.",
-    "categorySlug": "business",
-    "tags": [
-      "Open Source",
-      "EU AI Act",
-      "AI Safety"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise",
-    "title": "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise",
-    "summary": "Thrive Holdings has raised $2 billion in new funding at a $12 billion valuation from investors like SoftBank, D1 Capital Partners, and Alitmeter Capital.",
-    "categorySlug": "business",
-    "tags": [
-      "OpenAI",
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mesh-automattic-s-crm-for-everyone-comes-to-android",
-    "title": "Mesh, Automattic’s CRM for everyone, comes to Android",
-    "summary": "Mesh, an AI-powered contacts app and relationship manager from Automattic, is now an Android app.",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/mesh-automattics-crm-for-everyone-comes-to-android/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "why-stream-ring-maker-sandbar-says-the-future-of-ai-wearables-is-voice",
-    "title": "Why Stream ring-maker Sandbar says the future of AI wearables is voice",
-    "summary": "AI notetaking hardware has taken off over the past couple of years, with credit-card-sized devices, pendants, pins, and even transcribing earbuds all promising to capture your meetings and turn them into summaries and action items. Now, a whole wave of wearables — rings especiall",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/video/why-stream-ring-maker-sandbar-says-the-future-of-ai-wearables-is-voice/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "lovable-confirms-new-13-3b-valuation-raises-another-400m",
-    "title": "Lovable confirms new $13.3B valuation, raises another $400M",
-    "summary": "This new funding comes after Lovable hit $500 million in annualized run rate revenue in June, the startup told TechCrunch.",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "how-a-250-million-acquisition-collapsed-into-allegations-of-fraud-and-forged-sig",
-    "title": "How a $250 million acquisition collapsed into allegations of fraud and forged signatures",
-    "summary": "Investors are still waiting for their share of the $250 million windfall, and VideoVerse co-founder Vinayak Shrivastav is now at the center of multiple legal cases.",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/how-a-250-million-acquisition-collapsed-into-allegations-of-fraud-and-forged-signatures/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "why-sandbar-thinks-it-s-voice-enabled-ring-can-avoid-the-ai-hardware-graveyard",
-    "title": "Why Sandbar thinks it’s voice-enabled ring can avoid the AI hardware graveyard",
-    "summary": "AI notetaking hardware has taken off over the past couple of years, with credit-card-sized devices, pendants, pins, and even transcribing earbuds all promising to capture your meetings and turn them into summaries and action items. Now, a whole wave of wearables — rings especiall",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/podcast/why-sandbar-thinks-its-voice-enabled-ring-can-avoid-the-ai-hardware-graveyard/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "everything-announced-at-made-by-google-26-pixel-11-pixel-watch-5-pixel-tag-and-t",
-    "title": "Everything announced at Made by Google ’26: Pixel 11, Pixel Watch 5, Pixel Tag, and tons of Gemini features",
-    "summary": "From the Pixel 11 series and a brand new competitor to Apple’s AirTag, here are all the announcements from the Made by Google 2026 event.",
-    "categorySlug": "business",
-    "tags": [
-      "Google DeepMind",
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "ai-code-testing-startup-blacksmith-s-valuation-jumps-almost-10x-in-less-than-a-y",
-    "title": "AI code-testing startup Blacksmith’s valuation jumps almost 10x in less than a year",
-    "summary": "Blacksmith says revenue has grown more than tenfold over the past year.",
-    "categorySlug": "business",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "ich-arbeite-120-stunden-pro-woche-an-meiner-app-die-meiste-zeit-flie-t-in-diese-",
-    "title": "Ich arbeite 120 Stunden pro Woche an meiner App: Die meiste Zeit fließt in diese Mini-Aufgaben",
-    "summary": "KI-Agenten liefern den Content für die Wett-Plattform von Vincent Betz. Der verbringt die meiste Zeit damit, Fehler zu beheben.",
-    "categorySlug": "business",
-    "tags": [
-      "Agentic AI"
-    ],
-    "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/gruenderszene-sucht-die-super-gruender/fellows/ich-arbeite-120-stunden-pro-woche-und-treffe-keine-freunde/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "so-brachte-mir-ein-viraler-linkedin-post-uber-1000-anmeldungen-auf-meiner-dating",
-    "title": "So brachte mir ein viraler Linkedin-Post über 1000 Anmeldungen auf meiner Dating-App",
-    "summary": "Theodora Both will über ihre App und KI ambitionierte Menschen zusammenbringen – und polarisiert dadurch auf LinkedIn.",
-    "categorySlug": "business",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/wie-ein-linkedin-post-mir-1000-app-anmeldungen-brachte/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "will-google-diesen-1-5-milliarden-dollar-deal",
-    "title": "Will Google diesen 1,5-Milliarden-Dollar-Deal?",
-    "summary": "Programmierende Agenten gehören derzeit zu den gefragtesten Anwendungsfällen für KI. Wie Insider berichten, plant Google dafür den Kauf eines Startups.",
-    "categorySlug": "business",
-    "tags": [
-      "Google DeepMind",
-      "RAG",
-      "Agentic AI"
-    ],
-    "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/business/will-google-diesen-15-milliarden-dollar-deal/",
-    "publishedAt": "2026-08-12",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mit-ki-bewerben-dieses-wort-fallt-sofort-auf",
-    "title": "Mit KI bewerben? Dieses Wort fällt sofort auf",
-    "summary": "Y Combinator-Bewerbungen werden länger – und klingen zunehmend nach KI. Welche Wörter und Schreibweisen seit dem Siegeszug von ChatGPT häufiger auftauchen.",
-    "categorySlug": "business",
     "tags": [
       "OpenAI"
     ],
-    "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/news/mit-ki-bewerben-dieses-wort-faellt-sofort-auf/",
-    "publishedAt": "2026-08-12",
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/openai-ki-sicherheits-team-aufgeloest-1758441/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "ganz-schon-meta-ich-habe-zuckerbergs-6500-worter-ki-manifest-gelesen",
-    "title": "Ganz schön Meta: Ich habe Zuckerbergs 6500-Wörter-KI-Manifest gelesen",
-    "summary": "Hat sich sonst noch irgendwer die Zeit genommen? Zuckerberg schafft es trotz der vielen Worte nicht so richtig, eine positive Vision von KI zu entwickeln.",
-    "categorySlug": "business",
+    "slug": "ki-kurt-die-besten-studien-der-welt-und-spaltet-die-wissenschaft",
+    "title": "KI kürt die besten Studien der Welt – und spaltet die Wissenschaft",
+    "summary": "Das Startup QED Science setzt auf KI, um die Qualität von wissenschaftlichen Arbeiten schneller zu bewerten. Doch das Verfahren wirft selbst Fragen nach Transparenz, Bias und Objektivität auf.weiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Meta AI"
+      "RAG"
     ],
-    "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/ganz-schoen-meta-ich-habe-zuckerbergs-6500-woerter-ki-manifest-gelesen/",
-    "publishedAt": "2026-08-12",
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-kuert-die-besten-studien-der-welt-und-spaltet-die-wissenschaft-1758362/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "diese-7-ki-startups-haben-einen-uberraschenden-investor-die-telekom",
-    "title": "Diese 7 KI-Startups haben einen überraschenden Investor: die Telekom",
-    "summary": "Von der Telefonzelle zum Unicorn-Hirten. Die Telekom hat in einige der namhaftesten deutschen Technologie-Startups investiert.",
+    "slug": "chatgpt-zeigt-bald-auch-in-deutschland-werbung-doch-es-gibt-einen-ausweg",
+    "title": "ChatGPT zeigt bald auch in Deutschland Werbung – doch es gibt einen Ausweg",
+    "summary": "Die werbefreie Zeit in ChatGPT ist für viele Nutzer:innen auch hierzulande schon bald vorbei. Ende August startet OpenAI Anzeigen in Deutschland. Wie die Ads aussehen und warum für EU-Nutzer:innen andere Regeln gelten.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "OpenAI",
+      "EU AI Act",
+      "Deutschland"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/chatgpt-werbung-deutschland-1758391/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "5-dinge-die-du-diese-woche-wissen-musst-es-muss-ja-nicht-immer-ki-sein",
+    "title": "5 Dinge, die du diese Woche wissen musst: Es muss ja nicht immer KI sein",
+    "summary": "Jeden Montagmorgen berichten wir über fünf Dinge, die zum Wochenstart wichtig sind. Diesmal geht es um KI-freie Produktivitäts-Tools, Wasserzeichen in Claude, Googles neue Pixel-Smartphones, die bislang größte Sternenkarte und Tipps für Google Maps.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Google DeepMind",
+      "Anthropic",
+      "EU AI Act"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/5-dinge-die-du-diese-woche-wissen-musst-ki-freie-tools-claude-pixel-11-sternenkarte-google-maps-1758120/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "virtual-try-on-warum-fashion-zeigt-wie-ki-skalierbar-wird",
+    "title": "Virtual Try-On: Warum Fashion zeigt, wie KI skalierbar wird",
+    "summary": "Generative KI löst zunehmend echte, operative Geschäftsprobleme im Onlinehandel. Kaum ein Beispiel führt das so eindrucksvoll vor Augen wie Virtual Try-On (VTO). Was lange als technische Spielerei galt, entwickelt sich 2026 zum Business Case.weiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/virtual-try-on-warum-fashion-zeigt-wie-ki-skalierbar-wird-1756722/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "bildungsforscher-warnt-diese-metakompetenz-entscheidet-uber-eure-zukunft",
+    "title": "Bildungsforscher warnt: Diese Metakompetenz entscheidet über eure Zukunft",
+    "summary": "Wer KI blind vertraut, verliert die Fähigkeit, Ergebnisse zu hinterfragen. Bildungsforscher Ulrich Trautwein fordert, Schulen und Hochschulen stärker auf Selbstweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Meta AI",
+      "RAG",
+      "EU AI Act"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/bildungsforscher-warnt-vor-ki-in-der-schule-diese-metakompetenz-entscheidet-ueber-eure-zukunft-1756476/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "anthropic-s-annualized-revenue-surges-to-65b",
+    "title": "Anthropic’s annualized revenue surges to $65B",
+    "summary": "The model maker added $18 billion in annualized revenue in two months.",
     "categorySlug": "business",
     "tags": [
+      "Anthropic",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ai-automation-startup-relay-shuts-down-staff-joins-google-s-chrome-team",
+    "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
+    "summary": "\"We have some really ambitious plans to help you work with AI in Chrome to get things done, and I’ll have more to share soon,\" Jacob Bank, Relay founder and CEO, said.",
+    "categorySlug": "business",
+    "tags": [
+      "Google DeepMind",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "amazon-which-started-off-selling-books-is-destroying-rare-texts-to-train-ai",
+    "title": "Amazon, which started off selling books, is destroying rare texts to train AI",
+    "summary": "Rare books are incredibly valuable for training LLMs, since these models have already trained on whatever's available online.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud",
+    "title": "Groq raises $350M to fuel its pivot from AI chips to neocloud",
+    "summary": "Groq raised $350 million at a $3.5 billion valuation as the former AI chipmaker pivots to a neocloud business and expands its Nvidia-powered data center footprint.",
+    "categorySlug": "business",
+    "tags": [
+      "NVIDIA",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project",
+    "title": "Nvidia investing $1.5B in SoftBank data center developer behind OpenAI project",
+    "summary": "Nvidia's investment in SoftBank's data center developer will guarantee its chips power an OpenAI data center.",
+    "categorySlug": "business",
+    "tags": [
+      "OpenAI",
+      "NVIDIA",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation",
+    "title": "Wispr raises $280M at $2B valuation as it looks beyond dictation",
+    "summary": "The funds will allow Wispr to increase its footprint as it ventures into new areas, such as meetings, with its newly released note-taker tool.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "man-muss-nicht-ins-silicon-valley-um-erfolgreich-zu-sein-openai-manager-verrat-s",
+    "title": "„Man muss nicht ins Silicon Valley, um erfolgreich zu sein“ – OpenAI Manager verrät seine größten Startup-Insights",
+    "summary": "De Longvilliers arbeitet bei OpenAI und ist für Startups in Europa verantwortlich – er hat verraten, worauf er bei seiner Arbeit achtet.",
+    "categorySlug": "business",
+    "tags": [
+      "OpenAI",
       "EU AI Act"
     ],
     "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/gruenderszene/ki-startups-diese-7-haben-einen-ueberraschenden-investor/",
-    "publishedAt": "2026-08-12",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/openai-manager-man-muss-nicht-ins-silicon-valley-um-erfolgreich-zu-sein/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "import-ai-469-science-ai-rsi-simulator-and-zuck-s-technological-pessimism",
+    "title": "Import AI 469: Science AI; RSI simulator; and Zuck's technological pessimism",
+    "summary": "The new frontier of AI is developing capable autonomous researchers",
+    "categorySlug": "policy",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Import AI (Jack Clark Newsletter)",
+    "sourceUrl": "https://importai.substack.com/p/import-ai-469-science-ai-rsi-simulator",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "glm-5-3-stripe-openrouter-deal-ai-agent-consensus",
+    "title": "GLM-5.3, Stripe OpenRouter deal, AI agent consensus",
+    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "TLDR AI",
+    "sourceUrl": "https://tldr.tech/ai/2026-08-17",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery",
+    "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+    "summary": "General Science",
+    "categorySlug": "research",
+    "tags": [
+      "Google DeepMind",
+      "Meta AI"
+    ],
+    "sourceName": "Google Research Blog",
+    "sourceUrl": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "inducing-reward-free-judging-rubrics-that-reduce-over-crediting-in-agent-evaluat",
+    "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+    "summary": "arXiv:2608.13564v1 Announce Type: new \nAbstract: Evaluating language-model agents at scale increasingly relies on a second language model as an automatic judge, because the gold signal, an executable environment reward, is expensive, slow, or unavailable at deployment time. Such ",
+    "categorySlug": "research",
+    "tags": [
+      "Agentic AI",
+      "AI Safety",
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13564",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "depth-aware-sensitivity-analysis-of-mixture-of-experts-models-via-magnitude-base",
+    "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+    "summary": "arXiv:2608.13565v1 Announce Type: new \nAbstract: Mixture-of-Experts (MoE) architectures scale large language models (LLMs) while preserving computational efficiency through sparse activation. Despite their widespread adoption, the relative importance of individual MoE layers rema",
+    "categorySlug": "research",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13565",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "modular-cognitive-architecture-emerges-in-large-language-models",
+    "title": "Modular Cognitive Architecture Emerges in Large Language Models",
+    "summary": "arXiv:2608.13567v1 Announce Type: new \nAbstract: The human brain exhibits a striking degree of functional specialization, with distinct networks supporting language, formal reasoning, reasoning about other minds, and reasoning about the physical world. Is this modular organizatio",
+    "categorySlug": "research",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13567",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "a-year-in-llm-serving-workload-evolution-caching-and-load-balancing",
+    "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing",
+    "summary": "arXiv:2608.13573v1 Announce Type: new \nAbstract: Large Language Model (LLM) serving has become a critical cloud workload, and realistic traces are essential for motivating and benchmarking serving systems. However, existing LLM serving workload studies remain limited in scale and",
+    "categorySlug": "research",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13573",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "agentao-a-governed-local-first-runtime-for-tool-using-llm-agents",
+    "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+    "summary": "arXiv:2608.13574v1 Announce Type: new \nAbstract: LLM agents increasingly operate as execution systems that invoke tools, modify local state, use persistent memory, and interact with external protocols. These capabilities make agents useful, but they also introduce risks related t",
+    "categorySlug": "research",
+    "tags": [
+      "Agentic AI",
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13574",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ai-evaluation-should-work-with-humans",
+    "title": "AI Evaluation Should Work With Humans",
+    "summary": "arXiv:2608.13577v1 Announce Type: new \nAbstract: This position paper argues that the dominant paradigm of AI evaluation (which focuses on superhuman autonomous performance and so implicitly targets the goal of replacing humans) is guiding AI development in the wrong direction. In",
+    "categorySlug": "research",
+    "tags": [
+      "AI Safety",
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13577",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "stable-miscalibration-in-large-language-models-a-practical-view-of-high-confiden",
+    "title": "Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors",
+    "summary": "arXiv:2608.13591v1 Announce Type: new \nAbstract: High-confidence errors in large language models are often treated as evidence of fragile internal inference. We study a different possibility: stable miscalibration, where a confident wrong answer remains locally stable under small",
+    "categorySlug": "research",
+    "tags": [
+      "RAG",
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13591",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "measuring-cross-task-behavioral-consistency-in-language-model-agents",
+    "title": "Measuring Cross-Task Behavioral Consistency in Language Model Agents",
+    "summary": "arXiv:2608.13598v1 Announce Type: new \nAbstract: Agent evaluation relies almost entirely on outcome metrics such as success rate, which capture whether an agent succeeds but not how consistently it behaves. We argue that behavioral consistency across tasks is a distinct and measu",
+    "categorySlug": "research",
+    "tags": [
+      "Agentic AI",
+      "AI Safety",
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13598",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "cross-disciplinary-taxonomy-and-modeling-of-misunderstanding-generation-amplific",
+    "title": "Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents",
+    "summary": "arXiv:2608.13604v1 Announce Type: new \nAbstract: Detection of misunderstanding is an urgent problem to solve because communication has moved away from real-time, in-person interaction and is increasingly handled by AI-mediated channels. This shift cuts communicators off from the ",
+    "categorySlug": "research",
+    "tags": [
+      "RAG",
+      "Agentic AI",
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13604",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "active-perception-for-embodied-disambiguation",
+    "title": "Active Perception for Embodied Disambiguation",
+    "summary": "arXiv:2608.13605v1 Announce Type: new \nAbstract: Natural language provides robots with a flexible task interface, but target ambiguity in embodied environments arises not only from user intent; it can also result from missing taskrelevant physical evidence in the current observat",
+    "categorySlug": "research",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13605",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "does-a-language-server-save-tokens-for-coding-agents-a-measurement-methodology-a",
+    "title": "Does a Language Server Save Tokens for Coding Agents? A Measurement Methodology and Preliminary Study",
+    "summary": "arXiv:2608.13568v1 Announce Type: new \nAbstract: Coding agents spend most of their context budget on retrieval. Lexical retrieval (grep) is universal, instant, and zero-setup, but noisy: it cannot tell a definition from a call from a comment. Semantic retrieval via the Language S",
+    "categorySlug": "research",
+    "tags": [
+      "RAG",
+      "Agentic AI",
+      "AI Safety"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13568",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "think-in-latent-explain-in-language-self-explainable-latent-reasoning",
+    "title": "Think in Latent, Explain in Language: Self-Explainable Latent Reasoning",
+    "summary": "arXiv:2608.13570v1 Announce Type: new \nAbstract: Latent reasoning has emerged as a powerful alternative to text-based Chain-of-Thought (CoT), offering significant gains in computational efficiency by compressing verbose reasoning into compact embeddings. However, compressing reas",
+    "categorySlug": "research",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13570",
+    "publishedAt": "2026-08-17",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "not-all-tokens-are-equal-inflation-aware-routing-for-agentic-llm-systems",
+    "title": "Not All Tokens Are Equal: Inflation-Aware Routing for Agentic LLM Systems",
+    "summary": "arXiv:2608.13571v1 Announce Type: new \nAbstract: When a language model fails to answer a query on the first attempt, an agentic system retries, consuming additional tokens each time. This retry overhead creates a gap between what a model's per-token price implies and what a full ",
+    "categorySlug": "research",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2608.13571",
+    "publishedAt": "2026-08-17",
     "aiGenerated": false,
     "humanReviewed": false
   }
