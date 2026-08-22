@@ -2,6 +2,44 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "anonymes-ki-modell-ox-alpha-opencode-zhipu-ai",
+      "title": "Anonymes KI-Modell „Ox Alpha“ erobert OpenCode Go: Spuren führen zu Zhipu AI",
+      "summary": "Auf Entwicklerplattformen wie OpenRouter und OpenCode (jetzt auch im Abonnement OpenCode Go) sorgt ein unter dem Codenamen 'stealth/ox-alpha' anonym veröffentlichtes KI-Modell für Aufsehen. Ox Alpha beeindruckt in Benchmarks für Programmierung und komplexe Agenten-Workflows mit überlegener Leistung und schlägt etablierte Modelle wie GPT-5.6 Sol und Claude Fable 5. Technische Analysen (u. a. Tokenizer-Fingerabdrücke und API-Signaturen) deuten mit hoher Wahrscheinlichkeit auf das chinesische KI-Labor Zhipu AI und dessen kommende Modellgeneration GLM-5 hin. Der Vorfall unterstreicht den Trend zu Stealth-Launches im KI-Sektor und wirft zugleich Fragen zur Herkunftsnachweis- und Transparenzpflicht gemäß EU AI Act auf.",
+      "categorySlug": "technisch",
+      "tags": [
+        "Zhipu AI",
+        "OpenCode",
+        "Coding AI",
+        "EU AI Act"
+      ],
+      "sourceName": "KuCoin News / OpenCode",
+      "sourceUrl": "https://www.kucoin.com/news/flash/anonymous-ai-model-stealth-ox-alpha-shows-superior-programming-skills-technical-clues-point-to-zhipu-ai-s-next-gen-model",
+      "publishedAt": "2026-08-22",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Der Stealth-Launch von Ox Alpha auf OpenCode Go verdeutlicht, wie globale Entwicklerplattformen anonyme Hochleistungsmodelle vor dem offiziellen Branding testen. Zugleich rückt das Thema KI-Transparenz und Kennzeichnungspflicht (Art. 50/53 EU AI Act) erneut in den Fokus der Entwickler-Community.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "OpenCode (X / Twitter)",
+          "label": "OpenCode Announcement: Ox Alpha is now available on OpenCode Go too",
+          "url": "https://x.com/opencode/status/2090758645499728234"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "KuCoin Flash News",
+          "label": "Anonymous AI Model 'Stealth Ox Alpha' Shows Superior Programming Skills",
+          "url": "https://www.kucoin.com/news/flash/anonymous-ai-model-stealth-ox-alpha-shows-superior-programming-skills-technical-clues-point-to-zhipu-ai-s-next-gen-model"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "OpenRouter",
+          "label": "Model Spec & Benchmarks: stealth/ox-alpha (1M Token Kontext & 131k Output)",
+          "url": "https://openrouter.ai/stealth/ox-alpha"
+        }
+      ]
+    },
+    {
       "slug": "openai-loest-preparedness-team-fuer-ki-risiken-auf",
       "title": "OpenAI löst Preparedness-Team für KI-Risiken auf: Umstrukturierung sorgt für Debatte",
       "summary": "OpenAI hat sein eigenständiges 'Preparedness'-Team für KI-Risiken aufgelöst und die Zuständigkeiten in allgemeine Forschungsteams integriert. Das Team war maßgeblich dafür verantwortlich, katastrophale Risiken moderner Frontier-Modelle zu bewerten und Sicherheitsgrenzen zu definieren. Die Umstrukturierung erfolgt unmittelbar nach dem Durchsetzungsstart des EU AI Act und löst in der internationalen Sicherheitsforschung sowie unter europäischen Regulierungsbehörden Debatten über die künftige Governance von KI-Systemen mit Systemrisiko aus.",
