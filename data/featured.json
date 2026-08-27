@@ -2,6 +2,44 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "ox-alpha-anonymes-ki-modell-heise-hintergrund-z-ai-glm5",
+      "title": "Ox Alpha: Was hinter dem Hype um das anonyme KI-Modell steckt",
+      "summary": "Das mysteriöse KI-Modell 'Ox Alpha' sorgt in der internationalen Entwickler-Community für enorme Aufregung: Auf Plattformen wie OpenRouter und OpenCode überzeugt das als 'Stealth-Modell' bereitgestellte System bei komplexen Coding-Aufgaben und schlägt etablierte Spitzenmodelle. Eine Analyse von heise online beleuchtet die Hintergründe: Technische Fingerabdrücke und API-Merkmale führen eindeutig zum chinesischen KI-Labor Z.ai (Zhipu AI) und dessen kommender Modellgeneration. Der Fall unterstreicht den strategischen Trend zu anonymen Testläufen vor dem offiziellen Branding – und wirft zugleich drängende Fragen zur Transparenz- und Anbieterkennzeichnungspflicht nach Artikel 50 des EU AI Act auf.",
+      "categorySlug": "technisch",
+      "tags": [
+        "Ox Alpha",
+        "Zhipu AI",
+        "AI Safety",
+        "EU AI Act"
+      ],
+      "sourceName": "heise online",
+      "sourceUrl": "https://www.heise.de/hintergrund/Ox-Alpha-Was-hinter-dem-Hype-um-das-anonyme-KI-Modell-steckt-11426268.html",
+      "publishedAt": "2026-08-26",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: heise online beleuchtet das Phänomen 'Ox Alpha' im Detail. Das Stealth-Testing zeigt, wie führende Labore ihre Next-Gen-Modelle anonym in der Praxis erproben. Aus EU-Perspektive rückt dies die Durchsetzung der Transparenz- und Dokumentationsregeln für General-Purpose-KI in den Mittelpunkt.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Ox Alpha: Was hinter dem Hype um das anonyme KI-Modell steckt (Hintergrund)",
+          "url": "https://www.heise.de/hintergrund/Ox-Alpha-Was-hinter-dem-Hype-um-das-anonyme-KI-Modell-steckt-11426268.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "OpenCode (X)",
+          "label": "OpenCode Announcement: Ox Alpha is now available on OpenCode Go too",
+          "url": "https://x.com/opencode/status/2090758645499728234"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "OpenRouter",
+          "label": "Model Spec & Benchmarks: stealth/ox-alpha (1M Token Kontext)",
+          "url": "https://openrouter.ai/stealth/ox-alpha"
+        }
+      ]
+    },
+    {
       "slug": "anonymes-ki-modell-ox-alpha-opencode-zhipu-ai",
       "title": "Anonymes KI-Modell „Ox Alpha“ erobert OpenCode Go: Spuren führen zu Zhipu AI",
       "summary": "Auf Entwicklerplattformen wie OpenRouter und OpenCode (jetzt auch im Abonnement OpenCode Go) sorgt ein unter dem Codenamen 'stealth/ox-alpha' anonym veröffentlichtes KI-Modell für Aufsehen. Ox Alpha beeindruckt in Benchmarks für Programmierung und komplexe Agenten-Workflows mit überlegener Leistung und schlägt etablierte Modelle wie GPT-5.6 Sol und Claude Fable 5. Technische Analysen (u. a. Tokenizer-Fingerabdrücke und API-Signaturen) deuten mit hoher Wahrscheinlichkeit auf das chinesische KI-Labor Zhipu AI und dessen kommende Modellgeneration GLM-5 hin. Der Vorfall unterstreicht den Trend zu Stealth-Launches im KI-Sektor und wirft zugleich Fragen zur Herkunftsnachweis- und Transparenzpflicht gemäß EU AI Act auf.",
