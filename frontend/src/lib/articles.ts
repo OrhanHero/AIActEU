@@ -36,6 +36,46 @@ export type RelatedLink = {
 // plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = [
   {
+    "slug": "siemens-chef-warnt-vor-zu-viel-regulierung-bei-ki",
+    "title": "Siemens-Chef warnt vor zu viel Regulierung bei KI",
+    "summary": "Siemens-Konzernchef Roland Busch äußert sich im Interview betont optimistisch zu den immensen Effizienz- und Innovationsgewinnen durch Künstliche Intelligenz in der Industrie, warnt jedoch eindringlich vor einer Überregulierung aus Brüssel. Neue gesetzliche Vorschriften und Bürokratiehürden im Umfeld von EU AI Act und Data Act dürften die Wettbewerbsfähigkeit und Innovationskraft europäischer Industrieunternehmen im globalen Wettbewerb nicht schwächen. Busch fordert praxistaugliche Leitlinien und den Abbau regulatorischer Hürden.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "Siemens",
+      "Regulierung",
+      "Wirtschaft"
+    ],
+    "sourceName": "heise online",
+    "sourceUrl": "https://www.heise.de/news/Siemens-Chef-warnt-vor-zu-viel-Regulierung-bei-KI-11434313.html",
+    "publishedAt": "2026-08-29",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "editorsNote": "Hauptstory der Woche: Siemens-CEO Roland Busch bringt die Bedenken der europäischen Industrie in die laufende Umsetzungsdebatte des EU AI Act ein. Die Mahnung verdeutlicht die Herausforderung, strenge Governance-Vorgaben mit der Erhaltung der europäischen Innovationskraft in Einklang zu bringen.",
+    "relatedLinks": [
+      {
+        "group": "berichterstattung",
+        "sourceName": "heise online",
+        "label": "Siemens-Chef warnt vor zu viel Regulierung bei KI",
+        "url": "https://www.heise.de/news/Siemens-Chef-warnt-vor-zu-viel-Regulierung-bei-KI-11434313.html"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "Europäische Kommission",
+        "label": "EU AI Act & Data Act: Vorgaben für europäische Unternehmen",
+        "url": "https://ec.europa.eu/commission/presscorner/detail/de/ip_26_1714"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "heise online",
+        "label": "Massiver Umbau gekippt: Meta wollte „KI-nativ“ werden – und scheiterte",
+        "url": "https://www.heise.de/news/Massiver-Umbau-gekippt-Meta-wollte-KI-nativ-werden-und-scheiterte-11434074.html"
+      }
+    ],
+    "breaking": true,
+    "editorsPick": true
+  },
+  {
     "slug": "ox-alpha-anonymes-ki-modell-heise-hintergrund-z-ai-glm5",
     "title": "Ox Alpha: Was hinter dem Hype um das anonyme KI-Modell steckt",
     "summary": "Das mysteriöse KI-Modell 'Ox Alpha' sorgt in der internationalen Entwickler-Community für enorme Aufregung: Auf Plattformen wie OpenRouter und OpenCode überzeugt das als 'Stealth-Modell' bereitgestellte System bei komplexen Coding-Aufgaben und schlägt etablierte Spitzenmodelle. Eine Analyse von heise online beleuchtet die Hintergründe: Technische Fingerabdrücke und API-Merkmale führen eindeutig zum chinesischen KI-Labor Z.ai (Zhipu AI) und dessen kommender Modellgeneration. Der Fall unterstreicht den strategischen Trend zu anonymen Testläufen vor dem offiziellen Branding – und wirft zugleich drängende Fragen zur Transparenz- und Anbieterkennzeichnungspflicht nach Artikel 50 des EU AI Act auf.",
@@ -1022,21 +1062,6 @@ export const articles: Article[] = [
     ],
     "sourceName": "TechCrunch – Artificial Intelligence",
     "sourceUrl": "https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents/",
-    "publishedAt": "2026-08-26",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor",
-    "title": "Ex-Meta scientists want to bring visual AI to the factory floor",
-    "summary": "Perceptron offers an AI model that it says can help machines navigate the world while also providing in-depth visual intelligence.",
-    "categorySlug": "business",
-    "tags": [
-      "Meta AI",
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor/",
     "publishedAt": "2026-08-26",
     "aiGenerated": false,
     "humanReviewed": false
