@@ -36,6 +36,52 @@ export type RelatedLink = {
 // plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = [
   {
+    "slug": "ki-update-chatgpt-vlose-mhs-openclaw-git-schadcode",
+    "title": "KI-Update kompakt: ChatGPT als Suchmaschine, MHS, OpenClaw 2.0 & Git-Schadcode",
+    "summary": "Die EU-Kommission stuft ChatGPT erstmals als „sehr große Online-Suchmaschine“ (VLOSE) nach dem Digital Services Act (DSA) ein, da der Dienst über 45 Millionen monatlich aktive Nutzer in der EU verzeichnet – OpenAI muss bis Januar 2027 strenge Risikobewertungen und Meldeverfahren vorlegen. Zugleich stellt Anthropic mit dem „Model Hardware Standard“ (MHS) eine universelle Treiberschicht für KI-Agenten zur Steuerung von Labor- und Industriegeräten vor, während OpenClaw 2.0 mit Multiplayer-Sessions und Langzeitgedächtnis debütiert. Parallel warnt die IT-Sicherheitsforschung vor Schadcode in Git-Konfigurationen, den Entwickleragenten beim Öffnen manipulierter Repositories unbemerkt mit vollen Rechten ausführen.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "ChatGPT",
+      "AI Safety",
+      "Digital Services Act"
+    ],
+    "sourceName": "heise online",
+    "sourceUrl": "https://www.heise.de/news/KI-Update-kompakt-ChatGPT-als-Suchmaschine-MHS-OpenClaw-2-0-git-Schadcode-11437809.html",
+    "publishedAt": "2026-09-02",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "editorsNote": "Hauptstory der Woche: Das heise-Format „KI-Update“ beleuchtet die doppelgleisige Dynamik europäischer KI-Governance und technischer Risiken: Während die EU-Kommission ChatGPT unter das strenge Aufsichtsregime des Digital Services Act stellt, offenbaren Sicherheitsanalysen zu Git-Konfigurationen und autonomen Agenten (OpenClaw) neue Angriffsflächen in Entwickler-Workflows.",
+    "relatedLinks": [
+      {
+        "group": "berichterstattung",
+        "sourceName": "heise online",
+        "label": "KI-Update kompakt: ChatGPT als Suchmaschine, MHS, OpenClaw 2.0, git-Schadcode",
+        "url": "https://www.heise.de/news/KI-Update-kompakt-ChatGPT-als-Suchmaschine-MHS-OpenClaw-2-0-git-Schadcode-11437809.html"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "KI-Update Podcast (Podigee)",
+        "label": "Episode 654: Begleitende Audiofassung & vollständiges Episodentranskript",
+        "url": "https://kiupdate.podigee.io/654"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "Europäische Kommission",
+        "label": "Digital Services Act (DSA): Aufsichtsregeln für sehr große Online-Suchmaschinen (VLOSE)",
+        "url": "https://ec.europa.eu/commission/presscorner/detail/de/ip_26_1714"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "The Decoder",
+        "label": "Hintergrund: Einstufung von ChatGPT als sehr große Online-Suchmaschine durch die EU",
+        "url": "https://the-decoder.de/"
+      }
+    ],
+    "breaking": true,
+    "editorsPick": true
+  },
+  {
     "slug": "siemens-chef-warnt-vor-zu-viel-regulierung-bei-ki",
     "title": "Siemens-Chef warnt vor zu viel Regulierung bei KI",
     "summary": "Siemens-Konzernchef Roland Busch äußert sich im Interview betont optimistisch zu den immensen Effizienz- und Innovationsgewinnen durch Künstliche Intelligenz in der Industrie, warnt jedoch eindringlich vor einer Überregulierung aus Brüssel. Neue gesetzliche Vorschriften und Bürokratiehürden im Umfeld von EU AI Act und Data Act dürften die Wettbewerbsfähigkeit und Innovationskraft europäischer Industrieunternehmen im globalen Wettbewerb nicht schwächen. Busch fordert praxistaugliche Leitlinien und den Abbau regulatorischer Hürden.",
@@ -1047,21 +1093,6 @@ export const articles: Article[] = [
     ],
     "sourceName": "TechCrunch – Artificial Intelligence",
     "sourceUrl": "https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/",
-    "publishedAt": "2026-08-26",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "radar-makes-podcasts-searchable-and-usable-by-ai-agents",
-    "title": "Radar makes podcasts searchable — and usable by AI agents",
-    "summary": "Particle’s new podcast intelligence platform transcribes and analyzes more than 130,000 podcasts, making their conversations searchable on the web and accessible to AI agents through an API and MCP.",
-    "categorySlug": "business",
-    "tags": [
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents/",
     "publishedAt": "2026-08-26",
     "aiGenerated": false,
     "humanReviewed": false
