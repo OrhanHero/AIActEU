@@ -2,6 +2,50 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "ki-update-weworm-tuev-ki-zertifizierung-mistral-meta-muse",
+      "title": "KI-Update kompakt: WeWorm-Exploit, TÜV-Zertifizierung, Mistrals Milliarden & Meta Muse",
+      "summary": "Das heise-Format „KI-Update“ bündelt die wichtigsten Entwicklungen der Woche: Mit KI-Unterstützung deckten Sicherheitsforscher den verheerenden Zero-Click-Exploit „WeWorm“ in WeChat auf, der die Übernahme von bis zu einer Milliarde Konten ermöglichte – zeitgleich schlagen US-Sicherheitsbehörden wegen gezielter Modell-Destillation durch chinesische KI-Labore Alarm. In Europa kündigt der TÜV ein dreistufiges Prüf- und Zertifizierungsprogramm für KI-Systeme an, während das OWASP GenAI Security Project mit dem neuen „Crosswalk“ eine direkte Brücke zwischen 51 Sicherheitsrisiken und den Vorgaben der EU-KI-Verordnung (EU AI Act) schlägt. Zugleich sichert sich das europäische Vorzeige-Start-up Mistral AI drei Milliarden Euro frisches Kapital, und Meta schickt mit „Muse“ seinen ersten agentischen Assistenten in virtualisierten Sicherheitsumgebungen an den Start.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Agentic AI",
+        "Mistral AI"
+      ],
+      "sourceName": "heise online",
+      "sourceUrl": "https://www.heise.de/news/KI-Update-kompakt-Schoene-Neue-KI-Welt-WeWorm-KI-Agenten-Tiersprache-11446942.html",
+      "publishedAt": "2026-09-09",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Das heise-Format „KI-Update“ beleuchtet die entscheidende Schnittstelle zwischen Governance, Systemsicherheit und wirtschaftlicher Dynamik: Während der TÜV mit Prüfkriterien und OWASP mit dem Compliance-Crosswalk konkrete Leitplanken für den EU AI Act errichten, verdeutlichen der WeWorm-Exploit und autonome Agenten wie Meta Muse die akuten Sicherheitsherausforderungen für Entwickler und Anwender.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "KI-Update kompakt: Schöne Neue KI-Welt, WeWorm, KI-Agenten, Tiersprache",
+          "url": "https://www.heise.de/news/KI-Update-kompakt-Schoene-Neue-KI-Welt-WeWorm-KI-Agenten-Tiersprache-11446942.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "KI-Update Podcast (Podigee)",
+          "label": "Episode 657: Begleitende Audiofassung & vollständiges Episodentranskript",
+          "url": "https://kiupdate.podigee.io/657"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "KI absichern und belegen: OWASP veröffentlicht neue Hilfe (Crosswalk zu EU AI Act)",
+          "url": "https://www.heise.de/news/Neue-OWASP-Hilfe-fuer-sichere-KI-im-Unternehmen-11446620.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "Industrielle Spionage: US-Behörden warnen vor KI-Wissensabfluss nach China",
+          "url": "https://www.heise.de/news/US-Behoerden-warnen-vor-KI-Wissensabfluss-nach-China-11447411.html"
+        }
+      ]
+    },
+    {
       "slug": "ki-update-chatgpt-vlose-mhs-openclaw-git-schadcode",
       "title": "KI-Update kompakt: ChatGPT als Suchmaschine, MHS, OpenClaw 2.0 & Git-Schadcode",
       "summary": "Die EU-Kommission stuft ChatGPT erstmals als „sehr große Online-Suchmaschine“ (VLOSE) nach dem Digital Services Act (DSA) ein, da der Dienst über 45 Millionen monatlich aktive Nutzer in der EU verzeichnet – OpenAI muss bis Januar 2027 strenge Risikobewertungen und Meldeverfahren vorlegen. Zugleich stellt Anthropic mit dem „Model Hardware Standard“ (MHS) eine universelle Treiberschicht für KI-Agenten zur Steuerung von Labor- und Industriegeräten vor, während OpenClaw 2.0 mit Multiplayer-Sessions und Langzeitgedächtnis debütiert. Parallel warnt die IT-Sicherheitsforschung vor Schadcode in Git-Konfigurationen, den Entwickleragenten beim Öffnen manipulierter Repositories unbemerkt mit vollen Rechten ausführen.",
