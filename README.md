@@ -94,4 +94,4 @@ Damit macht jeder grüne Run eine belastbare Aussage: gebaut, hochgeladen **und*
 ## 🇪🇺 EU AI Act Compliance
 
 - **Art. 50 Transparenz:** Automatische Kennzeichnung KI-generierter Artikel und Grafiken mit dem `AI GENERATED` / `EU AI ACT ART. 50` Siegel.
-- **Art. 53 Transparenz-Register (`/verzeichnis`):** Verzeichnis der Top 10 KI-Frontier-Modelle (Claude 3.5 Sonnet, OpenAI o1/o3-mini, DeepSeek-R1, GPT-4o etc.) mit Knowledge Cutoff-Stichtagen und aufklappbarer Herkunfts-Aufschlüsselung nach 4 Quellen-Kategorien (Web, Bücher, Code, Medien).
+- **Art. 53 Transparenz-Register (`/verzeichnis`):** Verzeichnis der Top 10 KI-Frontier-Modelle (Claude 3.7 Sonnet, OpenAI o3/o3-mini, DeepSeek-R1, Gemini 2.0 Flash/Pro etc.) mit Knowledge Cutoff-Stichtagen und aufklappbarer Herkunfts-Aufschlüsselung nach 4 Quellen-Kategorien (Web, Bücher, Code, Medien).

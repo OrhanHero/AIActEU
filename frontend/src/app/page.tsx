@@ -245,7 +245,7 @@ export default function Home() {
                     Top 10 KI-Frontier-Modelle &amp; Daten-Herkunft
                   </h3>
                   <p className="mt-1 text-[11px] text-muted leading-relaxed">
-                    Claude 3.5, OpenAI o1, DeepSeek-R1 u.v.m. mit Knowledge Cutoffs &amp; Quellen-Breakdown.
+                    Claude 3.7 Sonnet, OpenAI o3, DeepSeek-R1, Gemini 2.0 u.v.m. mit Knowledge Cutoffs &amp; Quellen-Breakdown.
                   </p>
                 </div>
                 <span className="mt-2.5 inline-flex items-center gap-1 text-[11px] font-semibold text-primary group-hover:underline">
