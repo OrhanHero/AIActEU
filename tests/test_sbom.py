@@ -23,8 +23,12 @@ def test_gpai_evaluator_systemic_risk() -> None:
 def test_sbom_generator() -> None:
     generator = SBOMGenerator()
     datasets = [
-        DatasetComponent(name="CommonCrawl-Clean", provenance_category="Web", license_type="Permissive"),
-        DatasetComponent(name="EU-Law-Corpus", provenance_category="Books", license_type="Public Domain"),
+        DatasetComponent(
+            name="CommonCrawl-Clean", provenance_category="Web", license_type="Permissive"
+        ),
+        DatasetComponent(
+            name="EU-Law-Corpus", provenance_category="Books", license_type="Public Domain"
+        ),
     ]
     sbom = generator.generate(model_name="EurLLM-70B", datasets=datasets, energy_kwh=12500.0)
     data = sbom.to_dict()

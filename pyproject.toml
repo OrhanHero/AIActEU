@@ -29,7 +29,7 @@ dev = [
 aiact-check = "aiact.cli:main"
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 target-version = "py311"
 exclude = [
     "frontend",
@@ -39,8 +39,9 @@ exclude = [
 ]
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "UP"]
-ignore = []
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

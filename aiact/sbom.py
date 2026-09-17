@@ -1,7 +1,5 @@
-"""AI Software Bill of Materials (AI-SBOM) and dataset lineage generator."""
-
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 
@@ -25,7 +23,7 @@ class ModelSBOM:
         return {
             "bomFormat": "AI-SBOM-EU-AI-Act",
             "specVersion": "1.0",
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "timestamp": datetime.now(UTC).isoformat(),
             "component": {
                 "name": self.model_name,
                 "version": self.version,

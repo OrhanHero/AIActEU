@@ -11,8 +11,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Validate system configuration against EU AI Act")
     parser.add_argument("--config", help="Path to sample model config JSON")
     parser.add_argument("--output", help="Path to output JSON report")
-    parser.add_argument("--generate-sbom", action="store_true", help="Generate EU AI Act compliant AI-SBOM")
-    parser.add_argument("--evaluate-gpai", action="store_true", help="Evaluate General-Purpose AI model obligations")
+    parser.add_argument(
+        "--generate-sbom", action="store_true", help="Generate EU AI Act compliant AI-SBOM"
+    )
+    parser.add_argument(
+        "--evaluate-gpai", action="store_true", help="Evaluate General-Purpose AI model obligations"
+    )
     args = parser.parse_args()
 
     config_data = {}
