@@ -72,9 +72,10 @@ print(f"Applicable Articles: {assessment.mandatory_articles}")
 
 - [x] Initial taxonomy mapping for Regulation (EU) 2024/1689
 - [x] Annex III High-Risk heuristic engine
-- [ ] General-Purpose AI (GPAI) model duty checklist (Article 53)
-- [ ] Automated SBOM (Software Bill of Materials) & dataset lineage generator
+- [x] General-Purpose AI (GPAI) model duty checklist (Article 53)
+- [x] Automated SBOM (Software Bill of Materials) & dataset lineage generator
 - [ ] Direct integration with LLM-evaluation pipelines
+
 
 ---
 

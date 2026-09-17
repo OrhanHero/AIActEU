@@ -1,0 +1,42 @@
+name: Codex PR Compliance Audit
+
+on:
+  pull_request:
+    branches: [ "main", "GoogleAntigravityIDE" ]
+  workflow_dispatch:
+
+jobs:
+  eu-compliance-audit:
+    name: EU AI Act Codex Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run EU AI Act Assessment & SBOM Engine
+        run: |
+          python -m aiact.cli --generate-sbom --output ./generated-sbom.json
+          python -m aiact.cli --evaluate-gpai --output ./gpai-report.json
+          echo "=== EU AI Act Assessment Complete ==="
+          cat ./generated-sbom.json
+          cat ./gpai-report.json
+
+      - name: Upload Audit Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-compliance-reports
+          path: |
+            generated-sbom.json
+            gpai-report.json

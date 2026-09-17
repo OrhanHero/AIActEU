@@ -2,6 +2,9 @@
 
 from dataclasses import dataclass, field
 
+from aiact.gpai import GPAIAuditResult, GPAIEvaluator, GPAISpec
+from aiact.sbom import DatasetComponent, ModelSBOM, SBOMGenerator
+
 
 @dataclass
 class ModelProfile:
@@ -44,3 +47,17 @@ class RiskClassifier:
             risk_tier="Minimal / Transparency Only (Title IV)",
             mandatory_articles=["Article 50"],
         )
+
+
+__all__ = [
+    "AssessmentResult",
+    "DatasetComponent",
+    "GPAIAuditResult",
+    "GPAIEvaluator",
+    "GPAISpec",
+    "ModelProfile",
+    "ModelSBOM",
+    "RiskClassifier",
+    "SBOMGenerator",
+]
+
