@@ -1,7 +1,6 @@
 """AIActEU - EU AI Act (Regulation EU 2024/1689) Developer Toolkit."""
 
 from dataclasses import dataclass, field
-from typing import List
 
 
 @dataclass
@@ -14,7 +13,7 @@ class ModelProfile:
 @dataclass
 class AssessmentResult:
     risk_tier: str
-    mandatory_articles: List[str] = field(default_factory=list)
+    mandatory_articles: list[str] = field(default_factory=list)
 
 
 class RiskClassifier:

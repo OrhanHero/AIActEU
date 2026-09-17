@@ -2,6 +2,8 @@
 
 import argparse
 import json
+from pathlib import Path
+
 from aiact import ModelProfile, RiskClassifier
 
 
@@ -13,12 +15,14 @@ def main() -> None:
 
     domain = "general"
     if args.config:
-        try:
-            with open(args.config, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                domain = data.get("domain", "general")
-        except Exception:
-            pass
+        config_path = Path(args.config)
+        if config_path.is_file():
+            try:
+                with config_path.open("r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    domain = data.get("domain", "general")
+            except (json.JSONDecodeError, OSError):
+                domain = "general"
 
     classifier = RiskClassifier()
     res = classifier.evaluate(ModelProfile(domain=domain))
@@ -29,7 +33,7 @@ def main() -> None:
     }
 
     if args.output:
-        with open(args.output, "w", encoding="utf-8") as f:
+        with Path(args.output).open("w", encoding="utf-8") as f:
             json.dump(report, f, indent=2)
     else:
         print(json.dumps(report, indent=2))
