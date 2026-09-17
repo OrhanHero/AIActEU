@@ -94,3 +94,30 @@ Overrides noch nötig sind (ggf. entfernen, sobald `next` selbst gepatchte Versi
   eine unabhängig lauffähige, geseedete Strapi-Instanz) — bewusst noch nicht verknüpft, um keine
   Abhängigkeit von einem laufenden Backend-Prozess für den Frontend-Build einzuführen; siehe
   `frontend/src/lib/articles.ts` Kommentar
+
+---
+
+## Open-Source Governance & OpenAI Codex-for-OSS Readiness (Stand: 17.09.2026)
+
+Das Repository ist vollständig öffentlich unter [`https://github.com/OrhanHero/AIActEU`](https://github.com/OrhanHero/AIActEU) bereitgestellt und für das **OpenAI Codex for Open Source**-Programm auditiert:
+
+1. **Governance & Community-Health:**
+   - Standardisierte MIT-Lizenz ([`LICENSE`](./LICENSE))
+   - Coordinated Vulnerability Disclosure Policy mit 48h-SLA ([`SECURITY.md`](./SECURITY.md))
+   - Detaillierter Leitfaden für Mitwirkende ([`CONTRIBUTING.md`](./CONTRIBUTING.md))
+   - Contributor Covenant Code of Conduct v2.1 ([`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md))
+   - Strukturierte Vorlagen für Issues & PRs ([`.github/ISSUE_TEMPLATE/`](./.github/ISSUE_TEMPLATE/), [`.github/PULL_REQUEST_TEMPLATE.md`](./.github/PULL_REQUEST_TEMPLATE.md))
+
+2. **Automatisierte CI/CD-Pipeline ([`.github/workflows/ci.yml`](./.github/workflows/ci.yml)):**
+   - Matrix-Testing auf GitHub Actions mit **Python 3.11 & 3.12**.
+   - Automatisches Linting mit **Ruff** (PEP 8, Import-Sortierung, modernisierte Typannotationen).
+   - Test-Suite via **Pytest** mit Modulauflösung via [`pyproject.toml`](./pyproject.toml).
+
+3. **Python Compliance Toolkit (`aiact/`):**
+   - Entwickler-Framework zur Risikoklassifizierung gemäß EU AI Act (Verordnung EU 2024/1689).
+   - Enthält `RiskClassifier`, `ModelProfile` und CLI-Schnittstelle (`aiact-check`).
+   - Unit-Tests unter [`tests/test_compliance.py`](./tests/test_compliance.py).
+
+4. **Automatischer Sync-Pipeline-Mechanismus:**
+   - Das Post-Build-Skript [`frontend/scripts/clean-export.mjs`](./frontend/scripts/clean-export.mjs) spiegelt den bereinigten Produktions-Export (`out/`) nach jedem `npm run build` automatisch in das lokale Sync-Verzeichnis `C:\Users\Hero\Documents\AIActEU`.
+

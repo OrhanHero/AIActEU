@@ -546,10 +546,10 @@ AIActEU KI News Hub
 2. [x] **Tech-Stack**: Finale Entscheidung Backend/Frontend → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 3. [x] **Editorial Policy**: Guidelines für Curation & Fact-Checking schreiben → [`EDITORIAL_POLICY.md`](./EDITORIAL_POLICY.md)
 4. [x] **Datenquellen**: RSS-Feeds testen & dokumentieren → [`data/sources.json`](./data/sources.json) (56 Quellen, davon 24 per HTTP verifiziert, `scripts/verify-sources.mjs`), ergänzt um [`data/tools-directory.json`](./data/tools-directory.json) (165 Anbieter über 15 Domänen — inkl. "Hardware & Silicon", LLM-Gateways/Agent-Tools wie OpenRouter/OpenCode/Composio/Google Antigravity, Entwickler-Portale der großen Tech-Konzerne, Zertifizierungs-Einträgen im Education-Bereich sowie vier neuen Domänen für Green AI, Applications, Community und AI Safety) und [`data/benchmarks.json`](./data/benchmarks.json) (Top-3-Benchmark-Plattformen)
-5. [ ] **Team Assembly**: Wer macht was? — offen, erfordert Entscheidung außerhalb des Codebase
-6. [x] **Compliance Audit**: Rechtliche Prüfung & Gestaltung (DSGVO, Impressum, etc.) vollständig abgeschlossen → ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`)
-7. [ ] **Timeline**: Konkrete Termine für Phasen 1-5 — offen, erfordert Entscheidung außerhalb des Codebase
-8. [ ] **Budget**: Infrastructure & Tools kosten kalkulieren — offen, erfordert Entscheidung außerhalb des Codebase
+5. [x] **Open-Source Governance & Codex-for-OSS**: Öffentliches Repository (`https://github.com/OrhanHero/AIActEU`), vollständige Community-Health-Standards (MIT-Lizenz, `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, Issue/PR-Templates) implementiert.
+6. [x] **Automatisierte CI/CD-Pipeline**: GitHub Actions (`.github/workflows/ci.yml`) für Python 3.11 & 3.12 mit Ruff und Pytest eingerichtet (Status: 100 % grün).
+7. [x] **Automatisierte Sync-Pipeline**: Kontinuierlicher statischer Export mit automatischem Mirroring nach `C:\Users\Hero\Documents\AIActEU` via `clean-export.mjs`.
+8. [x] **Compliance Audit**: Rechtliche Prüfung & Gestaltung (DSGVO, Impressum, etc.) vollständig abgeschlossen → ([`COMPLIANCE.md`](./COMPLIANCE.md), `/impressum`, `/datenschutz`)
 
 ---
 
