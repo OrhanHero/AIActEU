@@ -1,4 +1,4 @@
-// Artificial Analysis Changelog – kuratierte Einträge (Stand: 11. Aug. 2026)
+// Artificial Analysis Changelog – kuratierte Einträge (Stand: 17. Sept. 2026)
 // Quelle: https://artificialanalysis.ai/de/changelog
 // Diese Daten werden manuell aktualisiert; die primäre Quelle ist immer AA selbst.
 
@@ -13,6 +13,147 @@ export interface ChangelogEntry {
 }
 
 export const aaChangelog: ChangelogEntry[] = [
+  // 16. Sept. 2026
+  {
+    date: "2026-09-16",
+    dateLabel: "16. Sept. 2026",
+    type: "article",
+    title: "Ant Group veröffentlicht Ling-3.0-flash-Fin",
+    description: "Ant Group stellt das finanzspezifische Flash-Modell Ling-3.0-flash-Fin für performante Banking- und FinTech-Inferenz vor.",
+    url: "https://artificialanalysis.ai/articles/ant-group-releases-finance-focused-ling-3-0-flash-fin",
+  },
+  {
+    date: "2026-09-16",
+    dateLabel: "16. Sept. 2026",
+    type: "model",
+    title: "Ling-3.0-flash-Fin",
+    intelligenceIndex: 23,
+    url: "https://artificialanalysis.ai/models/ling-3-0-flash-fin",
+  },
+  {
+    date: "2026-09-16",
+    dateLabel: "16. Sept. 2026",
+    type: "update",
+    title: "GLM-5.3 (max) Provider-Benchmarks",
+    description: "Neue Performance- und Latenz-Evaluationen für Z.ai GLM-5.3 bei Inco, GMI, Bitdeer AI und Crusoe.",
+    url: "https://artificialanalysis.ai/models/glm-5-3/providers",
+  },
+
+  // 15. Sept. 2026
+  {
+    date: "2026-09-15",
+    dateLabel: "15. Sept. 2026",
+    type: "model",
+    title: "Qwen3.8 Max (0902 Checkpoint)",
+    intelligenceIndex: 45,
+    description: "Alibaba Cloud aktualisiert Qwen3.8 Max mit verbessertem Reasoning-Score und 128k Kontextfenster.",
+    url: "https://artificialanalysis.ai/models/qwen3-8-max",
+  },
+  {
+    date: "2026-09-15",
+    dateLabel: "15. Sept. 2026",
+    type: "update",
+    title: "DeepSeek V4.1 Flash (Reasoning) Endpunkt-Vergleiche",
+    description: "Vergleich der Inferenz-Leistung von DeepSeek V4.1 Flash mit maximalem Reasoning-Aufwand bei Novita und Alibaba Cloud.",
+    url: "https://artificialanalysis.ai/models/deepseek-v4-1-flash/providers",
+  },
+
+  // 14. Sept. 2026
+  {
+    date: "2026-09-14",
+    dateLabel: "14. Sept. 2026",
+    type: "benchmark",
+    title: "Artificial Analysis Capability Indices v1.1 gestartet",
+    description: "Erweiterung um Agentic Tool Use (AutomationBench-AA), AA-Briefcase für Wissensarbeit und GDP.pdf für Long-Context-Evaluationen.",
+    url: "https://artificialanalysis.ai/articles/artificial-analysis-capability-indices-v1-1",
+  },
+  {
+    date: "2026-09-14",
+    dateLabel: "14. Sept. 2026",
+    type: "update",
+    title: "GPT-6 Astra (max) auf Amazon Bedrock",
+    description: "Erste Inferenz- und Durchsatzmessungen für OpenAIs Next-Gen Astra über AWS Bedrock.",
+    url: "https://artificialanalysis.ai/models/gpt-6-astra/providers",
+  },
+
+  // 13. Sept. 2026
+  {
+    date: "2026-09-13",
+    dateLabel: "13. Sept. 2026",
+    type: "model",
+    title: "K2 Horizon MoVA 36B A4B",
+    intelligenceIndex: 26,
+    description: "Neues Mixture-of-Variables-Attention Modell von MBZUAI für hocheffiziente Server-Workloads.",
+    url: "https://artificialanalysis.ai/models/k2-mova-36b-mid5",
+  },
+  {
+    date: "2026-09-13",
+    dateLabel: "13. Sept. 2026",
+    type: "model",
+    title: "K2 Horizon 7B",
+    intelligenceIndex: 21,
+    description: "Kompaktes 7B-Modell von MBZUAI für On-Device- und Edge-Anwendungen.",
+    url: "https://artificialanalysis.ai/models/k2-7b-ph2",
+  },
+
+  // 10. Sept. 2026
+  {
+    date: "2026-09-10",
+    dateLabel: "10. Sept. 2026",
+    type: "model",
+    title: "DeepSeek V4.1 Flash (Reasoning)",
+    intelligenceIndex: 40,
+    description: "DeepSeek V4.1 Flash erzielt Score 40 bei rasanter Token-Geschwindigkeit und minimalen Kosten.",
+    url: "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+  },
+  {
+    date: "2026-09-10",
+    dateLabel: "10. Sept. 2026",
+    type: "model",
+    title: "Ling-3.0-flash-VL",
+    intelligenceIndex: 25,
+    description: "Multimodale Vision-Language-Variante von Ant Group mit nativer Dokumenten- und Chart-Erkennung.",
+    url: "https://artificialanalysis.ai/models/ling-3-0-flash-vl",
+  },
+
+  // 09. Sept. 2026
+  {
+    date: "2026-09-09",
+    dateLabel: "9. Sept. 2026",
+    type: "article",
+    title: "Benchmarking GPT-6 Astra",
+    description: "GPT-6 Astra schließt in Intelligence & Coding Agent Index zu Claude Fable 5.1 auf – bei nur ca. 40 % der Inferenzkosten.",
+    url: "https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra",
+  },
+
+  // 07. Sept. 2026
+  {
+    date: "2026-09-07",
+    dateLabel: "7. Sept. 2026",
+    type: "benchmark",
+    title: "Intelligence Index v4.3 veröffentlicht",
+    description: "Upgrade von Terminal-Bench auf v4.0 und Einführung von AutomationBench-AA (657 geschäftliche Agenten-Workflows).",
+    url: "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3",
+  },
+  {
+    date: "2026-09-07",
+    dateLabel: "7. Sept. 2026",
+    type: "model",
+    title: "MiniCPM5-2B",
+    intelligenceIndex: 13,
+    description: "OpenBMB veröffentlicht ultra-kompaktes 2B-Modell mit überzeugender On-Device-Performance.",
+    url: "https://artificialanalysis.ai/models/minicpm5-2b",
+  },
+
+  // 04. Sept. 2026
+  {
+    date: "2026-09-04",
+    dateLabel: "4. Sept. 2026",
+    type: "benchmark",
+    title: "Intelligence Index v4.2 vorgestellt",
+    description: "Interim-Release mit komplexeren Aufgaben und privaten Testsets zur Verhinderung von Benchmark-Gaming.",
+    url: "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
+  },
   // 11. Aug. 2026
   {
     date: "2026-08-11",

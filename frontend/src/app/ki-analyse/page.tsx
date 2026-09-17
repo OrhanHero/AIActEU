@@ -131,7 +131,7 @@ export default function KiAnalysePage() {
                   🧠 Intelligenz
                 </h2>
                 <p className="text-xs text-muted mt-1">
-                  Intelligence Index v4.1.1 – GDPval-AA v2, 𝜏³-Banking, Terminal-Bench, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR
+                  Intelligence Index v4.3 – AutomationBench-AA, Terminal-Bench 4.0, GDPval-AA v2, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR
                 </p>
               </div>
               <Link
@@ -150,7 +150,7 @@ export default function KiAnalysePage() {
                 title="Intelligence Index – Übersicht"
                 description="Führende KI-Modelle nach Intelligenz-Score aus unabhängigen Evaluationen. Inkl. Open-Weights-Kennzeichnung und Kosten pro Aufgabe."
                 hashLink="https://artificialanalysis.ai/de#intelligence-tabs"
-                badge="v4.1.1"
+                badge="v4.3"
                 badgeColor="blue"
               />
               <ArtificialAnalysisBenchmarkCard
