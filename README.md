@@ -98,3 +98,13 @@ Damit macht jeder grüne Run eine belastbare Aussage: gebaut, hochgeladen **und*
 
 - **Art. 50 Transparenz:** Automatische Kennzeichnung KI-generierter Artikel und Grafiken mit dem `AI GENERATED` / `EU AI ACT ART. 50` Siegel.
 - **Art. 53 Transparenz-Register (`/verzeichnis`):** Verzeichnis der Top 10 KI-Frontier-Modelle (Claude 3.7 Sonnet, OpenAI o3/o3-mini, DeepSeek-R1, Gemini 2.0 Flash/Pro etc.) mit Knowledge Cutoff-Stichtagen und aufklappbarer Herkunfts-Aufschlüsselung nach 4 Quellen-Kategorien (Web, Bücher, Code, Medien).
+
+---
+
+## 📊 KI-Analyse, Benchmarks & Changelog (`/ki-analyse`)
+
+- **Unabhängige Modell-Evaluationen:** Direkte Anbindung an die Daten von *Artificial Analysis* für Frontier- und Open-Weight-Modelle.
+- **Intelligence Index v4.3:** Integration der neuesten Benchmark-Standards inklusive *AutomationBench-AA* (657 geschäftliche Agenten-Workflows) und *Terminal-Bench 4.0*.
+- **Neuester Changelog:** Kontinuierlich gepflegtes Changelog-Widget (`frontend/src/lib/ai-analysis-changelog.ts`) mit aktuellen Veröffentlichungen, Modellen (z. B. *Ling-3.0-flash-Fin*, *Qwen3.8 Max*, *DeepSeek V4.1 Flash*) und API-Provider-Benchmarks (Stand: September 2026).
+- **Modell-Berater & Interaktive Indizes:** Schnellzugriff auf Latenz-, TTFT- und Kostenanalysen pro Task.
+

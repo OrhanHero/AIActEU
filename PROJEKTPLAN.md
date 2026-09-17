@@ -309,6 +309,7 @@ AIActEU KI News Hub
 ├── Content Sections
 │   ├── Breaking News Carousel (Live-Updates)
 │   ├── 12 Kategorien (Cards/Tiles, inkl. Hardware & Silicon, Nachhaltigkeit, Safety u. a.)
+│   ├── KI-Analyse & Benchmarks (/ki-analyse: Artificial Analysis Intelligence Index v4.3, AutomationBench-AA & Live-Changelog)
 │   ├── Trending Dieser Woche
 │   └── Editor's Picks
 ├── Sidebar/Widgets
