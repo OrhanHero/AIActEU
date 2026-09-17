@@ -78,16 +78,55 @@ export default function Home() {
                   {leadArticle?.summary || "Kuratierte Nachrichten und wissenschaftliche Einblicke für den deutschsprachigen KI-Sektor – von Hardware & Silicon über LLMs und RAG bis EU-Verhaltenskodex-konformer Kennzeichnung."}
                 </p>
 
-                {/* Hero Editorial Cover Image Window */}
-                <div className="relative mt-3 h-64 w-full overflow-hidden rounded-2xl border border-border/80 bg-slate-950/80 shadow-2xl sm:h-80">
+                {/* Hero Editorial Cover Image Window with pulsating EU star effect */}
+                <div className="relative mt-3 h-64 w-full overflow-hidden rounded-2xl border border-blue-900/40 bg-slate-950/95 shadow-2xl sm:h-80 eu-hero-container">
+                  {/* EU Ambient Radial Glows & Starlight Aura */}
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden z-0">
+                    {/* Deep EU Azure Core Glow */}
+                    <div className="absolute h-64 w-64 rounded-full bg-blue-600/30 blur-3xl eu-radial-blue" />
+                    {/* Warm Golden Star Core Glow */}
+                    <div className="absolute h-48 w-48 rounded-full bg-amber-400/20 blur-2xl eu-radial-gold" />
+                    
+                    {/* Subtle Twinkling Golden Accent Stars */}
+                    <div className="absolute inset-0">
+                      {[
+                        { top: "16%", left: "32%", delay: "0s", size: "w-2.5 h-2.5" },
+                        { top: "12%", left: "50%", delay: "0.6s", size: "w-3.5 h-3.5" },
+                        { top: "16%", right: "32%", delay: "1.2s", size: "w-2.5 h-2.5" },
+                        { top: "34%", right: "24%", delay: "1.8s", size: "w-3 h-3" },
+                        { top: "64%", right: "25%", delay: "2.4s", size: "w-2.5 h-2.5" },
+                        { top: "80%", right: "35%", delay: "0.9s", size: "w-3 h-3" },
+                        { top: "84%", left: "50%", delay: "1.5s", size: "w-3.5 h-3.5" },
+                        { top: "80%", left: "35%", delay: "2.1s", size: "w-2.5 h-2.5" },
+                        { top: "64%", left: "25%", delay: "2.7s", size: "w-3 h-3" },
+                        { top: "34%", left: "24%", delay: "0.3s", size: "w-2.5 h-2.5" },
+                      ].map((star, idx) => (
+                        <svg
+                          key={idx}
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className={`absolute ${star.size} text-amber-300/60 eu-sparkle-star`}
+                          style={{
+                            top: star.top,
+                            left: star.left,
+                            right: star.right,
+                            animationDelay: star.delay,
+                          }}
+                        >
+                          <path d="M12 2l2.9 6.26L21.8 9.27l-5 4.87 1.18 6.86L12 17.77l-6 3.23 1.18-6.86-5-4.87 6.9-1.01L12 2z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+
                   <Image
                     src="/images/hero_ai_act_governance.png"
                     alt="EU AI Act Governance Illustration"
                     fill
                     priority
-                    className="object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02] eu-hero-star-image relative z-[1]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent pointer-events-none z-[2]" />
                   
                   {/* Top Overlay Badges */}
                   <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 z-10">

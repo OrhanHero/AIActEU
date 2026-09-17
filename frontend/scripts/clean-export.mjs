@@ -49,7 +49,7 @@ console.log(`clean-export: ${before} → ${after} Dateien in out/ (Prefetch-.txt
 // Automatischer Sync in das lokale Benutzer-Syncverzeichnis, falls vorhanden
 const SYNC_DIR = "C:/Users/Hero/Documents/AIActEU";
 try {
-  const { cp, rm, access, constants } = await import("node:fs/promises");
+  const { cp, access, constants } = await import("node:fs/promises");
   await access(SYNC_DIR, constants.F_OK);
   // Alte Dateien im Sync-Ordner bereinigen und aktuellen Stand spiegeln
   await cp(OUT_DIR, SYNC_DIR, { recursive: true, force: true });
