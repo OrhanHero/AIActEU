@@ -1,43 +1,56 @@
-# Dependencies
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging & Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual Environments
+.venv
+venv/
+env/
+
+# Testing & Linters
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Dependencies & Node
 node_modules/
+scripts/node_modules/
+frontend/node_modules/
 .pnp
 .pnp.js
 
-# Next.js
+# Next.js & Build Outputs
 frontend/.next/
 frontend/out/
 frontend/build/
+scripts/output/
 
-# Strapi
+# Backend & Caches
 backend/.cache/
 backend/build/
 backend/.tmp/
 backend/exports/
 backend/.strapi/
 
-# Ingestion-Skripte: generierte Ausgabe nicht versionieren
-scripts/output/
-
-# Env files
-.env
-.env.local
-.env.*.local
-!.env.example
-
-# Logs
+# IDEs & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.env
+*.env.local
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Editor
-.vscode/
-.idea/
-*.swp
-
-# OS
-.DS_Store
-Thumbs.db
 
 # TypeScript
 *.tsbuildinfo

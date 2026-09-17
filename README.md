@@ -1,110 +1,95 @@
-# AIActEU – KI News Hub
+# AIActEU
 
-Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor mit EU-Verhaltenskodex-konformer Kennzeichnung von KI-generierten/-kuratierten Inhalten (EU AI Act Art. 50 & Art. 53).
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI Pipeline](https://github.com/OrhanHero/AIActEU/actions/workflows/ci.yml/badge.svg)](https://github.com/OrhanHero/AIActEU/actions/workflows/ci.yml)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![EU AI Act Compliance](https://img.shields.io/badge/Focus-EU%20AI%20Act%20Governance-purple.svg)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 
----
-
-## 🚀 Technologie & Architektur
-
-- **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
-- **Typografie:** Newsreader (Editorial Serif) + Plus Jakarta Sans (Sans-Serif) – 100 % lokal gehostet.
-- **Export:** Statischer Export (`output: "export"` nach `frontend/out/`).
-- **Sicherheit & CSP:** Dynamische Content-Security-Policy (strikt in Produktion, entwicklerfreundlich in Dev mit Turbopack-Support).
-- **Ingestion-Pipeline:** Automatisierte RSS-Erfassung (`scripts/ingest.mjs`) aus 25+ verifizierten Fachquellen mit Deduplizierung und Kuration (`scripts/update-frontend-articles.mjs`).
-- **Mehrsprachigkeit (i18n):** Leichtgewichtiges Single-File Wörterbuch (`lib/i18n.ts`) & React Context für flüssiges DE/EN-Umschalten ohne Ordner-Wildwuchs.
-- **DSGVO & Compliance:** 0 Tracking-Cookies, 0 externe Font-Calls, rechtssichere Pflichtangaben (Impressum & Datenschutz).
-- **Aktueller Stand:** 17. September 2026 (Live-Ticker-Synchronisation).
-<!-- deploy-only:start -->
-- **Hosting:** IONOS Webspace (`/aiacteu/`).
-- **Automatisierte SFTP-Pipeline:** `.github/workflows/deploy.yml` baut das Projekt bei jedem Push auf den Branch `GoogleAntigravityIDE` und spiegelt die statischen Dateien automatisiert zu IONOS.
-<!-- deploy-only:end -->
+An open-source developer toolkit and compliance framework designed to parse, classify, and audit artificial intelligence systems according to the **European Union Artificial Intelligence Act (Regulation EU 2024/1689)**.
 
 ---
 
-## 📁 Projektstruktur
+## 📌 Mission
 
-```text
-.
-├── frontend/                   Next.js App Router (TypeScript, Tailwind CSS)
-│   ├── src/
-│   │   ├── app/                Seiten (Start, Verzeichnis, Compliance, Tutorials, etc.)
-│   │   ├── components/         UI-Komponenten (Header, Footer, Leaderboard, Cards)
-│   │   ├── context/            LanguageContext (DE / EN Umschaltung)
-│   │   └── lib/                Daten & Hilfsfunktionen (i18n, articles, topModels)
-│   └── public/                 Statische Assets
-├── ARCHITECTURE.md             Technische Architekturentscheidungen
-├── DESIGN.md                   Design-System (Farben, Typografie, Glassmorphismus)
-├── COMPLIANCE.md              EU-Verhaltenskodex- & DSGVO-Checkliste
-└── PROJEKTPLAN.md              Projektverlauf & Roadmap
-```
+The EU AI Act introduces strict horizontal risk tiers (Prohibited, High-Risk, Transparency/Limited, Minimal) and rigorous documentation duties. **AIActEU** provides an accessible, developer-first toolchain to:
+* Automatically evaluate system specifications against prohibited and high-risk definitions (Annex III).
+* Structure mandatory technical documentation and post-market monitoring pipelines.
+* Provide clean, versioned APIs and CLI tools for automated CI/CD compliance validation.
 
 ---
 
-## 🛠️ Lokale Entwicklung
+## 🚀 Key Features
 
-### 1. Abhängigkeiten installieren & Entwicklungs-Server starten
+* **Risk Tier Assessment Engine**: Rule-based and semantic validation to determine obligations under Title II, III, and IV.
+* **Structured Regulatory Taxonomy**: Up-to-date parsing of EU regulatory articles, recital references, and harmonized standards.
+* **Automated Audit Reports**: Generation of machine-readable (JSON/YAML) and human-readable (Markdown/HTML) compliance declarations.
+* **DevOps & CI/CD Ready**: Plug validation checks directly into automated build steps to prevent deploying non-compliant AI pipelines.
+
+---
+
+## 🛠️ Quick Start
+
+### Prerequisites
+* Python >= 3.11
+* `git`
+
+### Installation
 ```bash
-cd frontend
-npm install
-npm run dev
+git clone https://github.com/OrhanHero/AIActEU.git
+cd AIActEU
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -e .
 ```
-Die Anwendung läuft anschließend unter `http://localhost:3000`.
 
-### 2. Linting & Produktions-Build testen
+### Basic Usage
+
+#### 1. Validate System Configuration via CLI
 ```bash
-npm run lint      # Code-Qualitätsprüfung (0 Fehler)
-npm run build     # Compiliert den statischen Export nach frontend/out/
+aiact-check --config ./examples/sample-model-config.json --output report.json
+```
+
+#### 2. Python API Integration
+```python
+from aiact import RiskClassifier, ModelProfile
+
+profile = ModelProfile(
+    domain="recruitment_and_hr",
+    autonomous_decision_making=True,
+    biometric_identification=False
+)
+
+classifier = RiskClassifier()
+assessment = classifier.evaluate(profile)
+
+print(f"Assigned Risk Tier: {assessment.risk_tier}")
+print(f"Applicable Articles: {assessment.mandatory_articles}")
 ```
 
 ---
 
-<!-- deploy-only:start -->
-## 🚢 Automatisches Deployment (GitHub Actions -> IONOS)
+## 🗺️ Roadmap
 
-Das Deployment erfolgt vollautomatisch bei jedem Git Push auf den Branch **`GoogleAntigravityIDE`**.
-
-### GitHub Secret Konfiguration:
-Im GitHub Repository unter **Settings -> Secrets and variables -> Actions** muss ein einziges Secret hinterlegt sein:
-
-- **Secret Name:** `SFTP_URL`
-- **Secret Value Format:** `sftp://BENUTZERNAME:PASSWORT@HOST/aiacteu/`
-
-Die GitHub Action parst das Secret automatisch, isoliert Passwörter mit Sonderzeichen sicher und spiegelt den Stand nach `/aiacteu/` auf deinen IONOS Webspace.
-
-> **Sicherheitshinweis:** Dieses Deployment-Repository ist privat, die Actions-Logs sind es damit ebenfalls. Die folgende Regel gilt trotzdem unverändert, weil ein einzelner Fehlgriff (Repo wieder öffentlich, Log-Export, geteilter Screenshot) die Zugangsdaten sonst sofort preisgibt. GitHub maskiert ausschließlich den **exakten** Secret-Wert – Teilstrings, die der Code daraus herausparst (Host, Benutzername), erkennt die Maskierung **nicht**. `frontend/scripts/deploy.mjs` gibt deshalb nur noch `gesetzt`/`FEHLT` aus und filtert Zugangsdaten über `redact()` aus fremden Fehlermeldungen. Beim Anpassen der Diagnose-Ausgaben diese Regel beibehalten: niemals Host, Benutzername oder Passwort in ein `console.log` schreiben.
-
-### Zugangsdaten wechseln (IONOS-Benutzer rotieren)
-
-1. Im IONOS-Kundenmenü den neuen SFTP-Benutzer anlegen und dessen Zielverzeichnis notieren.
-2. Secret `SFTP_URL` in den GitHub Repository Settings auf das neue Format aktualisieren.
-3. Deployment auslösen – entweder per Push auf `GoogleAntigravityIDE` oder unter **Actions -> Build and Deploy to IONOS -> Run workflow** (`workflow_dispatch`).
-4. Den Schritt **Verify Live Deployment** im Run prüfen (siehe unten). Er ist der eigentliche Beleg dafür, dass die neuen Zugangsdaten funktionieren.
-
-### Verifikation: Warum ein grüner Upload nicht genügt
-
-Ein erfolgreicher SFTP-Upload beweist nur, dass die Verbindung stand – **nicht**, dass die Dateien dort gelandet sind, wo der Webserver sie ausliefert. Liefert ein neu angelegter IONOS-Benutzer ein abweichendes Home-Verzeichnis, lädt der Upload sauber an die falsche Stelle hoch, meldet Erfolg, und aiacteu.de serviert stumm weiter den alten Stand. Genau diese Lücke schließt der Schritt **Verify Live Deployment**:
-
-- `frontend/src/lib/lastUpdated.json` wird bei jedem Lauf neu geschrieben und ist damit ein pro Run eindeutiger Fingerabdruck des gebauten Stands.
-- Nach dem Upload ruft der Schritt `https://aiacteu.de` ab und vergleicht den dort ausgelieferten Zeitstempel mit dem erwarteten.
-- Bis zu 6 Versuche im Abstand von 10 Sekunden fangen Verzögerungen beim Ausliefern ab.
-- Schlägt der Abgleich fehl, wird der Run **rot** – mit dem Hinweis, das Zielverzeichnis der Zugangsdaten zu prüfen.
-
-Damit macht jeder grüne Run eine belastbare Aussage: gebaut, hochgeladen **und** live nachweisbar.
-
----
-<!-- deploy-only:end -->
-
-## 🇪🇺 EU AI Act Compliance
-
-- **Art. 50 Transparenz:** Automatische Kennzeichnung KI-generierter Artikel und Grafiken mit dem `AI GENERATED` / `EU AI ACT ART. 50` Siegel.
-- **Art. 53 Transparenz-Register (`/verzeichnis`):** Verzeichnis der Top 10 KI-Frontier-Modelle (Claude Fable 5.1 / Opus 5, OpenAI GPT-6 Astra / o3, Gemini 3.8 Flash / Pro, DeepSeek V4.1 Flash, Grok 4.6 etc.) mit Knowledge Cutoff-Stichtagen und aufklappbarer Herkunfts-Aufschlüsselung nach 4 Quellen-Kategorien (Web, Bücher, Code, Medien).
+- [x] Initial taxonomy mapping for Regulation (EU) 2024/1689
+- [x] Annex III High-Risk heuristic engine
+- [ ] General-Purpose AI (GPAI) model duty checklist (Article 53)
+- [ ] Automated SBOM (Software Bill of Materials) & dataset lineage generator
+- [ ] Direct integration with LLM-evaluation pipelines
 
 ---
 
-## 📊 KI-Analyse, Benchmarks & Changelog (`/ki-analyse`)
+## 🤝 Contributing
 
-- **Unabhängige Modell-Evaluationen:** Direkte Anbindung an die Daten von *Artificial Analysis* für Frontier- und Open-Weight-Modelle.
-- **Intelligence Index v4.3:** Integration der neuesten Benchmark-Standards inklusive *AutomationBench-AA* (657 geschäftliche Agenten-Workflows) und *Terminal-Bench 4.0*.
-- **Neuester Changelog:** Kontinuierlich gepflegtes Changelog-Widget (`frontend/src/lib/ai-analysis-changelog.ts`) mit aktuellen Veröffentlichungen, Modellen (z. B. *Ling-3.0-flash-Fin*, *Qwen3.8 Max*, *DeepSeek V4.1 Flash*) und API-Provider-Benchmarks (Stand: September 2026).
-- **Modell-Berater & Interaktive Indizes:** Schnellzugriff auf Latenz-, TTFT- und Kostenanalysen pro Task.
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before opening pull requests.
 
+---
+
+## 🔒 Security
+
+For responsible vulnerability disclosure, see [SECURITY.md](SECURITY.md).
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for full details.
