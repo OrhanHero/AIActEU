@@ -9,7 +9,7 @@ const socialLinks = [
   { label: "TikTok", href: "https://www.tiktok.com/@aiacteu" },
   { label: "YouTube", href: "https://www.youtube.com/@AIActEU" },
   { label: "X (Twitter)", href: "https://x.com/AIActEUR" },
-  { label: "GitHub Repository", href: "https://github.com/OrhanHero/AIActEU-code" },
+  { label: "GitHub Repository", href: "https://github.com/OrhanHero/AIActEU" },
 ];
 
 export function Footer() {
@@ -40,7 +40,7 @@ export function Footer() {
           {/* Slogan Badge */}
           <div className="rounded-xl border border-primary/20 bg-primary/5 p-2.5 text-xs text-foreground backdrop-blur-md transition-all duration-300 hover:border-primary/40 hover:bg-primary/10">
             <a
-              href="https://github.com/OrhanHero/AIActEU-code"
+              href="https://github.com/OrhanHero/AIActEU"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-wrap items-center gap-1.5 font-medium transition-colors hover:text-primary"
