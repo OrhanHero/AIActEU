@@ -1,5 +1,4 @@
 import path from "path";
-import fs from "fs";
 import { fileURLToPath } from "url";
 import SFTPClient from "ssh2-sftp-client";
 import ftp from "basic-ftp";
@@ -21,7 +20,7 @@ let remoteDir = (process.env.DIRECT_DIR || "/aiacteu").replace(/\/+$/, "") || "/
 function safeDecode(str) {
   try {
     return decodeURIComponent(str);
-  } catch (e) {
+  } catch {
     return str;
   }
 }
@@ -35,7 +34,7 @@ if (!server && raw) {
       password = p.password || "";
       port = parseInt(p.port || "22", 10);
       remoteDir = (p.remote_dir || "/aiacteu").replace(/\/+$/, "") || "/aiacteu";
-    } catch (e) {}
+    } catch {}
   } else {
     let clean = raw.replace(/^(sftp|ftps|ftp):\/\//i, "");
     const lastAt = clean.lastIndexOf("@");
@@ -136,7 +135,7 @@ async function run() {
     console.log("✅ SFTP-Verbindung erfolgreich! Übertrage Dateien...");
     try {
       await sftp.mkdir(remoteDir, true);
-    } catch (e) {}
+    } catch {}
     await sftp.uploadDir(localDir, remoteDir);
     await sftp.end();
     console.log("🎉 SFTP-Upload erfolgreich abgeschlossen!");
@@ -161,7 +160,7 @@ async function run() {
       secureOptions: { rejectUnauthorized: false },
     });
     ftpsConnected = true;
-  } catch (e1) {
+  } catch {
     try {
       await ftpClient.access({
         host: server,

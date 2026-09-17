@@ -8,9 +8,12 @@ Zentrale, kuratierte Nachrichtenplattform für den deutschsprachigen KI-Sektor m
 
 - **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
 - **Typografie:** Newsreader (Editorial Serif) + Plus Jakarta Sans (Sans-Serif) – 100 % lokal gehostet.
-- **Export:** Statischer Export (`output: "export"`).
+- **Export:** Statischer Export (`output: "export"` nach `frontend/out/`).
+- **Sicherheit & CSP:** Dynamische Content-Security-Policy (strikt in Produktion, entwicklerfreundlich in Dev mit Turbopack-Support).
+- **Ingestion-Pipeline:** Automatisierte RSS-Erfassung (`scripts/ingest.mjs`) aus 25+ verifizierten Fachquellen mit Deduplizierung und Kuration (`scripts/update-frontend-articles.mjs`).
 - **Mehrsprachigkeit (i18n):** Leichtgewichtiges Single-File Wörterbuch (`lib/i18n.ts`) & React Context für flüssiges DE/EN-Umschalten ohne Ordner-Wildwuchs.
 - **DSGVO & Compliance:** 0 Tracking-Cookies, 0 externe Font-Calls, rechtssichere Pflichtangaben (Impressum & Datenschutz).
+- **Aktueller Stand:** 17. September 2026 (Live-Ticker-Synchronisation).
 <!-- deploy-only:start -->
 - **Hosting:** IONOS Webspace (`/aiacteu/`).
 - **Automatisierte SFTP-Pipeline:** `.github/workflows/deploy.yml` baut das Projekt bei jedem Push auf den Branch `GoogleAntigravityIDE` und spiegelt die statischen Dateien automatisiert zu IONOS.

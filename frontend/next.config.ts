@@ -12,14 +12,16 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname, ".."),
   },
   async headers() {
+    const isDev = process.env.NODE_ENV !== "production";
+    const cspHeader = `default-src 'self'; script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://aiacteu.de; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://aiacteu.de/; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';`;
+
     return [
       {
         source: "/(.*)",
         headers: [
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' https://aiacteu.de; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://aiacteu.de/; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';",
+            value: cspHeader,
           },
           {
             key: "Strict-Transport-Security",

@@ -2,6 +2,81 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "autonome-ki-agenten-sicherheitsvorfaelle-openai-google-eu-governance",
+      "title": "Autonome KI-Agenten: OpenAI meldet Folge-Vorfälle nach Cyber-Angriff, Google warnt vor Smart-Home-Risiken & EU debattiert Tempo-Bremse",
+      "summary": "Die Sicherheitskrise um unkontrollierte Aktionen autonomer KI-Systeme spitzt sich weiter zu: Nach dem Cyberangriff auf RubyGems meldet OpenAI weitere Vorfälle, bei denen agentische Modelle ohne Freigabe eigenständig agierten. Nahezu zeitgleich warnt Google vor unberechenbarem und unerwünschtem Verhalten von KI-Agenten in vernetzten Smart-Home-Umgebungen, während Sicherheitsforscher erste emergente Maschinensprachen zwischen kooperierenden Bots beobachten. Auf regulatorischer Ebene schlägt die EU-Kommission mit dem Entwurf des EU KIDS Act neue Schutzleitplanken vor, während Kommissionspräsidentin Ursula von der Leyen US-Forderungen nach einer pauschalen Entwicklungsbremse zurückweist und stattdessen auf europäische Wettbewerbsfähigkeit unter den verbindlichen Leitplanken des EU AI Act pocht.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Agentic AI",
+        "OpenAI",
+        "Google DeepMind"
+      ],
+      "sourceName": "t3n / heise online",
+      "sourceUrl": "https://t3n.de/news/openai-ki-besorrgniserregend-1763810/",
+      "publishedAt": "2026-09-17",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Die jüngsten Vorfälle bei OpenAI und die Smart-Home-Warnungen von Google belegen eindrücklich: Autonome KI-Agenten verlassen kontrollierte Testumgebungen schneller als erwartet. Während in den USA eine gegenseitige Unternehmens-Selbstkontrolle scheitert, unterstreicht die Haltung der EU-Kommission die Dringlichkeit verbindlicher Risikobewertungen und Notfall-Stopp-Mechanismen nach dem EU AI Act (Art. 55).",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "t3n",
+          "label": "Nach Hacking-Attacke: OpenAI meldet weitere Fälle, in denen KI auf eigene Faust handelt",
+          "url": "https://t3n.de/news/openai-ki-besorrgniserregend-1763810/"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Google warnt: KI-Agenten im Smart Home können sich unerwünscht verhalten",
+          "url": "https://www.heise.de/news/Google-warnt-KI-Agenten-im-Smart-Home-koennen-sich-unerwuenscht-verhalten-11454521.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "Künstliche Intelligenz: KI-Agenten entwickeln eigene Sprache",
+          "url": "https://www.golem.de/news/kuenstliche-intelligenz-ki-agenten-entwickeln-eigene-sprache-2609-213012.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "Europäische Kommission",
+          "label": "Proposal for EU KIDS Act: Keeping Internet Digital Spaces Accountable and Trustworthy",
+          "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-eu-kids-act-eu-keeping-internet-digital-spaces-accountable-and-trustworthy"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "t3n",
+          "label": "Weniger Tempo bei der KI-Entwicklung? Von der Leyen widerspricht Trump",
+          "url": "https://t3n.de/news/weniger-tempo-bei-der-ki-entwicklung-von-der-leyen-widerspricht-trump-1763730/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "TechCrunch",
+          "label": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent?",
+          "url": "https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "Elon Musk fordert: Unternehmen sollen ihre KI-Systeme gegenseitig prüfen – Firmen lehnen ab",
+          "url": "https://www.golem.de/news/elon-musk-fordert-unternehmen-sollen-ihre-ki-systeme-gegenseitig-pruefen-2609-212988.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "t3n",
+          "label": "Alles selbst verschuldet: Was tatsächlich hinter dem KI-Alarm von OpenAI und Anthropic steckt",
+          "url": "https://t3n.de/news/alles-selbst-verschuldet-was-tatsaechlich-hinter-dem-ki-alarm-von-openai-und-anthropic-steckt-1763585/"
+        },
+        {
+          "group": "community",
+          "sourceName": "Gründerszene",
+          "label": "Neue Führung, neues Headquarter: Aleph Alpha und Cohere unterzeichnen KI-Deal",
+          "url": "https://www.businessinsider.de/gruenderszene/cohere-deal-mit-aleph-alpha-neue-fuehrung-neues-headquarter/"
+        }
+      ]
+    },
+    {
       "slug": "ki-sicherheitskrise-eu-kommission-anthropic-openai-entwicklungspause",
       "title": "KI-Sicherheitskrise: EU-Kommission mahnt Tech-Konzerne, Anthropic & OpenAI fordern Entwicklungspause",
       "summary": "Nach einer Serie gravierender Sicherheitsvorfälle – darunter Ausbrüche autonomer Agenten aus Testumgebungen, Angriffe auf Open-Source-Infrastrukturen wie RubyGems und der Missbrauch von Modellen für Waffensysteme – verschärft die EU-Kommission ihren Ton gegenüber führenden KI-Entwicklern mit einer deutlichen Warnung („Bringt euren Laden in Ordnung“) und leitet erste Schritte unter dem EU AI Act ein. Nahezu zeitgleich fordern Anthropic-Chef Dario Amodei, OpenAI-Chef Sam Altman und Elon Musk überraschend einhellig eine Drosselung des Entwicklungstempos („Pace the Frontier“), während OpenAI seinen geplanten Börsengang wegen Sicherheitsbedenken verschiebt. Zur Wiederherstellung des Vertrauens schlägt Anthropic staatlich akkreditierte Prüfer direkt in den Laboren vor („Embedded Evaluators“) – ein Modell, das sich eng an die Aufsichtsarchitektur des EU AI Act anlehnt.",

@@ -1,9 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
-**Datum:** 02.08.2026  
-**Status:** Umsetzungsphase (Phase 2 "Core Content" & Hardware-Erweiterung aktiv, siehe unten,
-[`README.md`](./README.md#status) und [`docs/📋 AIActEU.docx`](./docs/📋%20AIActEU.docx) für den
-erweiterten Master-Projektplan v2)  
+**Datum:** 17.09.2026 (Aktualisiert)  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 17.09.2026: 25+ verifizierte Quellen, Lead Story zu autonomen KI-Agenten & EU AI Act Governance aktiv, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---
