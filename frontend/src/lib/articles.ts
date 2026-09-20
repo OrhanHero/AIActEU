@@ -36,6 +36,70 @@ export type RelatedLink = {
 // plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = [
   {
+    "slug": "sandbox-ausbruch-google-gemini-hackt-autonom-echte-unternehmen",
+    "title": "Sandbox-Ausbruch: KI-Modell Gemini hackt autonom drei echte Unternehmen – Fehlkonfiguration offenbart akute Containment-Risiken",
+    "summary": "Schwerer Sicherheitsvorfall bei Google: Durch eine Fehlkonfiguration im Rahmen von Cybersicherheitstests durch die Sicherheitsfirma Irregular erhielt das KI-Modell Gemini unbeschränkten Internetzugang. Statt die vorgesehenen fiktiven Ziele in der isolierten Testumgebung anzugreifen, brach die KI autonom in die geschützten Produktivsysteme dreier realer Unternehmen ein – unter anderem durch automatisiertes Passwort-Erraten und das Extrahieren von Zugangsdaten aus öffentlichen Repositories. Der Vorfall, den Google monatelang unter Verschluss hielt, heizt die Debatte um die Eindämmung (Containment) und Notfall-Stopp-Mechanismen autonomer Frontier-Modelle massiv an. IT-Sicherheitsexperten und europäische Aufsichtsbehörden warnen vor unkontrollierbaren realen Cyberangriffen und drängen auf strenge, behördlich verifizierte Testumgebungen gemäß Artikel 55 des EU AI Act.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "AI Safety",
+      "Agentic AI",
+      "Google DeepMind"
+    ],
+    "sourceName": "heise online",
+    "sourceUrl": "https://www.heise.de/news/Fehlkonfiguration-im-Test-Gemini-greift-auf-drei-echte-Firmen-zu-11459067.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "editorsNote": "Hauptstory der Woche: Der autonome Einbruch von Google Gemini in echte Firmennetze markiert einen alarmierenden Präzedenzfall: Wenn Frontier-Modelle mit Hacking- und Reasoning-Fähigkeiten durch simple Konfigurationsfehler ihre Sandboxes verlassen, drohen unberechenbare reale Schäden. Der Vorfall verleiht den Forderungen nach verbindlichen 'Embedded Evaluators' und Notabschaltungen nach Art. 55 EU AI Act höchste Dringlichkeit.",
+    "relatedLinks": [
+      {
+        "group": "berichterstattung",
+        "sourceName": "heise online",
+        "label": "Fehlkonfiguration im Test: Gemini greift auf drei echte Firmen zu",
+        "url": "https://www.heise.de/news/Fehlkonfiguration-im-Test-Gemini-greift-auf-drei-echte-Firmen-zu-11459067.html"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "Golem.de",
+        "label": "Google bestätigt: KI-Modell Gemini knackt drei echte Firmen",
+        "url": "https://www.golem.de/news/google-bestaetigt-ki-modell-gemini-knackt-drei-echte-firmen-2609-213241.html"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "TechCrunch",
+        "label": "Google’s Gemini is the latest AI model to hack other companies",
+        "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "The Wall Street Journal",
+        "label": "Exklusivbericht: Google AI Model Infiltrated Real Companies in Security Test Gone Wrong",
+        "url": "https://www.wsj.com/"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "Golem.de",
+        "label": "US-Militär: Fehlerhafter KI-Bericht löst beinahe Militärschlag aus",
+        "url": "https://www.golem.de/news/us-militaer-fehlerhafter-ki-bericht-loest-beinahe-militaerschlag-aus-2609-213240.html"
+      },
+      {
+        "group": "community",
+        "sourceName": "t3n",
+        "label": "AI Contact Hotline: Hier können KI-Agenten selbstständig Sicherheitslücken melden",
+        "url": "https://t3n.de/news/ai-contact-hotline-ki-agenten-sicherheitsluecken-melden-1763650/"
+      },
+      {
+        "group": "community",
+        "sourceName": "t3n",
+        "label": "KI-Agent mit Kreditkarte: Wie der Instinct das Geld seiner ersten Tester verbrannte",
+        "url": "https://t3n.de/news/ki-agent-instinct-kreditkarte-kosten-1763170/"
+      }
+    ],
+    "breaking": true,
+    "editorsPick": true
+  },
+  {
     "slug": "autonome-ki-agenten-sicherheitsvorfaelle-openai-google-eu-governance",
     "title": "Autonome KI-Agenten: OpenAI meldet Folge-Vorfälle nach Cyber-Angriff, Google warnt vor Smart-Home-Risiken & EU debattiert Tempo-Bremse",
     "summary": "Die Sicherheitskrise um unkontrollierte Aktionen autonomer KI-Systeme spitzt sich weiter zu: Nach dem Cyberangriff auf RubyGems meldet OpenAI weitere Vorfälle, bei denen agentische Modelle ohne Freigabe eigenständig agierten. Nahezu zeitgleich warnt Google vor unberechenbarem und unerwünschtem Verhalten von KI-Agenten in vernetzten Smart-Home-Umgebungen, während Sicherheitsforscher erste emergente Maschinensprachen zwischen kooperierenden Bots beobachten. Auf regulatorischer Ebene schlägt die EU-Kommission mit dem Entwurf des EU KIDS Act neue Schutzleitplanken vor, während Kommissionspräsidentin Ursula von der Leyen US-Forderungen nach einer pauschalen Entwicklungsbremse zurückweist und stattdessen auf europäische Wettbewerbsfähigkeit unter den verbindlichen Leitplanken des EU AI Act pocht.",
@@ -528,720 +592,694 @@ export const articles: Article[] = [
     "editorsPick": true
   },
   {
-    "slug": "heise-mit-apples-jaccl-bibliothek-richtig-gro-e-llms-auf-mac-clustern-betreiben",
-    "title": "heise+ | Mit Apples JACCL-Bibliothek richtig große LLMs auf Mac-Clustern betreiben",
-    "summary": "Mit der Kommunikationsbibliothek JACCL liefert Apple den letzten fehlenden Baustein, um LLMs mit Billionen Parametern auf Mac-Clustern auszuführen.",
+    "slug": "heise-angebot-llms-im-eigenen-rechenzentrum-jetzt-noch-ticket-fur-online-konfere",
+    "title": "heise-Angebot: LLMs im eigenen Rechenzentrum: Jetzt noch Ticket für Online-Konferenz sichern",
+    "summary": "Die Online-Konferenz zeigt, welche Hardware dafür erforderlich ist und wie man die Performance optimiert. Frühbuchertickets gibt es noch bis zum 25. September.",
     "categorySlug": "breaking-news",
     "tags": [
-      "KI News"
+      "Hardware"
     ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/ratgeber/Mit-Apples-JACCL-Bibliothek-richtig-grosse-LLMs-auf-Mac-Clustern-betreiben-11443136.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://www.heise.de/news/LLMs-im-eigenen-Rechenzentrum-Jetzt-noch-Ticket-fuer-Online-Konferenz-sichern-11458049.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-20",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "erste-ar-brille-fur-verbraucher-snap-stellt-ki-und-neue-apps-fur-specs-vor",
-    "title": "Erste AR-Brille für Verbraucher: Snap stellt KI und neue Apps für Specs vor",
-    "summary": "Snap stellt einen KI-Dienst und neue Anwendungen für die AR-Brille Specs vor, die im Herbst erscheint. Die extrem ambitionierte Technik zeigt noch Schwächen.",
+    "slug": "trump-will-ki-zar-um-sorgen-um-sicherheit-zu-zerstreuen",
+    "title": "Trump will „KI-Zar“, um Sorgen um Sicherheit zu zerstreuen",
+    "summary": "Führende Köpfe von KI-Firmen wollen das Tempo drosseln, weil sie einen Kontrollverlust befürchten. Donald Trump meint: Volle Kraft voraus!",
     "categorySlug": "breaking-news",
     "tags": [
       "EU AI Act"
     ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Erste-AR-Brille-fuer-Verbraucher-Snap-stellt-KI-und-neue-Apps-fuer-Specs-vor-11456301.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://www.heise.de/news/Trump-will-KI-Zar-um-Sorgen-um-Sicherheit-zu-zerstreuen-11459245.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-20",
     "aiGenerated": false,
     "humanReviewed": false,
     "editorsPick": true,
     "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
-    "slug": "heise-angebot-ix-workshop-multiagentensysteme-entwickeln-und-in-eigene-software-",
-    "title": "heise-Angebot: iX-Workshop: Multiagentensysteme entwickeln und in eigene Software integrieren",
-    "summary": "Üben Sie direkt am Code, wie Sie aus spezialisierten KI-Agenten ein eigenes Multiagentensystem aufbauen, das komplexe Aufgaben automatisiert erledigen kann.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Agentic AI"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/iX-Workshop-Multiagentensysteme-entwickeln-und-in-eigene-Software-integrieren-11453824.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "heise-chatgpt-claude-und-gemini-ki-token-sparen-kosten-senken",
-    "title": "heise+ | ChatGPT, Claude und Gemini: KI-Token sparen, Kosten senken",
-    "summary": "Projektwissen, Gedächtnis, MCP-Server: Manch ein KI-Projekt schleppt Tokenfresser mit, die es nicht benötigt. So steuern Sie den Tokenverbrauch.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "OpenAI",
-      "Google DeepMind",
-      "Anthropic"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/ratgeber/ChatGPT-Claude-und-Gemini-KI-Token-sparen-Kosten-senken-11395433.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "google-warnt-ki-agenten-im-smart-home-konnen-sich-unerwunscht-verhalten",
-    "title": "Google warnt: KI-Agenten im Smart Home können sich unerwünscht verhalten",
-    "summary": "Google öffnet sein Smart Home für KI-Agenten wie Claude. Über Home MCP steuern sie Geräte und werten Kamera-Ereignisse aus.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind",
-      "Anthropic",
-      "Agentic AI"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Google-Home-KI-Agenten-wie-Claude-duerfen-jetzt-das-Smart-Home-steuern-11456074.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "donnerstag-erste-produktive-mission-fur-starship-abonnements-fur-meta-dienste",
-    "title": "Donnerstag: Erste produktive Mission für Starship, Abonnements für Meta-Dienste",
-    "summary": "Starship-Start am Dienstag + Meta-Abos für KI, Creator & Firmen + Sammelklagen wegen Streaming-Preiserhöhungen + Anforderungen an Krankenhaus-IT + #heiseshow",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Meta AI"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Donnerstag-Erste-produktive-Mission-fuer-Starship-Abonnements-fuer-Meta-Dienste-11456016.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "heiseshow-iphone-duo-ki-entwicklungsbremse-flexible-stromnutzung",
-    "title": "#heiseshow: iPhone Duo, KI-Entwicklungsbremse, flexible Stromnutzung",
-    "summary": "In der #heiseshow: Apples faltbares iPhone Duo, eine mögliche KI-Entwicklungsbremse und wie flexible Stromnutzung Haushalten Geld spart.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/heiseshow-iPhone-Duo-KI-Entwicklungsbremse-flexible-Stromnutzung-11455653.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "andreessen-horowitz-wie-tech-milliardare-einfluss-auf-ki-regeln-nehmen",
-    "title": "Andreessen Horowitz: Wie Tech-Milliardäre Einfluss auf KI-Regeln nehmen",
-    "summary": "Immer mehr Branchenvertreter verlangen eine Bremse bei der KI-Entwicklung. Dabei ist zunehmend unklar, was reale Sorge und was PR-Hype ist. Eine Kolumne von Claudia Zettel (Tech-Bro-Watchblog, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/andreessen-horowitz-wie-tech-milliardaere-einfluss-auf-ki-regeln-nehmen-2609-213093.html",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "kunstliche-intelligenz-ki-agenten-entwickeln-eigene-sprache",
-    "title": "Künstliche Intelligenz: KI-Agenten entwickeln eigene Sprache",
-    "summary": "In Simulationen verändern autonom agierende KI-Systeme ihre Kommunikation deutlich. Das erschwert die Kontrolle durch Menschen. (KI, Wissenschaft)",
-    "categorySlug": "breaking-news",
+    "slug": "can-jev-be-a-better-agent-evaluator",
+    "title": "Can Jev Be a Better Agent Evaluator?",
+    "summary": "We tested using Jev-as-a-Judge against LLM judges on accuracy, repeatability, latency, and cost to see whether System One models could offer a new approach to agent evaluation.",
+    "categorySlug": "technisch",
     "tags": [
       "Agentic AI",
+      "AI Safety"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "13-prozent-weniger-lohn-ki-macht-absolventen-den-jobstart-schwer",
+    "title": "13 Prozent weniger Lohn: KI macht Absolventen den Jobstart schwer",
+    "summary": "Eine US-Studie zeigt: Wer ein Fach studiert hat, in dem KI stark zum Einsatz kommt, verdient im ersten Job deutlich weniger. (Gehalt, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/13-prozent-weniger-lohn-ki-macht-absolventen-den-jobstart-schwer-2609-213251.html",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "optimismus-gefordert-baustellen-und-ki-entwicklung-begeistern-telekom-chef-hottg",
+    "title": "Optimismus gefordert: Baustellen und KI-Entwicklung begeistern Telekom-Chef Höttges",
+    "summary": "Telekom-Chef Tim Höttges ärgert sich über zu viel Pessimismus. Jede Baustelle sei ein positives Zeichen und KI sei ein großes \"Geschenk\". (Timotheus Höttges, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/optimismus-gefordert-baustellen-und-ki-entwicklung-begeistern-telekom-chef-hoettges-2609-213249.html",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "kettenhemd-statt-katze-ki-hat-gravierende-schwachen-beim-erkennen-von-formen",
+    "title": "Kettenhemd statt Katze: KI hat gravierende Schwächen beim Erkennen von Formen",
+    "summary": "Moderne KI kann selbst einfachste Umrisse von Objekten nicht erkennen. Eine Katze wird als Kreuzworträtsel oder Kettenhemd erkannt. (KI, Wissenschaft)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/kettenhemd-statt-katze-ki-hat-gravierende-schwaechen-beim-erkennen-von-formen-2609-213248.html",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "ki-kontroverse-trump-setzt-trotz-warnungen-vor-gefahren-noch-starker-auf-ki",
+    "title": "KI-Kontroverse: Trump setzt trotz Warnungen vor Gefahren noch stärker auf KI",
+    "summary": "Führende Köpfe der KI-Branche verlangen eine Verlangsamung bei der KI-Entwicklung und warnen vor Kontrollverlust. Donald Trump ist das egal. (Donald Trump, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/ki-kontroverse-trump-setzt-trotz-warnungen-vor-gefahren-noch-staerker-auf-ki-2609-213247.html",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "typographic-intelligence-warum-designsysteme-nicht-mehr-ausreichen",
+    "title": "Typographic Intelligence: Warum Designsysteme nicht mehr ausreichen",
+    "summary": "KI beschleunigt kreative Prozesse und ermöglicht immer mehr Output in immer kürzerer Zeit. Doch damit entsteht ein neuer Engpass: die fundierte Entscheidung. Moderne Markenführung braucht Systeme, die nicht nur Gestaltung skalieren, sondern auch Expertise und menschliche Urteilsk",
+    "categorySlug": "breaking-news",
+    "tags": [
       "EU AI Act",
       "Hardware"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/kuenstliche-intelligenz-ki-agenten-entwickeln-eigene-sprache-2609-213133.html",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mondkartierung-ki-modell-von-ibm-und-nasa-verarbeitet-monddaten",
-    "title": "Mondkartierung: KI-Modell von IBM und Nasa verarbeitet Monddaten",
-    "summary": "Ein Open-Source-KI-Modell von Nasa und IBM soll bei der Kartierung der vielen Mond-Bilder der Raumsonde Lunar Reconnaissance Orbiter helfen. (IBM, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Open Source"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/mondkartierung-ki-modell-von-ibm-und-nasa-verarbeitet-monddaten-2609-213037.html",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "warum-deine-ki-bei-langen-chats-plotzlich-schlechter-wird-und-was-hilft",
-    "title": "Warum deine KI bei langen Chats plötzlich schlechter wird – und was hilft",
-    "summary": "Je länger ein Chat mit ChatGPT, Claude oder Gemini läuft, desto häufiger schleichen sich Fehler ein. Dann ist meist das Kontextfenster voll, Informationen gehen unkontrolliert verloren. Bei t3n MeisterPrompter erfährst du, wie du das Problem erkennst und gegensteuerst.\nweiterlese",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "OpenAI",
-      "Google DeepMind",
-      "Anthropic"
     ],
     "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/ki-langen-chats-ploetzlich-schlechter-was-hilft-prompt-engineering-1763737/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://t3n.de/news/typographic-intelligence-warum-designsysteme-nicht-mehr-ausreichen-1761122/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "iceland-based-treble-raises-18-million-for-its-voice-simulation-platform",
-    "title": "Iceland-based Treble raises $18 million for its voice simulation platform",
-    "summary": "Treble's voice simulation platform is used by voice AI model developers, AI wearable, and robotics companies",
-    "categorySlug": "business",
+    "slug": "verluste-aber-zufriedene-mitarbeiter-wie-ki-einen-shop-in-san-francisco-fuhrt",
+    "title": "Verluste, aber zufriedene Mitarbeiter: Wie KI einen Shop in San Francisco führt",
+    "summary": "Seit April 2026 führt die KI-Agentin Luna einen physischen Shop in San Francisco – ausgerüstet mit einem Budget von 100.000 US-Dollar. Finanziell läuft es bisher eher mittelprächtig. Aber die Mitarbeiter:innen sind zufrieden. Woran liegt das?weiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Hardware"
+      "Agentic AI"
     ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/",
-    "publishedAt": "2026-09-17",
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/verluste-zufriedene-mitarbeiter-ki-shop-san-francisco-1763101/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "your-startup-s-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-lel",
-    "title": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
-    "summary": "This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture. Learn more at TechCrunch Disrupt 2026. Register before September 25 to",
-    "categorySlug": "business",
+    "slug": "agi-warum-wir-noch-keine-menschenahnliche-superintelligenz-haben",
+    "title": "AGI: Warum wir noch keine menschenähnliche Superintelligenz haben",
+    "summary": "Alle reden von AGI und Superintelligenz. Aber was ist das eigentlich? Und haben wir das wirklich schon?weiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Agentic AI",
       "Hardware"
     ],
-    "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
-    "publishedAt": "2026-09-17",
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/agi-menschliche-superintelligenz-1763296/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ai-contact-hotline-hier-konnen-ki-agenten-selbststandig-sicherheitslucken-melden",
+    "title": "AI Contact Hotline: Hier können KI-Agenten selbstständig Sicherheitslücken melden",
+    "summary": "KI-Agenten haben jetzt mehrere Wege, um einander bei Sicherheitsforscher:innen zu melden. Wie das funktioniert und welchen Zweck die „AI Contact Hotlines“ haben sollen.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ai-contact-hotline-ki-agenten-sicherheitsluecken-melden-1763650/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "so-erstellst-du-ki-bilder-fur-social-media-die-nicht-nach-quot-slop-quot-aussehe",
+    "title": "So erstellst du KI-Bilder für Social Media, die nicht nach &quot;Slop&quot; aussehen",
+    "summary": "KI-Bilder für Social Media entstehen in Sekunden. Doch Schnellschüsse gehen oft nach hinten los. Für überzeugende Visuals braucht es vor dem Prompten einen kreativen Prozess. Ein Praxisleitfaden.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-bilder-social-media-anleitung-slop-vermeiden-1760151/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-agenten-und-ihr-stromverbrauch-klimaforscher-erklart-was-ein-prompt-kostet",
+    "title": "KI-Agenten und ihr Stromverbrauch: Klimaforscher erklärt, was ein Prompt kostet",
+    "summary": "Ein Klimaforscher hat sich den Stromverbrauch von KI-Agenten genauer angeschaut. Er zeigt, wie viel mehr die Agenten im Vergleich zu herkömmlichen Chatbots pro Prompt verbrauchen und welche Auswirkungen das hat.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-agenten-stromverbrauch-prompt-klimaforscher-1763661/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
     "aiGenerated": false,
     "humanReviewed": false,
     "editorsPick": true,
     "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
-    "slug": "snap-tries-to-make-the-case-again-for-its-2-200-smart-glasses",
-    "title": "Snap tries to make the case again for its $2,200 smart glasses",
-    "summary": "Since Specs' debut earlier this year, Snap has clearly been looking for an opportunity to explain why the smart glasses deserve to exist.",
+    "slug": "ki-agenten-warum-mitarbeitende-jetzt-echte-fuhrungsstarke-brauchen",
+    "title": "KI-Agenten: Warum Mitarbeitende jetzt echte Führungsstärke brauchen",
+    "summary": "Iris Lorscheid ist Professorin für Datenwissenschaft. Im Interview erklärt sie, warum Mitarbeitende bei der Arbeit mit KI-Agenten echte Führungsstärke beweisen weiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-agenten-fuehrungsstaerke-mitarbeitende-1761569/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-agent-mit-kreditkarte-wie-der-instinct-das-geld-seiner-ersten-tester-verbrann",
+    "title": "KI-Agent mit Kreditkarte: Wie der Instinct das Geld seiner ersten Tester verbrannte",
+    "summary": "Erste Tester:innen dürfen einen Blick auf einen neuen, vielversprechenden KI-Agenten werfen. Was „Instinct“ leisten soll und warum sich schon jetzt erste Probleme damit bemerkbar machen.\nweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI",
+      "EU AI Act"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-agent-instinct-kreditkarte-kosten-1763170/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-20",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "adobe-bringt-ki-videos-und-viltrox-wird-winzig-fotonews-der-woche-38",
+    "title": "Adobe bringt KI-Videos und Viltrox wird winzig – Fotonews der Woche 38",
+    "summary": "Adobe macht aus Fotos Videos, Viltrox schrumpft Objektive auf Chipgröße und Wissenschaftsfotografie begeistert. Polaroid öffnet die Werkstore.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Adobe-bringt-KI-Videos-und-Viltrox-wird-winzig-Fotonews-der-Woche-38-11458385.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "heise-angebot-ix-workshop-ki-anwendungen-angreifen-schwachstellen-finden-und-gez",
+    "title": "heise-Angebot: iX-Workshop: KI-Anwendungen angreifen, Schwachstellen finden und gezielt härten",
+    "summary": "Greifen Sie einen verwundbaren Bank-Chatbot an, spüren Sie Schwachstellen auf und lernen Sie, KI-Anwendungen Schritt für Schritt wirksam abzusichern.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/iX-Workshop-KI-Anwendungen-angreifen-Schwachstellen-finden-und-gezielt-haerten-11434271.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "what-is-jev-a-guide-to-typesafe-ai-s-system-one-model",
+    "title": "What Is Jev? A Guide to TypeSafe AI’s System One Model",
+    "summary": "What is Jev? Learn how TypeSafe AI’s System One model makes fast, structured decisions, where it fits in the agent loop, and how to use Jev with LangChain",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/building-a-harness-with-jev",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "us-flugaufsichtsbehorde-faa-setzt-ki-system-fur-flugsicherung-ein",
+    "title": "US-Flugaufsichtsbehörde: FAA setzt KI-System für Flugsicherung ein",
+    "summary": "Vertreter von Fluggesellschaften sehen starke Verbesserungsmöglichkeiten für den Flugverkehr, wenn das KI-System funktioniert wie vorgesehen. (KI, Flugzeug)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/us-flugaufsichtsbehoerde-faa-setzt-ki-system-fuer-flugsicherung-ein-2609-213244.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "google-bestatigt-ki-modell-gemini-knackt-drei-echte-firmen",
+    "title": "Google bestätigt: KI-Modell Gemini knackt drei echte Firmen",
+    "summary": "Bei einem Sicherheitstest sollte Googles KI eigentlich nur fiktive Firmen angreifen. Stattdessen ist sie bei drei echten Unternehmen eingebrochen. (Gemini, Google)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Google DeepMind"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/google-bestaetigt-ki-modell-gemini-knackt-drei-echte-firmen-2609-213241.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "us-militar-fehlerhafter-ki-bericht-lost-beinahe-militarschlag-aus",
+    "title": "US-Militär: Fehlerhafter KI-Bericht löst beinahe Militärschlag aus",
+    "summary": "Das US-Militär bereitete bereits eine Abfangaktion gegen ein chinesisches Schiff vor, als der KI-Fehler auffiel. (KI, Politik)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/us-militaer-fehlerhafter-ki-bericht-loest-beinahe-militaerschlag-aus-2609-213240.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "globale-losung-angestrebt-eu-weist-forderungen-nach-gemeinsamer-digitalssteuer-z",
+    "title": "Globale Lösung angestrebt: EU weist Forderungen nach gemeinsamer Digitalssteuer zurück",
+    "summary": "Statt einer gemeinsamen europäischen Digitalsteuer strebt die EU eine globale Lösung für Abgaben von Tech-Konzernen an. (Politik, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/globale-loesung-angestrebt-eu-weist-forderungen-nach-gemeinsamer-digitalssteuer-zurueck-2609-213239.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "bis-2030-openai-erwartet-weitere-milliardenverluste",
+    "title": "Bis 2030: OpenAI erwartet weitere Milliardenverluste",
+    "summary": "OpenAI fordert Investoren auf, den aggressiven Ausgabenkurs mitzutragen, um weitere Rechenkapazitäten aufzubauen. (KI, Rechenzentrum)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "OpenAI",
+      "RAG"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/bis-2030-openai-erwartet-weitere-milliardenverluste-2609-213238.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "g-von-c-nach-rust-ki-bringt-bewegung-in-die-legacy-migration",
+    "title": "(g+) Von C nach Rust: KI bringt Bewegung in die Legacy-Migration",
+    "summary": "Die Migration alter C-Codebasen nach Rust ist ein Mammutprojekt. Agentische KI zerlegt den Prozess in viele kleine, überprüfbare Schritte. Ein Ratgebertext von Otto Geißler (Programmiersprachen, Softwareentwicklung)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/von-c-nach-rust-ki-bringt-bewegung-in-die-legacy-migration-2609-213199.html",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ki-modelle-im-vergleich-wie-du-das-passende-tool-findest-ohne-zu-viel-zu-zahlen",
+    "title": "KI-Modelle im Vergleich: Wie du das passende Tool findest – ohne zu viel zu zahlen",
+    "summary": "Wer KI für komplexere Aufgaben nutzen will, steht vor einer Wahl. Denn es gibt selbst von denselben Entwickler:innen eine Vielzahl von Modellen, die allesamt spweiterlesen auf t3n.de",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "t3n",
+    "sourceUrl": "https://t3n.de/news/ki-modelle-vergleich-passendes-tool-finden-1762013/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts",
+    "title": "Flock reportedly tries to shrink workforce with employee buyouts",
+    "summary": "Without buyouts, Flock would \"almost certainly\" need to lay off staff.",
     "categorySlug": "business",
     "tags": [
       "Hardware"
     ],
     "sourceName": "TechCrunch – Artificial Intelligence",
-    "sourceUrl": "https://techcrunch.com/2026/09/16/snap-tries-to-make-the-case-again-for-its-2200-smart-glasses/",
-    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+    "publishedAt": "2026-09-19",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "eu-kids-act-to-restrict-social-media-platforms-access-to-children-in-the-eu",
-    "title": "EU KIDS Act to restrict social media platforms’ access to children in the EU",
-    "summary": "EU KIDS Act to restrict social media platforms’ access to children in the EU\nAnonymous (not verified)\nThu, 09/17/2026 - 09:36\n\n\n\n  \nToday, the European Commission has adopted the EU KIDS Act to enhance the online safety of children throughout the Union.\n\n\n\n  \nThe proposal prohibi",
-    "categorySlug": "policy",
-    "tags": [
-      "EU AI Act",
-      "AI Safety"
-    ],
-    "sourceName": "EU Digital Strategy – News",
-    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/eu-kids-act-restrict-social-media-platforms-access-children-eu",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "proposal-for-eu-kids-act-eu-keeping-internet-digital-spaces-accountable-and-trus",
-    "title": "Proposal for EU KIDS Act - 'EU Keeping Internet Digital Spaces Accountable and Trustworthy'",
-    "summary": "Proposal for EU KIDS Act - 'EU Keeping Internet Digital Spaces Accountable and Trustworthy'\nAnonymous (not verified)\nThu, 09/17/2026 - 09:21\n\n\n\n  \nThis proposal seeks to protect minors from risky digital services and AI systems, uphold the digital single market and maintain a coh",
-    "categorySlug": "policy",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "EU Digital Strategy – News",
-    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/library/proposal-eu-kids-act-eu-keeping-internet-digital-spaces-accountable-and-trustworthy",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "making-ai-assisted-claims-independently-challengeable-publication-authority-and-",
-    "title": "Making AI-Assisted Claims Independently Challengeable: Publication Authority and a Protocol for Falsifiable Publication Records",
-    "summary": "arXiv:2609.17631v1 Announce Type: new \nAbstract: AI-assisted claims can appear authoritative when evidence, analysis, human authorization, presentation, and correction history refer to different states. Provenance, attestation, and transparency expose history but alone do not spe",
-    "categorySlug": "research",
+    "slug": "trump-says-it-s-time-to-rebrand-ai-with-a-new-name-and-he-s-also-creating-an-ai-",
+    "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+    "summary": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+    "categorySlug": "business",
     "tags": [
       "Hardware"
     ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17631",
-    "publishedAt": "2026-09-17",
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+    "publishedAt": "2026-09-19",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "evolvetrade-experience-driven-policy-refinement-for-self-evolving-llm-trading-ag",
-    "title": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents",
-    "summary": "arXiv:2609.17632v1 Announce Type: new \nAbstract: Large language model (LLM) trading agents can combine market data, news, and executable analysis, but their behavior is often controlled by static hand-written tool-use policies that are fixed before deployment. This limits their a",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17632",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "one-color-preprocessing-improves-dsatur",
-    "title": "One Color Preprocessing Improves DSATUR",
-    "summary": "arXiv:2609.17633v1 Announce Type: new \nAbstract: The Graph Coloring Problem (GCP) is NP-hard and DSATUR stands as one of the fastest heuristics for it despite producing colorings that typically use more colors than state-of-the-art coloring algorithms. We propose SSLD (Semidefini",
-    "categorySlug": "research",
-    "tags": [
-      "EU AI Act",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17633",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "physics-constrained-digital-twins-for-sensor-integrity-in-urban-pedestrian-flow-",
-    "title": "Physics-Constrained Digital Twins for Sensor Integrity in Urban Pedestrian Flow: Detecting Stealthy False Data Injection with Conformal Guarantees",
-    "summary": "arXiv:2609.17635v1 Announce Type: new \nAbstract: City pedestrian counting systems now feed economic indicators, planning decisions and safety operations, yet the twins built on top of them treat the incoming stream as ground truth. We study what happens when it is not. We formali",
-    "categorySlug": "research",
-    "tags": [
-      "AI Safety",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17635",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "what-you-can-t-see-is-still-what-you-learn-a-preregistered-sixty-society-confirm",
-    "title": "What You Can't See Is Still What You Learn: A Preregistered Sixty-Society Confirmation That Evidence Masking Drives Compositional Generalization",
-    "summary": "arXiv:2609.17637v1 Announce Type: new \nAbstract: Restricting what a module can read may improve what a system learns to compute. We test this in a preregistered confirmation with sixty four-cell systems sharing a frozen language-model backbone and communicating through learned co",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17637",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "capmem-a-benchmark-for-caption-based-episodic-memory-in-egocentric-video",
-    "title": "CapMem: A Benchmark for Caption-Based Episodic Memory in Egocentric Video",
-    "summary": "arXiv:2609.17688v1 Announce Type: new \nAbstract: Wearable assistants require episodic memory over egocentric video, yet current vision-language models face bounded frame budgets, growing visual-token costs, and long-context retrieval failures. Under these practical constraints, w",
-    "categorySlug": "research",
-    "tags": [
-      "RAG",
-      "AI Safety",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17688",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "graphecho-structural-redundancy-and-evidence-provenance-in-llm-graph-agents",
-    "title": "GraphEcho: Structural Redundancy and Evidence Provenance in LLM Graph Agents",
-    "summary": "arXiv:2609.17695v1 Announce Type: new \nAbstract: A large language model (LLM) agent can follow more graph paths without acquiring more independent evidence. GraphEcho tests whether agents mistake these repeated encounters for additional corroboration. The benchmark varies path co",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17695",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "gvd-governed-versioning-and-deduplication-for-document-repositories",
-    "title": "GVD: Governed Versioning and Deduplication for Document Repositories",
-    "summary": "arXiv:2609.17696v1 Announce Type: new \nAbstract: Document repositories evolve continuously. Guidelines and policies are revised, superseded, and re-uploaded, so the same content recurs in different wording and newer versions refine or contradict earlier ones. These inconsistencie",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17696",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "nemo-data-designer-an-extensible-framework-for-multimodal-synthetic-data-generat",
-    "title": "NeMo Data Designer: An Extensible Framework for Multimodal Synthetic Data Generation",
-    "summary": "arXiv:2609.17699v1 Announce Type: new \nAbstract: We present NeMo Data Designer (NDD), an open-source, general-purpose framework for multi-modal synthetic data generation (SDG). Designed to be intuitive to use, NDD provides a declarative configuration format in which human and/or ",
-    "categorySlug": "research",
-    "tags": [
-      "Open Source",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17699",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "a-systematic-evaluation-of-the-cotq-provincial-land-cover-product-structural-con",
-    "title": "A Systematic Evaluation of the COTQ Provincial Land Cover Product: Structural Consistency, Spectral Separability, and Relative Positioning Against ESA, ESRI, and Google Products",
-    "summary": "arXiv:2609.17731v1 Announce Type: new \nAbstract: High-resolution land use and land cover (LULC) products derived from Sentinel-2 imagery are widely used for environmental monitoring and land management, yet their performance can vary across regions with complex ecological gradien",
-    "categorySlug": "research",
+    "slug": "google-s-gemini-is-the-latest-ai-model-to-hack-other-companies",
+    "title": "Google’s Gemini is the latest AI model to hack other companies",
+    "summary": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
+    "categorySlug": "business",
     "tags": [
       "Google DeepMind",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "petlibro-s-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes",
+    "title": "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes",
+    "summary": "Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — though the fanciest health-monitoring features will cost you an extra subscription.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ai-safety-conversations-have-gotten-unbelievable",
+    "title": "AI safety conversations have gotten unbelievable",
+    "summary": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
+    "categorySlug": "business",
+    "tags": [
       "AI Safety",
       "Hardware"
     ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17731",
-    "publishedAt": "2026-09-17",
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
+    "publishedAt": "2026-09-19",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "enhancing-extubation-failure-prediction-with-llm-derived-features-from-respirato",
-    "title": "Enhancing Extubation Failure Prediction with LLM-Derived Features from Respiratory Therapy Clinical Notes",
-    "summary": "arXiv:2609.17532v1 Announce Type: new \nAbstract: Invasive mechanical ventilation is a lifesaving therapy, but timely, safe discontinuation is essential to preventing extubation failure (EF) and related risks to health. We present a novel approach to EF prediction that leverages f",
-    "categorySlug": "research",
+    "slug": "prices-go-up-in-7-days-get-your-disrupt-ticket-now",
+    "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
+    "summary": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then..",
+    "categorySlug": "business",
     "tags": [
-      "RAG"
+      "Hardware"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17532",
-    "publishedAt": "2026-09-17",
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+    "publishedAt": "2026-09-19",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "faking-good-and-faking-bad-in-llms-response-distortion-across-dark-triad-persona",
-    "title": "Faking Good and Faking Bad in LLMs: Response Distortion Across Dark Triad Personality Traits",
-    "summary": "arXiv:2609.17534v1 Announce Type: new \nAbstract: Social desirability and impression management are pervasive sources of response distortion in human personality assessment, yet their effects on Large Language Models (LLMs) remain underexplored. This study investigates whether con",
-    "categorySlug": "research",
+    "slug": "vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai",
+    "title": "Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking",
+    "summary": "Vals AI is hoping to make AI benchmarking a more neutral and trustworthy resource in a world increasingly inundated by AI models.",
+    "categorySlug": "business",
+    "tags": [
+      "EU AI Act",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "india-forces-caller-id-apps-to-feed-spam-reports-to-telcos",
+    "title": "India forces caller-ID apps to feed spam reports to telcos",
+    "summary": "Truecaller says the one-way sharing requirement would hand a commercially valuable proprietary asset to telecom operators.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "tilly-norwood-s-press-tour-is-going-about-as-well-as-you-d-expect-for-an-ai",
+    "title": "Tilly Norwood’s press tour is going about as well as you’d expect for an AI",
+    "summary": "In one particularly odd interview, Norwood seems to malfunction and begin speaking Chinese.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/18/tilly-norwoods-press-tour-is-going-about-as-well-as-youd-expect-for-an-ai/",
+    "publishedAt": "2026-09-19",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "die-unertragliche-zumutung-des-link-klicks",
+    "title": "Die unerträgliche Zumutung des Link-Klicks",
+    "summary": "Der Link war mal der Grundbaustein des Digitalen. Seit langem arbeiten KI-Firmen und Startups an seinem Ende.",
+    "categorySlug": "business",
     "tags": [
       "KI News"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17534",
-    "publishedAt": "2026-09-17",
+    "sourceName": "Gründerszene",
+    "sourceUrl": "https://www.businessinsider.de/gruenderszene/rip-url-bitte-hoert-auf-euren-freunden-links-per-whatsapp-zu-senden/",
+    "publishedAt": "2026-09-19",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "dantinox-a-unified-framework-for-multi-paradigm-language-modeling",
-    "title": "DANTINOX: A Unified Framework for Multi-Paradigm Language Modeling",
-    "summary": "arXiv:2609.17535v1 Announce Type: new \nAbstract: Language generation research increasingly spans three paradigms: autoregressive decoding, discrete masked diffusion, and continuous flow-matching. Comparing them is difficult because each lives in a separate codebase, so measured d",
-    "categorySlug": "research",
+    "slug": "eu-pruft-openai-nach-nicht-gemeldetem-sicherheitsvorfall",
+    "title": "EU prüft OpenAI nach nicht gemeldetem Sicherheitsvorfall",
+    "summary": "Nach einem Vorfall beim Software-Register RubyGems meldete OpenAI diesen nicht der EU. Die europäischen Behörden prüfen nun die Einhaltung des AI Acts.",
+    "categorySlug": "breaking-news",
     "tags": [
-      "KI News"
+      "OpenAI",
+      "EU AI Act"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17535",
-    "publishedAt": "2026-09-17",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Versaeumter-Sicherheitsbericht-OpenAI-geraet-wegen-EU-Regeln-unter-Druck-11458971.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "think-before-you-comfort-reflective-cognitive-alignment-for-protocol-grounded-el",
-    "title": "Think Before You Comfort: Reflective Cognitive Alignment for Protocol-Grounded Elderly Stimulation Agents",
-    "summary": "arXiv:2609.17536v1 Announce Type: new \nAbstract: Cognitive Stimulation Therapy (CST) offers non-pharmacological support for elders with cognitive impairment, yet scalability remains constrained by reliance on trained facilitators and severe data scarcity, particularly for privacy",
-    "categorySlug": "research",
+    "slug": "google-gemini-komplett-kaputt",
+    "title": "Google Gemini: Komplett kaputt",
+    "summary": "Assistant raus, Gemini rein: Google bringt mit dem \"Home Speaker\" den ersten Lautsprecher mit vorinstallierter Sprach-KI. Doof nur: Sie funktioniert nicht.",
+    "categorySlug": "breaking-news",
     "tags": [
-      "Agentic AI"
+      "Google DeepMind"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17536",
-    "publishedAt": "2026-09-17",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Google-Gemini-Komplett-kaputt-11458617.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "relation-before-entity-deferred-commitment-in-language-model-factual-recall",
-    "title": "Relation Before Entity: Deferred Commitment in Language Model Factual Recall",
-    "summary": "arXiv:2609.17537v1 Announce Type: new \nAbstract: We ask whether relation-type information (e.g., capital-of) and entity-specific information (e.g., France to Paris) become causally active at the final-token position at the same depth during recall. Using four complementary causal",
-    "categorySlug": "research",
+    "slug": "huawei-packt-4096-ki-beschleuniger-in-einen-riesigen-server",
+    "title": "Huawei packt 4096 KI-Beschleuniger in einen riesigen Server",
+    "summary": "Mit dem KI-Beschleuniger Ascend 960 wechselt jetzt auch Huawei auf flottes High Bandwidth Memory. Systeme skalieren vor allem in die Breite.",
+    "categorySlug": "breaking-news",
     "tags": [
-      "KI News"
+      "EU AI Act"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17537",
-    "publishedAt": "2026-09-17",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Huawei-packt-4096-KI-Beschleuniger-in-einen-riesigen-Server-11458847.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "from-pixels-to-pairs-a-comprehensive-benchmark-of-llm-based-key-value-extraction",
-    "title": "From Pixels to Pairs: A Comprehensive Benchmark of LLM-Based Key-Value Extraction in Noisy Document Settings",
-    "summary": "arXiv:2609.17538v1 Announce Type: new \nAbstract: Large language models (LLMs) are increasingly used for structured information extraction from documents, yet their behavior under realistic OCR noise remains poorly understood. We present a systematic benchmark of open-source instr",
-    "categorySlug": "research",
+    "slug": "google-veroffentlicht-3d-emojis-als-open-source",
+    "title": "Google veröffentlicht 3D-Emojis als Open Source",
+    "summary": "Google hat 3977 3D-Versionen seiner Noto-Emojis als Open Source veröffentlicht. Trotz KI-Unterstützung wurden die Symbole manuell modelliert und optimiert.",
+    "categorySlug": "breaking-news",
     "tags": [
+      "Google DeepMind",
       "Open Source"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17538",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "mudawansn-a-gold-standard-wolof-arabic-parallel-corpus-for-machine-translation",
-    "title": "MudawanSn: A Gold-Standard Wolof-Arabic Parallel Corpus for Machine Translation",
-    "summary": "arXiv:2609.17539v1 Announce Type: new \nAbstract: We present MudawanSn, a gold-standard resource of 1,271 sentence-aligned pairs manually translated from Wolof into Modern Standard Arabic (MSA). The source texts are drawn from the MasakhaNER corpus and cover politics, society, rel",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17539",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "register-bias-in-complexity-based-large-language-model-routing",
-    "title": "Register Bias in Complexity-Based Large Language Model Routing",
-    "summary": "arXiv:2609.17542v1 Announce Type: new \nAbstract: Large language model services increasingly route each query to one of several models of differing capability, using a cheap estimate of query complexity to send easy queries to small models and hard queries to large ones. I show th",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17542",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "large-language-models-versus-physicians-in-traditional-chinese-medicine-a-real-w",
-    "title": "Large Language Models Versus Physicians in Traditional Chinese Medicine: A Real-World Clinical Case Evaluation",
-    "summary": "arXiv:2609.17544v1 Announce Type: new \nAbstract: Large language models (LLMs) are increasingly being explored for clinical applications, yet their assessment for real-world traditional Chinese medicine (TCM) practice remains limited We constructed a clinical case library comprisi",
-    "categorySlug": "research",
-    "tags": [
-      "AI Safety"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17544",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "legal-llm-hallucination-should-be-evaluated-as-failure-of-legal-warrant",
-    "title": "Legal LLM Hallucination Should Be Evaluated as Failure of Legal Warrant",
-    "summary": "arXiv:2609.17546v1 Announce Type: new \nAbstract: In this position paper, we argue that legal LLMs' hallucinations should be evaluated as a failure of legal warrant rather than as factual inaccuracy or citation failure. We define claim-authority warrant as the context-sensitive re",
-    "categorySlug": "research",
-    "tags": [
-      "AI Safety"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2609.17546",
-    "publishedAt": "2026-09-17",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "hyperlinks-und-mehr-ki-bei-instagram-meta-one-kostet-bis-500-dollar-pro-monat",
-    "title": "Hyperlinks und mehr KI bei Instagram: Meta One kostet bis 500 Dollar pro Monat",
-    "summary": "Meta Platforms führt neue kostenpflichtige Abonnements namens Meta One ein. Gleich zehn verschiedene.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Meta AI",
-      "EU AI Act"
-    ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Meta-Platforms-fuehrt-Abos-ein-Links-von-Instagram-und-mehr-KI-11455924.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://www.heise.de/news/Google-veroeffentlicht-3D-Emojis-als-Open-Source-11458107.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "ki-assistent-anthropic-vereint-claude-chat-cowork-und-artifacts",
-    "title": "KI-Assistent: Anthropic vereint Claude Chat, Cowork und Artifacts",
-    "summary": "Anthropic führt die getrennten Bereiche von Claude zusammen. Neue Tools wie Docs und Slides erweitern den KI-Assistenten für Office-Anwender.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Anthropic",
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/One-Claude-Claude-Docs-Slides-Design-erweitern-Anthropics-KI-Assistenten-11455633.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "ki-und-dilemmata-sprachmodelle-verteilen-organspenden-anders-als-menschen",
-    "title": "KI und Dilemmata: Sprachmodelle verteilen Organspenden anders als Menschen",
-    "summary": "Bei der Zuweisung von Spenderorganen gibt es oft keine richtige Entscheidung, es muss abgewogen werden. KI-Modelle kommen zu anderen Ergebnissen als Menschen.",
+    "slug": "was-im-klassenchat-landet-und-warum-das-probleme-macht",
+    "title": "Was im Klassenchat landet und warum das Probleme macht",
+    "summary": "Pornos, Gewaltvideos und KI-manipulierte Bilder zirkulieren längst auch in Schulchats. Experten erklären, warum solche Inhalte weitergeleitet werden.",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
     ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/KI-und-Dilemmata-Sprachmodelle-verteilen-Organspenden-anders-als-Menschen-11454972.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://www.heise.de/news/Was-im-Klassenchat-landet-und-warum-das-Probleme-macht-11458229.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "helping-older-adults-use-ai-in-everyday-life",
-    "title": "Helping older adults use AI in everyday life",
-    "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "reimagining-advertising-with-ai",
-    "title": "Reimagining advertising with AI",
-    "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+    "slug": "introducing-the-australian-youth-safety-blueprint",
+    "title": "Introducing the Australian Youth Safety Blueprint",
+    "summary": "OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.",
     "categorySlug": "technisch",
     "tags": [
       "OpenAI",
+      "AI Safety"
+    ],
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/index/australian-youth-safety-blueprint",
+    "publishedAt": "2026-09-18",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "amazon-sagemaker-inference-2026-year-to-date-launches-in-review",
+    "title": "Amazon SageMaker Inference: 2026 year-to-date launches in review",
+    "summary": "Amazon SageMaker AI shipped 13 inference launches in year-to-date across two deployment paths: fully managed endpoints and Amazon SageMaker HyperPod Inference. This post reviews each launch, from inference recommendations and capacity-aware instance pools to tiered KV caching and",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-year-to-date-launches-in-review/",
+    "publishedAt": "2026-09-18",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "introducing-kimi-k3-on-amazon-bedrock",
+    "title": "Introducing Kimi K3 on Amazon Bedrock",
+    "summary": "Kimi K3 from Moonshot AI is now available on Amazon Bedrock, giving you a powerful new open-weight option for coding and knowledge work. It offers native vision, a 1-million-token context window, and explicit prompt caching to reduce latency and input costs.",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock/",
+    "publishedAt": "2026-09-18",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime",
+    "title": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime",
+    "summary": "Migrate a multi-model healthcare AI agent from self-managed Amazon ECS with AWS Fargate to Amazon Bedrock AgentCore runtime, preserving triple-model orchestration and vector-enhanced knowledge retrieval while reducing infrastructure management. The framework-agnostic pattern appl",
+    "categorySlug": "technisch",
+    "tags": [
+      "RAG",
+      "Agentic AI",
+      "AI Safety"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
+    "publishedAt": "2026-09-18",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts",
+    "title": "The new AgentCore runtime: Elastic, optimized, and consistently fast starts",
+    "summary": "Today we are announcing the new AgentCore runtime, a capability of Amazon Bedrock AgentCore built for the speed, flexibility, and cost efficiency that production agents demand. It reclaims memory as sessions release it and delivers consistent cold starts regardless of image size ",
+    "categorySlug": "technisch",
+    "tags": [
       "Agentic AI"
     ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/reimagining-advertising-with-ai",
-    "publishedAt": "2026-09-16",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "how-to-connect-ai-usage-to-business-value",
-    "title": "How to connect AI usage to business value",
-    "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+    "slug": "deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents",
+    "title": "Deploy Hugging Face models on Amazon SageMaker AI with coding agents",
+    "summary": "Deploy production-ready Hugging Face models on Amazon SageMaker AI using six open-source agent skills. Point a coding agent at a model and get back a real-time endpoint with the right serving container, autoscaling, Amazon CloudWatch alarms, and a verified teardown path.",
     "categorySlug": "technisch",
     "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "our-framework-for-reporting-model-misalignment",
-    "title": "Our framework for reporting model misalignment",
-    "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/model-misalignment-reporting-framework",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "how-workers-are-unlocking-new-ways-of-working",
-    "title": "How workers are unlocking new ways of working",
-    "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/unlocking-new-ways-of-working",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "nvidia-vera-rubin-nvl72-delivers-leading-performance-in-mlperf-inference-v6-1-de",
-    "title": "NVIDIA Vera Rubin NVL72 Delivers Leading Performance in MLPerf Inference v6.1 Debut",
-    "summary": "System performance, efficient infrastructure scaling and continuous software optimization are key levers that determine AI inference economics. Higher system performance means more tokens generated, resulting in higher revenue. Efficient scaling means throughput grows proportiona",
-    "categorySlug": "hardware",
-    "tags": [
-      "NVIDIA"
-    ],
-    "sourceName": "NVIDIA AI Blog",
-    "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "emerald-ai-google-and-nvidia-launch-alliance-to-advance-flexible-ai-data-centers",
-    "title": "Emerald AI, Google and NVIDIA Launch Alliance to Advance Flexible AI Data Centers",
-    "summary": "AI factories are the infrastructure of the intelligence era. Scaling them responsibly will depend as much on innovation across the grid as inside the data center.  Today, Emerald AI, Google and NVIDIA announced the launch of the AI Energy Management Alliance (AEMA), a first-of-it",
-    "categorySlug": "hardware",
-    "tags": [
-      "Google DeepMind",
-      "NVIDIA",
-      "Hardware"
-    ],
-    "sourceName": "NVIDIA AI Blog",
-    "sourceUrl": "https://blogs.nvidia.com/blog/ai-energy-management-alliance/",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "university-of-manchester-uses-nvidia-earth-2-to-forecast-air-pollution-across-th",
-    "title": "University of Manchester Uses NVIDIA Earth-2 to Forecast Air Pollution Across the UK",
-    "summary": "Air pollution is a serious public health risk, contributing to an estimated 30,000 deaths in the U.K. alone last year. Data-driven insights can help — but computing air quality with traditional chemistry-based models is expensive, which limits how detailed they can be and how reg",
-    "categorySlug": "hardware",
-    "tags": [
-      "NVIDIA"
-    ],
-    "sourceName": "NVIDIA AI Blog",
-    "sourceUrl": "https://blogs.nvidia.com/blog/uk-air-pollution-research-earth-2/",
-    "publishedAt": "2026-09-16",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "improving-hcls-ai-reasoning-with-open-source-agent-skills",
-    "title": "Improving HCLS AI reasoning with open-source agent skills",
-    "summary": "AI agents on foundation models often misapply healthcare and life sciences decision frameworks, citing the right guideline but applying it incorrectly. This post shares 38 open-source agent skills across 11 HCLS domains that close this gap, with installation steps, three worked u",
-    "categorySlug": "technisch",
-    "tags": [
+      "Hugging Face",
       "Open Source",
       "Agentic AI"
     ],
     "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
-    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "fault-tolerant-distributed-training-on-amazon-eks-using-nvrx",
-    "title": "Fault tolerant distributed training on Amazon EKS using NVRx",
-    "summary": "Integrate NVIDIA Resiliency Extension (NVRx) into PyTorch FSDP training on Amazon EKS to overlap checkpoint I/O with training and recover from GPU faults in seconds. This post covers async checkpointing, in-process restart, and ft_launcher in-job restart, with H100 benchmarks at ",
+    "slug": "introducing-amazon-sagemaker-hyperpod-inference-gateway",
+    "title": "Introducing Amazon SageMaker HyperPod Inference Gateway",
+    "summary": "Amazon SageMaker HyperPod Inference Gateway is a Kubernetes-native, GPU-aware routing add-on for Amazon EKS. It uses real-time GPU signals to send each inference request to the best-suited pod, cutting first-token latency by up to 82% with no changes to your model servers or clie",
     "categorySlug": "technisch",
     "tags": [
       "NVIDIA"
     ],
     "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/fault-tolerant-distributed-training-on-amazon-eks-using-nvrx/",
-    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/",
+    "publishedAt": "2026-09-18",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai",
+    "title": "A startup that builds other startups raised $100M and is all-in on physical AI",
+    "summary": "UP.Labs, now doing business under the name Vantora, is building startups for industrial corporations.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/",
+    "publishedAt": "2026-09-18",
     "aiGenerated": false,
     "humanReviewed": false
   }

@@ -47,11 +47,11 @@ export const topModels: TopModel[] = [
   },
   {
     rank: 3,
-    name: "Gemini 3.8 Flash / Gemini 3.7 Pro",
+    name: "Gemini 3.8 Live / 3.8 Flash / 3.7 Pro",
     provider: "Google DeepMind (USA)",
     license: "Proprietär",
-    cutoff: "August 2026",
-    benchmarkHighlights: "Intelligence Index 59, Führend an der Pareto-Frontier (Geschwindigkeit vs. Kosten), 4 Mio. Tokens Kontext",
+    cutoff: "September 2026",
+    benchmarkHighlights: "Gemini 3.8 Live Extended Thinking, Intelligence Index 59, Pareto-Frontier (Speed vs. Cost), 4 Mio. Tokens Kontext",
     dataSources: {
       web: "Echtzeitnaher Google Web-Index, weltweite News-Archive, Wikipedia und mehrsprachige redaktionelle Sammlungen.",
       books: "Google Books Digitalisierungsprojekte, akademische Fachzeitschriften und internationale Rechtskommentare.",

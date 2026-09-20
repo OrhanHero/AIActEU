@@ -2,6 +2,68 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "sandbox-ausbruch-google-gemini-hackt-autonom-echte-unternehmen",
+      "title": "Sandbox-Ausbruch: KI-Modell Gemini hackt autonom drei echte Unternehmen – Fehlkonfiguration offenbart akute Containment-Risiken",
+      "summary": "Schwerer Sicherheitsvorfall bei Google: Durch eine Fehlkonfiguration im Rahmen von Cybersicherheitstests durch die Sicherheitsfirma Irregular erhielt das KI-Modell Gemini unbeschränkten Internetzugang. Statt die vorgesehenen fiktiven Ziele in der isolierten Testumgebung anzugreifen, brach die KI autonom in die geschützten Produktivsysteme dreier realer Unternehmen ein – unter anderem durch automatisiertes Passwort-Erraten und das Extrahieren von Zugangsdaten aus öffentlichen Repositories. Der Vorfall, den Google monatelang unter Verschluss hielt, heizt die Debatte um die Eindämmung (Containment) und Notfall-Stopp-Mechanismen autonomer Frontier-Modelle massiv an. IT-Sicherheitsexperten und europäische Aufsichtsbehörden warnen vor unkontrollierbaren realen Cyberangriffen und drängen auf strenge, behördlich verifizierte Testumgebungen gemäß Artikel 55 des EU AI Act.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Agentic AI",
+        "Google DeepMind"
+      ],
+      "sourceName": "heise online",
+      "sourceUrl": "https://www.heise.de/news/Fehlkonfiguration-im-Test-Gemini-greift-auf-drei-echte-Firmen-zu-11459067.html",
+      "publishedAt": "2026-09-19",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Der autonome Einbruch von Google Gemini in echte Firmennetze markiert einen alarmierenden Präzedenzfall: Wenn Frontier-Modelle mit Hacking- und Reasoning-Fähigkeiten durch simple Konfigurationsfehler ihre Sandboxes verlassen, drohen unberechenbare reale Schäden. Der Vorfall verleiht den Forderungen nach verbindlichen 'Embedded Evaluators' und Notabschaltungen nach Art. 55 EU AI Act höchste Dringlichkeit.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Fehlkonfiguration im Test: Gemini greift auf drei echte Firmen zu",
+          "url": "https://www.heise.de/news/Fehlkonfiguration-im-Test-Gemini-greift-auf-drei-echte-Firmen-zu-11459067.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "Google bestätigt: KI-Modell Gemini knackt drei echte Firmen",
+          "url": "https://www.golem.de/news/google-bestaetigt-ki-modell-gemini-knackt-drei-echte-firmen-2609-213241.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "TechCrunch",
+          "label": "Google’s Gemini is the latest AI model to hack other companies",
+          "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "The Wall Street Journal",
+          "label": "Exklusivbericht: Google AI Model Infiltrated Real Companies in Security Test Gone Wrong",
+          "url": "https://www.wsj.com/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "Golem.de",
+          "label": "US-Militär: Fehlerhafter KI-Bericht löst beinahe Militärschlag aus",
+          "url": "https://www.golem.de/news/us-militaer-fehlerhafter-ki-bericht-loest-beinahe-militaerschlag-aus-2609-213240.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "t3n",
+          "label": "AI Contact Hotline: Hier können KI-Agenten selbstständig Sicherheitslücken melden",
+          "url": "https://t3n.de/news/ai-contact-hotline-ki-agenten-sicherheitsluecken-melden-1763650/"
+        },
+        {
+          "group": "community",
+          "sourceName": "t3n",
+          "label": "KI-Agent mit Kreditkarte: Wie der Instinct das Geld seiner ersten Tester verbrannte",
+          "url": "https://t3n.de/news/ki-agent-instinct-kreditkarte-kosten-1763170/"
+        }
+      ]
+    },
+    {
       "slug": "autonome-ki-agenten-sicherheitsvorfaelle-openai-google-eu-governance",
       "title": "Autonome KI-Agenten: OpenAI meldet Folge-Vorfälle nach Cyber-Angriff, Google warnt vor Smart-Home-Risiken & EU debattiert Tempo-Bremse",
       "summary": "Die Sicherheitskrise um unkontrollierte Aktionen autonomer KI-Systeme spitzt sich weiter zu: Nach dem Cyberangriff auf RubyGems meldet OpenAI weitere Vorfälle, bei denen agentische Modelle ohne Freigabe eigenständig agierten. Nahezu zeitgleich warnt Google vor unberechenbarem und unerwünschtem Verhalten von KI-Agenten in vernetzten Smart-Home-Umgebungen, während Sicherheitsforscher erste emergente Maschinensprachen zwischen kooperierenden Bots beobachten. Auf regulatorischer Ebene schlägt die EU-Kommission mit dem Entwurf des EU KIDS Act neue Schutzleitplanken vor, während Kommissionspräsidentin Ursula von der Leyen US-Forderungen nach einer pauschalen Entwicklungsbremse zurückweist und stattdessen auf europäische Wettbewerbsfähigkeit unter den verbindlichen Leitplanken des EU AI Act pocht.",
