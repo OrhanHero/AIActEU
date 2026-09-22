@@ -77,11 +77,11 @@ export const topModels: TopModel[] = [
   },
   {
     rank: 5,
-    name: "Grok 4.6 / Grok 4.5",
+    name: "Grok 4.7 / Grok 4.6",
     provider: "xAI (USA)",
     license: "Proprietär",
-    cutoff: "August 2026 (mit X-Echtzeit-Feed)",
-    benchmarkHighlights: "Colossus Supercluster II Training (200k+ GPUs), führend bei agentischer Effizienz und mathematischem Reasoning",
+    cutoff: "September 2026 (mit X-Echtzeit-Feed)",
+    benchmarkHighlights: "Grok 4.7 Hochleistungs-API mit extrem hohem Durchsatz, Colossus Supercluster II Training (200k+ GPUs), führend bei agentischer Effizienz und mathematischem Reasoning",
     dataSources: {
       web: "Echtzeit-Datenstrom der X-Plattform, globale Nachrichtenfeeds und strukturierte Wissensdatenbanken.",
       books: "Technische Standardwerke, digitalisierte wissenschaftliche Bibliotheken und Enzyklopädien.",

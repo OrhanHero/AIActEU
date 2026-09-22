@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
-**Datum:** 20.09.2026 (Aktualisiert)  
-**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 20.09.2026: 25+ verifizierte Quellen, Lead Story zum Sandbox-Ausbruch von Gemini & Containment-Governance aktiv, siehe [`README.md`](./README.md))  
+**Datum:** 22.09.2026 (Aktualisiert)  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 22.09.2026: 228 ingestierte Artikel aus verifizierten Quellen, Lead Story zu globaler KI-Governance, Kartellklagen & autonomen Shopping-Agenten aktiv, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---

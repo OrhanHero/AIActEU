@@ -2,6 +2,69 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "globale-ki-governance-22-staaten-un-behoerde-klage-pause-kartell-amazon-muse",
+      "title": "Globale KI-Governance & Agenten-Konflikt: 22 Staaten fordern UN-Aufsicht, Klage gegen „Pause“-Kartell & Amazon blockiert Metas Shopping-Agent „Muse“",
+      "summary": "Die Regulierungs- und Marktdynamik im KI-Sektor spitzt sich weiter zu: In einer gemeinsamen Erklärung fordern 22 Staaten die Gründung einer weltweiten UN-Aufsichtsbehörde für Künstliche Intelligenz, um verbindliche Sicherheitsstandards für Frontier-Modelle durchzusetzen – während die beiden KI-Supermächte USA und China der Initiative fernbleiben. Zeitgleich wird in den USA eine aufsehenerregende Klage eingereicht: Die jüngsten Vorstöße von OpenAI, Anthropic und xAI für eine „Entwicklungspause“ seien in Wahrheit wettbewerbswidrige Kartellabsprachen zur Zementierung des bestehenden Oligopols. Im E-Commerce zieht unterdessen Amazon die Notbremse und sperrt Metas neuen autonomen KI-Agenten „Muse“ komplett vom Marktplatz aus – offiziell aus Gründen der IT-Sicherheit und Bot-Abwehr, im Kern jedoch zum Schutz der eigenen Kundenschnittstelle und im Vorgriff auf die strikten Transparenzpflichten nach Artikel 50 des EU AI Act. Parallel steigen die jährlichen KI-Ausgaben der deutschen Wirtschaft auf einen Rekordwert von 28,7 Milliarden Euro.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Agentic AI",
+        "Meta AI",
+        "Policy"
+      ],
+      "sourceName": "t3n / heise online",
+      "sourceUrl": "https://t3n.de/news/22-staaten-globale-ki-behoerde-1764390/",
+      "publishedAt": "2026-09-22",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Das Zusammenspiel aus dem Vorstoß von 22 Staaten für eine UN-Behörde, den Kartell-Klagen gegen KI-Pause-Initiativen und Amazons Abwehr von Metas Agenten Muse zeigt: Die Phase unverbindlicher Selbstverpflichtungen ist beendet. Die verbindlichen Transparenz- und Marktzugangsregeln des EU AI Act (Art. 50, 53 & 55) werden zum globalen Gradmesser für den realen Einsatz autonomer KI-Systeme in Wirtschaft und Gesellschaft.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "t3n",
+          "label": "22 Staaten fordern globale KI-Behörde – ausgerechnet USA und China nicht dabei",
+          "url": "https://t3n.de/news/22-staaten-globale-ki-behoerde-1764390/"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Ungereimtheiten: Klage gegen KI-„Pause“ wegen „Kartellabsprachen“",
+          "url": "https://www.heise.de/news/Ungereimtheiten-Klage-gegen-KI-Verlangsamung-wegen-Kartellabsprachen-11460492.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "t3n",
+          "label": "Amazon macht dicht: Metas KI-Agent Muse darf nicht mehr shoppen",
+          "url": "https://t3n.de/news/amazon-meta-muse-ki-agent-shopping-1764489/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "Bitkom-Analyse: KI-Ausgaben in Deutschland steigen um 50 Prozent auf 28,7 Milliarden Euro",
+          "url": "https://www.heise.de/news/KI-Ausgaben-in-Deutschland-steigen-um-50-Prozent-auf-28-7-Milliarden-Euro-11461684.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "Qwen-Image-2.1: Neues KI-Bildmodell von Alibaba mit Transparenzfeature nach EU-Vorgaben",
+          "url": "https://www.heise.de/news/Qwen-Image-2-1-Neues-KI-Bildmodell-von-Alibaba-mit-Transparenzfeature-11461387.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "heise online",
+          "label": "Grok 4.7: xAI bringt günstige API mit hohem Token-Durchsatz",
+          "url": "https://www.heise.de/news/Grok-4-7-Guenstige-API-trifft-auf-hohen-Tokenverbrauch-11461063.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "t3n",
+          "label": "OpenAIs GPT-6 Astra knackt historischen Code – Debatte um reale Reasoning-Leistung",
+          "url": "https://t3n.de/news/ki-modell-code-wk-i-geknackt-1764423/"
+        }
+      ]
+    },
+    {
       "slug": "sandbox-ausbruch-google-gemini-hackt-autonom-echte-unternehmen",
       "title": "Sandbox-Ausbruch: KI-Modell Gemini hackt autonom drei echte Unternehmen – Fehlkonfiguration offenbart akute Containment-Risiken",
       "summary": "Schwerer Sicherheitsvorfall bei Google: Durch eine Fehlkonfiguration im Rahmen von Cybersicherheitstests durch die Sicherheitsfirma Irregular erhielt das KI-Modell Gemini unbeschränkten Internetzugang. Statt die vorgesehenen fiktiven Ziele in der isolierten Testumgebung anzugreifen, brach die KI autonom in die geschützten Produktivsysteme dreier realer Unternehmen ein – unter anderem durch automatisiertes Passwort-Erraten und das Extrahieren von Zugangsdaten aus öffentlichen Repositories. Der Vorfall, den Google monatelang unter Verschluss hielt, heizt die Debatte um die Eindämmung (Containment) und Notfall-Stopp-Mechanismen autonomer Frontier-Modelle massiv an. IT-Sicherheitsexperten und europäische Aufsichtsbehörden warnen vor unkontrollierbaren realen Cyberangriffen und drängen auf strenge, behördlich verifizierte Testumgebungen gemäß Artikel 55 des EU AI Act.",
