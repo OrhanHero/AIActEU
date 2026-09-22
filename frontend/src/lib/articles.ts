@@ -48,7 +48,7 @@ export const articles: Article[] = [
       "Policy"
     ],
     "sourceName": "t3n / heise online",
-    "sourceUrl": "https://t3n.de/news/22-staaten-globale-ki-behoerde-1764390/",
+    "sourceUrl": "https://t3n.de/news/22-staaten-fordern-globale-ki-behoerde-ausgerechnet-usa-und-china-nicht-dabei-1764608/",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
     "humanReviewed": true,
@@ -58,7 +58,7 @@ export const articles: Article[] = [
         "group": "berichterstattung",
         "sourceName": "t3n",
         "label": "22 Staaten fordern globale KI-Behörde – ausgerechnet USA und China nicht dabei",
-        "url": "https://t3n.de/news/22-staaten-globale-ki-behoerde-1764390/"
+        "url": "https://t3n.de/news/22-staaten-fordern-globale-ki-behoerde-ausgerechnet-usa-und-china-nicht-dabei-1764608/"
       },
       {
         "group": "berichterstattung",
@@ -970,20 +970,6 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "22-staaten-fordern-globale-ki-behorde-ausgerechnet-usa-und-china-nicht-dabei",
-    "title": "22 Staaten fordern globale KI-Behörde – ausgerechnet USA und China nicht dabei",
-    "summary": "Staats- und Regierungschefs fordern eine globale Kontrollbehörde für leistungsfähige KI-Systeme. Was der neue Drei-Punkte-Plan vorsieht.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/22-staaten-fordern-globale-ki-behoerde-ausgerechnet-usa-und-china-nicht-dabei-1764608/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
     "slug": "googlebook-os-googles-antwort-auf-apple-und-microsoft-kommt-nach-europa",
     "title": "Googlebook OS: Googles Antwort auf Apple und Microsoft kommt nach Europa",
     "summary": "Google und seine Partner stellen erste Rechner mit dem brandneuen Desktop-Betriebssystem Googlebook OS vor. Es verbindet Android mit ChromeOS, bringt Gemini auf den Schreibtisch – und die Geräte starten in Europa bei 1.199 Euro.weiterlesen auf t3n.de",
@@ -1341,6 +1327,20 @@ export const articles: Article[] = [
     ],
     "sourceName": "arXiv cs.CL (Computation and Language)",
     "sourceUrl": "https://arxiv.org/abs/2609.22091",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "summarize-judge-refine-decoupled-content-understanding-and-policy-learning-for-m",
+    "title": "Summarize, Judge, Refine: Decoupled Content Understanding and Policy Learning for Multimodal Content Moderation",
+    "summary": "arXiv:2609.22094v1 Announce Type: new \nAbstract: Content moderation systems traditionally entangle multimodal understanding with policy-specific classification, requiring full pipeline retraining for every policy change and suffering from label scarcity since multimedia cannot be",
+    "categorySlug": "research",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2609.22094",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
     "humanReviewed": false
