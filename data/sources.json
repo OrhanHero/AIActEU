@@ -316,19 +316,6 @@
       "displayName": "Golem.de"
     },
     {
-      "name": "t3n (allgemein, nach KI filtern)",
-      "type": "de-quelle",
-      "category": "breaking-news",
-      "feedUrl": "https://t3n.de/rss.xml",
-      "refreshIntervalMinutes": 60,
-      "scopeNote": "Der themenspezifische t3n-KI-Feed war nicht erreichbar; dies ist der allgemeine t3n-Feed. Ingestion muss auf KI-Keywords filtern.",
-      "verified": true,
-      "lastCheckedAt": "2026-09-22",
-      "domain": "general-news",
-      "requiresTopicFilter": true,
-      "displayName": "t3n"
-    },
-    {
       "name": "TechCrunch – Artificial Intelligence",
       "type": "startup",
       "category": "business",

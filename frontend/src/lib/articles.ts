@@ -37,40 +37,27 @@ export type RelatedLink = {
 export const articles: Article[] = [
   {
     "slug": "globale-ki-governance-22-staaten-un-behoerde-klage-pause-kartell-amazon-muse",
-    "title": "Globale KI-Governance & Agenten-Konflikt: 22 Staaten fordern UN-Aufsicht, Klage gegen „Pause“-Kartell & Amazon blockiert Metas Shopping-Agent „Muse“",
-    "summary": "Die Regulierungs- und Marktdynamik im KI-Sektor spitzt sich weiter zu: In einer gemeinsamen Erklärung fordern 22 Staaten die Gründung einer weltweiten UN-Aufsichtsbehörde für Künstliche Intelligenz, um verbindliche Sicherheitsstandards für Frontier-Modelle durchzusetzen – während die beiden KI-Supermächte USA und China der Initiative fernbleiben. Zeitgleich wird in den USA eine aufsehenerregende Klage eingereicht: Die jüngsten Vorstöße von OpenAI, Anthropic und xAI für eine „Entwicklungspause“ seien in Wahrheit wettbewerbswidrige Kartellabsprachen zur Zementierung des bestehenden Oligopols. Im E-Commerce zieht unterdessen Amazon die Notbremse und sperrt Metas neuen autonomen KI-Agenten „Muse“ komplett vom Marktplatz aus – offiziell aus Gründen der IT-Sicherheit und Bot-Abwehr, im Kern jedoch zum Schutz der eigenen Kundenschnittstelle und im Vorgriff auf die strikten Transparenzpflichten nach Artikel 50 des EU AI Act. Parallel steigen die jährlichen KI-Ausgaben der deutschen Wirtschaft auf einen Rekordwert von 28,7 Milliarden Euro.",
+    "title": "Globale KI-Governance & Kartell-Klagen: Vorstoß für UN-Aufsichtsbehörde, Klage gegen „Pause“-Absprachen & KI-Ausgaben auf Rekordhoch",
+    "summary": "Die Regulierungs- und Marktdynamik im KI-Sektor spitzt sich weiter zu: In den USA wurde eine aufsehenerregende Klage eingereicht – die jüngsten Vorstöße von OpenAI, Anthropic und xAI für eine koordinierte „Entwicklungspause“ seien in Wahrheit wettbewerbswidrige Kartellabsprachen zur Zementierung des bestehenden Oligopols. Zeitgleich fordern 22 Staaten in einer gemeinsamen Erklärung die Gründung einer weltweiten UN-Aufsichtsbehörde für Künstliche Intelligenz, um verbindliche Sicherheitsstandards für Frontier-Modelle durchzusetzen. In Europa treiben die Vorgaben des EU AI Act unterdessen neue technische Transparenzfeatures voran: Alibaba versieht sein Bildmodell Qwen-Image-2.1 mit Kennzeichnungsfunktionen nach EU-Standards. Parallel steigen die jährlichen KI-Ausgaben der deutschen Wirtschaft laut Bitkom um 50 Prozent auf den historischen Rekordwert von 28,7 Milliarden Euro.",
     "categorySlug": "policy",
     "tags": [
       "EU AI Act",
       "AI Safety",
-      "Agentic AI",
-      "Meta AI",
-      "Policy"
+      "Policy",
+      "Regulierung"
     ],
-    "sourceName": "t3n / heise online",
-    "sourceUrl": "https://t3n.de/news/22-staaten-fordern-globale-ki-behoerde-ausgerechnet-usa-und-china-nicht-dabei-1764608/",
+    "sourceName": "heise online",
+    "sourceUrl": "https://www.heise.de/news/Ungereimtheiten-Klage-gegen-KI-Verlangsamung-wegen-Kartellabsprachen-11460492.html",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
     "humanReviewed": true,
-    "editorsNote": "Hauptstory der Woche: Das Zusammenspiel aus dem Vorstoß von 22 Staaten für eine UN-Behörde, den Kartell-Klagen gegen KI-Pause-Initiativen und Amazons Abwehr von Metas Agenten Muse zeigt: Die Phase unverbindlicher Selbstverpflichtungen ist beendet. Die verbindlichen Transparenz- und Marktzugangsregeln des EU AI Act (Art. 50, 53 & 55) werden zum globalen Gradmesser für den realen Einsatz autonomer KI-Systeme in Wirtschaft und Gesellschaft.",
+    "editorsNote": "Hauptstory der Woche: Die Kartellklagen gegen die Absprachen führender Labore und der weltweite Druck auf verbindliche Governance belegen: Die Ära unverbindlicher Selbstverpflichtungen weicht strikten Rechtsrahmen. Die Transparenz- und Kennzeichnungsregeln des EU AI Act (Art. 50 & 53) setzen dabei weltweit die Maßstäbe.",
     "relatedLinks": [
-      {
-        "group": "berichterstattung",
-        "sourceName": "t3n",
-        "label": "22 Staaten fordern globale KI-Behörde – ausgerechnet USA und China nicht dabei",
-        "url": "https://t3n.de/news/22-staaten-fordern-globale-ki-behoerde-ausgerechnet-usa-und-china-nicht-dabei-1764608/"
-      },
       {
         "group": "berichterstattung",
         "sourceName": "heise online",
         "label": "Ungereimtheiten: Klage gegen KI-„Pause“ wegen „Kartellabsprachen“",
         "url": "https://www.heise.de/news/Ungereimtheiten-Klage-gegen-KI-Verlangsamung-wegen-Kartellabsprachen-11460492.html"
-      },
-      {
-        "group": "berichterstattung",
-        "sourceName": "t3n",
-        "label": "Amazon macht dicht: Metas KI-Agent Muse darf nicht mehr shoppen",
-        "url": "https://t3n.de/news/amazon-meta-muse-ki-agent-shopping-1764489/"
       },
       {
         "group": "hintergrund",
@@ -92,9 +79,9 @@ export const articles: Article[] = [
       },
       {
         "group": "community",
-        "sourceName": "t3n",
-        "label": "OpenAIs GPT-6 Astra knackt historischen Code – Debatte um reale Reasoning-Leistung",
-        "url": "https://t3n.de/news/ki-modell-code-wk-i-geknackt-1764423/"
+        "sourceName": "heise online",
+        "label": "heise Security: Autonome KI-Angreifer – Leitfaden zur IT-Verteidigung",
+        "url": "https://www.heise.de/news/heise-security-Webinar-So-verteidigt-man-sich-gegen-angreifende-KI-Agenten-11461303.html"
       }
     ],
     "breaking": true,
@@ -147,18 +134,6 @@ export const articles: Article[] = [
         "sourceName": "Golem.de",
         "label": "US-Militär: Fehlerhafter KI-Bericht löst beinahe Militärschlag aus",
         "url": "https://www.golem.de/news/us-militaer-fehlerhafter-ki-bericht-loest-beinahe-militaerschlag-aus-2609-213240.html"
-      },
-      {
-        "group": "community",
-        "sourceName": "t3n",
-        "label": "AI Contact Hotline: Hier können KI-Agenten selbstständig Sicherheitslücken melden",
-        "url": "https://t3n.de/news/ai-contact-hotline-ki-agenten-sicherheitsluecken-melden-1763650/"
-      },
-      {
-        "group": "community",
-        "sourceName": "t3n",
-        "label": "KI-Agent mit Kreditkarte: Wie der Instinct das Geld seiner ersten Tester verbrannte",
-        "url": "https://t3n.de/news/ki-agent-instinct-kreditkarte-kosten-1763170/"
       }
     ],
     "breaking": true,
@@ -176,19 +151,13 @@ export const articles: Article[] = [
       "OpenAI",
       "Google DeepMind"
     ],
-    "sourceName": "t3n / heise online",
-    "sourceUrl": "https://t3n.de/news/openai-ki-besorrgniserregend-1763810/",
+    "sourceName": "heise online / Golem.de",
+    "sourceUrl": "https://www.heise.de/news/Google-warnt-KI-Agenten-im-Smart-Home-koennen-sich-unerwuenscht-verhalten-11454521.html",
     "publishedAt": "2026-09-17",
     "aiGenerated": false,
     "humanReviewed": true,
     "editorsNote": "Hauptstory der Woche: Die jüngsten Vorfälle bei OpenAI und die Smart-Home-Warnungen von Google belegen eindrücklich: Autonome KI-Agenten verlassen kontrollierte Testumgebungen schneller als erwartet. Während in den USA eine gegenseitige Unternehmens-Selbstkontrolle scheitert, unterstreicht die Haltung der EU-Kommission die Dringlichkeit verbindlicher Risikobewertungen und Notfall-Stopp-Mechanismen nach dem EU AI Act (Art. 55).",
     "relatedLinks": [
-      {
-        "group": "berichterstattung",
-        "sourceName": "t3n",
-        "label": "Nach Hacking-Attacke: OpenAI meldet weitere Fälle, in denen KI auf eigene Faust handelt",
-        "url": "https://t3n.de/news/openai-ki-besorrgniserregend-1763810/"
-      },
       {
         "group": "berichterstattung",
         "sourceName": "heise online",
@@ -209,12 +178,6 @@ export const articles: Article[] = [
       },
       {
         "group": "hintergrund",
-        "sourceName": "t3n",
-        "label": "Weniger Tempo bei der KI-Entwicklung? Von der Leyen widerspricht Trump",
-        "url": "https://t3n.de/news/weniger-tempo-bei-der-ki-entwicklung-von-der-leyen-widerspricht-trump-1763730/"
-      },
-      {
-        "group": "hintergrund",
         "sourceName": "TechCrunch",
         "label": "Anthropic and OpenAI want to embed safety evaluators. Will they really be independent?",
         "url": "https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/"
@@ -224,12 +187,6 @@ export const articles: Article[] = [
         "sourceName": "Golem.de",
         "label": "Elon Musk fordert: Unternehmen sollen ihre KI-Systeme gegenseitig prüfen – Firmen lehnen ab",
         "url": "https://www.golem.de/news/elon-musk-fordert-unternehmen-sollen-ihre-ki-systeme-gegenseitig-pruefen-2609-212988.html"
-      },
-      {
-        "group": "community",
-        "sourceName": "t3n",
-        "label": "Alles selbst verschuldet: Was tatsächlich hinter dem KI-Alarm von OpenAI und Anthropic steckt",
-        "url": "https://t3n.de/news/alles-selbst-verschuldet-was-tatsaechlich-hinter-dem-ki-alarm-von-openai-und-anthropic-steckt-1763585/"
       },
       {
         "group": "community",
@@ -294,12 +251,6 @@ export const articles: Article[] = [
         "sourceName": "Golem.de",
         "label": "Angst vor Super-KI eint plötzlich die größten Rivalen (Amodei, Altman, Musk)",
         "url": "https://www.golem.de/news/anthropic-angst-vor-super-ki-eint-ploetzlich-die-groessten-rivalen-2609-212954.html"
-      },
-      {
-        "group": "community",
-        "sourceName": "t3n",
-        "label": "Nach KI-Agenten-Vorfall: Anthropic-Chef fordert Drosselung der KI-Entwicklung",
-        "url": "https://t3n.de/news/anthropic-openai-drosselung-ki-entwicklung-agenten-ausbruch-1763082/"
       }
     ],
     "breaking": true,
@@ -566,8 +517,8 @@ export const articles: Article[] = [
       "EU AI Act",
       "Transparenz"
     ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/claude-wasserzeichen-nutzer-kritisieren-anthropic-1757852/",
+    "sourceName": "heise online",
+    "sourceUrl": "https://www.heise.de/news/Claude-Nutzer-aeussern-wegen-des-neuen-Wasserzeichens-Kritik-an-Anthropic-11412904.html",
     "publishedAt": "2026-08-13",
     "aiGenerated": true,
     "humanReviewed": false,
@@ -688,20 +639,6 @@ export const articles: Article[] = [
     "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
-    "slug": "ungereimtheiten-klage-gegen-ki-pause-wegen-kartellabsprachen",
-    "title": "Ungereimtheiten: Klage gegen KI- „Pause“ wegen „Kartellabsprachen “",
-    "summary": "Vier Menschen klagen gegen die Pläne großer KI-Firmen, die Entwicklung von KI eigenständig zu verlangsamen. Bei der Klage gibt es einige Ungereimtheiten.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Ungereimtheiten-Klage-gegen-KI-Verlangsamung-wegen-Kartellabsprachen-11460492.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
     "slug": "ki-ausgaben-in-deutschland-steigen-um-50-prozent-auf-28-7-milliarden-euro",
     "title": "KI-Ausgaben in Deutschland steigen um 50 Prozent auf 28,7 Milliarden Euro",
     "summary": "In Deutschland werden in diesem Jahr fast 30 Milliarden für KI ausgegeben, das sind 50 Prozent mehr als vor einem Jahr. 2027 sollen es noch viel mehr werden.",
@@ -743,9 +680,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/news/heise-security-Webinar-So-verteidigt-man-sich-gegen-angreifende-KI-Agenten-11461303.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+    "humanReviewed": false
   },
   {
     "slug": "peloton-bringt-neue-laufbander-mal-hochklappbar-mal-mit-computer-vision",
@@ -760,7 +695,9 @@ export const articles: Article[] = [
     "sourceUrl": "https://www.heise.de/news/Peloton-bringt-neue-Laufbaender-Mal-hochklappbar-mal-mit-KI-11461225.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "qwen-image-2-1-neues-ki-bildmodell-von-alibaba-mit-transparenzfeature",
@@ -822,6 +759,35 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
+    "slug": "how-trane-gets-building-insights-60x-faster-with-amazon-bedrock-agentcore",
+    "title": "How Trane gets building insights 60x faster with Amazon Bedrock AgentCore",
+    "summary": "In about four weeks, Trane Technologies built an AI-powered agentic solution on Amazon Bedrock AgentCore that reduced a 20-minute, multi-screen building diagnostic workflow to a 20-second natural language interaction, a 60x improvement in time-to-insight. This post shares the arc",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-trane-gets-building-insights-60x-faster-with-amazon-bedrock-agentcore/",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-tata-elxsi-detects-industrial-safety-risks-in-seconds-on-aws",
+    "title": "How Tata Elxsi detects industrial safety risks in seconds on AWS",
+    "summary": "Learn how Tata Elxsi built IRIS, a real-time industrial safety platform on AWS. IRIS filters camera video at the edge, streams metadata through Amazon Kinesis, runs computer vision on Amazon SageMaker AI, and correlates detections into high-confidence alerts, detecting unsafe con",
+    "categorySlug": "technisch",
+    "tags": [
+      "Meta AI",
+      "AI Safety"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-tata-elxsi-detects-industrial-safety-risks-in-seconds-on-aws/",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
     "slug": "extending-public-sector-intelligence-with-agentforce-and-aws",
     "title": "Extending public sector intelligence with Agentforce and AWS",
     "summary": "Public sector agencies process large volumes of unstructured evidence, such as body camera footage and scanned documents. This post shows how to combine Amazon Bedrock Data Automation with the Model Context Protocol (MCP) to turn that data into structured insights and surface the",
@@ -834,7 +800,9 @@ export const articles: Article[] = [
     "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/extending-public-sector-intelligence-with-agentforce-and-aws/",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
-    "humanReviewed": false
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
     "slug": "transformers-now-runs-llama-cpp-quants",
@@ -849,9 +817,7 @@ export const articles: Article[] = [
     "sourceUrl": "https://huggingface.co/blog/transformers-llama-cpp-quants",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+    "humanReviewed": false
   },
   {
     "slug": "jun-kim-omlx-creator-and-maintainer-joins-hugging-face-to-support-the-mlx-commun",
@@ -950,81 +916,6 @@ export const articles: Article[] = [
     ],
     "sourceName": "Golem.de",
     "sourceUrl": "https://www.golem.de/news/maschinen-herrschaft-abgesagt-warum-die-ki-panikmache-unfug-ist-2609-213279.html",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "studie-als-ki-agent-stanford-tool-macht-forschungsartikel-interaktiv",
-    "title": "Studie als KI-Agent: Stanford-Tool macht Forschungsartikel interaktiv",
-    "summary": "Mit Paper2Agent hat ein Team aus Stanford ein kostenloses Framework entwickelt, das aus einzelnen Studien interaktive KI-Agenten macht. Die können nicht nur Fragen beantworten, sondern auch untereinander kommunizieren.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "RAG",
-      "Agentic AI"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/studie-als-ki-agent-stanford-tool-macht-forschungsartikel-interaktiv-1764493/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "googlebook-os-googles-antwort-auf-apple-und-microsoft-kommt-nach-europa",
-    "title": "Googlebook OS: Googles Antwort auf Apple und Microsoft kommt nach Europa",
-    "summary": "Google und seine Partner stellen erste Rechner mit dem brandneuen Desktop-Betriebssystem Googlebook OS vor. Es verbindet Android mit ChromeOS, bringt Gemini auf den Schreibtisch – und die Geräte starten in Europa bei 1.199 Euro.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind",
-      "EU AI Act"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/googlebook-os-googles-antwort-auf-apple-und-microsoft-kommt-nach-europa-1764499/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "neue-android-malware-mit-ki-unterstutzung-entdeckt-warum-betroffenen-nur-noch-ei",
-    "title": "Neue Android-Malware mit KI-Unterstützung entdeckt: Warum Betroffenen nur noch ein Werksreset bleibt",
-    "summary": "Android-User:innen müssen derzeit mehr Vorsicht im Netz walten lassen. Eine neue Malware, die KI für ihre Zwecke missbraucht, hat es speziell auf Geräte mit Googles Betriebssystem abgesehen. Welche Schäden „Rathat“ verursachen kann und wie du dich davor schützt.\nweiterlesen auf t",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind",
-      "EU AI Act"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/android-malware-ki-unterstuetzung-werksreset-1764460/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "28-7-milliarden-euro-deutschland-gibt-so-viel-fur-ki-aus-wie-nie-zuvor",
-    "title": "28,7 Milliarden Euro: Deutschland gibt so viel für KI aus wie nie zuvor",
-    "summary": "KI-Software bleibt Wachstumstreiber: Deutsche Unternehmen investieren 2026 deutlich mehr, um Prozesse zu beschleunigen und Produkte zu verbessern.weiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act",
-      "Deutschland"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/287-milliarden-euro-deutschland-gibt-so-viel-fuer-ki-aus-wie-nie-zuvor-1764506/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
-    "publishedAt": "2026-09-22",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "amazon-macht-dicht-metas-ki-agent-muse-darf-nicht-mehr-shoppen",
-    "title": "Amazon macht dicht: Metas KI-Agent Muse darf nicht mehr shoppen",
-    "summary": "Amazon blockiert Metas KI-Agenten Muse beim Online-Shopping. Offiziell geht es um Datenschutz und Sicherheit, im Kern aber um die Kontrolle der Kundenbeziehung.\nweiterlesen auf t3n.de",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Meta AI",
-      "Agentic AI"
-    ],
-    "sourceName": "t3n",
-    "sourceUrl": "https://t3n.de/news/amazon-meta-muse-ki-agent-shopping-1764489/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
     "humanReviewed": false
@@ -1341,6 +1232,62 @@ export const articles: Article[] = [
     ],
     "sourceName": "arXiv cs.CL (Computation and Language)",
     "sourceUrl": "https://arxiv.org/abs/2609.22094",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "ai-inferred-expressed-well-being-and-collective-action-discourse-in-climate-chan",
+    "title": "AI-inferred expressed well-being and collective-action discourse in climate-change campaigns on X",
+    "summary": "arXiv:2609.22096v1 Announce Type: new \nAbstract: Climate campaigns are often evaluated through attention and mobilization, but less is known about the well-being language that accompanies them. Whether campaign periods alter positive affect and hope, and whether happiness aligns ",
+    "categorySlug": "research",
+    "tags": [
+      "AI Safety"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2609.22096",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "token-signatures-of-code-comparing-coding-behaviors-across-large-language-models",
+    "title": "Token Signatures of Code: Comparing Coding Behaviors Across Large Language Models",
+    "summary": "arXiv:2609.22097v1 Announce Type: new \nAbstract: The evaluation of large language models (LLMs) on coding tasks has primarily focused on performance metrics such as pass@k. As LLMs continue to advance, many models now meet baseline performance requirements, reducing the discrimin",
+    "categorySlug": "research",
+    "tags": [
+      "AI Safety"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2609.22097",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "treespark-calibrated-load-adaptive-draft-trees-for-semi-autoregressive-speculati",
+    "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+    "summary": "arXiv:2609.22098v1 Announce Type: new \nAbstract: Speculative decoding accelerates language-model inference by letting a cheap drafter propose tokens that the target model verifies in parallel. Recent block drafters make drafting nearly free: a single backbone pass emits an entire",
+    "categorySlug": "research",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2609.22098",
+    "publishedAt": "2026-09-22",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "a-framework-for-recipe-data-structure-with-applications-for-culinary-and-nutriti",
+    "title": "A framework for recipe data structure with applications for culinary and nutritional insights",
+    "summary": "arXiv:2609.22099v1 Announce Type: new \nAbstract: Cooking is a complex process that transforms raw ingredients into delicious and nutritious dishes, yet the recipes that encode this process remain largely free text; readable by people but not directly computable. Existing recipe c",
+    "categorySlug": "research",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "arXiv cs.CL (Computation and Language)",
+    "sourceUrl": "https://arxiv.org/abs/2609.22099",
     "publishedAt": "2026-09-22",
     "aiGenerated": false,
     "humanReviewed": false

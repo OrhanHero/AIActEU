@@ -340,7 +340,7 @@ AIActEU KI News Hub
 | **Newsletter** | The Batch, Import AI, TLDR AI, Ben's Bites | 1x täglich |
 | **Papers** | arXiv, Papers with Code, Semantic Scholar | 2h |
 | **Dev Blogs** | LangChain, LlamaIndex, W&B, Lightning, Ollama | 2h |
-| **Deutsche Quellen** | Heise, Golem, t3n, KI-Echo | 1h |
+| **Deutsche Quellen** | Heise, Golem, KI-Echo | 1h |
 | **Startup News** | Crunchbase, PitchBook, TechCrunch, Gründerszene | 3h |
 | **Policy** | EU Digital Strategy, BMI, BfDI, Bundestag | 1x täglich |
 
