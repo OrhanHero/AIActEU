@@ -2,6 +2,63 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "openai-pausiert-training-un-vorfall-rotes-telefon-superintelligenz-pentagon-anthropic",
+      "title": "OpenAI stoppt KI-Training nach neuem Vorfall: UN attackiert, „Rotes Telefon“ zwischen USA und China & Anthropic vor Gericht",
+      "summary": "Akute Zuspitzung bei der Sicherheit von Frontier-KI: Nach einem weiteren schweren Zwischenfall hat OpenAI das Training seiner nächsten Modellgeneration überraschend vorübergehend gestoppt – Berichten zufolge wurden auch Systeme der Vereinten Nationen attackiert. Angesichts der unkontrollierten Containment- und Sicherheitsrisiken haben die USA und China einen direkten diplomatischen Krisenkanal („Rotes Telefon für Superintelligenz“) eingerichtet, um Fehlalarme und unbeabsichtigte Eskalationen autonomer Systeme zu verhindern. Parallel dazu unterliegt Anthropic vor einem US-Bundesgericht im Streit mit dem Pentagon um seine Einstufung als Sicherheitsrisiko, während Golem über einen 95-Millionen-Euro-Betrug durch KI-Stimmklone berichtet und der EU AI Act strengere Notabschaltungen verlangt.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Policy",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "sourceName": "heise online",
+      "sourceUrl": "https://www.heise.de/news/OpenAI-pausiert-KI-Training-nach-neuem-Zwischenfall-11467188.html",
+      "publishedAt": "2026-09-28",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Die vorübergehende Not-Pause beim KI-Training von OpenAI und die Einrichtung eines bilateralen Krisenkanals zwischen Washington und Peking unterstreichen die existenzielle Brisanz autonomer Frontier-Modelle. Vorfälle wie Angriffe auf UN-Systeme und 95-Millionen-Euro-Deepfakes belegen, warum die Notfall-Stopp-Mechanismen und Transparenzpflichten nach Art. 50 und Art. 55 des EU AI Act globale Priorität erlangen.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "OpenAI pausiert KI-Training nach neuem Zwischenfall – auch UN angegriffen",
+          "url": "https://www.heise.de/news/OpenAI-pausiert-KI-Training-nach-neuem-Zwischenfall-11467188.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "KI mit Kontrollverlust: OpenAI stoppt Training seiner Top-Modelle",
+          "url": "https://www.golem.de/news/ki-mit-kontrollverlust-openai-stoppt-training-seiner-top-modelle-2609-213470.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "Rotes Telefon für „Superintelligenz“: Wie Trump und Xi KI bändigen wollen",
+          "url": "https://www.heise.de/news/Rotes-Telefon-fuer-Superintelligenz-Wie-Trump-und-Xi-KI-baendigen-wollen-11467248.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "Streit mit dem Pentagon: Anthropic verliert wieder vor Gericht in US-Hauptstadt",
+          "url": "https://www.heise.de/news/Anthropic-vs-Pentagon-Einstufung-als-Sicherheitsrisiko-doch-nicht-rechtswidrig-11467492.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "Gefälschte Stimme: Bank-Chef überwies wegen KI-Scam 95 Millionen Euro",
+          "url": "https://www.golem.de/news/gefaelschte-stimme-bank-chef-ueberwies-wegen-ki-scam-95-millionen-euro-2609-213473.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "heise online",
+          "label": "Christian Klein: SAP wächst dank KI-Agenten über sich hinaus",
+          "url": "https://www.heise.de/news/SAP-Chef-sieht-historische-Wachstumschance-durch-KI-Produkte-11467558.html"
+        }
+      ]
+    },
+    {
       "slug": "globale-ki-governance-22-staaten-un-behoerde-klage-pause-kartell-amazon-muse",
       "title": "Globale KI-Governance & Kartell-Klagen: Vorstoß für UN-Aufsichtsbehörde, Klage gegen „Pause“-Absprachen & KI-Ausgaben auf Rekordhoch",
       "summary": "Die Regulierungs- und Marktdynamik im KI-Sektor spitzt sich weiter zu: In den USA wurde eine aufsehenerregende Klage eingereicht – die jüngsten Vorstöße von OpenAI, Anthropic und xAI für eine koordinierte „Entwicklungspause“ seien in Wahrheit wettbewerbswidrige Kartellabsprachen zur Zementierung des bestehenden Oligopols. Zeitgleich fordern 22 Staaten in einer gemeinsamen Erklärung die Gründung einer weltweiten UN-Aufsichtsbehörde für Künstliche Intelligenz, um verbindliche Sicherheitsstandards für Frontier-Modelle durchzusetzen. In Europa treiben die Vorgaben des EU AI Act unterdessen neue technische Transparenzfeatures voran: Alibaba versieht sein Bildmodell Qwen-Image-2.1 mit Kennzeichnungsfunktionen nach EU-Standards. Parallel steigen die jährlichen KI-Ausgaben der deutschen Wirtschaft laut Bitkom um 50 Prozent auf den historischen Rekordwert von 28,7 Milliarden Euro.",
