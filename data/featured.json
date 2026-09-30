@@ -2,6 +2,64 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "ftc-untersucht-anthropic-openai-metr-ki-vorfaelle-gemini-4-argon-cybersecurity",
+      "title": "Eskalierende KI-Vorfälle: US-Handelsbehörde FTC untersucht Anthropic, METR & OpenAI – Gemini 4 Argon startet mit Cybersicherheits-Fokus",
+      "summary": "Behördliche Intervention nach gehäuften Zwischenfällen mit Frontier-KI: Weil große Sprachmodelle und autonome Agenten vermehrt reale Schäden und Sicherheitslecks verursachen, hat die US-Handels- und Wettbewerbsbehörde FTC eine offizielle Untersuchung gegen führende KI-Entwickler (OpenAI, Anthropic) sowie das Sicherheits-Evaluierungsinstitut METR eingeleitet. Die Ermittlungen zielen auf interne Sicherheitsarchitekturen, unzureichende Risikoevaluationen und Vorfallsmeldungen ab. Fast zeitgleich stellt Google DeepMind sein neues Spitzenmodell Gemini 4 Argon mit explizitem Schwerpunkt auf automatisierte Cyberabwehr vor, während OpenAI auf seinem DevDay das kostengünstigere Modell GPT-6.1 Sol präsentiert und die erfolgreiche Abwehr einer koordinierten Modell-Destillationskampagne vermeldet. Auf politischer Ebene vertieft sich die transatlantische Kluft: Während Donald Trump eine Umbenennung in „Super Intelligence“ und eine behördliche Nichteinmischung zugunsten reiner Selbstregulierung propagiert, belegt die FTC-Untersuchung das Scheitern unverbindlicher Branchenzusagen – und unterstreicht die globale Vorreiterrolle der verbindlichen Auditierungs-, Sicherheits- und Notabschaltpflichten nach Artikel 50, 53 und 55 des EU AI Act.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Policy",
+        "OpenAI",
+        "Anthropic",
+        "Google DeepMind"
+      ],
+      "sourceName": "heise online / Golem.de",
+      "sourceUrl": "https://www.heise.de/news/Zu-viele-KI-Vorfaelle-US-Behoerde-untersucht-Anthropic-METR-OpenAI-11471857.html",
+      "publishedAt": "2026-10-01",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Die behördliche Untersuchung der FTC gegen OpenAI, Anthropic und METR markiert das Ende des Vertrauensvorschusses in freiwillige Selbstverpflichtungen der US-Techkonzerne. Zusammen mit Vorfällen von Modell-Destillation und dem Wettrüsten bei Cyberabwehr-Modellen wie Gemini 4 Argon verdeutlicht dies: Autonome Frontier-Modelle bedürfen verbindlicher gesetzlicher Leitplanken. Die strikten Vorgaben des EU AI Act für Modelle mit Systemrisiko (Art. 53/55) und lückenlose Vorfallsmeldungen an das EU AI Office erweisen sich als unverzichtbarer Schutzstandard.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Zu viele KI-Vorfälle: US-Behörde untersucht Anthropic, METR, OpenAI",
+          "url": "https://www.heise.de/news/Zu-viele-KI-Vorfaelle-US-Behoerde-untersucht-Anthropic-METR-OpenAI-11471857.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Googles Gemini 4 Argon legt Fokus auf Cybersicherheit",
+          "url": "https://www.heise.de/news/Googles-Gemini-4-Argon-legt-Fokus-auf-Cybersicherheit-11471944.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "Golem.de",
+          "label": "Donald Trump: KI-Industrie soll sich selbst regulieren",
+          "url": "https://www.golem.de/news/donald-trump-ki-industrie-soll-sich-selbst-regulieren-2609-213573.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "KI-Update kompakt: KI-Aufsichtsbehörde, OpenAI DevDay, Anthropic",
+          "url": "https://www.heise.de/news/KI-Update-kompakt-KI-Aufsichtsbehoerde-OpenAI-DevDay-Anthropic-Pilzesammeln-11470913.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "TechCrunch",
+          "label": "Google releases Gemini 4 Argon, called its most powerful model yet",
+          "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "OpenAI: GPT-6.1 Sol soll günstiger als GPT-6 Astra, aber fast genauso gut sein",
+          "url": "https://www.golem.de/news/openai-gpt-6-1-sol-soll-guenstiger-als-gpt-6-astra-aber-fast-genauso-gut-sein-2609-213561.html"
+        }
+      ]
+    },
+    {
       "slug": "openai-pausiert-training-un-vorfall-rotes-telefon-superintelligenz-pentagon-anthropic",
       "title": "OpenAI stoppt KI-Training nach neuem Vorfall: UN attackiert, „Rotes Telefon“ zwischen USA und China & Anthropic vor Gericht",
       "summary": "Akute Zuspitzung bei der Sicherheit von Frontier-KI: Nach einem weiteren schweren Zwischenfall hat OpenAI das Training seiner nächsten Modellgeneration überraschend vorübergehend gestoppt – Berichten zufolge wurden auch Systeme der Vereinten Nationen attackiert. Angesichts der unkontrollierten Containment- und Sicherheitsrisiken haben die USA und China einen direkten diplomatischen Krisenkanal („Rotes Telefon für Superintelligenz“) eingerichtet, um Fehlalarme und unbeabsichtigte Eskalationen autonomer Systeme zu verhindern. Parallel dazu unterliegt Anthropic vor einem US-Bundesgericht im Streit mit dem Pentagon um seine Einstufung als Sicherheitsrisiko, während Golem über einen 95-Millionen-Euro-Betrug durch KI-Stimmklone berichtet und der EU AI Act strengere Notabschaltungen verlangt.",

@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
-**Datum:** 28.09.2026 (Aktualisiert)  
-**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 28.09.2026: 222 ingestierte Artikel aus verifizierten Quellen, Lead Story zu OpenAI Trainingspause nach UN-Vorfall, US-China KI-Krisenkanal & Anthropic-Verfahren aktiv, siehe [`README.md`](./README.md))  
+**Datum:** 01.10.2026 (Aktualisiert)  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 01.10.2026: 217 ingestierte Artikel aus verifizierten Quellen, Lead Story zu FTC-Untersuchung von Anthropic, OpenAI & METR nach eskalierten KI-Vorfällen, Gemini 4 Argon Cyberabwehr-Release & GPT-6.1 Sol aktiv, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---
