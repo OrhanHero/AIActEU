@@ -1,4 +1,6 @@
 import { articles, getTopTags } from "@/lib/articles";
+import { verifiedSourceCount } from "@/lib/sources";
+import lastUpdated from "@/lib/lastUpdated.json";
 import { GlassCard } from "@/components/ui/GlassCard";
 import Link from "next/link";
 
@@ -126,7 +128,7 @@ export function Sidebar() {
       </GlassCard>
 
       {/* Trending Topics */}
-      <WidgetCard title="🔥 Trending Themen">
+      <WidgetCard title="Trending Themen">
         <ul className="flex flex-wrap gap-2">
           {trendingTags.map((tag) => (
             <li key={tag}>
@@ -139,19 +141,28 @@ export function Sidebar() {
       </WidgetCard>
 
       {/* Real-time Ingestion Metrics */}
-      <WidgetCard title="⚡ Ingestion Pipeline">
+      <WidgetCard title="Ingestion Pipeline">
         <div className="flex flex-col gap-3 text-xs text-muted">
           <div className="flex items-center justify-between border-b border-border/60 pb-2">
             <span>Aktive RSS-Quellen:</span>
-            <span className="font-mono font-bold text-foreground">24 Verifiziert</span>
+            <span className="font-mono font-bold text-foreground">{verifiedSourceCount} Verifiziert</span>
           </div>
           <div className="flex items-center justify-between border-b border-border/60 pb-2">
             <span>Live Artikel-Feed:</span>
-            <span className="font-mono font-bold text-foreground">60 Top News</span>
+            <span className="font-mono font-bold text-foreground">{articles.length} Artikel</span>
           </div>
           <div className="flex items-center justify-between">
             <span>Fokus-Region:</span>
             <span className="font-semibold text-primary">DACH & EU Sector</span>
+          </div>
+          <div className="mt-1 border-t border-border/40 pt-2">
+            <span className="text-[10px] text-muted">Letztes Update: </span>
+            <time className="font-mono text-[10px] text-foreground">{lastUpdated.formattedDE}</time>
+            <div className="mt-1.5">
+              <Link href="/quellen" className="text-[10px] font-semibold text-primary hover:underline">
+                Alle Quellen einsehen →
+              </Link>
+            </div>
           </div>
         </div>
       </WidgetCard>

@@ -17,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/verzeichnis",
     "/tutorials",
     "/publikationen",
+    "/quellen",
+    "/ki-analyse",
+    "/audit",
     ...categories.map((category) => `/kategorien/${category.slug}`),
     ...tutorials.map((tutorial) => `/tutorials/${tutorial.slug}`),
   ];

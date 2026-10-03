@@ -29,6 +29,9 @@ export default function Home() {
 
   return (
     <div className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 lg:px-8">
+      {/* Semantischer Seiten-Titel (SEO, Screen-Reader) */}
+      <h1 className="sr-only">AIActEU – KI-News, EU AI Act & Compliance-Überblick</h1>
+
       {/* Top Ticker Status Bar */}
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-primary/20 bg-primary/5 px-4 py-2.5 backdrop-blur-md">
         <div className="flex items-center gap-3 text-xs">
@@ -44,16 +47,7 @@ export default function Home() {
       </div>
 
       {/* Editorial Magazine Hero Section */}
-      <section className="relative mb-12 overflow-hidden">
-        {/* Ambient Glows */}
-        <div
-          className="pointer-events-none absolute -left-20 -top-20 h-96 w-96 animate-float rounded-full bg-blue-500/20 blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute -right-20 top-10 h-96 w-96 animate-float rounded-full bg-purple-500/20 blur-3xl [animation-delay:-4s]"
-          aria-hidden
-        />
+      <section className="mb-12">
 
         <div className="grid gap-6 lg:grid-cols-12">
           {/* Main Hero Story (Left 8 cols) */}
@@ -70,61 +64,23 @@ export default function Home() {
                   </span>
                 </div>
 
-                <h1 className="font-serif-heading text-2xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl group-hover:text-primary transition-colors">
+                <h2 className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl group-hover:text-primary transition-colors">
                   {leadArticle?.title || "Zentrale KI-News, Hardware & EU AI Act Governance"}
-                </h1>
+                </h2>
 
                 <p className="text-sm leading-relaxed text-muted sm:text-base">
                   {leadArticle?.summary || "Kuratierte Nachrichten und wissenschaftliche Einblicke für den deutschsprachigen KI-Sektor – von Hardware & Silicon über LLMs und RAG bis EU-Verhaltenskodex-konformer Kennzeichnung."}
                 </p>
 
-                {/* Hero Editorial Cover Image Window with pulsating EU star effect */}
-                <div className="relative mt-3 h-64 w-full overflow-hidden rounded-2xl border border-blue-900/40 bg-slate-950/95 shadow-2xl sm:h-80 eu-hero-container">
-                  {/* EU Ambient Radial Glows & Starlight Aura */}
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden z-0">
-                    {/* Deep EU Azure Core Glow */}
-                    <div className="absolute h-64 w-64 rounded-full bg-blue-600/30 blur-3xl eu-radial-blue" />
-                    {/* Warm Golden Star Core Glow */}
-                    <div className="absolute h-48 w-48 rounded-full bg-amber-400/20 blur-2xl eu-radial-gold" />
-                    
-                    {/* Subtle Twinkling Golden Accent Stars */}
-                    <div className="absolute inset-0">
-                      {[
-                        { top: "16%", left: "32%", delay: "0s", size: "w-2.5 h-2.5" },
-                        { top: "12%", left: "50%", delay: "0.6s", size: "w-3.5 h-3.5" },
-                        { top: "16%", right: "32%", delay: "1.2s", size: "w-2.5 h-2.5" },
-                        { top: "34%", right: "24%", delay: "1.8s", size: "w-3 h-3" },
-                        { top: "64%", right: "25%", delay: "2.4s", size: "w-2.5 h-2.5" },
-                        { top: "80%", right: "35%", delay: "0.9s", size: "w-3 h-3" },
-                        { top: "84%", left: "50%", delay: "1.5s", size: "w-3.5 h-3.5" },
-                        { top: "80%", left: "35%", delay: "2.1s", size: "w-2.5 h-2.5" },
-                        { top: "64%", left: "25%", delay: "2.7s", size: "w-3 h-3" },
-                        { top: "34%", left: "24%", delay: "0.3s", size: "w-2.5 h-2.5" },
-                      ].map((star, idx) => (
-                        <svg
-                          key={idx}
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className={`absolute ${star.size} text-amber-300/60 eu-sparkle-star`}
-                          style={{
-                            top: star.top,
-                            left: star.left,
-                            right: star.right,
-                            animationDelay: star.delay,
-                          }}
-                        >
-                          <path d="M12 2l2.9 6.26L21.8 9.27l-5 4.87 1.18 6.86L12 17.77l-6 3.23 1.18-6.86-5-4.87 6.9-1.01L12 2z" />
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
+                {/* Hero EU-Bild */}
+                <div className="relative mt-3 h-64 w-full overflow-hidden rounded-2xl border border-blue-900/40 bg-slate-950/95 shadow-xl sm:h-80 eu-hero-container">
 
                   <Image
                     src="/images/hero_ai_act_governance.png"
                     alt="EU AI Act Governance Illustration"
                     fill
                     priority
-                    className="object-contain p-2 transition-transform duration-700 group-hover:scale-[1.02] eu-hero-star-image relative z-[1]"
+                    className="object-contain p-2 transition-transform duration-500 group-hover:scale-[1.01] relative z-[1]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent pointer-events-none z-[2]" />
                   
@@ -236,8 +192,8 @@ export default function Home() {
           <div className="flex flex-col gap-4 lg:col-span-4">
             <div className="flex items-center justify-between rounded-xl border border-border/80 bg-surface/80 px-4 py-3 backdrop-blur-md">
               <h2 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
-                <span className="inline-flex h-2 w-2 rounded-full bg-accent animate-ping" />
-                🚨 Eilmeldungen &amp; Updates
+                <span className="inline-flex h-2 w-2 rounded-full bg-accent" />
+                Eilmeldungen & Updates
               </h2>
               <span className="font-mono text-[10px] text-muted">{breaking.length} Artikel</span>
             </div>
@@ -350,7 +306,7 @@ export default function Home() {
             <section>
               <div className="mb-6 flex items-center justify-between border-b border-border/60 pb-3">
                 <div>
-                  <h2 className="font-serif-heading text-2xl font-bold tracking-tight text-foreground">⭐ Redaktionsempfehlungen</h2>
+                  <h2 className="text-2xl font-bold tracking-tight text-foreground">Redaktionsempfehlungen</h2>
                   <p className="text-xs text-muted">Besonders relevante Analysen und Berichte für die KI-Praxis</p>
                 </div>
               </div>
@@ -366,7 +322,7 @@ export default function Home() {
           <section>
             <div className="mb-6 flex items-center justify-between border-b border-border/60 pb-3">
               <div>
-                <h2 className="font-serif-heading text-2xl font-bold tracking-tight text-foreground">⚡ Neueste Entwicklungen</h2>
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">Neueste Entwicklungen</h2>
                 <p className="text-xs text-muted">Aktuelle Beiträge aus verifizierten KI-Quellen</p>
               </div>
             </div>
