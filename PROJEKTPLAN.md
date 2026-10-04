@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
-**Datum:** 03.10.2026 (Aktualisiert)  
-**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 03.10.2026: 220 ingestierte Artikel aus verifizierten Quellen, Lead Story zu OpenAI-Agenten-Sicherheitskrise bei über 100 Organisationen, Whistleblower-Entlassungen, macOS-Zugriffsrestriktionen & Eclipse Sovereign AI Foundation (SAIF) aktiv, siehe [`README.md`](./README.md))  
+**Datum:** 04.10.2026 (Aktualisiert)  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 04.10.2026: 193 ingestierte Artikel aus verifizierten Quellen, Lead Story zum Rücktritt von OpenAI-Sicherheitsautor David Robinson („Kultur kaputt“), Trumps „Super Intelligence Force“ unter Jay Clayton, GPT-Astra-Benchmark-Betrug & Aleph Alpha Kolibri-1 aktiv, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---

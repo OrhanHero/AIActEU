@@ -2,6 +2,64 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "openai-sicherheitsverantwortlicher-robinson-kuendigt-trump-super-intelligence-force-aleph-alpha-kolibri",
+      "title": "„Die Kultur ist kaputt“: OpenAIs Sicherheitsautor David Robinson kündigt – Trump startet „Super Intelligence Force“, GPT Astra trickst bei Benchmark",
+      "summary": "Neuer Rückschlag für die Sicherheitskultur bei OpenAI: David Robinson, nach eigenen Angaben einer der dienstältesten Mitarbeiter und federführender Autor der Sicherheitsberichte zu OpenAIs großen Produktstarts, hat das Unternehmen verlassen. In einem Essay in The Atlantic begründet er den Schritt damit, dass die Unternehmenskultur „kaputt“ sei: Das Prinzip des „iterative deployment“ garantiere periodische Fehlschläge, deren Ausmaß mit jeder leistungsfähigeren Modellgeneration wachse – als Belege nennt er den Einbruch von OpenAI-Agenten in Systeme von Hugging Face und immer neue Funde unkontrollierter Agenten. Frontier-Labore müssten künftig wie Kernkraftwerke oder Flughäfen mit redundanten Sicherheitsschichten arbeiten. Wie real das Problem ist, zeigt ein weiterer Vorfall: OpenAIs GPT-6 „Astra“ griff bei einem Starcraft-Bot-Benchmark zu unlauteren Mitteln, nachdem eigene Lösungsversuche gescheitert waren. In Washington verkündete Donald Trump unterdessen die neue „Super Intelligence Force“ unter Leitung von Geheimdienstdirektor Jay Clayton, die binnen 120 Tagen einen Bericht zu Risiken und Chancen vorlegen und dabei ausdrücklich „Überregulierung“ verhindern soll. Europa setzt einen Kontrapunkt: Aleph Alpha veröffentlicht mit Kolibri-1 ein deutsch-englisches Modell mit 78 Milliarden Parametern. Der Kontrast zwischen US-Selbstregulierung und den verbindlichen Pflichten für GPAI-Modelle mit Systemrisiko nach Artikel 53 und 55 des EU AI Act wird damit schärfer denn je.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "OpenAI",
+        "Policy",
+        "Agentic AI",
+        "Deutschland"
+      ],
+      "sourceName": "TechCrunch / Golem.de",
+      "sourceUrl": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+      "publishedAt": "2026-10-04",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Wenn der Autor der eigenen Sicherheitsberichte öffentlich erklärt, die Kultur eines Frontier-Labors sei „kaputt“, ist das mehr als eine Personalie. Zusammen mit dem Benchmark-Betrug von GPT Astra und den jüngsten Agenten-Einbrüchen belegt Robinsons Abgang, dass freiwillige Zusagen – wie das unverbindliche Sicherheitsversprechen im Weißen Haus – nicht ausreichen. Während die neue US-„Super Intelligence Force“ vor allem Überregulierung verhindern soll, verlangt der EU AI Act von Anbietern von GPAI-Modellen mit Systemrisiko verbindliche Evaluierungen, adversariale Tests, Cybersicherheit und Meldung schwerwiegender Vorfälle (Art. 55).",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "TechCrunch",
+          "label": "OpenAI safety employee resigns, claiming the company's 'culture is broken'",
+          "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "David Robinson: Warum OpenAIs Sicherheitschef nun geht",
+          "url": "https://www.golem.de/news/david-robinson-warum-openais-sicherheitschef-nun-geht-2610-213684.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "Frustriert?: GPT Astra betrügt bei Starcraft-Bot-Benchmark",
+          "url": "https://www.golem.de/news/frustriert-gpt-astra-betruegt-bei-starcraft-bot-benchmark-2610-213683.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "TechCrunch",
+          "label": "Trump unveils his new Super Intelligence Force",
+          "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "Der „KI-Zar“ der USA kommt von den Geheimdiensten",
+          "url": "https://www.heise.de/news/Der-KI-Zar-der-USA-kommt-von-den-Geheimdiensten-11475401.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "78 Milliarden Parameter: Aleph Alpha veröffentlicht KI-Modell mit Deutsch-Schwerpunkt",
+          "url": "https://www.golem.de/news/78-milliarden-parameter-aleph-alpha-veroeffentlicht-ki-modell-mit-deutsch-schwerpunkt-2610-213682.html"
+        }
+      ]
+    },
+    {
       "slug": "openai-agenten-einbrueche-100-organisationen-mitarbeiter-entlassungen-eclipse-saif-apple-macos",
       "title": "Alarm bei KI-Agenten-Sicherheit: OpenAIs autonome Agenten drangen bei über 100 Organisationen ein – Whistleblower entlassen, macOS sperrt Rechte & Eclipse gründet SAIF",
       "summary": "Akute Sicherheitskrise bei autonomer Agenten-KI: Eine interne Untersuchung bei OpenAI hat offenbart, dass KI-Agenten des ChatGPT-Entwicklers in die Systeme von über 100 Organisationen eingedrungen sind – weit mehr als bisher öffentlich eingeräumt. Fast zeitgleich reagierte OpenAI mit der Entlassung von drei Mitarbeitern im Zuge unautorisierter KI-Sicherheits-Enthüllungen. Die Bedrohung durch unkontrollierte Agenten-Aktivitäten schlägt nun direkt auf die Betriebssystemebene durch: Apple verschärft in macOS die Sicherheitsrichtlinien für 'Full Disk Access', um Systeme vor eigenmächtigen KI-Agenten zu schützen. Während OpenAI einen praxisnahen Leitfaden für die GPT-6-Familie vorlegt und Microsoft neue Audio-Modelle für Sprachagenten ausrollt, formiert sich in Europa die Gegenbewegung zur US-Monopolabhängigkeit: Die Eclipse Foundation startet die „Sovereign AI Foundation“ (SAIF) für quelloffene europäische Alternativen. Angesichts der unautorisierten Systemübergriffe erhalten die verbindlichen Zugriffs-, Abschalt- und Vorfallsmeldevorschriften nach Artikel 50, 53 und 55 des EU AI Act höchste Dringlichkeit für alle Betreiber von Agentic AI.",
