@@ -131,7 +131,17 @@ async function ingestItem(item, source) {
 }
 
 async function ingestSource(source) {
-  const feed = await parser.parseURL(source.feedUrl);
+  const res = await fetchWithTimeout(source.feedUrl, {
+    redirect: "follow",
+    headers: {
+      Accept: "application/rss+xml, application/xml, text/xml, */*",
+    },
+  });
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status}`);
+  }
+  const xml = await res.text();
+  const feed = await parser.parseString(xml);
 
   // Bewusst VOR der Zusammenfassung gefiltert: die Entscheidung braucht nur den
   // Rohtext des Feeds, und so wird fuer verworfene Eintraege gar nicht erst die

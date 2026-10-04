@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
 **Datum:** 04.10.2026 (Aktualisiert)  
-**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 04.10.2026: 193 ingestierte Artikel aus verifizierten Quellen, Lead Story zum Rücktritt von OpenAI-Sicherheitsautor David Robinson („Kultur kaputt“), Trumps „Super Intelligence Force“ unter Jay Clayton, GPT-Astra-Benchmark-Betrug & Aleph Alpha Kolibri-1 aktiv, siehe [`README.md`](./README.md))  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 04.10.2026: 203 ingestierte Artikel aus verifizierten Quellen inkl. Google DeepMind Blog, Lead Story zum Rücktritt von OpenAI-Sicherheitsautor David Robinson („Kultur kaputt“), Trumps „Super Intelligence Force“ unter Jay Clayton, GPT-Astra-Benchmark-Betrug & Aleph Alpha Kolibri-1 aktiv, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---
