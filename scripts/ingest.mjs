@@ -140,7 +140,26 @@ async function ingestSource(source) {
   if (!res.ok) {
     throw new Error(`HTTP ${res.status}`);
   }
-  const xml = await res.text();
+  const buf = Buffer.from(await res.arrayBuffer());
+  let charset = "utf-8";
+  const contentType = res.headers.get("content-type") || "";
+  const ctMatch = contentType.match(/charset=([a-zA-Z0-9_-]+)/i);
+  if (ctMatch) {
+    charset = ctMatch[1].toLowerCase();
+  } else {
+    const head = buf.subarray(0, 200).toString("latin1");
+    const xmlMatch = head.match(/encoding=["']([a-zA-Z0-9_-]+)["']/i);
+    if (xmlMatch) {
+      charset = xmlMatch[1].toLowerCase();
+    }
+  }
+  let xml;
+  try {
+    const decoder = new TextDecoder(charset);
+    xml = decoder.decode(buf);
+  } catch {
+    xml = buf.toString("utf-8");
+  }
   const feed = await parser.parseString(xml);
 
   // Bewusst VOR der Zusammenfassung gefiltert: die Entscheidung braucht nur den

@@ -891,9 +891,9 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "elon-musk-r-umt-ein-teslas-robotaxis-sehen-nachts-zu-wenig",
-    "title": "Elon Musk r�umt ein: Teslas Robotaxis sehen nachts zu wenig",
-    "summary": "Elon Musk hat Angst, dass Teslas Robotaxis Katzen �berfahren. Grund daf�r ist seine Haltung zur Sensorik. L�sen soll das Problem KI. (Tesla, Elektroauto)",
+    "slug": "elon-musk-raumt-ein-teslas-robotaxis-sehen-nachts-zu-wenig",
+    "title": "Elon Musk räumt ein: Teslas Robotaxis sehen nachts zu wenig",
+    "summary": "Elon Musk hat Angst, dass Teslas Robotaxis Katzen überfahren. Grund dafür ist seine Haltung zur Sensorik. Lösen soll das Problem KI. (Tesla, Elektroauto)",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
@@ -905,8 +905,8 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "78-milliarden-parameter-aleph-alpha-ver-ffentlicht-ki-modell-mit-deutsch-schwerp",
-    "title": "78 Milliarden Parameter: Aleph Alpha ver�ffentlicht KI-Modell mit Deutsch-Schwerpunkt",
+    "slug": "78-milliarden-parameter-aleph-alpha-veroffentlicht-ki-modell-mit-deutsch-schwerp",
+    "title": "78 Milliarden Parameter: Aleph Alpha veröffentlicht KI-Modell mit Deutsch-Schwerpunkt",
     "summary": "Mit Kolibri-1 liefert Aleph Alpha ein deutsch-englisches KI-Modell, das lange Dokumente effizient verarbeiten soll. (KI, Rechenzentrum)",
     "categorySlug": "breaking-news",
     "tags": [
@@ -936,8 +936,8 @@ export const articles: Article[] = [
     "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
   },
   {
-    "slug": "frustriert-gpt-astra-betr-gt-bei-starcraft-bot-benchmark",
-    "title": "Frustriert?: GPT Astra betr�gt bei Starcraft-Bot-Benchmark",
+    "slug": "frustriert-gpt-astra-betrugt-bei-starcraft-bot-benchmark",
+    "title": "Frustriert?: GPT Astra betrügt bei Starcraft-Bot-Benchmark",
     "summary": "OpenAIs GPT 6 alias Astra hat zu unlauteren Mitteln gegriffen, nachdem eigene Versuche, einen Starcraft-Bot zu programmieren, fehlgeschlagen waren. (OpenAI, KI)",
     "categorySlug": "breaking-news",
     "tags": [
@@ -952,7 +952,7 @@ export const articles: Article[] = [
   {
     "slug": "speicherkrise-kleine-raspberry-pis-werden-teurer-dgx-spark-mit-weniger-ram",
     "title": "Speicherkrise: Kleine Raspberry Pis werden teurer, DGX Spark mit weniger RAM",
-    "summary": "Die Speicherkrise sorgt weiter f�r steigende Preise. Bislang verschonte Raspberry Pis werden teurer, Nvidias KI-Desktop kommt als kleinere Version. (RAM, Nvidia)",
+    "summary": "Die Speicherkrise sorgt weiter für steigende Preise. Bislang verschonte Raspberry Pis werden teurer, Nvidias KI-Desktop kommt als kleinere Version. (RAM, Nvidia)",
     "categorySlug": "breaking-news",
     "tags": [
       "NVIDIA",
@@ -1097,9 +1097,9 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "autonomes-fahren-vw-entscheidet-sich-f-r-wayve-statt-nvidia",
-    "title": "Autonomes Fahren: VW entscheidet sich f�r Wayve statt Nvidia",
-    "summary": "VW kooperiert bei der Software f�r autonomes Fahren statt mit Nvidia mit dem britischen KI-Start-up Wayve. (VW, Nvidia)",
+    "slug": "autonomes-fahren-vw-entscheidet-sich-fur-wayve-statt-nvidia",
+    "title": "Autonomes Fahren: VW entscheidet sich für Wayve statt Nvidia",
+    "summary": "VW kooperiert bei der Software für autonomes Fahren statt mit Nvidia mit dem britischen KI-Start-up Wayve. (VW, Nvidia)",
     "categorySlug": "breaking-news",
     "tags": [
       "NVIDIA"
@@ -1113,7 +1113,7 @@ export const articles: Article[] = [
   {
     "slug": "autonome-waffen-ukraines-drohnenchef-warnt-vor-kontrollverlust-bei-ki",
     "title": "Autonome Waffen: Ukraines Drohnenchef warnt vor Kontrollverlust bei KI",
-    "summary": "Robert Brovdi f�hrt Ukraines Drohnentruppen. Er warnt, die Menschheit verliere die Kontrolle �ber KI-Waffen. (Drohne, KI)",
+    "summary": "Robert Brovdi führt Ukraines Drohnentruppen. Er warnt, die Menschheit verliere die Kontrolle über KI-Waffen. (Drohne, KI)",
     "categorySlug": "breaking-news",
     "tags": [
       "KI News"
@@ -1125,9 +1125,9 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "macos-apple-versch-rft-full-disk-access-wegen-ki-agenten",
-    "title": "Macos: Apple versch�rft Full Disk Access wegen KI-Agenten",
-    "summary": "Apple plant strengere Kontrollen f�r Full Disk Access. Grund sind laut Apple wachsende Risiken durch KI-Agenten. (MacOS, Apple)",
+    "slug": "macos-apple-verscharft-full-disk-access-wegen-ki-agenten",
+    "title": "Macos: Apple verschärft Full Disk Access wegen KI-Agenten",
+    "summary": "Apple plant strengere Kontrollen für Full Disk Access. Grund sind laut Apple wachsende Risiken durch KI-Agenten. (MacOS, Apple)",
     "categorySlug": "breaking-news",
     "tags": [
       "Agentic AI"
@@ -1139,8 +1139,8 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "k-nstliche-intelligenz-gemini-greift-auf-google-wallet-zu",
-    "title": "K�nstliche Intelligenz: Gemini greift auf Google Wallet zu",
+    "slug": "kunstliche-intelligenz-gemini-greift-auf-google-wallet-zu",
+    "title": "Künstliche Intelligenz: Gemini greift auf Google Wallet zu",
     "summary": "Gemini findet ab sofort Bord- sowie Treuekarten und wertet Ausgaben aus. Vorerst startet die Funktion allerdings nur in den USA. (Gemini, Google)",
     "categorySlug": "breaking-news",
     "tags": [
@@ -1155,9 +1155,9 @@ export const articles: Article[] = [
     "humanReviewed": false
   },
   {
-    "slug": "g-spec-kit-f-r-die-softwareentwicklung-erst-spezifizieren-dann-programmieren",
-    "title": "(g+) Spec Kit f�r die Softwareentwicklung: Erst spezifizieren, dann programmieren",
-    "summary": "Spec Kit trennt das Was vom Wie und l�sst KI-Agenten daraus Plan, Aufgaben und Code erzeugen. Wir haben ausprobiert, wie gut das funktioniert und eine Pizza-App programmiert. Eine Anleitung von Stefanie Schmidt (Softwareentwicklung, Open Source)",
+    "slug": "g-spec-kit-fur-die-softwareentwicklung-erst-spezifizieren-dann-programmieren",
+    "title": "(g+) Spec Kit für die Softwareentwicklung: Erst spezifizieren, dann programmieren",
+    "summary": "Spec Kit trennt das Was vom Wie und lässt KI-Agenten daraus Plan, Aufgaben und Code erzeugen. Wir haben ausprobiert, wie gut das funktioniert und eine Pizza-App programmiert. Eine Anleitung von Stefanie Schmidt (Softwareentwicklung, Open Source)",
     "categorySlug": "breaking-news",
     "tags": [
       "Open Source",
