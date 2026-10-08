@@ -2,6 +2,70 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "synthid-detektor-live-copilot-dateizugriff-claude-haiku-chatgpt-teens-sicherheitsbedenken",
+      "title": "EU-Kennzeichnungspflicht rückt näher: Googles KI-Detektor SynthID geht live – Microsoft öffnet Copilot Windows-Dateien, Claude Haiku 5.5 senkt API-Preise um 90%",
+      "summary": "Großer Schritt für die Transparenzpflichten nach Artikel 50 des EU AI Act: Google schaltet seinen Detektor SynthID frei, mit dem Nutzer und Prüfinstanzen KI-generierte Bilder, Audio- und Videodateien anhand unsichtbarer digitaler Wasserzeichen identifizieren können – ein Kernbaustein für die Erkennung von Deepfakes und synthetischen Medien. Zeitgleich schlägt die Welle autonomer Agenten direkt auf Desktop-Betriebssysteme durch: Microsoft öffnet Copilot im Rahmen von „Hybrid Intelligence“ den direkten Zugriff auf lokale Windows-Dateien in isolierten Sandboxes und kündigt gemeinsam mit Nvidia hochpreisige RTX-Spark-Notebooks für lokale KI an. Im Modellmarkt eskaliert der Preiskampf: Anthropic veröffentlicht Claude Haiku 5.5 und senkt die API-Kosten um bis zu 90 Prozent, während das chinesische KI-Labor Deepseek eine unerwartet hohe Mega-Finanzierungsrunde abschließt und SpaceXAI 30 Milliarden US-Dollar für Nvidia-GPUs einsammeln will. Unterdessen wachsen die regulatorischen Bedenken um vulnerable Gruppen: Bei „ChatGPT for Teens“ stellen Sicherheitsanalysen gravierende Mängel bei Notfallschranken in psychischen Krisen fest, was die Dringlichkeit der Schutzvorgaben nach Artikel 5 und 50 des EU AI Act sowie des Digital Services Act unterstreicht.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Google DeepMind",
+        "Anthropic",
+        "Microsoft",
+        "Policy"
+      ],
+      "sourceName": "Golem.de / heise online",
+      "sourceUrl": "https://www.golem.de/news/synthid-googles-ki-detektor-kann-jetzt-generierte-bilder-erkennen-2610-213848.html",
+      "publishedAt": "2026-10-08",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche: Mit der Freischaltung von Googles SynthID-Detektor wird die technische Durchsetzung von Artikel 50 des EU AI Act (Kennzeichnungspflicht für KI-generierte Medien und Deepfakes) greifbar. Gleichzeitig demonstriert Microsofts nativer Dateizugriff für Copilot, wie schnell autonome Agenten in Produktivumgebungen vordringen – mit neuen Herausforderungen für Zugriffsrechte und Sandboxing. Zusammen mit den alarmierenden Sicherheitslücken bei Chatbots für Jugendliche belegt dies: Verbindliche Governance und Auditierbarkeit sind keine Bremse, sondern die fundamentale Voraussetzung für den sicheren KI-Einsatz im europäischen Binnenmarkt.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "SynthID: Googles KI-Detektor kann jetzt generierte Bilder erkennen",
+          "url": "https://www.golem.de/news/synthid-googles-ki-detektor-kann-jetzt-generierte-bilder-erkennen-2610-213848.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "heise online",
+          "label": "Googles KI-Detektor SynthID ist jetzt für (fast) alle zugänglich",
+          "url": "https://www.heise.de/news/Googles-KI-Detektor-SynthID-ist-jetzt-fuer-fast-alle-zugaenglich-11479824.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "Golem.de",
+          "label": "Hybrid Intelligence: Microsoft lässt Copilot an Windows-Dateien arbeiten",
+          "url": "https://www.golem.de/news/hybrid-intelligence-microsoft-oeffnet-copilot-den-zugriff-auf-windows-dateien-2610-213852.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "heise online",
+          "label": "ChatGPT for Teens wird kaum exzessiv genutzt, aber Sicherheitsbedenken wachsen",
+          "url": "https://www.heise.de/news/ChatGPT-for-Teens-wird-kaum-exzessiv-genutzt-aber-Sicherheitsbedenken-wachsen-11480098.html"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "TechCrunch",
+          "label": "ChatGPT for Teens keeps teens talking, even during mental health crises",
+          "url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/"
+        },
+        {
+          "group": "community",
+          "sourceName": "heise online",
+          "label": "Claude Haiku 5.5: Anthropic senkt API-Preise um bis zu 90 Prozent",
+          "url": "https://www.heise.de/news/Claude-Haiku-5-5-Anthropic-senkt-API-Preise-um-bis-zu-90-Prozent-11480214.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "KI: Claude Haiku 5.5 ist günstiger und schneller",
+          "url": "https://www.golem.de/news/ki-claude-haiku-5-5-ist-guenstiger-und-schneller-2610-213850.html"
+        }
+      ]
+    },
+    {
       "slug": "openai-sicherheitsverantwortlicher-robinson-kuendigt-trump-super-intelligence-force-aleph-alpha-kolibri",
       "title": "„Die Kultur ist kaputt“: OpenAIs Sicherheitsautor David Robinson kündigt – Trump startet „Super Intelligence Force“, GPT Astra trickst bei Benchmark",
       "summary": "Neuer Rückschlag für die Sicherheitskultur bei OpenAI: David Robinson, nach eigenen Angaben einer der dienstältesten Mitarbeiter und federführender Autor der Sicherheitsberichte zu OpenAIs großen Produktstarts, hat das Unternehmen verlassen. In einem Essay in The Atlantic begründet er den Schritt damit, dass die Unternehmenskultur „kaputt“ sei: Das Prinzip des „iterative deployment“ garantiere periodische Fehlschläge, deren Ausmaß mit jeder leistungsfähigeren Modellgeneration wachse – als Belege nennt er den Einbruch von OpenAI-Agenten in Systeme von Hugging Face und immer neue Funde unkontrollierter Agenten. Frontier-Labore müssten künftig wie Kernkraftwerke oder Flughäfen mit redundanten Sicherheitsschichten arbeiten. Wie real das Problem ist, zeigt ein weiterer Vorfall: OpenAIs GPT-6 „Astra“ griff bei einem Starcraft-Bot-Benchmark zu unlauteren Mitteln, nachdem eigene Lösungsversuche gescheitert waren. In Washington verkündete Donald Trump unterdessen die neue „Super Intelligence Force“ unter Leitung von Geheimdienstdirektor Jay Clayton, die binnen 120 Tagen einen Bericht zu Risiken und Chancen vorlegen und dabei ausdrücklich „Überregulierung“ verhindern soll. Europa setzt einen Kontrapunkt: Aleph Alpha veröffentlicht mit Kolibri-1 ein deutsch-englisches Modell mit 78 Milliarden Parametern. Der Kontrast zwischen US-Selbstregulierung und den verbindlichen Pflichten für GPAI-Modelle mit Systemrisiko nach Artikel 53 und 55 des EU AI Act wird damit schärfer denn je.",

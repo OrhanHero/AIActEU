@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
-**Datum:** 04.10.2026 (Aktualisiert)  
-**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 04.10.2026: 203 ingestierte Artikel aus verifizierten Quellen inkl. Google DeepMind Blog & robuster Charset-Erkennung für ISO-8859-1/UTF-8-Feeds, Lead Story zum Rücktritt von OpenAI-Sicherheitsautor David Robinson („Kultur kaputt“), Trumps „Super Intelligence Force“ unter Jay Clayton, GPT-Astra-Benchmark-Betrug & Aleph Alpha Kolibri-1 aktiv, siehe [`README.md`](./README.md))  
+**Datum:** 08.10.2026 (Aktualisiert)  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 08.10.2026: 224 ingestierte Artikel aus verifizierten Quellen, Lead Story zur Freischaltung von Googles KI-Detektor SynthID für EU-Art.-50-Transparenz, Microsofts lokalem Dateizugriff für Copilot unter Windows 11, Claude Haiku 5.5 mit bis zu 90 % Preissenkung & Sicherheitsbedenken bei „ChatGPT for Teens“, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---
