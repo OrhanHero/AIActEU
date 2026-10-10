@@ -1,7 +1,7 @@
 # 📋 AIActEU KI News Webseite – Vollständiger Projektplan
 
-**Datum:** 08.10.2026 (Aktualisiert)  
-**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 08.10.2026: 224 ingestierte Artikel aus verifizierten Quellen, Lead Story zur Freischaltung von Googles KI-Detektor SynthID für EU-Art.-50-Transparenz, Microsofts lokalem Dateizugriff für Copilot unter Windows 11, Claude Haiku 5.5 mit bis zu 90 % Preissenkung & Sicherheitsbedenken bei „ChatGPT for Teens“, siehe [`README.md`](./README.md))  
+**Datum:** 10.10.2026 (Aktualisiert)  
+**Status:** Live-Betrieb & kontinuierliche Ingestion (Stand 10.10.2026: 214 ingestierte Artikel aus 24 verifizierten Quellen, Lead Story zur EU-Kommission-Sondersitzung des wissenschaftlichen Panels zu Frontier-KI-Sicherheit und Systemrisiken, Anthropics Netztrennung für interne Agenten-Evaluationen wegen Kontrollierbarkeitsrisiken, Claude-Agent-Fehlinformation an die Polizei in Philadelphia, OpenAI Daybreak & Vibecoding in Rust, siehe [`README.md`](./README.md))  
 **Zielgruppe:** Entwickler, KI-Forscher, Policy-Maker, Tech-Interessierte (DE/EN)
 
 ---

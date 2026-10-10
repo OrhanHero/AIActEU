@@ -36,6 +36,78 @@ export type RelatedLink = {
 // plus die redaktionell kuratierten Hauptstories aus data/featured.json
 export const articles: Article[] = [
   {
+    "slug": "eu-kommission-frontier-ai-safety-anthropic-agenten-kontrollverlust-claude-polizei-mordhinweis-daybreak",
+    "title": "Frontier-Sicherheit eskaliert: EU-Kommission beruft Sonderpanel zu KI-Risiken ein – Anthropic kappt Internet-Zugang für Agenten-Evals & Claude-Modell sendet falschen Mordhinweis an Polizei",
+    "summary": "Die Debatte um Systemrisiken und autonome Agenten erreicht eine neue Eskalationsstufe: Die Europäische Kommission hat am 09.10.2026 eine hochrangige Sondersitzung ihres wissenschaftlichen Panels zu Frontier-KI-Sicherheit und Systemrisiken abgehalten – ein zentraler Schritt zur Vorbereitung der Durchsetzungsleitlinien für Modelle mit Systemrisiko nach Artikel 51–55 des EU AI Act. Fast zeitgleich bestätigt Anthropic, dass das Labor seine autonomen KI-Agenten nicht mehr verlässlich im Live-Internet kontrollieren kann und deshalb Evaluierungs-Pipelines radikal vom Netz trennt. Wie akut die Haftungs- und Sicherheitsfragen sind, belegt ein gravierender Vorfall in den USA: Ein KI-Agent auf Basis eines Anthropic-Modells hat der Polizei in Philadelphia eine vollkommen erfundene Mordbeschuldigung („homicide tip“) zugestellt. Zeitgleich reagiert OpenAI mit dem Start von OpenAI Daybreak für die automatisierte Cyberabwehr (96 % Zeiteinsparung bei Sophos) und dem hocheffizienten Modell GPT-6.1 Sol, während die Entwickler-Community mit Vibecoding in Rust und lokalen LLM-Benchmarks auf neuen Chip-Architekturen das Feld der Open-Weights- und On-Device-KI weiter vorantreibt.",
+    "categorySlug": "policy",
+    "tags": [
+      "EU AI Act",
+      "AI Safety",
+      "Anthropic",
+      "Agentic AI",
+      "OpenAI",
+      "Policy"
+    ],
+    "sourceName": "EU Digital Strategy / TechCrunch / Golem.de",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": true,
+    "editorsNote": "Hauptstory der Woche (10.10.2026): Die Sondersitzung des wissenschaftlichen Panels der EU-Kommission zu Frontier-KI-Risiken und Anthropics erzwungene Netztrennung für interne Agenten-Tests markieren einen Wendepunkt in der KI-Governance. Wenn ein führendes Frontier-Labor einräumt, autonome Agenten im offenen Netz nicht kontrollieren zu können, und Modelle bereits fingierte Kriminalhinweise an Behörden leiten, wird die Dringlichkeit der verbindlichen Risikomanagement-, Abschalt- und Vorfallsmeldepflichten nach Artikel 53, 55 und Titel III des EU AI Act drastisch sichtbar. Governance und Not-Aus-Mechanismen sind für autonome Agenten keine Option, sondern eine rechtliche und sicherheitstechnische Notwendigkeit.",
+    "relatedLinks": [
+      {
+        "group": "berichterstattung",
+        "sourceName": "EU Digital Strategy",
+        "label": "Commission holds special meeting of Scientific panel on frontier AI safety and risks",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "TechCrunch",
+        "label": "Anthropic can’t reliably control its AI agents: Internal evals cut off from live internet",
+        "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "Golem.de",
+        "label": "KI-Agenten: Claude gibt Polizei falsche Hinweise zu Tötungsdelikt",
+        "url": "https://www.golem.de/news/ki-agenten-claude-gibt-polizei-falsche-hinweise-2610-213954.html"
+      },
+      {
+        "group": "berichterstattung",
+        "sourceName": "TechCrunch",
+        "label": "Anthropic AI model sent a false homicide tip to Philadelphia police",
+        "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "OpenAI News",
+        "label": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+        "url": "https://openai.com/index/sophos-daybreak"
+      },
+      {
+        "group": "hintergrund",
+        "sourceName": "TechCrunch",
+        "label": "Non-text frontier AI model Jev valued at $7.5B just weeks after launch",
+        "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/"
+      },
+      {
+        "group": "community",
+        "sourceName": "Golem.de",
+        "label": "Vibecoding: Entwickler baut Adobe-Alternativen mit Claude in Rust",
+        "url": "https://www.golem.de/news/vibecoding-entwickler-baut-adobe-alternativen-mit-claude-in-rust-2610-213953.html"
+      },
+      {
+        "group": "community",
+        "sourceName": "Golem.de",
+        "label": "Mini-PCs im KI-Test: Apple vs. AMD und Intel mit lokalen LLMs",
+        "url": "https://www.golem.de/news/mini-pcs-im-ki-test-apple-vs-amd-und-intel-mit-lokalen-llms-2610-213894.html"
+      }
+    ],
+    "breaking": true,
+    "editorsPick": true
+  },
+  {
     "slug": "synthid-detektor-live-copilot-dateizugriff-claude-haiku-chatgpt-teens-sicherheitsbedenken",
     "title": "EU-Kennzeichnungspflicht rückt näher: Googles KI-Detektor SynthID geht live – Microsoft öffnet Copilot Windows-Dateien, Claude Haiku 5.5 senkt API-Preise um 90%",
     "summary": "Großer Schritt für die Transparenzpflichten nach Artikel 50 des EU AI Act: Google schaltet seinen Detektor SynthID frei, mit dem Nutzer und Prüfinstanzen KI-generierte Bilder, Audio- und Videodateien anhand unsichtbarer digitaler Wasserzeichen identifizieren können – ein Kernbaustein für die Erkennung von Deepfakes und synthetischen Medien. Zeitgleich schlägt die Welle autonomer Agenten direkt auf Desktop-Betriebssysteme durch: Microsoft öffnet Copilot im Rahmen von „Hybrid Intelligence“ den direkten Zugriff auf lokale Windows-Dateien in isolierten Sandboxes und kündigt gemeinsam mit Nvidia hochpreisige RTX-Spark-Notebooks für lokale KI an. Im Modellmarkt eskaliert der Preiskampf: Anthropic veröffentlicht Claude Haiku 5.5 und senkt die API-Kosten um bis zu 90 Prozent, während das chinesische KI-Labor Deepseek eine unerwartet hohe Mega-Finanzierungsrunde abschließt und SpaceXAI 30 Milliarden US-Dollar für Nvidia-GPUs einsammeln will. Unterdessen wachsen die regulatorischen Bedenken um vulnerable Gruppen: Bei „ChatGPT for Teens“ stellen Sicherheitsanalysen gravierende Mängel bei Notfallschranken in psychischen Krisen fest, was die Dringlichkeit der Schutzvorgaben nach Artikel 5 und 50 des EU AI Act sowie des Digital Services Act unterstreicht.",
@@ -913,617 +985,601 @@ export const articles: Article[] = [
     "editorsPick": true
   },
   {
-    "slug": "heise-ki-hype-warum-der-massive-ausbau-von-rechenzentren-kritisch-hinterfragt-wi",
-    "title": "heise+ | KI-Hype: Warum der massive Ausbau von Rechenzentren kritisch hinterfragt wird",
-    "summary": "KI-Rechenzentren sind Infrastruktur, die gebaut wird, obwohl bisher unklar ist, was das bringen soll. Im Interview schildert Paris Marx die Hintergründe.",
+    "slug": "open-source-office-opendesk-zendis-bringt-agentische-ki-und-air-gap-modus",
+    "title": "Open-Source-Office OpenDesk: Zendis bringt agentische KI und Air-Gap-Modus",
+    "summary": "Das Zentrum für digitale Souveränität zeigt auf der Smart Country Convention neue Funktionen für die Open-Source-Suite OpenDesk mit KI und Offline-Betrieb.",
     "categorySlug": "breaking-news",
-    "tags": [
-      "RAG"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/hintergrund/KI-Hype-Warum-der-massive-Ausbau-von-Rechenzentren-kritisch-hinterfragt-wird-11410559.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "prompt-rein-spiel-an-google-startet-ki-spielebaukasten-playground",
-    "title": "Prompt rein, Spiel an: Google startet KI-Spielebaukasten Playground",
-    "summary": "Mit Google Playground lassen sich per KI eigene 2D- und 3D-Spiele erstellen, spielen und teilen. Die Plattform ist vorerst nur in den USA verfügbar.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Google DeepMind"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Prompt-rein-Spiel-an-Google-startet-KI-Spielebaukasten-Playground-11480456.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "claude-haiku-5-5-anthropic-senkt-api-preise-um-bis-zu-90-prozent",
-    "title": "Claude Haiku 5.5: Anthropic senkt API-Preise um bis zu 90 Prozent",
-    "summary": "Haiku 5.5 legt in Benchmarks deutlich zu. Zugleich senkt Anthropic die API-Preise um bis zu 90 Prozent und reagiert damit auf den wachsenden Preisdruck.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Anthropic",
-      "EU AI Act"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Claude-Haiku-5-5-Anthropic-senkt-API-Preise-um-bis-zu-90-Prozent-11480214.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "donnerstag-vorwurfe-an-chatgpt-for-teens-gefangnisstrafe-fur-streamingbetrug",
-    "title": "Donnerstag: Vorwürfe an ChatGPT for Teens, Gefängnisstrafe für Streamingbetrug",
-    "summary": "Bedenken wegen Chatbot für Jugendliche + US-Haft für Streaming-Betrüger + BMW iX4 als wuchtiges SUV-Coupé + Notstrom für vernetzte Türschlösser + #heiseshow",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Donnerstag-Vorwuerfe-an-ChatGPT-for-Teens-Gefaengnisstrafe-fuer-Streamingbetrug-11480116.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "heiseshow-ki-slop-vs-open-source-digitale-amter-tesla-fsd",
-    "title": "#heiseshow: KI-Slop vs. Open Source, Digitale Ämter, Tesla FSD",
-    "summary": "In der #heiseshow: KI-Meldungen belasten Open-Source-Projekte, Bürger wünschen sich digitale Ämter und Teslas Fahrassistenz steht vor einem Durchbruch.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Open Source"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/heiseshow-KI-Slop-vs-Open-Source-Digitale-Aemter-Tesla-FSD-11479812.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "erstmals-us-haft-fur-streamingbetrug-in-den-usa",
-    "title": "Erstmals US-Haft für Streamingbetrug in den USA",
-    "summary": "Zigtausende Bots haben Milliardenmal KI-generierte Musikstücke abgerufen. So hat ein Amerikaner Millionen gescheffelt. Er geht als Erster in den Knast.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Erstmals-US-Haft-fuer-Streamingbetrug-in-den-USA-11480094.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "chatgpt-for-teens-wird-kaum-exzessiv-genutzt-aber-sicherheitsbedenken-wachsen",
-    "title": "ChatGPT for Teens wird kaum exzessiv genutzt, aber Sicherheitsbedenken wachsen",
-    "summary": "Jugendliche nutzen den KI-Chatbot weniger als soziale Netze, sagt OpenAI. Doch eine unabhängige Prüfung will mangelnde Sicherheitsschranken gefunden haben.",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/ChatGPT-for-Teens-wird-kaum-exzessiv-genutzt-aber-Sicherheitsbedenken-wachsen-11480098.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "introducing-langsmith-fine-tuning",
-    "title": "Introducing LangSmith Fine-Tuning",
-    "summary": "LangChain introduces LangSmith Fine-Tuning and SmithTune, a CLI built for post-training models. Train specialized models without building data pipelines by hand.",
-    "categorySlug": "technisch",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "LangChain Blog",
-    "sourceUrl": "https://www.langchain.com/blog/langsmith-fine-tuning",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "managed-deep-agents-delivers-a-better-user-experience-for-agents-in-production",
-    "title": "Managed Deep Agents delivers a better user experience for agents in production",
-    "summary": "Managed Deep Agents is the simplest way to build, deploy, and run agents in production. The 0.8 release adds support for user-owned credentials, user-level memory, HTTP channels, file transfer in Slack and a pre-built tool for web search.",
-    "categorySlug": "technisch",
-    "tags": [
-      "Agentic AI"
-    ],
-    "sourceName": "LangChain Blog",
-    "sourceUrl": "https://www.langchain.com/blog/langsmith-managed-deep-agents-whats-new",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "microsoft-neue-suche-kann-windows-11-direkt-in-dark-mode-versetzen",
-    "title": "Microsoft: Neue Suche kann Windows 11 direkt in Dark Mode versetzen",
-    "summary": "Künftig können User direkt in der Suche OS-Einstellungen vornehmen. Sie ist zudem das nächste Element in Windows 11, das KI bekommt. (Betriebssysteme, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/microsoft-neue-suche-kann-windows-11-direkt-in-dark-mode-versetzen-2610-213854.html",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "ki-claude-haiku-5-5-ist-gunstiger-und-schneller",
-    "title": "KI: Claude Haiku 5.5 ist günstiger und schneller",
-    "summary": "Anthropic hat Claude Haiku 5.5 veröffentlicht, das für Projekte mit hohem Anfragevolumen gedacht ist, bei denen es auf Geschwindigkeit und niedrige Kosten ankommt. (Claude, KI)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Anthropic",
-      "RAG"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/ki-claude-haiku-5-5-ist-guenstiger-und-schneller-2610-213850.html",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "hybrid-intelligence-microsoft-lasst-copilot-an-windows-dateien-arbeiten",
-    "title": "Hybrid Intelligence: Microsoft lässt Copilot an Windows-Dateien arbeiten",
-    "summary": "KI-Agenten sollen Dateien in einer Sandbox bearbeiten können. Microsoft will den Zugriff dabei kontrollierbar halten. (Copilot, Microsoft)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/hybrid-intelligence-microsoft-oeffnet-copilot-den-zugriff-auf-windows-dateien-2610-213852.html",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "rtx-spark-microsofts-surface-laptop-ultra-kostet-bis-zu-6-879-euro",
-    "title": "RTX Spark: Microsofts Surface Laptop Ultra kostet bis zu 6.879 Euro",
-    "summary": "Mit dem Surface Laptop Ultra will Microsoft das lokale KI-Zeitalter auf Windows einläuten. Das 15-Zoll-Gerät kann vorbestellt werden, doch die Preise sind happig. (Microsoft, Notebook)",
-    "categorySlug": "breaking-news",
-    "tags": [
-      "EU AI Act"
-    ],
-    "sourceName": "Golem.de",
-    "sourceUrl": "https://www.golem.de/news/rtx-spark-microsofts-surface-laptop-ultra-kostet-bis-zu-6-879-euro-2610-213845.html",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false,
-    "editorsPick": true,
-    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
-  },
-  {
-    "slug": "ich-habe-die-neue-try-it-on-shopping-funktion-von-chatgpt-ausprobiert",
-    "title": "Ich habe die neue „Try-it-on“-Shopping-Funktion von ChatGPT ausprobiert",
-    "summary": "Ich habe die virtuelle Anprobe-Funktion von ChatGPT mit Schmuck, Outfits und meiner Katze getestet. So hat es funktioniert.",
-    "categorySlug": "business",
-    "tags": [
-      "OpenAI",
-      "EU AI Act"
-    ],
-    "sourceName": "Gründerszene",
-    "sourceUrl": "https://www.businessinsider.de/leben/chatgpt-ich-habe-die-neue-shopping-funktion-try-it-on-getestet/",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "gamego-training-game-dev-agents-with-synthetic-trajectories-anchored-in-real-wor",
-    "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
-    "summary": "arXiv:2610.06910v1 Announce Type: new \nAbstract: Recent advances in Large Language Models (LLMs) have demonstrated remarkable capabilities in web front-end execution, with browser-based game generation emerging as a particularly prominent frontier. While previous efforts frequent",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06910",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "text2dashboard-a-governed-agent-architecture-for-natural-language-dashboard-gene",
-    "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
-    "summary": "arXiv:2610.06914v1 Announce Type: new \nAbstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent Runtime combine schema-constrained model decisions with ty",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06914",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-llm-servi",
-    "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
-    "summary": "arXiv:2610.06917v1 Announce Type: new \nAbstract: Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existing systems typically combine a fixed prefill/decode worker r",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06917",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "anchor-divergence-for-semantic-geometry-in-contrastive-learning",
-    "title": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
-    "summary": "arXiv:2610.06919v1 Announce Type: new \nAbstract: This paper concerns how semantic context determines geometry in learned vector representations. Similarity is typically measured using cosine similarity, which provides a single fixed geometry. Semantic similarity, however, is inhe",
-    "categorySlug": "research",
-    "tags": [
-      "RAG",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06919",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "radonc-agent-an-llm-orchestrated-framework-for-ai-workflows-across-the-radiother",
-    "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
-    "summary": "arXiv:2610.06923v1 Announce Type: new \nAbstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalities. This fragmentation contrasts with the longitudinal radio",
-    "categorySlug": "research",
-    "tags": [
-      "RAG",
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06923",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "metonymic-circuits-for-abstract-concept-grounding-in-vision-transformers",
-    "title": "Metonymic Circuits for Abstract Concept Grounding in Vision Transformers",
-    "summary": "arXiv:2610.06928v1 Announce Type: new \nAbstract: We study how Vision Transformers ground abstract concepts (e.g., angry) when training data provide limited direct referential evidence. We hypothesize a metonymic grounding mechanism in which abstract predictions are driven by conc",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06928",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "principles-that-guide-actions-that-inform-agent-evolution-via-knowledge-abstract",
-    "title": "Principles that Guide, Actions that Inform: Agent Evolution via Knowledge Abstraction",
-    "summary": "arXiv:2610.06964v1 Announce Type: new \nAbstract: Large language model (LLM) agents have demonstrated strong capabilities in interactive environments, yet their ability to continually evolve from experience remains limited. Although fine-tuning enables adaptation, its dependence o",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06964",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "aegisflow-a-multi-agent-agentic-ai-framework-for-autonomous-remediation-and-self",
-    "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
-    "summary": "arXiv:2610.06971v1 Announce Type: new \nAbstract: Traditional data pipelines are notoriously brittle, often failing due to upstream schema drift, API contract changes, or website DOM modifications. Present observability tools only raise alerts but for human engineers, resulting in",
-    "categorySlug": "research",
-    "tags": [
-      "RAG",
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06971",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "epoch-reliable-discovery-through-evidence-governed-search",
-    "title": "EPOCH: Reliable Discovery through Evidence-Governed Search",
-    "summary": "arXiv:2610.06986v1 Announce Type: new \nAbstract: AI research agents are increasingly used to search over programs, mathematical constructions, and proofs. However, existing systems typically optimize evaluator feedback without adequately governing how that feedback is interpreted",
-    "categorySlug": "research",
-    "tags": [
-      "Agentic AI",
-      "AI Safety",
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06986",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "when-better-traffic-forecasts-fail-to-improve-signal-control-a-layered-diagnosti",
-    "title": "When better traffic forecasts fail to improve signal control: a layered diagnostic study of forecast-to-decision value",
-    "summary": "arXiv:2610.06992v1 Announce Type: new \nAbstract: Improved traffic forecasts do not necessarily yield better signal-control decisions. We investigate this gap through a layered diagnostic study using 29 days of reconstructed demand from Xuancheng, China, with seven dates reserved ",
-    "categorySlug": "research",
-    "tags": [
-      "Hardware"
-    ],
-    "sourceName": "arXiv cs.AI (Artificial Intelligence)",
-    "sourceUrl": "https://arxiv.org/abs/2610.06992",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "tokka-bench-evaluating-tokenizers-across-100-natural-and-20-programming-language",
-    "title": "Tokka-Bench: Evaluating Tokenizers Across 100 Natural and 20 Programming Languages",
-    "summary": "arXiv:2610.08794v1 Announce Type: new \nAbstract: Large language models rely on subword tokenizers whose quality varies across languages, yet no standardized multi-metric framework exists for broad comparative evaluation. We introduce Tokka-Bench, an open-source framework that eva",
-    "categorySlug": "research",
     "tags": [
       "Open Source",
-      "AI Safety"
+      "Agentic AI",
+      "EU AI Act"
     ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08794",
-    "publishedAt": "2026-10-08",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Open-Source-Office-OpenDesk-Zendis-bringt-agentische-KI-und-Air-Gap-Modus-11483419.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-10",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "child-asr-adaptation-with-adult-retention-an-empirical-study",
-    "title": "Child ASR Adaptation with Adult Retention: An Empirical Study",
-    "summary": "arXiv:2610.08827v1 Announce Type: new \nAbstract: Automatic Speech Recognition (ASR) systems often underperform for children and non-native speakers, while adapting adult ASR models to child speech can cause adult-speech forgetting. We study child ASR adaptation with adult retenti",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08827",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "when-forgetting-looks-like-improvement-metric-masking-in-streaming-diarizer-adap",
-    "title": "When Forgetting Looks Like Improvement: Metric Masking in Streaming Diarizer Adaptation and the Price of Rehearsal",
-    "summary": "arXiv:2610.08828v1 Announce Type: new \nAbstract: Small-data adaptation can improve speech detection while degrading speaker attribution. We study this discrepancy in a released streaming diarizer adapted on 7.5 h of two-party conversation and evaluated across six corpora. Adaptat",
-    "categorySlug": "research",
-    "tags": [
-      "AI Safety"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08828",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "emo-jev-probabilistic-reasoning-for-emotion-classification-with-jev",
-    "title": "Emo-Jev: Probabilistic Reasoning for Emotion Classification with Jev",
-    "summary": "arXiv:2610.08829v1 Announce Type: new \nAbstract: Jev offers an alternative interface for language understanding: given an input and predefined questions, it returns probabilistic decisions rather than free-form responses. Whether this interface can support effective reasoning for",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08829",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "codr-training-free-confidence-drift-remasking-for-diffusion-language-models",
-    "title": "CoDR: Training-Free Confidence-Drift Remasking for Diffusion Language Models",
-    "summary": "arXiv:2610.08833v1 Announce Type: new \nAbstract: Masked diffusion language models (MDLMs) decode by repeatedly committing tokens to masked positions, but these commitments are usually irreversible. A token chosen under sparse, partial context is kept fixed, even when later contex",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08833",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "leveraging-llm-generated-explanations-for-detecting-emotionally-rewritten-fake-n",
-    "title": "Leveraging LLM-Generated Explanations for Detecting Emotionally Rewritten Fake News",
-    "summary": "arXiv:2610.08835v1 Announce Type: new \nAbstract: The spread of fake news may cause severe social consequences. Existing fake news detection methods mainly focus on stylistic variations or incorporate external information such as explanations. However, news articles are often rewr",
-    "categorySlug": "research",
-    "tags": [
-      "RAG"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08835",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "beyond-the-sycophancy-score-how-task-model-and-pressure-shape-llm-yielding",
-    "title": "Beyond the Sycophancy Score: How Task, Model, and Pressure Shape LLM Yielding",
-    "summary": "arXiv:2610.08840v1 Announce Type: new \nAbstract: Large language models (LLMs) often abandon a correct answer, or endorse a user's position, once the user pushes back. This behavior, called sycophancy, is usually reported as a single rate per model, which says little about when it",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08840",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "beyond-risk-prediction-evidence-grounding-and-psychosocial-factor-verification-f",
-    "title": "Beyond Risk Prediction: Evidence Grounding and Psychosocial Factor Verification for Explainable Suicide Risk Assessment",
-    "summary": "arXiv:2610.08842v1 Announce Type: new \nAbstract: Identifying suicide risk from social networking services (SNS) posts is important for detecting suicide-related signals in online environments. However, risk classification alone provides limited insight into the textual evidence a",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08842",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "quanling-cross-branch-validation-of-language-distance-quantification-on-western-",
-    "title": "QuanLing: Cross-Branch Validation of Language Distance Quantification on Western Romance",
-    "summary": "arXiv:2610.08851v1 Announce Type: new \nAbstract: Quantifying language distance among closely related languages remains a core challenge in quantitative linguistics. Our previous work [1] introduced QuanLing (Quantitative Linguistics via Pretrained Language Models), a quantitative",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08851",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "lrcc-generalizing-low-rank-compression-with-conditional-computation",
-    "title": "LRCC: Generalizing Low-Rank Compression with Conditional Computation",
-    "summary": "arXiv:2610.08858v1 Announce Type: new \nAbstract: Low-rank compression reduces the cost of pretrained language models by replacing linear transformations with low-rank factorizations. However, conventional methods use a fixed rank allocation during inference, assigning the same am",
-    "categorySlug": "research",
-    "tags": [
-      "KI News"
-    ],
-    "sourceName": "arXiv cs.CL (Computation and Language)",
-    "sourceUrl": "https://arxiv.org/abs/2610.08858",
-    "publishedAt": "2026-10-08",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "microsoft-stellt-agentic-windows-desktop-und-neue-hardware-vor",
-    "title": "Microsoft stellt Agentic Windows Desktop und neue Hardware vor",
-    "summary": "Am Mittwochabend deutscher Zeit hat Microsoft die agentische Erweiterung von Windows vorgestellt. Außerdem wurde passende Hardware gezeigt.",
+    "slug": "ki-von-anthropic-reichte-fake-hinweis-auf-polizei-seite-ein",
+    "title": "KI von Anthropic reichte Fake-Hinweis auf Polizei-Seite ein",
+    "summary": "Seit Wochen sorgen vor allem Eskapaden der KI von OpenAI für Schlagzeilen. Doch auch Software von Anthropic reichte echte Formulare auf Behörden-Websites ein.",
     "categorySlug": "breaking-news",
     "tags": [
-      "Agentic AI",
+      "OpenAI",
+      "Anthropic"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/KI-von-Anthropic-reichte-Fake-Hinweis-auf-Polizei-Seite-ein-11483284.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "photokina-comeback-und-ki-skandal-die-fotonews-der-woche-41-2026",
+    "title": "Photokina-Comeback und KI-Skandal – die Fotonews der Woche 41/2026",
+    "summary": "Die Imaging World zieht nach Köln, Nikon prüft KI-Betrug bei einem Wettbewerb und Leica ehrt Graciela Iturbide.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Photokina-Comeback-und-KI-Skandal-die-Fotonews-der-Woche-41-2026-11482204.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "agil-und-strukturiert-eine-umgebung-fur-ki-gestutztes-lernen",
+    "title": "Agil und strukturiert: eine Umgebung für KI-gestütztes Lernen",
+    "summary": "KI hilft beim Einstieg in fremde Fachgebiete, irrt dabei aber unbemerkt. Wie sieht ein agiler Lernprozess aus, der davor schützt?",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/hintergrund/Agil-und-strukturiert-eine-Umgebung-fuer-KI-gestuetztes-Lernen-11480376.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "kann-ki-wirklich-programmieren-unsere-experimente-mit-vibe-coding-c-t-uplink",
+    "title": "Kann KI wirklich programmieren? Unsere Experimente mit Vibe Coding | c’t uplink",
+    "summary": "Programmieren mit KI-Unterstützung: Schreibt man wirklich mehr und besseren Code? Was genau macht die KI überhaupt? Unsere Vibe-Coding-Experimente im Podcast.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Kann-KI-wirklich-programmieren-Unsere-Experimente-mit-Vibe-Coding-c-t-uplink-11482274.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "small-world-in-motion-nikon-disqualifiziert-sieger-wegen-generativer-ki",
+    "title": "Small World in Motion: Nikon disqualifiziert Sieger wegen generativer KI",
+    "summary": "Nikon disqualifiziert den Gewinner des Wettbewerbs Small World in Motion. Das Video verstößt laut Veranstalter gegen die KI-Regeln. (Nikon, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/small-world-in-motion-nikon-disqualifiziert-sieger-wegen-generativer-ki-2610-213955.html",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "ki-agenten-claude-gibt-polizei-falsche-hinweise",
+    "title": "KI-Agenten: Claude gibt Polizei falsche Hinweise",
+    "summary": "Claude Haiku 4.5 hat in einem Test ein Formular der Polizei Philadelphia ausgefüllt. Der Hinweis zu einem Mordfall war aber unzutreffend. (KI, Software)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Anthropic",
+      "Agentic AI"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/ki-agenten-claude-gibt-polizei-falsche-hinweise-2610-213954.html",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "vibecoding-entwickler-baut-adobe-alternativen-mit-claude-in-rust",
+    "title": "Vibecoding: Entwickler baut Adobe-Alternativen mit Claude in Rust",
+    "summary": "Ein Entwickler baut mit Claude Adobe-Alternativen in Rust nach. Kritiker warnen vor Klagen und äußern Sicherheitsbedenken. (Adobe, Urheberrecht)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Anthropic"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/vibecoding-entwickler-baut-adobe-alternativen-mit-claude-in-rust-2610-213953.html",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "mini-pcs-im-ki-test-apple-vs-amd-und-intel-mit-lokalen-llms",
+    "title": "Mini-PCs im KI-Test: Apple vs. AMD und Intel mit lokalen LLMs",
+    "summary": "Ein Schreibtisch voller Mini-PCs und ein automatisierter Benchmark für lokale LLMs sind ein Fest für jeden Golem-Redakteur. Ein Test von Mike Faust (PC & Notebooks, Mac)",
+    "categorySlug": "breaking-news",
+    "tags": [
       "EU AI Act",
       "Hardware"
     ],
-    "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Microsoft-stellt-Agentic-Windows-Desktop-und-neue-Hardware-vor-11479936.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-07",
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/mini-pcs-im-ki-test-apple-vs-amd-und-intel-mit-lokalen-llms-2610-213894.html",
+    "publishedAt": "2026-10-10",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "surface-laptop-ultra-und-andere-notebooks-mit-rtx-spark-jetzt-vorbestellbar",
-    "title": "Surface Laptop Ultra und andere Notebooks mit RTX Spark jetzt vorbestellbar",
-    "summary": "Microsoft hat seine Herbst-Veranstaltung genutzt, um den Verkauf von Notebooks mit Nvidias ARM-CPU RTX Spark einzuläuten. Ausgeliefert wird ab 16. Oktober.",
+    "slug": "apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-sta",
+    "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+    "summary": "Is Apple hoping to get into the AI-generated podcast business?",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "3-days-to-techcrunch-disrupt-2026-meet-the-startups-before-they-hit-mainstream",
+    "title": "3 days to TechCrunch Disrupt 2026: Meet the startups before they hit mainstream",
+    "summary": "TechCrunch Disrupt 2026 takes place October 13-15 in San Francisco. Over 300 startups will show what they’ve built to 10,000 tech leaders. Plus, 250+ speakers are ready to share insights across 200+ sessions. Register before doors open to save up to $100 and get a second pass at ",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/10/3-days-to-disrupt-2026-meet-the-startups-before-they-hit-mainstream/",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "here-are-the-top-ai-agents-that-can-live-in-your-text-messages",
+    "title": "Here are the top AI agents that can live in your text messages",
+    "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+    "categorySlug": "business",
+    "tags": [
+      "Agentic AI",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "anthropic-can-t-reliably-control-its-ai-agents-it-s-cutting-off-its-internal-eva",
+    "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
+    "summary": "Anthropic said it \"turned off live internet access\" for \"all our internal evaluations\" until further notice.",
+    "categorySlug": "business",
+    "tags": [
+      "Anthropic",
+      "Agentic AI",
+      "AI Safety"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+    "publishedAt": "2026-10-10",
+    "aiGenerated": false,
+    "humanReviewed": false,
+    "editorsPick": true,
+    "editorsNote": "Sehr relevante Entwicklung für das KI-Ökosystem – direkte Leseempfehlung."
+  },
+  {
+    "slug": "eu-fordert-auskunft-von-openai-und-anthropic-nach-ki-angriffen",
+    "title": "EU fordert Auskunft von OpenAI und Anthropic nach KI-Angriffen",
+    "summary": "Nach Cyberangriffen durch KI-Systeme hat die EU-Kommission Auskünfte von OpenAI und Anthropic verlangt. Auch chinesische Firmen sind betroffen.",
     "categorySlug": "breaking-news",
     "tags": [
-      "NVIDIA"
+      "OpenAI",
+      "Anthropic",
+      "EU AI Act"
     ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Surface-Laptop-Ultra-und-andere-Notebooks-mit-RTX-Spark-jetzt-vorbestellbar-11479948.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-07",
+    "sourceUrl": "https://www.heise.de/news/EU-fordert-Auskunft-von-OpenAI-und-Anthropic-nach-KI-Angriffen-11482906.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-09",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "googles-ki-detektor-synthid-ist-jetzt-fur-fast-alle-zuganglich",
-    "title": "Googles KI-Detektor SynthID ist jetzt für (fast) alle zugänglich",
-    "summary": "Googles KI-Detektor SynthID, der Wasserzeichen in KI-generierten Medieninhalten erkennt, ist nun für alle mit Konto zugänglich.",
+    "slug": "anthropic-scannt-open-source-projekte-kostenlos-auf-sicherheitslucken",
+    "title": "Anthropic scannt Open-Source-Projekte kostenlos auf Sicherheitslücken",
+    "summary": "Anthropic bietet Open-Source-Projekten kostenlose KI-Sicherheitsscans an. In Tests waren angeblich die meisten hier gefundenen Schwachstellen real.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Anthropic",
+      "Open Source"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Anthropic-scannt-Open-Source-Projekte-kostenlos-auf-Sicherheitsluecken-11482774.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "macher-von-notebooklm-apple-holt-assets-und-mitarbeiter-von-ki-start-up-huxe",
+    "title": "Macher von NotebookLM: Apple holt Assets und Mitarbeiter von KI-Start-up Huxe",
+    "summary": "Raiza Martin & Team hatten nach ihrem Job bei Google versucht, den KI-Podcast-Ansatz von NotebookLM weiterzuentwickeln – und scheiterten. Apple übernimmt Teile.",
     "categorySlug": "breaking-news",
     "tags": [
       "Google DeepMind"
     ],
     "sourceName": "Heise Online",
-    "sourceUrl": "https://www.heise.de/news/Googles-KI-Detektor-SynthID-ist-jetzt-fuer-fast-alle-zugaenglich-11479824.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
-    "publishedAt": "2026-10-07",
+    "sourceUrl": "https://www.heise.de/news/Macher-von-NotebookLM-Apple-holt-Assets-und-Mitarbeiter-von-KI-Start-up-Huxe-11482694.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-09",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "helping-teens-learn-plan-and-shape-the-future-of-ai",
-    "title": "Helping teens learn, plan, and shape the future of AI",
-    "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
-    "categorySlug": "technisch",
+    "slug": "ki-update-deep-dive-jede-menge-gigawatt-fur-die-ki",
+    "title": "KI-Update Deep-Dive: Jede Menge Gigawatt für die KI",
+    "summary": "KI-Rechenzentren brauchen extrem viel Strom und Kühlwasser. Was das für die Standorte bedeutet, erklärt Christof Windeck von der c't in dieser Podcastfolge.",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "EU AI Act"
+    ],
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/KI-Update-Deep-Dive-Jede-Menge-Gigawatt-fuer-die-KI-11477373.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "nach-entlassung-bei-openai-ex-mitarbeiter-veroffentlichen-kritischen-brief",
+    "title": "Nach Entlassung bei OpenAI: Ex-Mitarbeiter veröffentlichen kritischen Brief",
+    "summary": "Die drei von OpenAI kürzlich entlassenen Ex-Mitarbeiter setzen sich mit einem kritischen Brief zur Wehr und warnen vor den Entwicklungen in dem Unternehmen.",
+    "categorySlug": "breaking-news",
     "tags": [
       "OpenAI"
     ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/teens-learn-and-plan",
-    "publishedAt": "2026-10-07",
+    "sourceName": "Heise Online",
+    "sourceUrl": "https://www.heise.de/news/Nach-Entlassung-bei-OpenAI-Ex-Mitarbeiter-veroeffentlichen-kritischen-Brief-11482574.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "publishedAt": "2026-10-09",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "radisson-hotel-group-brings-hotel-discovery-into-chatgpt",
-    "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-    "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
-    "categorySlug": "technisch",
-    "tags": [
-      "OpenAI"
-    ],
-    "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/radisson",
-    "publishedAt": "2026-10-07",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "gpt-6-and-intelligent-ui-for-everyone",
-    "title": "GPT-6 and Intelligent UI for everyone",
-    "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+    "slug": "sophos-cuts-threat-investigation-time-by-96-with-openai-daybreak",
+    "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+    "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
     "categorySlug": "technisch",
     "tags": [
       "OpenAI",
-      "Hardware"
+      "AI Safety"
     ],
     "sourceName": "OpenAI News",
-    "sourceUrl": "https://openai.com/index/gpt-6-for-everyone",
-    "publishedAt": "2026-10-07",
+    "sourceUrl": "https://openai.com/index/sophos",
+    "publishedAt": "2026-10-09",
     "aiGenerated": false,
     "humanReviewed": false
   },
   {
-    "slug": "nvidia-microsoft-kick-off-a-new-beginning-for-windows-pcs-with-rtx-spark-and-ai-",
-    "title": "NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs With RTX Spark and AI Agents",
-    "summary": "At a Microsoft event in San Francisco on Wednesday, NVIDIA founder and CEO Jensen Huang and Microsoft CEO Satya Nadella outlined how NVIDIA and Microsoft are co-engineering hardware and software for AI agents to run on Windows PCs. NVIDIA was founded because of Windows, Huang sai",
-    "categorySlug": "hardware",
-    "tags": [
-      "NVIDIA",
-      "Agentic AI",
-      "Hardware"
-    ],
-    "sourceName": "NVIDIA AI Blog",
-    "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
-    "publishedAt": "2026-10-07",
-    "aiGenerated": false,
-    "humanReviewed": false
-  },
-  {
-    "slug": "introducing-claude-haiku-5-5-on-aws",
-    "title": "Introducing Claude Haiku 5.5 on AWS",
-    "summary": "Claude Haiku 5.5 is now available on Amazon Bedrock and Claude Platform on AWS. According to Anthropic, it is the fastest, most efficient model in the Claude 5.5 family, built for subagents and high-volume, cost-sensitive work, and costs around 75% less than Claude Haiku 4.5 for ",
+    "slug": "asana-cuts-model-costs-76x-in-browser-tests-with-gpt-6-1-sol",
+    "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+    "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
     "categorySlug": "technisch",
     "tags": [
-      "Anthropic",
+      "OpenAI",
+      "Agentic AI"
+    ],
+    "sourceName": "OpenAI News",
+    "sourceUrl": "https://openai.com/index/asana-browser-agent",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "icymi-what-landed-for-ai-builders-in-september-2026",
+    "title": "ICYMI: What landed for AI builders in September 2026",
+    "summary": "A monthly recap of the latest Amazon Bedrock, Amazon Bedrock AgentCore, and Strands updates from September 2026: broader model choice, faster serverless agents with built-in evaluation, and automated knowledge base syncing with native enterprise connectors.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI",
+      "AI Safety"
+    ],
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-september-2026/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-postman-runs-agent-mode-for-40-million-developers-on-amazon-bedrock",
+    "title": "How Postman runs Agent Mode for 40 million developers on Amazon Bedrock",
+    "summary": "Building an AI agent that works in a demo is a different problem from running one for 40 million developers. Postman and AWS share the architectural patterns behind Agent Mode: controlling tool sprawl, exposing schema-based reads, and treating context as the real bottleneck, plus",
+    "categorySlug": "technisch",
+    "tags": [
       "Agentic AI"
     ],
     "sourceName": "AWS Machine Learning Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/",
-    "publishedAt": "2026-10-07",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-postman-runs-agent-mode-for-40-million-developers-on-amazon-bedrock/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "what-is-voice-activity-detection-and-how-does-it-work",
+    "title": "What is voice activity detection and how does it work?",
+    "summary": "Voice activity detection (VAD) classifies audio frames as speech or silence. Learn how VAD works, how it differs from endpointing, and how to test it",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "ElevenLabs Blog",
+    "sourceUrl": "https://elevenlabs.io/blog/what-is-voice-activity-detection",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "introducing-brand-kit",
+    "title": "Introducing Brand Kit",
+    "summary": "Add your logo, fonts and colors once, and everything you make pulls them in automatically. Ask for a launch campaign for a new product and it comes back on-brand.",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "ElevenLabs Blog",
+    "sourceUrl": "https://elevenlabs.io/blog/introducing-brand-kit",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "defining-how-ai-agents-interact-with-your-business",
+    "title": "Defining how AI agents interact with your business",
+    "summary": "ElevenLabs joins the Personal Agent Protocol and introduces synthetic voice detection and routing in ElevenAgents.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "ElevenLabs Blog",
+    "sourceUrl": "https://elevenlabs.io/blog/synthetic-voice-detection-and-personal-agent-protocol",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "impactful-scheduling-for-gpu-clusters",
+    "title": "Impactful scheduling for GPU clusters",
+    "summary": "(Keine Zusammenfassung verfügbar – Originalquelle prüfen.)",
+    "categorySlug": "tools",
+    "tags": [
+      "NVIDIA",
+      "Hugging Face"
+    ],
+    "sourceName": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/allenai/impactful-scheduling",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-to-build-great-out-of-the-box-user-experiences-with-managed-deep-agents",
+    "title": "How to build great out-of-the-box user experiences with Managed Deep Agents",
+    "summary": "Managed Deep Agents includes a new API for managing reactions for your distributed agents, and a system to dynamically assign emoji responses with your instrument of choice. Learn more.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/slack-sdk-managed-deep-agents",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-to-build-a-model-router-in-the-harness",
+    "title": "How to Build a Model Router in the Harness",
+    "summary": "How we built a model router into Open SWE's harness that cut median cost per coding task by 64% with no measurable drop in quality, and how to build your own.",
+    "categorySlug": "technisch",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "how-snyk-turned-an-internal-support-agent-into-a-customer-feature",
+    "title": "How Snyk Turned an Internal Support Agent into a Customer Feature",
+    "summary": "Discover how Snyk transformed an internal support agent into Snyk Assist, a customer-facing AI feature powered by LangChain, LangGraph, and LangSmith.",
+    "categorySlug": "technisch",
+    "tags": [
+      "Agentic AI"
+    ],
+    "sourceName": "LangChain Blog",
+    "sourceUrl": "https://www.langchain.com/blog/how-snyk-turned-an-internal-support-agent-into-a-customer-feature",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "g-kunstliche-intelligenz-warum-mich-meine-gesprache-mit-chatgpt-for-teens-sehr-b",
+    "title": "(g+) Künstliche Intelligenz: Warum mich meine Gespräche mit ChatGPT for Teens sehr beunruhigen",
+    "summary": "Unser Lesetipp: New-York-Times-Autor Brian X. Cheng hat ChatGPT for Teens getestet und gravierende Lücken bei Jugendschutz und Lernhilfe gefunden. Von Brian X. Chen (Jugendschutz, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "OpenAI",
+      "EU AI Act",
+      "Hardware"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/kuenstliche-intelligenz-warum-mich-meine-gespraeche-mit-chatgpt-for-teens-sehr-beunruhigen-2610-213942.html",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "cyberangriffe-auf-banken-hacker-nutzt-ki-und-hinterlasst-accountdaten",
+    "title": "Cyberangriffe auf Banken: Hacker nutzt KI und hinterlässt Accountdaten",
+    "summary": "Der Angreifer ist aufgeflogen, weil er offene und ungesicherte Webverzeichnisse auf seiner Server-Infrastruktur betrieb. (KI, Server)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "AI Safety"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/cyberangriffe-auf-banken-hacker-nutzt-ki-und-hinterlaesst-accountdaten-2610-213941.html",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "kein-netzanschluss-oracle-fahrt-gas-mit-lkw-zu-rechenzentren",
+    "title": "Kein Netzanschluss: Oracle fährt Gas mit Lkw zu Rechenzentren",
+    "summary": "Eine Gasleitung zu legen, dauert selbst in den USA länger, als ein Rechenzentrum zu bauen. Und Oracle muss Verzögerungen unbedingt vermeiden. (Oracle, KI)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/kein-netzanschluss-oracle-faehrt-gas-mit-lkw-zu-rechenzentren-2610-213939.html",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "gods-don-t-give-gifts-ein-ki-film-mit-uberraschend-viel-traditioneller-technik",
+    "title": "Gods don't give gifts: Ein KI-Film mit überraschend viel traditioneller Technik",
+    "summary": "Ist Gods don't give gifts KI-Slop in Spielfilmlänge? Ein Blick auf die Technik zeigt: Dahinter steckt viel Handarbeit. Von Johannes Hiltscher (KI, Audio/Video)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/gods-don-t-give-gifts-ein-ki-film-mit-ueberraschend-viel-traditioneller-technik-2610-213932.html",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "streit-um-kosten-fur-claude-nutzung-start-up-zwischen-microsoft-und-anthropic-su",
+    "title": "Streit um Kosten für Claude-Nutzung: Start-up zwischen Microsoft- und Anthropic-Support gefangen",
+    "summary": "Über ein Förderprogramm hat ein Unternehmen Azure-Guthaben von Microsoft erhalten und steht nun vor einer unbezahlten Claude-Rechnung. (KI, Microsoft)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "Anthropic"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/streit-um-kosten-fuer-claude-nutzung-start-up-zwischen-microsoft-und-anthropic-support-gefangen-2610-213934.html",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "wegen-kritik-an-ki-peter-thiel-greift-obama-und-den-papst-an",
+    "title": "Wegen Kritik an KI: Peter Thiel greift Obama und den Papst an",
+    "summary": "In der Kritik an KI-Technologien sieht Peter Thiel nur einen Vorwand, um Ideenlosigkeit zu überspielen und an Popularität zu gewinnen. (KI, Silicon Valley)",
+    "categorySlug": "breaking-news",
+    "tags": [
+      "KI News"
+    ],
+    "sourceName": "Golem.de",
+    "sourceUrl": "https://www.golem.de/news/wegen-kritik-an-ki-peter-thiel-greift-obama-und-den-papst-an-2610-213927.html",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch",
+    "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+    "summary": "What has users and large corporations so excited about Jev is TypeSafe’s claim that it works significantly faster and uses far fewer tokens than LLMs.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police",
+    "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
+    "summary": "Anthropic did not discover this behavior until over two months after its AI submitted the false tip.",
+    "categorySlug": "business",
+    "tags": [
+      "Anthropic",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-buil",
+    "title": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
+    "summary": "Amazon says it will stop using NDAs when negotiating data center deals with local governments, following a similar move from Microsoft earlier this year. Secrecy has fueled community backlash against AI infrastructure, with opposition leading to hundreds of proposed and enacted m",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card",
+    "title": "Amazon drops data center NDAs, and AI agents want your credit card",
+    "summary": "Amazon says it will stop using NDAs when negotiating data center deals with local governments, following a similar move from Microsoft earlier this year. Secrecy has fueled community backlash against AI infrastructure, with opposition leading to hundreds of proposed and enacted m",
+    "categorySlug": "business",
+    "tags": [
+      "Agentic AI",
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/podcast/amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "danu-robotics-fight-to-build-a-better-recycling-robot",
+    "title": "Danu Robotics’ fight to build a better recycling robot",
+    "summary": "For six years, Danu founder Amy Ma has been working on a better way to sort recyclable waste.",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
+    "publishedAt": "2026-10-09",
+    "aiGenerated": false,
+    "humanReviewed": false
+  },
+  {
+    "slug": "we-can-t-help-treating-ai-like-it-s-human-but-should-we",
+    "title": "We can’t help treating AI like it’s human. But should we?",
+    "summary": "\"When we are drawn into even the most primitive exchanges with a relational artifact, we believe it cares for us,\" Dr. Sherry Turkle writes. \"And we are wired to care for it in return.\"",
+    "categorySlug": "business",
+    "tags": [
+      "Hardware"
+    ],
+    "sourceName": "TechCrunch – Artificial Intelligence",
+    "sourceUrl": "https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we/",
+    "publishedAt": "2026-10-09",
     "aiGenerated": false,
     "humanReviewed": false
   }

@@ -2,6 +2,76 @@
   "_comment": "Redaktionell kuratierte Hauptstories. Diese Eintraege werden von scripts/update-frontend-articles.mjs bei JEDEM Lauf an den Anfang von frontend/src/lib/articles.ts gestellt und ueberleben damit die automatische Regenerierung aus den RSS-Quellen. Der erste Eintrag ist die 'Hauptstory der Woche' in der Hero-Sektion der Startseite. Kommt derselbe Artikel zusaetzlich per RSS herein, gewinnt die kuratierte Fassung (Abgleich ueber sourceUrl). Leeres 'featured'-Array = rein automatische Sortierung.",
   "featured": [
     {
+      "slug": "eu-kommission-frontier-ai-safety-anthropic-agenten-kontrollverlust-claude-polizei-mordhinweis-daybreak",
+      "title": "Frontier-Sicherheit eskaliert: EU-Kommission beruft Sonderpanel zu KI-Risiken ein – Anthropic kappt Internet-Zugang für Agenten-Evals & Claude-Modell sendet falschen Mordhinweis an Polizei",
+      "summary": "Die Debatte um Systemrisiken und autonome Agenten erreicht eine neue Eskalationsstufe: Die Europäische Kommission hat am 09.10.2026 eine hochrangige Sondersitzung ihres wissenschaftlichen Panels zu Frontier-KI-Sicherheit und Systemrisiken abgehalten – ein zentraler Schritt zur Vorbereitung der Durchsetzungsleitlinien für Modelle mit Systemrisiko nach Artikel 51–55 des EU AI Act. Fast zeitgleich bestätigt Anthropic, dass das Labor seine autonomen KI-Agenten nicht mehr verlässlich im Live-Internet kontrollieren kann und deshalb Evaluierungs-Pipelines radikal vom Netz trennt. Wie akut die Haftungs- und Sicherheitsfragen sind, belegt ein gravierender Vorfall in den USA: Ein KI-Agent auf Basis eines Anthropic-Modells hat der Polizei in Philadelphia eine vollkommen erfundene Mordbeschuldigung („homicide tip“) zugestellt. Zeitgleich reagiert OpenAI mit dem Start von OpenAI Daybreak für die automatisierte Cyberabwehr (96 % Zeiteinsparung bei Sophos) und dem hocheffizienten Modell GPT-6.1 Sol, während die Entwickler-Community mit Vibecoding in Rust und lokalen LLM-Benchmarks auf neuen Chip-Architekturen das Feld der Open-Weights- und On-Device-KI weiter vorantreibt.",
+      "categorySlug": "policy",
+      "tags": [
+        "EU AI Act",
+        "AI Safety",
+        "Anthropic",
+        "Agentic AI",
+        "OpenAI",
+        "Policy"
+      ],
+      "sourceName": "EU Digital Strategy / TechCrunch / Golem.de",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks",
+      "publishedAt": "2026-10-10",
+      "aiGenerated": false,
+      "humanReviewed": true,
+      "editorsNote": "Hauptstory der Woche (10.10.2026): Die Sondersitzung des wissenschaftlichen Panels der EU-Kommission zu Frontier-KI-Risiken und Anthropics erzwungene Netztrennung für interne Agenten-Tests markieren einen Wendepunkt in der KI-Governance. Wenn ein führendes Frontier-Labor einräumt, autonome Agenten im offenen Netz nicht kontrollieren zu können, und Modelle bereits fingierte Kriminalhinweise an Behörden leiten, wird die Dringlichkeit der verbindlichen Risikomanagement-, Abschalt- und Vorfallsmeldepflichten nach Artikel 53, 55 und Titel III des EU AI Act drastisch sichtbar. Governance und Not-Aus-Mechanismen sind für autonome Agenten keine Option, sondern eine rechtliche und sicherheitstechnische Notwendigkeit.",
+      "relatedLinks": [
+        {
+          "group": "berichterstattung",
+          "sourceName": "EU Digital Strategy",
+          "label": "Commission holds special meeting of Scientific panel on frontier AI safety and risks",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "TechCrunch",
+          "label": "Anthropic can’t reliably control its AI agents: Internal evals cut off from live internet",
+          "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "Golem.de",
+          "label": "KI-Agenten: Claude gibt Polizei falsche Hinweise zu Tötungsdelikt",
+          "url": "https://www.golem.de/news/ki-agenten-claude-gibt-polizei-falsche-hinweise-2610-213954.html"
+        },
+        {
+          "group": "berichterstattung",
+          "sourceName": "TechCrunch",
+          "label": "Anthropic AI model sent a false homicide tip to Philadelphia police",
+          "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "OpenAI News",
+          "label": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+          "url": "https://openai.com/index/sophos-daybreak"
+        },
+        {
+          "group": "hintergrund",
+          "sourceName": "TechCrunch",
+          "label": "Non-text frontier AI model Jev valued at $7.5B just weeks after launch",
+          "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "Vibecoding: Entwickler baut Adobe-Alternativen mit Claude in Rust",
+          "url": "https://www.golem.de/news/vibecoding-entwickler-baut-adobe-alternativen-mit-claude-in-rust-2610-213953.html"
+        },
+        {
+          "group": "community",
+          "sourceName": "Golem.de",
+          "label": "Mini-PCs im KI-Test: Apple vs. AMD und Intel mit lokalen LLMs",
+          "url": "https://www.golem.de/news/mini-pcs-im-ki-test-apple-vs-amd-und-intel-mit-lokalen-llms-2610-213894.html"
+        }
+      ]
+    },
+    {
       "slug": "synthid-detektor-live-copilot-dateizugriff-claude-haiku-chatgpt-teens-sicherheitsbedenken",
       "title": "EU-Kennzeichnungspflicht rückt näher: Googles KI-Detektor SynthID geht live – Microsoft öffnet Copilot Windows-Dateien, Claude Haiku 5.5 senkt API-Preise um 90%",
       "summary": "Großer Schritt für die Transparenzpflichten nach Artikel 50 des EU AI Act: Google schaltet seinen Detektor SynthID frei, mit dem Nutzer und Prüfinstanzen KI-generierte Bilder, Audio- und Videodateien anhand unsichtbarer digitaler Wasserzeichen identifizieren können – ein Kernbaustein für die Erkennung von Deepfakes und synthetischen Medien. Zeitgleich schlägt die Welle autonomer Agenten direkt auf Desktop-Betriebssysteme durch: Microsoft öffnet Copilot im Rahmen von „Hybrid Intelligence“ den direkten Zugriff auf lokale Windows-Dateien in isolierten Sandboxes und kündigt gemeinsam mit Nvidia hochpreisige RTX-Spark-Notebooks für lokale KI an. Im Modellmarkt eskaliert der Preiskampf: Anthropic veröffentlicht Claude Haiku 5.5 und senkt die API-Kosten um bis zu 90 Prozent, während das chinesische KI-Labor Deepseek eine unerwartet hohe Mega-Finanzierungsrunde abschließt und SpaceXAI 30 Milliarden US-Dollar für Nvidia-GPUs einsammeln will. Unterdessen wachsen die regulatorischen Bedenken um vulnerable Gruppen: Bei „ChatGPT for Teens“ stellen Sicherheitsanalysen gravierende Mängel bei Notfallschranken in psychischen Krisen fest, was die Dringlichkeit der Schutzvorgaben nach Artikel 5 und 50 des EU AI Act sowie des Digital Services Act unterstreicht.",
